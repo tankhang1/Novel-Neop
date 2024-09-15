@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Lora.ttf",
+      "sha1": "47b78da7542fcf4a27c30fbaaf9234172dfa6f7a"
+    },
+    {
+      "path": "src/assets/fonts/SedgwickAve-Regular.ttf",
+      "sha1": "b35432cfcecaa9021f68b67919b37ba43c724b1c"
+    },
+    {
+      "path": "src/assets/fonts/SedgwickAveDisplay-Regular.ttf",
+      "sha1": "38b59f4c8f422f1b136351d822e3462ebc1726e2"
+    }
+  ]
+}
