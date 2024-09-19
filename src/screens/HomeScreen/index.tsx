@@ -4,8 +4,9 @@ import {
   View,
   ListRenderItemInfo,
   ScrollView,
+  ActivityIndicator,
 } from 'react-native';
-import React from 'react';
+import React, {startTransition, useEffect, useState} from 'react';
 import AppImage from '@components/AppImage';
 import SearchIcon from '@assets/icons/search.svg';
 import AppCarousel from '@components/AppCarousel';
@@ -83,6 +84,7 @@ const ListComicNew = [
 ];
 const HomeScreen = () => {
   const navigation = useNavigation();
+  const [isLoading, setIsLoading] = useState(false);
   const renderCommicPopularItem = ({
     item,
     index,
@@ -119,6 +121,13 @@ const HomeScreen = () => {
       />
     );
   };
+  useEffect(() => {
+    setTimeout(() => {
+      startTransition(() => {
+        setIsLoading(false);
+      });
+    }, 200);
+  }, []);
   return (
     <AppWrapper>
       <ScrollView>
@@ -131,76 +140,37 @@ const HomeScreen = () => {
           <SearchIcon width={32} height={32} />
         </View>
         <AppCarousel />
-        <View style={styles.mainWrapper}>
-          <Categories />
-          <View style={{paddingHorizontal: 16, gap: 16}}>
-            <Title content="TRUYỆN HAY NÊN ĐỌC" width={245} height={42} />
-            <FlatList
-              data={ListComic}
-              renderItem={renderCommicPopularItem}
-              numColumns={3}
-              columnWrapperStyle={styles.gapColumnWrapper}
-              style={styles.gapColumnWrapper}
-              scrollEnabled={false}
-            />
-            <Title content="TRUYỆN HOÀN THÀNH" width={245} height={42} />
+        {isLoading ? (
+          <View style={styles.loadingContainer}>
+            <ActivityIndicator />
           </View>
-          <FlatList
-            data={ListComic}
-            renderItem={renderCommicDoneItem}
-            horizontal
-            contentContainerStyle={{gap: 12}}
-            showsHorizontalScrollIndicator={false}
-            ListHeaderComponent={<View style={{width: 8}} />}
-            ListFooterComponent={<View style={{width: 8}} />}
-          />
-          <FlatList
-            data={ListComic}
-            renderItem={renderCommicDoneItem}
-            horizontal
-            contentContainerStyle={{gap: 12}}
-            showsHorizontalScrollIndicator={false}
-            ListHeaderComponent={<View style={{width: 8}} />}
-            ListFooterComponent={<View style={{width: 8}} />}
-          />
-        </View>
-        <View style={{position: 'relative', paddingVertical: 32}}>
-          <AppImage
-            source={require('../../assets/images/bg_1.png')}
-            resizeMode="contain"
-            imageStyle={{
-              width: '140%',
-              position: 'absolute',
-              top: -64,
-              left: -50,
-            }}
-          />
-          <View style={styles.newsComicWrapper}>
-            <View style={styles.newComicContentWrapper}>
-              <Title content="TRUYỆN MỚI" width={245} height={42} />
-              <View style={styles.contentWrapper}>
-                <AppImage
-                  source={require('../../assets/images/card_7.png')}
-                  imageStyle={styles.newsCommicTitleImage}
-                  resizeMode="stretch"
-                />
-                <View style={{gap: 8, flex: 1}}>
-                  <AppText style={{fontSize: 15, color: 'white'}}>
-                    Đệ Đệ Của Ta Là Thiên Tuyển Chi Tử
-                  </AppText>
-                  <AppText
-                    style={{fontSize: 12, color: 'white', lineHeight: 18}}>
-                    Tần Phong xuyên qua Hoang Cổ trở thành Tần gia đại thiếu
-                    gia, song bào thai nhị đệ vẫn là trong truyền thuyết thiên
-                    tuyển chi tử, càng là có được một khối vạn người không được
-                    một Chí Tôn Cốt.
-                  </AppText>
-                </View>
-              </View>
+        ) : (
+          <View style={styles.mainWrapper}>
+            <Categories />
+            <View style={{paddingHorizontal: 16, gap: 16}}>
+              <Title content="TRUYỆN HAY NÊN ĐỌC" width={245} height={42} />
+              <FlatList
+                data={ListComic}
+                renderItem={renderCommicPopularItem}
+                numColumns={3}
+                columnWrapperStyle={styles.gapColumnWrapper}
+                style={styles.gapColumnWrapper}
+                scrollEnabled={false}
+              />
+              <Title content="TRUYỆN HOÀN THÀNH" width={245} height={42} />
             </View>
             <FlatList
-              data={ListComicNew}
-              renderItem={renderCommicNewsItem}
+              data={ListComic}
+              renderItem={renderCommicDoneItem}
+              horizontal
+              contentContainerStyle={{gap: 12}}
+              showsHorizontalScrollIndicator={false}
+              ListHeaderComponent={<View style={{width: 8}} />}
+              ListFooterComponent={<View style={{width: 8}} />}
+            />
+            <FlatList
+              data={ListComic}
+              renderItem={renderCommicDoneItem}
               horizontal
               contentContainerStyle={{gap: 12}}
               showsHorizontalScrollIndicator={false}
@@ -208,19 +178,76 @@ const HomeScreen = () => {
               ListFooterComponent={<View style={{width: 8}} />}
             />
           </View>
-          <AppImage
-            source={require('../../assets/images/bg_2.png')}
-            resizeMode="contain"
-            imageStyle={styles.newComicBackground}
-          />
-        </View>
-        <View style={{paddingHorizontal: 16, gap: 16, marginTop: 25}}>
-          <Title content="TẤT CẢ TRUYỆN" width={245} height={42} />
-          <Card2 />
-          <Card2 />
-          <Card2 />
-          <Card2 />
-        </View>
+        )}
+        {isLoading ? (
+          <View style={styles.loadingContainer}>
+            <ActivityIndicator />
+          </View>
+        ) : (
+          <View style={{position: 'relative', paddingVertical: 32}}>
+            <AppImage
+              source={require('../../assets/images/bg_1.png')}
+              resizeMode="contain"
+              imageStyle={{
+                width: '140%',
+                position: 'absolute',
+                top: -64,
+                left: -50,
+              }}
+            />
+            <View style={styles.newsComicWrapper}>
+              <View style={styles.newComicContentWrapper}>
+                <Title content="TRUYỆN MỚI" width={245} height={42} />
+                <View style={styles.contentWrapper}>
+                  <AppImage
+                    source={require('../../assets/images/card_7.png')}
+                    imageStyle={styles.newsCommicTitleImage}
+                    resizeMode="stretch"
+                  />
+                  <View style={{gap: 8, flex: 1}}>
+                    <AppText style={{fontSize: 15, color: 'white'}}>
+                      Đệ Đệ Của Ta Là Thiên Tuyển Chi Tử
+                    </AppText>
+                    <AppText
+                      style={{fontSize: 12, color: 'white', lineHeight: 18}}>
+                      Tần Phong xuyên qua Hoang Cổ trở thành Tần gia đại thiếu
+                      gia, song bào thai nhị đệ vẫn là trong truyền thuyết thiên
+                      tuyển chi tử, càng là có được một khối vạn người không
+                      được một Chí Tôn Cốt.
+                    </AppText>
+                  </View>
+                </View>
+              </View>
+              <FlatList
+                data={ListComicNew}
+                renderItem={renderCommicNewsItem}
+                horizontal
+                contentContainerStyle={{gap: 12}}
+                showsHorizontalScrollIndicator={false}
+                ListHeaderComponent={<View style={{width: 8}} />}
+                ListFooterComponent={<View style={{width: 8}} />}
+              />
+            </View>
+            <AppImage
+              source={require('../../assets/images/bg_2.png')}
+              resizeMode="contain"
+              imageStyle={styles.newComicBackground}
+            />
+          </View>
+        )}
+        {isLoading ? (
+          <View style={styles.loadingContainer}>
+            <ActivityIndicator />
+          </View>
+        ) : (
+          <View style={{paddingHorizontal: 16, gap: 16, marginTop: 25}}>
+            <Title content="TẤT CẢ TRUYỆN" width={245} height={42} />
+            <Card2 />
+            <Card2 />
+            <Card2 />
+            <Card2 />
+          </View>
+        )}
         <View style={{height: 20}} />
       </ScrollView>
     </AppWrapper>
@@ -271,5 +298,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: -130,
     left: -60,
+  },
+  loadingContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 30,
   },
 });
