@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     height: HEIGHT,
     justifyContent: 'center',
     alignItems: 'center',
+    zIndex: 9999,
   },
   logo: {
     width: 200,
