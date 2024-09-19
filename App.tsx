@@ -1,24 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from './src/screens/HomeScreen';
 import ComicDetail from './src/screens/ComicDetail';
 import ReadComic from './src/screens/ReadComic';
 import {RootStackParamList} from '@utils/types/navigation';
+import {View} from 'react-native';
+import AnimatedBootSplash from '@screens/AnimatedBootSplash';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const App = () => {
+  const [visible, setVisible] = useState(true);
+  const [isReady, setIsReady] = useState(false);
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
+    <View style={{flex: 1}}>
+      <NavigationContainer
+        onReady={() => {
+          setTimeout(() => {
+            setIsReady(true);
+          }, 1000);
+          setTimeout(() => {
+            setVisible(false);
+          }, 3000);
         }}>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="ComicDetail" component={ComicDetail} />
-        <Stack.Screen name="ReadComic" component={ReadComic} />
-      </Stack.Navigator>
-    </NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}>
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="ComicDetail" component={ComicDetail} />
+          <Stack.Screen name="ReadComic" component={ReadComic} />
+        </Stack.Navigator>
+      </NavigationContainer>
+      {visible && (
+        <AnimatedBootSplash
+          onAnimationEnd={() => {
+            setVisible(false);
+          }}
+          isReady={isReady}
+        />
+      )}
+    </View>
   );
 };
 

@@ -109,8 +109,13 @@ const ReadComic = () => {
     'menu' | 'setting' | undefined
   >();
   const [themeColor, setThemeColor] = useState('#FFFFFF');
-  const [fontSize, setFontSize] = useState(0);
+  const [fontSize, setFontSize] = useState(14);
+  const [padding, setPadding] = useState(0);
+  const [lineHeight, setLineHeight] = useState(16);
   const [chapter, setChapter] = useState('C1');
+  const [fontFamily, setFontFamily] = useState<'Merriweather-Light' | 'Inter'>(
+    'Inter',
+  );
   const [counterEnd, setCounterEnd] = useState(0);
   const toggleSheet = () => {
     isOpen.value = !isOpen.value;
@@ -171,6 +176,12 @@ const ReadComic = () => {
                   {
                     color: themeColor === '#000000' ? 'white' : 'black',
                   },
+                  {
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    padding: padding,
+                    fontFamily: fontFamily,
+                  },
                 ]}>
                 {CHAPTER_CONTENT.get(chapter)?.content}
               </Text>
@@ -187,106 +198,184 @@ const ReadComic = () => {
         toggleSheet={toggleSheet}
         duration={300}
         wrapperStyle={styles.bottomSheetContainer}>
-        <View style={{paddingHorizontal: 16, paddingVertical: 12}}>
-          <View style={styles.bottomSheetHeaderContainer}>
-            <TouchableOpacity
-              hitSlop={10}
-              onPress={() => {
-                setTabBottomSheet(undefined);
-                toggleSheet();
-              }}>
-              <IconX />
-            </TouchableOpacity>
-          </View>
-          <View style={{gap: 24}}>
-            <View>
-              <AppText style={styles.themeText}>Màu nền</AppText>
-              <View style={styles.themeSelectionContainer}>
-                <TouchableOpacity onPress={() => setThemeColor('#FFFFFF')}>
-                  <ImageBackground
-                    source={require('../../assets/images/bg-color-1.png')}
-                    style={styles.themeItem}>
-                    {themeColor === '#FFFFFF' && <IconCheck />}
-                  </ImageBackground>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => setThemeColor('#E5E3DF')}>
-                  <ImageBackground
-                    source={require('../../assets/images/bg-color-2.png')}
-                    style={styles.themeItem}>
-                    {themeColor === '#E5E3DF' && <IconCheck />}
-                  </ImageBackground>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => setThemeColor('#EAE4D3')}>
-                  <ImageBackground
-                    source={require('../../assets/images/bg-color-3.png')}
-                    style={styles.themeItem}>
-                    {themeColor === '#EAE4D3' && <IconCheck />}
-                  </ImageBackground>
-                </TouchableOpacity>
+        <View style={{paddingHorizontal: 16, paddingVertical: 12, height: 340}}>
+          <ScrollView>
+            <View style={styles.bottomSheetHeaderContainer}>
+              <TouchableOpacity
+                hitSlop={10}
+                onPress={() => {
+                  setTabBottomSheet(undefined);
+                  toggleSheet();
+                }}>
+                <IconX />
+              </TouchableOpacity>
+            </View>
+            <View style={{gap: 24}}>
+              <View>
+                <AppText style={styles.themeText}>Màu nền</AppText>
+                <View style={styles.themeSelectionContainer}>
+                  <TouchableOpacity onPress={() => setThemeColor('#FFFFFF')}>
+                    <ImageBackground
+                      source={require('../../assets/images/bg-color-1.png')}
+                      style={styles.themeItem}>
+                      {themeColor === '#FFFFFF' && <IconCheck />}
+                    </ImageBackground>
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={() => setThemeColor('#E5E3DF')}>
+                    <ImageBackground
+                      source={require('../../assets/images/bg-color-2.png')}
+                      style={styles.themeItem}>
+                      {themeColor === '#E5E3DF' && <IconCheck />}
+                    </ImageBackground>
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={() => setThemeColor('#EAE4D3')}>
+                    <ImageBackground
+                      source={require('../../assets/images/bg-color-3.png')}
+                      style={styles.themeItem}>
+                      {themeColor === '#EAE4D3' && <IconCheck />}
+                    </ImageBackground>
+                  </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => setThemeColor('#000000')}>
-                  <ImageBackground
-                    source={require('../../assets/images/bg-color-4.png')}
-                    style={styles.themeItem}>
-                    {themeColor === '#000000' && <IconCheckWhite />}
-                  </ImageBackground>
-                </TouchableOpacity>
+                  <TouchableOpacity onPress={() => setThemeColor('#000000')}>
+                    <ImageBackground
+                      source={require('../../assets/images/bg-color-4.png')}
+                      style={styles.themeItem}>
+                      {themeColor === '#000000' && <IconCheckWhite />}
+                    </ImageBackground>
+                  </TouchableOpacity>
+                </View>
               </View>
-            </View>
-            <View>
-              <AppText style={styles.themeText}>Font chữ</AppText>
-              <View style={styles.themeSelectionContainer}>
-                <ImageBackground
-                  source={require('../../assets/images/bg-color-4.png')}
-                  style={styles.themeItem}>
-                  <AppText style={[{color: '#F8DE5E'}, styles.fontStyle]}>
-                    Aa
+              <View>
+                <AppText style={styles.themeText}>Font chữ</AppText>
+                <View style={styles.themeSelectionContainer}>
+                  <Pressable
+                    onPress={() => setFontFamily('Merriweather-Light')}>
+                    <ImageBackground
+                      source={require('../../assets/images/bg-color-4.png')}
+                      style={styles.themeItem}>
+                      <AppText style={[{color: '#F8DE5E'}, styles.fontStyle]}>
+                        Aa
+                      </AppText>
+                    </ImageBackground>
+                  </Pressable>
+                  <Pressable
+                    onPress={() => setFontFamily('Merriweather-Light')}>
+                    <ImageBackground
+                      source={require('../../assets/images/bg-color-1.png')}
+                      style={styles.themeItem}>
+                      <AppText style={[{color: 'black'}, styles.fontStyle]}>
+                        Aa
+                      </AppText>
+                    </ImageBackground>
+                  </Pressable>
+                  <Pressable onPress={() => setFontFamily('Inter')}>
+                    <ImageBackground
+                      source={require('../../assets/images/bg-color-2.png')}
+                      style={styles.themeItem}
+                    />
+                  </Pressable>
+                </View>
+              </View>
+              <View style={styles.menuItemContainer}>
+                <View>
+                  <AppText style={{fontSize: 14, color: '#090A0B'}}>
+                    Cỡ chữ
                   </AppText>
-                </ImageBackground>
-                <ImageBackground
-                  source={require('../../assets/images/bg-color-1.png')}
-                  style={styles.themeItem}>
-                  <AppText style={[{color: 'black'}, styles.fontStyle]}>
-                    Aa
+                  <View style={styles.themeSelectionContainer}>
+                    <TouchableOpacity
+                      onPress={() => {
+                        if (fontSize > 0) {
+                          setFontSize(fontSize - 1);
+                        }
+                      }}>
+                      <AppImage
+                        source={require('../../assets/images/arrow-left-circle.png')}
+                        imageStyle={styles.arrowBtn}
+                        resizeMode="contain"
+                      />
+                    </TouchableOpacity>
+                    <AppText style={{fontSize: 16, color: 'black'}}>
+                      {fontSize}
+                    </AppText>
+                    <TouchableOpacity
+                      onPress={() => {
+                        setFontSize(fontSize + 1);
+                      }}>
+                      <AppImage
+                        source={require('../../assets/images/arrow-right-circle.png')}
+                        imageStyle={styles.arrowBtn}
+                        resizeMode="contain"
+                      />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+                <View>
+                  <AppText style={{fontSize: 14, color: '#090A0B'}}>
+                    Khoảng cách dòng
                   </AppText>
-                </ImageBackground>
-                <ImageBackground
-                  source={require('../../assets/images/bg-color-2.png')}
-                  style={styles.themeItem}
-                />
+                  <View style={styles.themeSelectionContainer}>
+                    <TouchableOpacity
+                      onPress={() => {
+                        if (lineHeight > 0) {
+                          setLineHeight(lineHeight - 1);
+                        }
+                      }}>
+                      <AppImage
+                        source={require('../../assets/images/arrow-left-circle.png')}
+                        imageStyle={styles.arrowBtn}
+                        resizeMode="contain"
+                      />
+                    </TouchableOpacity>
+                    <AppText style={{fontSize: 16, color: 'black'}}>
+                      {lineHeight}
+                    </AppText>
+                    <TouchableOpacity
+                      onPress={() => {
+                        setLineHeight(lineHeight + 1);
+                      }}>
+                      <AppImage
+                        source={require('../../assets/images/arrow-right-circle.png')}
+                        imageStyle={styles.arrowBtn}
+                        resizeMode="contain"
+                      />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+                <View>
+                  <AppText style={{fontSize: 14, color: '#090A0B'}}>
+                    Padding
+                  </AppText>
+                  <View style={styles.themeSelectionContainer}>
+                    <TouchableOpacity
+                      onPress={() => {
+                        if (padding > 0) {
+                          setPadding(padding - 1);
+                        }
+                      }}>
+                      <AppImage
+                        source={require('../../assets/images/arrow-left-circle.png')}
+                        imageStyle={styles.arrowBtn}
+                        resizeMode="contain"
+                      />
+                    </TouchableOpacity>
+                    <AppText style={{fontSize: 16, color: 'black'}}>
+                      {padding}
+                    </AppText>
+                    <TouchableOpacity
+                      onPress={() => {
+                        setPadding(padding + 1);
+                      }}>
+                      <AppImage
+                        source={require('../../assets/images/arrow-right-circle.png')}
+                        imageStyle={styles.arrowBtn}
+                        resizeMode="contain"
+                      />
+                    </TouchableOpacity>
+                  </View>
+                </View>
               </View>
             </View>
-            <View>
-              <AppText style={{fontSize: 14, color: '#090A0B'}}>Cỡ chữ</AppText>
-              <View style={styles.themeSelectionContainer}>
-                <TouchableOpacity
-                  onPress={() => {
-                    if (fontSize > 0) {
-                      setFontSize(fontSize - 1);
-                    }
-                  }}>
-                  <AppImage
-                    source={require('../../assets/images/arrow-left-circle.png')}
-                    imageStyle={styles.arrowBtn}
-                    resizeMode="contain"
-                  />
-                </TouchableOpacity>
-                <AppText style={{fontSize: 16, color: 'black'}}>
-                  {fontSize}
-                </AppText>
-                <TouchableOpacity
-                  onPress={() => {
-                    setFontSize(fontSize + 1);
-                  }}>
-                  <AppImage
-                    source={require('../../assets/images/arrow-right-circle.png')}
-                    imageStyle={styles.arrowBtn}
-                    resizeMode="contain"
-                  />
-                </TouchableOpacity>
-              </View>
-            </View>
-          </View>
+          </ScrollView>
         </View>
       </BottomSheet>
       <BottomSheet

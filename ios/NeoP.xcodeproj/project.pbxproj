@@ -17,6 +17,7 @@
 		EA79E344D7EE46AE88054765 /* SedgwickAve-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A740745A8D947E28450BD87 /* SedgwickAve-Regular.ttf */; };
 		C37FAD6DB63E48A291D15DA2 /* SedgwickAveDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB4FD54DC0F14E7E932A6E9C /* SedgwickAveDisplay-Regular.ttf */; };
 		FE64F1800E674F8282C56E11 /* Lora.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0B0C1CCDC294DE98336AF3F /* Lora.ttf */; };
+		D5F8BAB4A86D4B7E8F643B46 /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C16544DA94BDEA93C6D23 /* Merriweather-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4A740745A8D947E28450BD87 /* SedgwickAve-Regular.ttf */ = {isa = PBXFileReference; name = "SedgwickAve-Regular.ttf"; path = "../src/assets/fonts/SedgwickAve-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		BB4FD54DC0F14E7E932A6E9C /* SedgwickAveDisplay-Regular.ttf */ = {isa = PBXFileReference; name = "SedgwickAveDisplay-Regular.ttf"; path = "../src/assets/fonts/SedgwickAveDisplay-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C0B0C1CCDC294DE98336AF3F /* Lora.ttf */ = {isa = PBXFileReference; name = "Lora.ttf"; path = "../src/assets/fonts/Lora.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1A1C16544DA94BDEA93C6D23 /* Merriweather-Light.ttf */ = {isa = PBXFileReference; name = "Merriweather-Light.ttf"; path = "../src/assets/fonts/Merriweather-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				4A740745A8D947E28450BD87 /* SedgwickAve-Regular.ttf */,
 				BB4FD54DC0F14E7E932A6E9C /* SedgwickAveDisplay-Regular.ttf */,
 				C0B0C1CCDC294DE98336AF3F /* Lora.ttf */,
+				1A1C16544DA94BDEA93C6D23 /* Merriweather-Light.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				EA79E344D7EE46AE88054765 /* SedgwickAve-Regular.ttf in Resources */,
 				C37FAD6DB63E48A291D15DA2 /* SedgwickAveDisplay-Regular.ttf in Resources */,
 				FE64F1800E674F8282C56E11 /* Lora.ttf in Resources */,
+				D5F8BAB4A86D4B7E8F643B46 /* Merriweather-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
