@@ -1,5 +1,5 @@
 import {View, StyleSheet, ScrollView} from 'react-native';
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import AppImage from '../AppImage';
 import {WIDTH} from '../../constants';
 import Indicator from '../../assets/icons/indicator.svg';
@@ -11,10 +11,22 @@ const BANNERS = [
   require('../../assets/images/banner.png'),
 ];
 const AppCarousel = () => {
+  const ref = useRef<ScrollView>(null);
   const [curIndex, setCurIndex] = useState(0);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (curIndex === 3) {
+  //       setCurIndex(0);
+  //       ref.current?.scrollTo({x: 0});
+  //     } else {
+  //       ref.current?.scrollTo({x: (curIndex + 1) * WIDTH, animated: true});
+  //     }
+  //   }, 1000);
+  // }, [curIndex]);
   return (
     <View>
       <ScrollView
+        ref={ref}
         horizontal
         pagingEnabled
         showsHorizontalScrollIndicator={false}
@@ -48,7 +60,7 @@ const AppCarousel = () => {
 export default AppCarousel;
 
 const styles = StyleSheet.create({
-  banner: {width: WIDTH, height: 188},
+  banner: {width: WIDTH, height: 270},
 
   dotWrapper: {
     flexDirection: 'row',
@@ -56,7 +68,7 @@ const styles = StyleSheet.create({
     gap: 6,
     justifyContent: 'center',
     position: 'absolute',
-    bottom: 15,
+    bottom: 30,
     width: WIDTH,
   },
 });

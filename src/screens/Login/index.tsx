@@ -6,44 +6,20 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import AppWrapper from '@components/AppWrapper';
-import {HEIGHT, WIDTH} from '@constants/index';
+import {WIDTH} from '@constants/index';
 import Line from '@assets/icons/line.svg';
-import Animated, {
-  FadeIn,
-  FadeOut,
-  interpolate,
-  useAnimatedStyle,
-  useSharedValue,
-  withTiming,
-} from 'react-native-reanimated';
+import Animated, {FadeIn, FadeOut} from 'react-native-reanimated';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@utils/types/navigation';
 const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 const LoginScreen = ({navigation}: Props) => {
-  const [type, setType] = useState<'SIGN_IN' | 'SIGN_UP'>('SIGN_IN');
-  const translateX = useSharedValue(0);
-  const btnAnimatedStyle = useAnimatedStyle(() => {
-    return {
-      transform: [
-        {translateX: interpolate(translateX.value, [0, 1], [0, WIDTH / 2])},
-      ],
-    };
-  });
-
   const onNavHomeScreen = () => {
     navigation.navigate('Home');
   };
-  useEffect(() => {
-    if (type === 'SIGN_IN') {
-      translateX.value = withTiming(0);
-    } else {
-      translateX.value = withTiming(1);
-    }
-  }, [type, translateX]);
 
   return (
     <AppWrapper>
@@ -66,24 +42,6 @@ const LoginScreen = ({navigation}: Props) => {
           source={require('@assets/images/mask.png')}
           style={styles.bottomSheet}
           resizeMode="stretch">
-          <View style={styles.btnWrapper}>
-            <TouchableOpacity
-              style={styles.btn}
-              onPress={() => setType('SIGN_IN')}>
-              <Text style={styles.btnText}>Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.btn}
-              onPress={() => setType('SIGN_UP')}>
-              <Text style={styles.btnText}>Sign up</Text>
-            </TouchableOpacity>
-          </View>
-          <View>
-            <Animated.View style={[styles.indicatorWrapper, btnAnimatedStyle]}>
-              <View style={styles.indicator} />
-            </Animated.View>
-            <Line />
-          </View>
           <View style={styles.socialBtnWrapper}>
             <TouchableOpacity onPress={onNavHomeScreen}>
               <Image
@@ -104,43 +62,24 @@ const LoginScreen = ({navigation}: Props) => {
               />
             </TouchableOpacity>
           </View>
-          {type === 'SIGN_IN' && (
-            <Animated.View
+          <Animated.View
+            entering={FadeIn}
+            exiting={FadeOut}
+            style={styles.orWrapper}>
+            <Line width={'40%'} />
+            <Text style={styles.orText}>Or login with</Text>
+            <Line width={'40%'} />
+          </Animated.View>
+          <View style={[styles.guessBtnWrapper]}>
+            <AnimatedTouchable
+              onPress={onNavHomeScreen}
               entering={FadeIn}
-              exiting={FadeOut}
-              style={styles.orWrapper}>
-              <Line width={'40%'} />
-              <Text style={styles.orText}>Or login with</Text>
-              <Line width={'40%'} />
-            </Animated.View>
-          )}
-          <View
-            style={[
-              styles.guessBtnWrapper,
-              type === 'SIGN_UP' && styles.guessBtnSignUpWrapper,
-            ]}>
-            {type === 'SIGN_IN' && (
-              <AnimatedTouchable
-                onPress={onNavHomeScreen}
-                entering={FadeIn}
-                exiting={FadeOut}>
-                <Image
-                  source={require('@assets/images/btn-guess.png')}
-                  style={styles.btnSocial}
-                />
-              </AnimatedTouchable>
-            )}
-            <TouchableOpacity>
-              <Text style={styles.linkBtn}>You can’t login? Report</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.termWrapper}>
-            <TouchableOpacity>
-              <Text style={styles.linkBtn}>Terms and Conditions</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={styles.linkBtn}>Provacy Policy</Text>
-            </TouchableOpacity>
+              exiting={FadeOut}>
+              <Image
+                source={require('@assets/images/btn-guess.png')}
+                style={styles.btnSocial}
+              />
+            </AnimatedTouchable>
           </View>
         </ImageBackground>
       </View>
@@ -154,27 +93,28 @@ const styles = StyleSheet.create({
   wrapper: {
     gap: 5,
     paddingHorizontal: 20,
-    paddingVertical: 10,
     justifyContent: 'flex-end',
     flex: 1,
   },
-  logo: {width: 90, height: 90},
+  logo: {width: 77, height: 77},
   title: {
     color: '#000000',
-    fontSize: 37,
+    fontSize: 36,
     fontFamily: 'UVNBayBuomHepNang',
     fontWeight: '600',
   },
   description: {
     color: '#000000',
-    fontSize: 25,
+    fontSize: 17,
+    letterSpacing: 1,
     fontStyle: 'normal',
-    fontFamily: 'UVNBayBuomHepNang',
+    fontWeight: '600',
+    fontFamily: 'Montserrat',
   },
   bottomSheet: {
     width: WIDTH,
-    height: HEIGHT * 0.65,
-    paddingVertical: 20,
+
+    paddingVertical: 50,
   },
   btnWrapper: {
     justifyContent: 'space-between',

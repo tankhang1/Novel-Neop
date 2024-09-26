@@ -19,6 +19,7 @@
 		FE64F1800E674F8282C56E11 /* Lora.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0B0C1CCDC294DE98336AF3F /* Lora.ttf */; };
 		D5F8BAB4A86D4B7E8F643B46 /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C16544DA94BDEA93C6D23 /* Merriweather-Light.ttf */; };
 		5731702E1721420C9A09B780 /* UVNBayBuomHepNang.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3935E7477DD423FA0836F6D /* UVNBayBuomHepNang.ttf */; };
+		0A1E1254446D4D86A5BB8844 /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E67B2651931647DC89189FA7 /* Montserrat.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		C0B0C1CCDC294DE98336AF3F /* Lora.ttf */ = {isa = PBXFileReference; name = "Lora.ttf"; path = "../src/assets/fonts/Lora.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1A1C16544DA94BDEA93C6D23 /* Merriweather-Light.ttf */ = {isa = PBXFileReference; name = "Merriweather-Light.ttf"; path = "../src/assets/fonts/Merriweather-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		E3935E7477DD423FA0836F6D /* UVNBayBuomHepNang.ttf */ = {isa = PBXFileReference; name = "UVNBayBuomHepNang.ttf"; path = "../src/assets/fonts/UVNBayBuomHepNang.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E67B2651931647DC89189FA7 /* Montserrat.ttf */ = {isa = PBXFileReference; name = "Montserrat.ttf"; path = "../src/assets/fonts/Montserrat.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				C0B0C1CCDC294DE98336AF3F /* Lora.ttf */,
 				1A1C16544DA94BDEA93C6D23 /* Merriweather-Light.ttf */,
 				E3935E7477DD423FA0836F6D /* UVNBayBuomHepNang.ttf */,
+				E67B2651931647DC89189FA7 /* Montserrat.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				FE64F1800E674F8282C56E11 /* Lora.ttf in Resources */,
 				D5F8BAB4A86D4B7E8F643B46 /* Merriweather-Light.ttf in Resources */,
 				5731702E1721420C9A09B780 /* UVNBayBuomHepNang.ttf in Resources */,
+				0A1E1254446D4D86A5BB8844 /* Montserrat.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

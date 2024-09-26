@@ -5,6 +5,8 @@ import {
   ListRenderItemInfo,
   ScrollView,
   ActivityIndicator,
+  TouchableOpacity,
+  Text,
 } from 'react-native';
 import React, {startTransition, useEffect, useState} from 'react';
 import AppImage from '@components/AppImage';
@@ -17,7 +19,7 @@ import AppText from '@components/AppText';
 import Card2 from './components/Card2';
 import {useNavigation} from '@react-navigation/native';
 import AppWrapper from '@components/AppWrapper';
-
+import IconRight from '@assets/icons/arrow-right.svg';
 type TComic = {
   image: any;
   label: string;
@@ -147,8 +149,14 @@ const HomeScreen = () => {
         ) : (
           <View style={styles.mainWrapper}>
             <Categories />
-            <View style={{paddingHorizontal: 16, gap: 16}}>
-              <Title content="TRUYỆN HAY NÊN ĐỌC" width={245} height={42} />
+            <View style={styles.commicContainer}>
+              <View style={styles.titleWrapper}>
+                <Title content="Popular Novels" width={250} height={42} />
+                <TouchableOpacity style={styles.moreBtn}>
+                  <Text style={styles.moreText}>More</Text>
+                  <IconRight />
+                </TouchableOpacity>
+              </View>
               <FlatList
                 data={ListComic}
                 renderItem={renderCommicPopularItem}
@@ -157,25 +165,31 @@ const HomeScreen = () => {
                 style={styles.gapColumnWrapper}
                 scrollEnabled={false}
               />
-              <Title content="TRUYỆN HOÀN THÀNH" width={245} height={42} />
+              <View style={styles.titleWrapper}>
+                <Title content="Complete NOvels" width={245} height={42} />
+                <TouchableOpacity style={styles.moreBtn}>
+                  <Text style={styles.moreText}>More</Text>
+                  <IconRight />
+                </TouchableOpacity>
+              </View>
             </View>
             <FlatList
               data={ListComic}
               renderItem={renderCommicDoneItem}
               horizontal
-              contentContainerStyle={{gap: 12}}
+              contentContainerStyle={styles.gap}
               showsHorizontalScrollIndicator={false}
-              ListHeaderComponent={<View style={{width: 8}} />}
-              ListFooterComponent={<View style={{width: 8}} />}
+              ListHeaderComponent={<View style={styles.gapView} />}
+              ListFooterComponent={<View style={styles.gapView} />}
             />
             <FlatList
               data={ListComic}
               renderItem={renderCommicDoneItem}
               horizontal
-              contentContainerStyle={{gap: 12}}
+              contentContainerStyle={styles.gap}
               showsHorizontalScrollIndicator={false}
-              ListHeaderComponent={<View style={{width: 8}} />}
-              ListFooterComponent={<View style={{width: 8}} />}
+              ListHeaderComponent={<View style={styles.gapView} />}
+              ListFooterComponent={<View style={styles.gapView} />}
             />
           </View>
         )}
@@ -184,20 +198,15 @@ const HomeScreen = () => {
             <ActivityIndicator />
           </View>
         ) : (
-          <View style={{position: 'relative', paddingVertical: 32}}>
+          <View style={styles.bgNewCommic}>
             <AppImage
               source={require('../../assets/images/bg_1.png')}
               resizeMode="contain"
-              imageStyle={{
-                width: '140%',
-                position: 'absolute',
-                top: -64,
-                left: -50,
-              }}
+              imageStyle={styles.bgContainer}
             />
             <View style={styles.newsComicWrapper}>
               <View style={styles.newComicContentWrapper}>
-                <Title content="TRUYỆN MỚI" width={245} height={42} />
+                <Title content="News NOvels" width={245} height={42} />
                 <View style={styles.contentWrapper}>
                   <AppImage
                     source={require('../../assets/images/card_7.png')}
@@ -222,10 +231,10 @@ const HomeScreen = () => {
                 data={ListComicNew}
                 renderItem={renderCommicNewsItem}
                 horizontal
-                contentContainerStyle={{gap: 12}}
+                contentContainerStyle={styles.gap}
                 showsHorizontalScrollIndicator={false}
-                ListHeaderComponent={<View style={{width: 8}} />}
-                ListFooterComponent={<View style={{width: 8}} />}
+                ListHeaderComponent={<View style={styles.gapView} />}
+                ListFooterComponent={<View style={styles.gapView} />}
               />
             </View>
             <AppImage
@@ -241,7 +250,13 @@ const HomeScreen = () => {
           </View>
         ) : (
           <View style={{paddingHorizontal: 16, gap: 16, marginTop: 25}}>
-            <Title content="TẤT CẢ TRUYỆN" width={245} height={42} />
+            <View style={styles.titleWrapper}>
+              <Title content="All NOvels" width={245} height={42} />
+              <TouchableOpacity style={styles.moreBtn}>
+                <Text style={styles.moreText}>More</Text>
+                <IconRight />
+              </TouchableOpacity>
+            </View>
             <Card2 />
             <Card2 />
             <Card2 />
@@ -277,7 +292,7 @@ const styles = StyleSheet.create({
     gap: 12,
     width: '100%',
     height: 442,
-    backgroundColor: '#3C3C3C',
+    backgroundColor: '#22262B',
   },
   newsCommicTitleImage: {
     width: 104,
@@ -303,5 +318,29 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: 30,
+  },
+  commicContainer: {paddingHorizontal: 16, gap: 16},
+  titleWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  moreBtn: {flexDirection: 'row', alignItems: 'center', gap: 5},
+  moreText: {
+    fontSize: 14,
+    fontFamily: 'Montserrat',
+    color: 'black',
+    fontWeight: '600',
+  },
+  gapView: {
+    width: 8,
+  },
+  gap: {gap: 12},
+  bgNewCommic: {position: 'relative', paddingVertical: 32},
+  bgContainer: {
+    width: '140%',
+    position: 'absolute',
+    top: -64,
+    left: -50,
   },
 });

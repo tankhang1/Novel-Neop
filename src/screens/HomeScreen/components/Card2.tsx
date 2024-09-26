@@ -3,6 +3,7 @@ import React from 'react';
 import AppImage from '@components/AppImage';
 import AppText from '@components/AppText';
 import Tag from './Tag';
+import AppImageWrapper from '@components/AppImageWrapper';
 
 type TCard2 = {
   imageStyle?: StyleProp<ImageStyle>;
@@ -13,7 +14,7 @@ type TCard2 = {
 const Card2 = ({imageStyle, titleStyle, subTitleStyle}: TCard2) => {
   return (
     <View style={styles.cardContainer}>
-      <AppImage
+      <AppImageWrapper
         source={require('../../../assets/images/card_1.png')}
         imageStyle={[styles.image, imageStyle]}
         resizeMode="stretch"

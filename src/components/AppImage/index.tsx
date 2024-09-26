@@ -8,6 +8,7 @@ import {
   StyleProp,
   StyleSheet,
   View,
+  ViewStyle,
 } from 'react-native';
 import Animated, {FadeIn} from 'react-native-reanimated';
 
@@ -15,8 +16,9 @@ type TAppImage = {
   imageStyle?: StyleProp<ImageStyle>;
   source: ImageSourcePropType;
   resizeMode: ImageResizeMode;
+  globalStyle?: StyleProp<ViewStyle>;
 };
-const AppImage = ({imageStyle, source, resizeMode}: TAppImage) => {
+const AppImage = ({imageStyle, globalStyle, source, resizeMode}: TAppImage) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -34,7 +36,7 @@ const AppImage = ({imageStyle, source, resizeMode}: TAppImage) => {
     setIsLoading(false);
   };
   return (
-    <View>
+    <View style={globalStyle}>
       <Animated.Image
         entering={FadeIn}
         style={[styles.image, imageStyle]}

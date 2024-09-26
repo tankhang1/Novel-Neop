@@ -7,8 +7,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
-import AppImage from '@components/AppImage';
 import AppText from '@components/AppText';
+import AppImageWrapper from '@components/AppImageWrapper';
 
 type TCard = {
   image: any;
@@ -32,7 +32,7 @@ const Card = ({
     <TouchableOpacity
       onPress={onPress}
       style={[styles.cardWrapper, wrapperStyle]}>
-      <AppImage
+      <AppImageWrapper
         source={image}
         imageStyle={[styles.image, imageStyle]}
         resizeMode="stretch"

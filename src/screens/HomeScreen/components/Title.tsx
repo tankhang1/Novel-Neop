@@ -11,7 +11,11 @@ const Title = ({width, height, content}: TTitle) => {
     <ImageBackground
       source={require('@assets/images/background.png')}
       style={{width, height}}>
-      <AppTextGradient content={content} width={width} height={height} />
+      <AppTextGradient
+        content={content?.toUpperCase()}
+        width={width}
+        height={height}
+      />
     </ImageBackground>
   );
 };

@@ -40,9 +40,10 @@ const AppTextGradient = ({content, width, height}: TAppTextGradient) => {
         <Mask id="mask0">
           <Text
             x={24}
-            y={20 + (height ?? 48) / 3.9}
-            fontFamily="SedgwickAveDisplay-Regular"
-            fontSize={20}
+            y={20 + (height ?? 48) / 4.7}
+            fontFamily="UVNBayBuomHepNang"
+            fontSize={17}
+            letterSpacing={4}
             fontWeight="bold"
             fill="white">
             {content}
