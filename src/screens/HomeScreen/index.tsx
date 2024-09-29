@@ -10,82 +10,84 @@ import {
 } from 'react-native';
 import React, {startTransition, useEffect, useState} from 'react';
 import AppImage from '@components/AppImage';
-import SearchIcon from '@assets/icons/search.svg';
 import AppCarousel from '@components/AppCarousel';
 import Categories from './Categories';
 import Title from './components/Title';
 import Card from './components/Card';
 import AppText from '@components/AppText';
 import Card2 from './components/Card2';
-import {useNavigation} from '@react-navigation/native';
 import AppWrapper from '@components/AppWrapper';
 import IconRight from '@assets/icons/arrow-right.svg';
+import {COLORS} from '@constants/index';
+import {RootStackParamList} from '@utils/types/navigation';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import SearchIcon from '@assets/icons/SearchIcon';
 type TComic = {
   image: any;
   label: string;
 };
 const ListComic = [
   {
-    image: require('../../assets/images/card_1.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('../../assets/images/card_2.png'),
+    image: require('@assets/images/card_2.png'),
     label: 'Cử Đầu Vọng Minh Nguyệt',
   },
   {
-    image: require('../../assets/images/card_3.png'),
+    image: require('@assets/images/card_3.png'),
     label: 'Chiến Thần Trừ Yêu Dẹp Loạn',
   },
   {
-    image: require('../../assets/images/card_4.png'),
+    image: require('@assets/images/card_4.png'),
     label: 'Tiểu Gia Là Siêu Cấp Thiên Tài',
   },
   {
-    image: require('../../assets/images/card_5.png'),
+    image: require('@assets/images/card_5.png'),
     label: 'Thần Lộ',
   },
   {
-    image: require('../../assets/images/card_6.png'),
+    image: require('@assets/images/card_6.png'),
     label: 'Nhật Ký Của Tôi Và Em Trai',
   },
 ];
 const ListComicNew = [
   {
-    image: require('../../assets/images/card_7.png'),
+    image: require('@assets/images/card_7.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('../../assets/images/card_7.png'),
+    image: require('@assets/images/card_7.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('../../assets/images/card_7.png'),
+    image: require('@assets/images/card_7.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('../../assets/images/card_7.png'),
+    image: require('@assets/images/card_7.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('../../assets/images/card_7.png'),
+    image: require('@assets/images/card_7.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('../../assets/images/card_7.png'),
+    image: require('@assets/images/card_7.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('../../assets/images/card_7.png'),
+    image: require('@assets/images/card_7.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('../../assets/images/card_7.png'),
+    image: require('@assets/images/card_7.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
 ];
-const HomeScreen = () => {
-  const navigation = useNavigation();
+type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
+const HomeScreen = ({navigation}: Props) => {
   const [isLoading, setIsLoading] = useState(false);
   const renderCommicPopularItem = ({
     item,
@@ -109,6 +111,7 @@ const HomeScreen = () => {
         key={index}
         imageStyle={styles.newsItemImage}
         wrapperStyle={styles.newsItemWrapper}
+        numberOfLines={2}
       />
     );
   };
@@ -120,6 +123,7 @@ const HomeScreen = () => {
         imageStyle={styles.newsItemImage}
         wrapperStyle={styles.newsItemWrapper}
         labelStyle={styles.newsItemLabel}
+        numberOfLines={2}
       />
     );
   };
@@ -135,11 +139,13 @@ const HomeScreen = () => {
       <ScrollView>
         <View style={styles.header}>
           <AppImage
-            source={require('../../assets/images/logo.png')}
+            source={require('../../assets/images/large_logo.png')}
             resizeMode="contain"
             imageStyle={styles.logo}
           />
-          <SearchIcon width={32} height={32} />
+          <TouchableOpacity onPress={() => navigation.navigate('SearchScreen')}>
+            <SearchIcon width={32} height={32} />
+          </TouchableOpacity>
         </View>
         <AppCarousel />
         {isLoading ? (
@@ -154,7 +160,7 @@ const HomeScreen = () => {
                 <Title content="Popular Novels" width={250} height={42} />
                 <TouchableOpacity style={styles.moreBtn}>
                   <Text style={styles.moreText}>More</Text>
-                  <IconRight />
+                  <IconRight fill={COLORS.lightmode.netrual[500]} />
                 </TouchableOpacity>
               </View>
               <FlatList
@@ -206,7 +212,13 @@ const HomeScreen = () => {
             />
             <View style={styles.newsComicWrapper}>
               <View style={styles.newComicContentWrapper}>
-                <Title content="News NOvels" width={245} height={42} />
+                <View style={styles.titleWrapper}>
+                  <Title content="New Novels" width={245} height={42} />
+                  <TouchableOpacity style={styles.moreBtn}>
+                    <Text style={styles.moreText}>More</Text>
+                    <IconRight />
+                  </TouchableOpacity>
+                </View>
                 <View style={styles.contentWrapper}>
                   <AppImage
                     source={require('../../assets/images/card_7.png')}
@@ -214,15 +226,25 @@ const HomeScreen = () => {
                     resizeMode="stretch"
                   />
                   <View style={{gap: 8, flex: 1}}>
-                    <AppText style={{fontSize: 15, color: 'white'}}>
-                      Đệ Đệ Của Ta Là Thiên Tuyển Chi Tử
+                    <AppText style={styles.newsNovelsTitle}>
+                      Nine Star Hegemon Body Art
                     </AppText>
                     <AppText
-                      style={{fontSize: 12, color: 'white', lineHeight: 18}}>
-                      Tần Phong xuyên qua Hoang Cổ trở thành Tần gia đại thiếu
-                      gia, song bào thai nhị đệ vẫn là trong truyền thuyết thiên
-                      tuyển chi tử, càng là có được một khối vạn người không
-                      được một Chí Tôn Cốt.
+                      style={styles.newsNovelsDescription}
+                      numberOfLines={6}>
+                      Long Chen, a crippled youth who cannot cultivate, is
+                      constantly targeted and bullied by his fellow noble heirs.
+                      After a particularly vicious beating, he wakes up and
+                      realizes a Pill Sovereign's soul has somehow merged with
+                      him, giving him some additional memories. Within those
+                      memories is the mysterious Nine Star Hegemon Body Art, a
+                      cultivation technique that even he can train in, but whose
+                      secrets and origin are still a mystery to him. Relying on
+                      his improved instincts as he finally begins to cultivate,
+                      he realizes a huge conspiracy is underfoot within the
+                      Phoenix Cry Empire; a conspiracy involving his father,
+                      members of the imperial family, and even the Emperor
+                      himself.
                     </AppText>
                   </View>
                 </View>
@@ -273,8 +295,8 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   logo: {
-    width: 32,
-    height: 32,
+    width: 46,
+    height: 46,
   },
   header: {
     flexDirection: 'row',
@@ -288,18 +310,18 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   newsComicWrapper: {
-    paddingVertical: 32,
+    paddingVertical: 20,
     gap: 12,
     width: '100%',
-    height: 442,
+    height: 480,
     backgroundColor: '#22262B',
   },
   newsCommicTitleImage: {
-    width: 104,
-    height: 138,
+    width: 119,
+    height: 158,
   },
-  newsItemImage: {width: 76, height: 100},
-  newsItemWrapper: {width: 76, height: 180},
+  newsItemImage: {width: 85, height: 115},
+  newsItemWrapper: {width: 85, height: 200},
   newsItemLabel: {color: 'white', fontSize: 12},
   newComicContentWrapper: {paddingHorizontal: 16, gap: 16},
   contentWrapper: {
@@ -329,8 +351,7 @@ const styles = StyleSheet.create({
   moreText: {
     fontSize: 14,
     fontFamily: 'Montserrat',
-    color: 'black',
-    fontWeight: '600',
+    color: COLORS.lightmode.netrual[500],
   },
   gapView: {
     width: 8,
@@ -342,5 +363,21 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: -64,
     left: -50,
+  },
+  newsNovelsDescription: {
+    fontSize: 11,
+    color: COLORS.lightmode.netrual[100],
+    lineHeight: 17,
+    fontFamily: 'Montserrat',
+    fontWeight: 300,
+    letterSpacing: 1,
+  },
+  newsNovelsTitle: {
+    fontSize: 17,
+    lineHeight: 23.8,
+    letterSpacing: 1,
+    fontWeight: 400,
+    color: COLORS.lightmode.netrual[0],
+    fontFamily: 'UVNBayBuomHepNang_Regular',
   },
 });

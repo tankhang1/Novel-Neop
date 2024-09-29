@@ -8,6 +8,7 @@ import {RootStackParamList} from '@utils/types/navigation';
 import {View} from 'react-native';
 import AnimatedBootSplash from '@screens/AnimatedBootSplash';
 import LoginScreen from '@screens/Login';
+import SearchScreen from '@screens/SearchScreen';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const App = () => {
   const [visible, setVisible] = useState(true);
@@ -41,6 +42,7 @@ const App = () => {
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="ComicDetail" component={ComicDetail} />
             <Stack.Screen name="ReadComic" component={ReadComic} />
+            <Stack.Screen name="SearchScreen" component={SearchScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       )}

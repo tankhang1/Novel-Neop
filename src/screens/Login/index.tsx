@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import AppWrapper from '@components/AppWrapper';
-import {WIDTH} from '@constants/index';
+import {COLORS, WIDTH} from '@constants/index';
 import Line from '@assets/icons/line.svg';
 import Animated, {FadeIn, FadeOut} from 'react-native-reanimated';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
@@ -100,11 +100,11 @@ const styles = StyleSheet.create({
   title: {
     color: '#000000',
     fontSize: 36,
-    fontFamily: 'UVNBayBuomHepNang',
+    fontFamily: 'UVNBayBuomHepNang_Regular',
     fontWeight: '600',
   },
   description: {
-    color: '#000000',
+    color: COLORS.lightmode.netrual[900],
     fontSize: 17,
     letterSpacing: 1,
     fontStyle: 'normal',

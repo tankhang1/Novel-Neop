@@ -28,8 +28,8 @@ import SettingFill from '@assets/icons/setting-fill.svg';
 import {useSharedValue} from 'react-native-reanimated';
 import BottomSheet from '@components/AppBottomSheet';
 import {WIDTH} from '@constants/index';
-import IconX from '@assets/icons/closeX.svg';
 import AppImage from '@components/AppImage';
+import CloseX from '@assets/icons/CloseX';
 const LIST_CHAPTER = [
   {
     label: 'Chương 1: Sống lại 10 năm trước',
@@ -207,7 +207,7 @@ const ReadComic = () => {
                   setTabBottomSheet(undefined);
                   toggleSheet();
                 }}>
-                <IconX />
+                <CloseX />
               </TouchableOpacity>
             </View>
             <View style={{gap: 24}}>
@@ -393,7 +393,7 @@ const ReadComic = () => {
                 setTabBottomSheet(undefined);
                 toggleSheetMenu();
               }}>
-              <IconX />
+              <CloseX />
             </TouchableOpacity>
           </View>
           <View>

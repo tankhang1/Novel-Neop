@@ -39,9 +39,9 @@ const AppTextGradient = ({content, width, height}: TAppTextGradient) => {
         {/* Create a mask using the text */}
         <Mask id="mask0">
           <Text
-            x={24}
+            x={15}
             y={20 + (height ?? 48) / 4.7}
-            fontFamily="UVNBayBuomHepNang"
+            fontFamily="UVNBayBuomHepNang_Regular"
             fontSize={17}
             letterSpacing={4}
             fontWeight="bold"
@@ -53,7 +53,7 @@ const AppTextGradient = ({content, width, height}: TAppTextGradient) => {
 
       {/* Apply the gradient within the mask */}
       <Rect
-        x={24}
+        x={15}
         y="0"
         width={width}
         height={height}

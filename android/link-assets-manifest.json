@@ -11,7 +11,7 @@
     },
     {
       "path": "src/assets/fonts/Montserrat.ttf",
-      "sha1": "debd10e57fb07dd24187c41679885129449c1435"
+      "sha1": "9dfbddad5025d8d224b4939e54c1a4ac8ac6015b"
     },
     {
       "path": "src/assets/fonts/SedgwickAve-Regular.ttf",
@@ -23,7 +23,11 @@
     },
     {
       "path": "src/assets/fonts/UVNBayBuomHepNang.ttf",
-      "sha1": "da8419153ba76e8830506cabcaaba59bc7c8e4fd"
+      "sha1": "7fb5e7d5efe19e6c8ad908d4a5dd0d3183c2bd70"
+    },
+    {
+      "path": "src/assets/fonts/UVNBayBuomHepNang_Regular.ttf",
+      "sha1": "127b7020956dd4504deb5eece365241a39b5d037"
     }
   ]
 }
