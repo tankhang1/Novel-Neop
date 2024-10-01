@@ -33,12 +33,12 @@ const Card2 = ({imageStyle, titleStyle, subTitleStyle}: TCard2) => {
           <Tag
             content="Tiên Hiệp"
             wrapperStyle={styles.tagWrapper}
-            textStyle={styles.tagText}
+            textStyle={[styles.tagText, subTitleStyle]}
           />
           <Tag
             content="Hoàn thành"
             wrapperStyle={styles.tagWrapper}
-            textStyle={styles.tagText}
+            textStyle={[styles.tagText, subTitleStyle]}
           />
         </View>
       </View>
@@ -49,7 +49,7 @@ const Card2 = ({imageStyle, titleStyle, subTitleStyle}: TCard2) => {
 const styles = StyleSheet.create({
   cardContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     gap: 8,
   },
   image: {
@@ -57,8 +57,9 @@ const styles = StyleSheet.create({
     height: 100,
   },
   title: {
-    fontSize: 16,
+    fontSize: 18,
     color: 'black',
+    fontFamily: 'UVNBayBuomHepNang_Regular',
   },
   subtitleContainer: {
     flexDirection: 'row',
@@ -71,7 +72,8 @@ const styles = StyleSheet.create({
   },
   subTitle: {
     color: 'black',
-    fontSize: 12,
+    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontSize: 14,
   },
   tagContainer: {
     flexDirection: 'row',
@@ -84,7 +86,8 @@ const styles = StyleSheet.create({
   },
   tagText: {
     color: 'white',
-    fontSize: 12,
+    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontSize: 14,
     paddingVertical: 4,
     paddingHorizontal: 15,
   },

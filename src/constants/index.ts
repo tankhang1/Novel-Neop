@@ -7,7 +7,7 @@ import NotificationInActiveIcon from '@assets/icons/navigation/notification-inac
 import NotificationActiveIcon from '@assets/icons/navigation/notification-active.svg';
 import ProfileInActiveIcon from '@assets/icons/navigation/profile-inactive.svg';
 import ProfileActiveIcon from '@assets/icons/navigation/profile-active.svg';
-
+import ArrowLeftIcon from '@assets/icons/arrow-back.svg';
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 const ASSETS = {
@@ -21,6 +21,7 @@ const ASSETS = {
     NotificationActiveIcon,
     ProfileActiveIcon,
     ProfileInActiveIcon,
+    ArrowLeftIcon,
   },
 };
 const COLORS = {

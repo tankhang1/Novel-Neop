@@ -1,21 +1,33 @@
-import {View, ScrollView, StyleSheet} from 'react-native';
+import {View, ScrollView, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import FirstHalf from '@assets/icons/first-half.svg';
 import Magical from '@assets/icons/magical.svg';
 import MartialArts from '@assets/icons/martial-arts.svg';
 import ScienceFiction from '@assets/icons/science-fiction.svg';
 import AppText from '@components/AppText';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {RootStackParamList} from '@utils/types/navigation';
 
 type TCategoryItem = {
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
   label: string;
 };
+type CategoryItemNavigationProp = NavigationProp<
+  RootStackParamList,
+  'Category'
+>;
+
 const CategoryItem = ({icon: Icon, label}: TCategoryItem) => {
+  const navigation = useNavigation<CategoryItemNavigationProp>();
   return (
-    <View style={styles.categoryItem}>
+    <TouchableOpacity
+      style={styles.categoryItem}
+      onPress={() => {
+        navigation.navigate('Category');
+      }}>
       <Icon />
       <AppText style={styles.categoryLabel}>{label}</AppText>
-    </View>
+    </TouchableOpacity>
   );
 };
 const Categories = () => {

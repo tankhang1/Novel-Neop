@@ -4,6 +4,8 @@ type RootStackParamList = {
   ComicDetail: undefined;
   ReadComic: undefined;
   SearchScreen: undefined;
+  Category: undefined;
+  More: undefined;
 };
 
 type BottomTabParamList = {

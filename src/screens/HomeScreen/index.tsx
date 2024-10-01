@@ -150,7 +150,9 @@ const HomeScreen = ({navigation}: Props) => {
           <View style={styles.commicContainer}>
             <View style={styles.titleWrapper}>
               <Title content="Popular Novels" width={250} height={42} />
-              <TouchableOpacity style={styles.moreBtn}>
+              <TouchableOpacity
+                style={styles.moreBtn}
+                onPress={() => navigation.navigate('More')}>
                 <Text style={styles.moreText}>More</Text>
                 <IconRight fill={COLORS.lightmode.netrual[500]} />
               </TouchableOpacity>
