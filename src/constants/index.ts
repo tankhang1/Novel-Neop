@@ -1,9 +1,27 @@
 import {Dimensions} from 'react-native';
+import HomeInActiveIcon from '@assets/icons/navigation/home-inactive.svg';
+import HomeActiveIcon from '@assets/icons/navigation/home-active.svg';
+import LibraryInActiveIcon from '@assets/icons/navigation/library-inactive.svg';
+import LibraryActiveIcon from '@assets/icons/navigation/library-active.svg';
+import NotificationInActiveIcon from '@assets/icons/navigation/notification-inactive.svg';
+import NotificationActiveIcon from '@assets/icons/navigation/notification-active.svg';
+import ProfileInActiveIcon from '@assets/icons/navigation/profile-inactive.svg';
+import ProfileActiveIcon from '@assets/icons/navigation/profile-active.svg';
+
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 const ASSETS = {
   IMAGES: {},
-  ICONS: {},
+  ICONS: {
+    HomeActiveIcon,
+    HomeInActiveIcon,
+    LibraryActiveIcon,
+    LibraryInActiveIcon,
+    NotificationInActiveIcon,
+    NotificationActiveIcon,
+    ProfileActiveIcon,
+    ProfileInActiveIcon,
+  },
 };
 const COLORS = {
   empty: 'rgba(255,255,255,0.01)',

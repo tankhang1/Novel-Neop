@@ -9,6 +9,7 @@ import {
 import React from 'react';
 import AppText from '@components/AppText';
 import AppImageWrapper from '@components/AppImageWrapper';
+import Animated, {FadeIn} from 'react-native-reanimated';
 
 type TCard = {
   image: any;
@@ -18,7 +19,9 @@ type TCard = {
   labelStyle?: StyleProp<TextStyle>;
   numberOfLines?: number;
   onPress?: () => void;
+  index?: number;
 };
+const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
 const Card = ({
   image,
   label,
@@ -26,10 +29,12 @@ const Card = ({
   wrapperStyle,
   labelStyle,
   numberOfLines,
+  index = 0,
   onPress,
 }: TCard) => {
   return (
-    <TouchableOpacity
+    <AnimatedTouchable
+      entering={FadeIn.delay(index * 100)}
       onPress={onPress}
       style={[styles.cardWrapper, wrapperStyle]}>
       <AppImageWrapper
@@ -42,7 +47,7 @@ const Card = ({
         numberOfLines={numberOfLines}>
         {label}
       </AppText>
-    </TouchableOpacity>
+    </AnimatedTouchable>
   );
 };
 

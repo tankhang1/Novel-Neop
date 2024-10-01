@@ -1,9 +1,16 @@
 type RootStackParamList = {
-  Home: undefined;
+  Login: undefined;
+  Main: undefined;
   ComicDetail: undefined;
   ReadComic: undefined;
-  Login: undefined;
   SearchScreen: undefined;
 };
 
-export type {RootStackParamList};
+type BottomTabParamList = {
+  Home: undefined;
+  Library: undefined;
+  Notification: undefined;
+  MyProfile: undefined;
+};
+
+export type {RootStackParamList, BottomTabParamList};

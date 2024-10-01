@@ -18,7 +18,7 @@ const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 const LoginScreen = ({navigation}: Props) => {
   const onNavHomeScreen = () => {
-    navigation.navigate('Home');
+    navigation.navigate('Main');
   };
 
   return (

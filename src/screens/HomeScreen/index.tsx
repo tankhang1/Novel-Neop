@@ -4,11 +4,10 @@ import {
   View,
   ListRenderItemInfo,
   ScrollView,
-  ActivityIndicator,
   TouchableOpacity,
   Text,
 } from 'react-native';
-import React, {startTransition, useEffect, useState} from 'react';
+import React, {useCallback} from 'react';
 import AppImage from '@components/AppImage';
 import AppCarousel from '@components/AppCarousel';
 import Categories from './Categories';
@@ -19,7 +18,7 @@ import Card2 from './components/Card2';
 import AppWrapper from '@components/AppWrapper';
 import IconRight from '@assets/icons/arrow-right.svg';
 import {COLORS} from '@constants/index';
-import {RootStackParamList} from '@utils/types/navigation';
+import {BottomTabParamList, RootStackParamList} from '@utils/types/navigation';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import SearchIcon from '@assets/icons/SearchIcon';
 type TComic = {
@@ -86,54 +85,51 @@ const ListComicNew = [
     label: 'Phàm Nhân Tu Tiên',
   },
 ];
-type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
+type Props = NativeStackScreenProps<
+  RootStackParamList & Pick<BottomTabParamList, 'Home'>,
+  'Home'
+>;
 const HomeScreen = ({navigation}: Props) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const renderCommicPopularItem = ({
-    item,
-    index,
-  }: ListRenderItemInfo<TComic>) => {
-    return (
+  const renderCommicPopularItem = useCallback(
+    ({item, index}: ListRenderItemInfo<TComic>) => (
       <Card
         {...item}
         key={index}
-        onPress={() => {
-          //@ts-ignore
-          navigation.navigate('ComicDetail');
-        }}
+        index={index}
+        onPress={() => navigation.navigate('ComicDetail')}
       />
-    );
-  };
-  const renderCommicDoneItem = ({item, index}: ListRenderItemInfo<TComic>) => {
-    return (
+    ),
+    [navigation],
+  );
+  const renderCommicDoneItem = useCallback(
+    ({item, index}: ListRenderItemInfo<TComic>) => (
       <Card
         {...item}
+        index={index}
         key={index}
         imageStyle={styles.newsItemImage}
         wrapperStyle={styles.newsItemWrapper}
         numberOfLines={2}
       />
-    );
-  };
-  const renderCommicNewsItem = ({item, index}: ListRenderItemInfo<TComic>) => {
-    return (
+    ),
+    [],
+  );
+
+  const renderCommicNewsItem = useCallback(
+    ({item, index}: ListRenderItemInfo<TComic>) => (
       <Card
         {...item}
+        index={index}
         key={index}
         imageStyle={styles.newsItemImage}
         wrapperStyle={styles.newsItemWrapper}
         labelStyle={styles.newsItemLabel}
         numberOfLines={2}
       />
-    );
-  };
-  useEffect(() => {
-    setTimeout(() => {
-      startTransition(() => {
-        setIsLoading(false);
-      });
-    }, 200);
-  }, []);
+    ),
+    [],
+  );
+
   return (
     <AppWrapper>
       <ScrollView>
@@ -148,144 +144,129 @@ const HomeScreen = ({navigation}: Props) => {
           </TouchableOpacity>
         </View>
         <AppCarousel />
-        {isLoading ? (
-          <View style={styles.loadingContainer}>
-            <ActivityIndicator />
-          </View>
-        ) : (
-          <View style={styles.mainWrapper}>
-            <Categories />
-            <View style={styles.commicContainer}>
-              <View style={styles.titleWrapper}>
-                <Title content="Popular Novels" width={250} height={42} />
-                <TouchableOpacity style={styles.moreBtn}>
-                  <Text style={styles.moreText}>More</Text>
-                  <IconRight fill={COLORS.lightmode.netrual[500]} />
-                </TouchableOpacity>
-              </View>
-              <FlatList
-                data={ListComic}
-                renderItem={renderCommicPopularItem}
-                numColumns={3}
-                columnWrapperStyle={styles.gapColumnWrapper}
-                style={styles.gapColumnWrapper}
-                scrollEnabled={false}
-              />
-              <View style={styles.titleWrapper}>
-                <Title content="Complete NOvels" width={245} height={42} />
-                <TouchableOpacity style={styles.moreBtn}>
-                  <Text style={styles.moreText}>More</Text>
-                  <IconRight />
-                </TouchableOpacity>
-              </View>
-            </View>
-            <FlatList
-              data={ListComic}
-              renderItem={renderCommicDoneItem}
-              horizontal
-              contentContainerStyle={styles.gap}
-              showsHorizontalScrollIndicator={false}
-              ListHeaderComponent={<View style={styles.gapView} />}
-              ListFooterComponent={<View style={styles.gapView} />}
-            />
-            <FlatList
-              data={ListComic}
-              renderItem={renderCommicDoneItem}
-              horizontal
-              contentContainerStyle={styles.gap}
-              showsHorizontalScrollIndicator={false}
-              ListHeaderComponent={<View style={styles.gapView} />}
-              ListFooterComponent={<View style={styles.gapView} />}
-            />
-          </View>
-        )}
-        {isLoading ? (
-          <View style={styles.loadingContainer}>
-            <ActivityIndicator />
-          </View>
-        ) : (
-          <View style={styles.bgNewCommic}>
-            <AppImage
-              source={require('../../assets/images/bg_1.png')}
-              resizeMode="contain"
-              imageStyle={styles.bgContainer}
-            />
-            <View style={styles.newsComicWrapper}>
-              <View style={styles.newComicContentWrapper}>
-                <View style={styles.titleWrapper}>
-                  <Title content="New Novels" width={245} height={42} />
-                  <TouchableOpacity style={styles.moreBtn}>
-                    <Text style={styles.moreText}>More</Text>
-                    <IconRight />
-                  </TouchableOpacity>
-                </View>
-                <View style={styles.contentWrapper}>
-                  <AppImage
-                    source={require('../../assets/images/card_7.png')}
-                    imageStyle={styles.newsCommicTitleImage}
-                    resizeMode="stretch"
-                  />
-                  <View style={{gap: 8, flex: 1}}>
-                    <AppText style={styles.newsNovelsTitle}>
-                      Nine Star Hegemon Body Art
-                    </AppText>
-                    <AppText
-                      style={styles.newsNovelsDescription}
-                      numberOfLines={6}>
-                      Long Chen, a crippled youth who cannot cultivate, is
-                      constantly targeted and bullied by his fellow noble heirs.
-                      After a particularly vicious beating, he wakes up and
-                      realizes a Pill Sovereign's soul has somehow merged with
-                      him, giving him some additional memories. Within those
-                      memories is the mysterious Nine Star Hegemon Body Art, a
-                      cultivation technique that even he can train in, but whose
-                      secrets and origin are still a mystery to him. Relying on
-                      his improved instincts as he finally begins to cultivate,
-                      he realizes a huge conspiracy is underfoot within the
-                      Phoenix Cry Empire; a conspiracy involving his father,
-                      members of the imperial family, and even the Emperor
-                      himself.
-                    </AppText>
-                  </View>
-                </View>
-              </View>
-              <FlatList
-                data={ListComicNew}
-                renderItem={renderCommicNewsItem}
-                horizontal
-                contentContainerStyle={styles.gap}
-                showsHorizontalScrollIndicator={false}
-                ListHeaderComponent={<View style={styles.gapView} />}
-                ListFooterComponent={<View style={styles.gapView} />}
-              />
-            </View>
-            <AppImage
-              source={require('../../assets/images/bg_2.png')}
-              resizeMode="contain"
-              imageStyle={styles.newComicBackground}
-            />
-          </View>
-        )}
-        {isLoading ? (
-          <View style={styles.loadingContainer}>
-            <ActivityIndicator />
-          </View>
-        ) : (
-          <View style={{paddingHorizontal: 16, gap: 16, marginTop: 25}}>
+
+        <View style={styles.mainWrapper}>
+          <Categories />
+          <View style={styles.commicContainer}>
             <View style={styles.titleWrapper}>
-              <Title content="All NOvels" width={245} height={42} />
+              <Title content="Popular Novels" width={250} height={42} />
+              <TouchableOpacity style={styles.moreBtn}>
+                <Text style={styles.moreText}>More</Text>
+                <IconRight fill={COLORS.lightmode.netrual[500]} />
+              </TouchableOpacity>
+            </View>
+            <FlatList
+              data={ListComic}
+              renderItem={renderCommicPopularItem}
+              numColumns={3}
+              columnWrapperStyle={styles.gapColumnWrapper}
+              style={styles.gapColumnWrapper}
+              scrollEnabled={false}
+            />
+            <View style={styles.titleWrapper}>
+              <Title content="Complete NOvels" width={245} height={42} />
               <TouchableOpacity style={styles.moreBtn}>
                 <Text style={styles.moreText}>More</Text>
                 <IconRight />
               </TouchableOpacity>
             </View>
-            <Card2 />
-            <Card2 />
-            <Card2 />
-            <Card2 />
           </View>
-        )}
-        <View style={{height: 20}} />
+          <FlatList
+            data={ListComic}
+            renderItem={renderCommicDoneItem}
+            horizontal
+            contentContainerStyle={styles.gap}
+            showsHorizontalScrollIndicator={false}
+            ListHeaderComponent={<View style={styles.gapView} />}
+            ListFooterComponent={<View style={styles.gapView} />}
+          />
+          <FlatList
+            data={ListComic}
+            renderItem={renderCommicDoneItem}
+            horizontal
+            contentContainerStyle={styles.gap}
+            showsHorizontalScrollIndicator={false}
+            ListHeaderComponent={<View style={styles.gapView} />}
+            ListFooterComponent={<View style={styles.gapView} />}
+          />
+        </View>
+
+        <View style={styles.bgNewCommic}>
+          <AppImage
+            source={require('../../assets/images/bg_1.png')}
+            resizeMode="contain"
+            imageStyle={styles.bgContainer}
+          />
+          <View style={styles.newsComicWrapper}>
+            <View style={styles.newComicContentWrapper}>
+              <View style={styles.titleWrapper}>
+                <Title content="New Novels" width={245} height={42} />
+                <TouchableOpacity style={styles.moreBtn}>
+                  <Text style={styles.moreText}>More</Text>
+                  <IconRight />
+                </TouchableOpacity>
+              </View>
+              <View style={styles.contentWrapper}>
+                <AppImage
+                  source={require('../../assets/images/card_7.png')}
+                  imageStyle={styles.newsCommicTitleImage}
+                  resizeMode="stretch"
+                />
+                <View style={{gap: 8, flex: 1}}>
+                  <AppText style={styles.newsNovelsTitle}>
+                    Nine Star Hegemon Body Art
+                  </AppText>
+                  <AppText
+                    style={styles.newsNovelsDescription}
+                    numberOfLines={6}>
+                    Long Chen, a crippled youth who cannot cultivate, is
+                    constantly targeted and bullied by his fellow noble heirs.
+                    After a particularly vicious beating, he wakes up and
+                    realizes a Pill Sovereign's soul has somehow merged with
+                    him, giving him some additional memories. Within those
+                    memories is the mysterious Nine Star Hegemon Body Art, a
+                    cultivation technique that even he can train in, but whose
+                    secrets and origin are still a mystery to him. Relying on
+                    his improved instincts as he finally begins to cultivate, he
+                    realizes a huge conspiracy is underfoot within the Phoenix
+                    Cry Empire; a conspiracy involving his father, members of
+                    the imperial family, and even the Emperor himself.
+                  </AppText>
+                </View>
+              </View>
+            </View>
+            <FlatList
+              data={ListComicNew}
+              renderItem={renderCommicNewsItem}
+              horizontal
+              contentContainerStyle={styles.gap}
+              showsHorizontalScrollIndicator={false}
+              ListHeaderComponent={<View style={styles.gapView} />}
+              ListFooterComponent={<View style={styles.gapView} />}
+            />
+          </View>
+          <AppImage
+            source={require('../../assets/images/bg_2.png')}
+            resizeMode="contain"
+            imageStyle={styles.newComicBackground}
+          />
+        </View>
+
+        <View style={{paddingHorizontal: 16, gap: 16, marginTop: 25}}>
+          <View style={styles.titleWrapper}>
+            <Title content="All NOvels" width={245} height={42} />
+            <TouchableOpacity style={styles.moreBtn}>
+              <Text style={styles.moreText}>More</Text>
+              <IconRight />
+            </TouchableOpacity>
+          </View>
+          <Card2 />
+          <Card2 />
+          <Card2 />
+          <Card2 />
+        </View>
+
+        <View style={{height: 150}} />
       </ScrollView>
     </AppWrapper>
   );
