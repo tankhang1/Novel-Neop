@@ -90,22 +90,20 @@ type Props = NativeStackScreenProps<
   'Home'
 >;
 const HomeScreen = ({navigation}: Props) => {
-  const renderCommicPopularItem = useCallback(
-    ({item, index}: ListRenderItemInfo<TComic>) => (
-      <Card
-        {...item}
-        key={index}
-        index={index}
-        onPress={() => navigation.navigate('ComicDetail')}
-      />
-    ),
-    [navigation],
+  const onCardPress = () => {
+    navigation.navigate('ComicDetail');
+  };
+  const renderCommicPopularItem = ({
+    item,
+    index,
+  }: ListRenderItemInfo<TComic>) => (
+    <Card {...item} key={index} onPress={onCardPress} />
   );
+
   const renderCommicDoneItem = useCallback(
     ({item, index}: ListRenderItemInfo<TComic>) => (
       <Card
         {...item}
-        index={index}
         key={index}
         imageStyle={styles.newsItemImage}
         wrapperStyle={styles.newsItemWrapper}
@@ -119,7 +117,6 @@ const HomeScreen = ({navigation}: Props) => {
     ({item, index}: ListRenderItemInfo<TComic>) => (
       <Card
         {...item}
-        index={index}
         key={index}
         imageStyle={styles.newsItemImage}
         wrapperStyle={styles.newsItemWrapper}

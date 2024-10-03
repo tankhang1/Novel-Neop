@@ -19,9 +19,14 @@ const BottomTabNavigation = () => {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
+        lazy: true,
       }}
       tabBar={customBottomTab}>
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{unmountOnBlur: false}}
+      />
       <Tab.Screen name="Library" component={LibraryScreen} />
       <Tab.Screen name="Notification" component={NotificationScreen} />
       <Tab.Screen name="MyProfile" component={MyProfileScreen} />

@@ -10,7 +10,9 @@ import ProfileActiveIcon from '@assets/icons/navigation/profile-active.svg';
 import ArrowLeftIcon from '@assets/icons/arrow-back.svg';
 import SortIcon from '@assets/icons/sort.svg';
 import SortUpIcon from '@assets/icons/sort-up.svg';
-
+import TopTabIndicatorIcon from '@assets/icons/top-tab-indicator.svg';
+import BackgroundBtn from '@assets/icons/bg-btn.svg';
+import ArrowRightIcon from '@assets/icons/arrow-right.svg';
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 const ASSETS = {
@@ -27,6 +29,9 @@ const ASSETS = {
     ArrowLeftIcon,
     SortIcon,
     SortUpIcon,
+    TopTabIndicatorIcon,
+    BackgroundBtn,
+    ArrowRightIcon,
   },
 };
 const COLORS = {

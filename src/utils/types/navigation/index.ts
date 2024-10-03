@@ -10,9 +10,15 @@ type RootStackParamList = {
 
 type BottomTabParamList = {
   Home: undefined;
-  Library: undefined;
+  Library: TopLibraryTabParamList;
   Notification: undefined;
   MyProfile: undefined;
 };
 
-export type {RootStackParamList, BottomTabParamList};
+type TopLibraryTabParamList = {
+  BookMarks: undefined;
+  Owned: undefined;
+  Offline: undefined;
+};
+
+export type {RootStackParamList, BottomTabParamList, TopLibraryTabParamList};
