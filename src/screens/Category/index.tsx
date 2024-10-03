@@ -6,6 +6,7 @@ import AppImage from '@components/AppImage';
 import Card2 from '@screens/HomeScreen/components/Card2';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@utils/types/navigation';
+import AppSearch from '@components/AppSearch';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Category'>;
 const CategoryScreen = ({navigation}: Props) => {
@@ -25,6 +26,7 @@ const CategoryScreen = ({navigation}: Props) => {
         imageStyle={styles.bannerImage}
         resizeMode="cover"
       />
+      <AppSearch />
       <View style={styles.scrollContainer}>
         <ScrollView
           contentContainerStyle={styles.scrollViewContent}

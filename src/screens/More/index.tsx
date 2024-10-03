@@ -5,6 +5,7 @@ import {ASSETS, WIDTH} from '@constants/index';
 import Card2 from '@screens/HomeScreen/components/Card2';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@utils/types/navigation';
+import AppSearch from '@components/AppSearch';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'More'>;
 const MoreScreen = ({navigation}: Props) => {
@@ -19,7 +20,7 @@ const MoreScreen = ({navigation}: Props) => {
         }
         rightSection={<View style={styles.rightSection} />}
       />
-
+      <AppSearch />
       <View style={styles.scrollContainer}>
         <ScrollView
           contentContainerStyle={styles.scrollViewContent}

@@ -45,7 +45,7 @@ const SearchScreen = () => {
             key={index}
             label={tag.label}
             index={index}
-            isActive={true}
+            isActive={index % 2 === 0}
           />
         ))}
       </View>
