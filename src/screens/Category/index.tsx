@@ -21,12 +21,12 @@ const CategoryScreen = ({navigation}: Props) => {
         }
         rightSection={<View style={styles.rightSection} />}
       />
+      <AppSearch />
       <AppImage
         source={require('@assets/images/banner.png')}
         imageStyle={styles.bannerImage}
         resizeMode="cover"
       />
-      <AppSearch />
       <View style={styles.scrollContainer}>
         <ScrollView
           contentContainerStyle={styles.scrollViewContent}

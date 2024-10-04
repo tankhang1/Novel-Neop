@@ -13,10 +13,20 @@ import SortUpIcon from '@assets/icons/sort-up.svg';
 import TopTabIndicatorIcon from '@assets/icons/top-tab-indicator.svg';
 import BackgroundBtn from '@assets/icons/bg-btn.svg';
 import ArrowRightIcon from '@assets/icons/arrow-right.svg';
+import DoneAllIcon from '@assets/icons/done-all.svg';
+import NotificationICon from '@assets/icons/notification-icon.svg';
+import RemoveIcon from '@assets/icons/remove.svg';
+import InfoWarningIcon from '@assets/icons/info-warning.svg';
+import EditIcon from '@assets/icons/edit.svg';
+
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 const ASSETS = {
-  IMAGES: {},
+  IMAGES: {
+    NotificationSettingImage: require('@assets/images/notification-setting.png'),
+    SettingImage: require('@assets/images/setting.png'),
+    LogoutSettingImage: require('@assets/images/logout-setting.png'),
+  },
   ICONS: {
     HomeActiveIcon,
     HomeInActiveIcon,
@@ -32,6 +42,11 @@ const ASSETS = {
     TopTabIndicatorIcon,
     BackgroundBtn,
     ArrowRightIcon,
+    DoneAllIcon,
+    RemoveIcon,
+    NotificationICon,
+    InfoWarningIcon,
+    EditIcon,
   },
 };
 const COLORS = {

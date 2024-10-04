@@ -1,4 +1,9 @@
-import {ImageBackground, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  ImageBackground,
+  TouchableOpacity,
+  StyleSheet,
+  View,
+} from 'react-native';
 import React, {memo, useState} from 'react';
 import {ASSETS, WIDTH} from '@constants/index';
 import AppImageWrapper from '@components/AppImageWrapper';
@@ -54,11 +59,14 @@ const CustomBottomTab = ({navigation}: BottomTabBarProps) => {
         if (tab.key === 'COMMIC') {
           return (
             <TouchableOpacity key={tab.key} style={styles.tabContainer}>
-              <AppImageWrapper
-                source={tab.url}
-                resizeMode="stretch"
-                imageStyle={styles.commicImage}
-              />
+              <View style={styles.commicContainer}>
+                <AppImageWrapper
+                  source={tab.url}
+                  resizeMode="contain"
+                  type="YELLOW"
+                  imageStyle={styles.commicImage}
+                />
+              </View>
             </TouchableOpacity>
           );
         }
@@ -99,8 +107,11 @@ const styles = StyleSheet.create({
   commicImage: {
     width: 60,
     height: 88,
+  },
+  commicContainer: {
     position: 'absolute',
-    top: -10,
+    top: -70,
+    height: 100,
   },
 });
 

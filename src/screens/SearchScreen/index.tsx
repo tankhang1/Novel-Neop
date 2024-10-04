@@ -4,6 +4,7 @@ import {COLORS} from '@constants/index';
 import SearchItem from './components/SearchItem';
 import BadgeItem from './components/BadgeItem';
 import Item from './components/Item';
+import Categories from '@screens/HomeScreen/Categories';
 
 const TAGS = [
   {label: '#Wuxia', value: '#Wuxia'},
@@ -38,6 +39,9 @@ const SearchScreen = () => {
   return (
     <View style={styles.container}>
       <SearchItem />
+      <View>
+        <Categories />
+      </View>
       <Text style={styles.title}>Tag</Text>
       <View style={styles.tagsContainer}>
         {TAGS.map((tag, index) => (

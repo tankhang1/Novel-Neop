@@ -30,7 +30,7 @@ const AppCarousel = () => {
     }, 1000);
   }, [curIndex]);
   return (
-    <View>
+    <View style={styles.banner}>
       <ScrollView
         ref={ref}
         horizontal

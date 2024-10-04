@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   ImageBackground,
   Text,
@@ -33,7 +33,7 @@ const TOP_TAB = [
   },
 ];
 
-const MyTabBar: React.FC<MaterialTopTabBarProps> = ({navigation}) => {
+const MyTabBar: React.FC<MaterialTopTabBarProps> = ({navigation, state}) => {
   const [tab, setTab] = useState(0);
   const transX = useSharedValue(0);
 
@@ -50,6 +50,11 @@ const MyTabBar: React.FC<MaterialTopTabBarProps> = ({navigation}) => {
       ],
     };
   });
+
+  useEffect(() => {
+    setTab(state.index);
+    transX.value = withSpring(state.index);
+  }, [state, transX]);
 
   return (
     <ImageBackground
