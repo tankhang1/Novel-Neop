@@ -186,15 +186,14 @@ const ComicDetail = ({navigation}: Props) => {
         backgroundColor: COLORS.lightmode.netrual[50],
       }}>
       <ScrollView>
-        <View style={styles.backButtonContainer}>
-          <TouchableOpacity
-            style={styles.backButton}
-            onPress={() => navigation.goBack()}
-            hitSlop={10}>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={styles.backButtonContainer}>
+          <View style={styles.backButton} hitSlop={10}>
             <ArrowBack width={20} />
-          </TouchableOpacity>
+          </View>
           <Text style={styles.backTxtButton}>Back</Text>
-        </View>
+        </TouchableOpacity>
 
         <View style={styles.globalStyle}>
           <Card2

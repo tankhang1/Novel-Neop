@@ -59,6 +59,7 @@ const Card2 = ({
             />
           </View>
         </View>
+        <View style={{flex: 1}} />
         {isReview && (
           <View style={styles.rowContainer}>
             <View style={styles.iconTextContainer}>
