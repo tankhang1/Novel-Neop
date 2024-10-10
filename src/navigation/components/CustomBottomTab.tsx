@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: WIDTH,
-    height: 120,
+    height: 100,
     backgroundColor: 'transparent',
     position: 'absolute',
     bottom: 0,

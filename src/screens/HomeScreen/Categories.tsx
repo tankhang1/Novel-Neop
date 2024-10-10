@@ -30,13 +30,16 @@ const CategoryItem = ({icon: Icon, label}: TCategoryItem) => {
     </TouchableOpacity>
   );
 };
-const Categories = () => {
+type TCategory = {
+  gap?: number;
+};
+const Categories = ({gap = 16}: TCategory) => {
   return (
     <ScrollView
       horizontal
       contentContainerStyle={styles.categoryWrapper}
       showsHorizontalScrollIndicator={false}>
-      <View style={{width: 16}} />
+      <View style={{width: gap}} />
       <CategoryItem icon={FirstHalf} label="Wuxia" key={1} />
       <CategoryItem icon={Magical} label="Fantasy" key={2} />
       <CategoryItem icon={MartialArts} label="Urban" key={3} />
@@ -46,7 +49,7 @@ const Categories = () => {
       <CategoryItem icon={FirstHalf} label="Sci-fi" key={7} />
       <CategoryItem icon={FirstHalf} label="Sci-fi" key={8} />
 
-      <View style={{width: 16}} />
+      <View style={{width: gap}} />
     </ScrollView>
   );
 };

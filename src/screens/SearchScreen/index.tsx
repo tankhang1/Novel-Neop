@@ -39,9 +39,12 @@ const SearchScreen = () => {
   return (
     <View style={styles.container}>
       <SearchItem />
+      <Text style={styles.title}>Category</Text>
+
       <View>
-        <Categories />
+        <Categories gap={0} />
       </View>
+
       <Text style={styles.title}>Tag</Text>
       <View style={styles.tagsContainer}>
         {TAGS.map((tag, index) => (

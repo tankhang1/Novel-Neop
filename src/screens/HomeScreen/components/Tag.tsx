@@ -6,11 +6,16 @@ type TTag = {
   wrapperStyle?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
   content?: string;
+  isGray?: boolean;
 };
-const Tag = ({wrapperStyle, textStyle, content}: TTag) => {
+const Tag = ({wrapperStyle, textStyle, content, isGray}: TTag) => {
   return (
     <ImageBackground
-      source={require('../../../assets/images/tag.png')}
+      source={
+        isGray
+          ? require('../../../assets/images/tag-gray.png')
+          : require('../../../assets/images/tag.png')
+      }
       style={wrapperStyle}>
       <AppText style={textStyle}>{content}</AppText>
     </ImageBackground>

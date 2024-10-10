@@ -9,8 +9,10 @@ import {
 import React from 'react';
 import SearchIcon from '@assets/icons/SearchIcon';
 import {ASSETS, COLORS} from '@constants/index';
+import {useNavigation} from '@react-navigation/native';
 
 const AppSearch = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.searchWrapper}>
       <ImageBackground
@@ -27,6 +29,11 @@ const AppSearch = () => {
           style={styles.input}
           placeholderTextColor={COLORS.lightmode.netrual[300]}
           placeholder="Search something"
+          onPressIn={() => {
+            //@ts-ignore
+            navigation.navigate('SearchScreen');
+          }}
+          showSoftInputOnFocus={false}
         />
       </ImageBackground>
       <TouchableOpacity>
@@ -34,7 +41,7 @@ const AppSearch = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.iconWrapper}>
         <ASSETS.ICONS.SortUpIcon />
-        <Text>Mới đánh dấu</Text>
+        <Text style={styles.newBookMark}>Mới đánh dấu</Text>
       </TouchableOpacity>
     </View>
   );
@@ -43,6 +50,12 @@ const AppSearch = () => {
 export default AppSearch;
 
 const styles = StyleSheet.create({
+  newBookMark: {
+    fontSize: 13,
+    fontWeight: '500',
+    color: COLORS.lightmode.netrual[500],
+    fontFamily: 'Montserrat',
+  },
   container: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -53,6 +66,7 @@ const styles = StyleSheet.create({
   },
   input: {
     color: COLORS.lightmode.netrual[300],
+    fontSize: 14,
     fontFamily: 'Merriweather-Light',
     flex: 1,
   },

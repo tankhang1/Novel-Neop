@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     width: '70%',
     textAlign: 'center',
     lineHeight: 18,
+    opacity: 0.5,
   },
   buttonImage: {
     width: 220,

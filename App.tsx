@@ -3,6 +3,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {View} from 'react-native';
 import AnimatedBootSplash from '@screens/AnimatedBootSplash';
 import AppNavigation from '@navigation/AppNavigation';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import dayjs from 'dayjs';
+dayjs.extend(relativeTime);
 const App = () => {
   const [visible, setVisible] = useState(true);
   const [isReady, setIsReady] = useState(false);

@@ -1,6 +1,6 @@
-import {ImageBackground, StyleSheet} from 'react-native';
+import {ImageBackground, StyleSheet, View} from 'react-native';
 import * as React from 'react';
-import {HEIGHT, WIDTH} from '@constants/index';
+import {ASSETS, HEIGHT, WIDTH} from '@constants/index';
 import Animated, {
   interpolate,
   SlideInDown,
@@ -53,6 +53,9 @@ const AnimatedBootSplash = ({onAnimationEnd, isReady}: Props) => {
         source={require('../../assets/images/large_logo.png')}
         style={[styles.logo, logoAnimatedStyle]}
       />
+      <View style={styles.neop_logo}>
+        <ASSETS.ICONS.NeopLogoIcon />
+      </View>
     </ImageBackground>
   );
 };
@@ -71,5 +74,9 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
     resizeMode: 'contain',
+  },
+  neop_logo: {
+    position: 'absolute',
+    bottom: 20,
   },
 });

@@ -105,8 +105,7 @@ const styles = StyleSheet.create({
   },
   description: {
     color: COLORS.lightmode.netrual[900],
-    fontSize: 17,
-    letterSpacing: 1,
+    fontSize: 14,
     fontStyle: 'normal',
     fontWeight: '600',
     fontFamily: 'Montserrat',

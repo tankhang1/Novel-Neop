@@ -18,9 +18,21 @@ import NotificationICon from '@assets/icons/notification-icon.svg';
 import RemoveIcon from '@assets/icons/remove.svg';
 import InfoWarningIcon from '@assets/icons/info-warning.svg';
 import EditIcon from '@assets/icons/edit.svg';
+import NeopLogoIcon from '@assets/icons/neop-logo.svg';
+import MenuIcon from '@assets/icons/menu.svg';
+import EyeIcon from '@assets/icons/eye.svg';
+import EyeFillIcon from '@assets/icons/eye-fill.svg';
+import StarFillIcon from '@assets/icons/star-fill.svg';
+import ChervonDownIcon from '@assets/icons/chervon-down.svg';
+import BookMarkIcon from '@assets/icons/bookmark.tsx';
+import LikeIcon from '@assets/icons/like';
+import ExchangeIcon from '@assets/icons/exchange.svg';
+import PlayIcon from '@assets/icons/play.svg';
+import SendFillIcon from '@assets/icons/send-fill.svg';
 
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
+
 const ASSETS = {
   IMAGES: {
     NotificationSettingImage: require('@assets/images/notification-setting.png'),
@@ -47,6 +59,17 @@ const ASSETS = {
     NotificationICon,
     InfoWarningIcon,
     EditIcon,
+    NeopLogoIcon,
+    MenuIcon,
+    EyeIcon,
+    EyeFillIcon,
+    StarFillIcon,
+    ChervonDownIcon,
+    BookMarkIcon,
+    LikeIcon,
+    ExchangeIcon,
+    PlayIcon,
+    SendFillIcon,
   },
 };
 const COLORS = {
@@ -78,6 +101,7 @@ const COLORS = {
       200: '#C4C6CD',
       300: '#A3A5AE',
       500: '#626576',
+      700: 'rgba(34, 38, 43, 1)',
       900: '#090A0B',
     },
     success: {

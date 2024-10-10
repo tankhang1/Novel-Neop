@@ -146,7 +146,12 @@ const HomeScreen = ({navigation}: Props) => {
           <Categories />
           <View style={styles.commicContainer}>
             <View style={styles.titleWrapper}>
-              <Title content="Popular Novels" width={250} height={42} />
+              <Title
+                content="POPULAR NOVELS"
+                width={250}
+                height={42}
+                textStyle={{paddingLeft: 16}}
+              />
               <TouchableOpacity
                 style={styles.moreBtn}
                 onPress={() => navigation.navigate('More')}>
@@ -163,7 +168,12 @@ const HomeScreen = ({navigation}: Props) => {
               scrollEnabled={false}
             />
             <View style={styles.titleWrapper}>
-              <Title content="Complete NOvels" width={245} height={42} />
+              <Title
+                content="COMPLETE NOVELS"
+                width={250}
+                height={42}
+                textStyle={{paddingLeft: 16}}
+              />
               <TouchableOpacity style={styles.moreBtn}>
                 <Text style={styles.moreText}>More</Text>
                 <IconRight />
@@ -199,7 +209,12 @@ const HomeScreen = ({navigation}: Props) => {
           <View style={styles.newsComicWrapper}>
             <View style={styles.newComicContentWrapper}>
               <View style={styles.titleWrapper}>
-                <Title content="New Novels" width={245} height={42} />
+                <Title
+                  content="NEW NOVELS"
+                  width={200}
+                  height={42}
+                  textStyle={{paddingLeft: 16}}
+                />
                 <TouchableOpacity style={styles.moreBtn}>
                   <Text style={styles.moreText}>More</Text>
                   <IconRight />
@@ -253,7 +268,12 @@ const HomeScreen = ({navigation}: Props) => {
 
         <View style={{paddingHorizontal: 16, gap: 16, marginTop: 25}}>
           <View style={styles.titleWrapper}>
-            <Title content="All NOvels" width={245} height={42} />
+            <Title
+              content="ALL NOVELS"
+              width={191}
+              height={42}
+              textStyle={{paddingLeft: 16}}
+            />
             <TouchableOpacity style={styles.moreBtn}>
               <Text style={styles.moreText}>More</Text>
               <IconRight />
