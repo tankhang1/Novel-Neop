@@ -35,7 +35,7 @@ const Card = ({
       <AppImageWrapper
         source={image}
         imageStyle={[styles.image, imageStyle]}
-        resizeMode="stretch"
+        resizeMode="cover"
       />
       <AppText
         style={[styles.labelStyle, labelStyle]}

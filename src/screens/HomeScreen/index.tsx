@@ -31,57 +31,57 @@ const ListComic = [
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('@assets/images/card_2.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Cử Đầu Vọng Minh Nguyệt',
   },
   {
-    image: require('@assets/images/card_3.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Chiến Thần Trừ Yêu Dẹp Loạn',
   },
   {
-    image: require('@assets/images/card_4.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Tiểu Gia Là Siêu Cấp Thiên Tài',
   },
   {
-    image: require('@assets/images/card_5.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Thần Lộ',
   },
   {
-    image: require('@assets/images/card_6.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Nhật Ký Của Tôi Và Em Trai',
   },
 ];
 const ListComicNew = [
   {
-    image: require('@assets/images/card_7.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('@assets/images/card_7.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('@assets/images/card_7.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('@assets/images/card_7.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('@assets/images/card_7.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('@assets/images/card_7.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('@assets/images/card_7.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
   {
-    image: require('@assets/images/card_7.png'),
+    image: require('@assets/images/card_1.png'),
     label: 'Phàm Nhân Tu Tiên',
   },
 ];
@@ -180,24 +180,26 @@ const HomeScreen = ({navigation}: Props) => {
               </TouchableOpacity>
             </View>
           </View>
-          <FlatList
-            data={ListComic}
-            renderItem={renderCommicDoneItem}
-            horizontal
-            contentContainerStyle={styles.gap}
-            showsHorizontalScrollIndicator={false}
-            ListHeaderComponent={<View style={styles.gapView} />}
-            ListFooterComponent={<View style={styles.gapView} />}
-          />
-          <FlatList
-            data={ListComic}
-            renderItem={renderCommicDoneItem}
-            horizontal
-            contentContainerStyle={styles.gap}
-            showsHorizontalScrollIndicator={false}
-            ListHeaderComponent={<View style={styles.gapView} />}
-            ListFooterComponent={<View style={styles.gapView} />}
-          />
+          <View>
+            <FlatList
+              data={ListComic}
+              renderItem={renderCommicDoneItem}
+              horizontal
+              contentContainerStyle={styles.gap}
+              showsHorizontalScrollIndicator={false}
+              ListHeaderComponent={<View style={styles.gapView} />}
+              ListFooterComponent={<View style={styles.gapView} />}
+            />
+            <FlatList
+              data={ListComic}
+              renderItem={renderCommicDoneItem}
+              horizontal
+              contentContainerStyle={styles.gap}
+              showsHorizontalScrollIndicator={false}
+              ListHeaderComponent={<View style={styles.gapView} />}
+              ListFooterComponent={<View style={styles.gapView} />}
+            />
+          </View>
         </View>
 
         <View style={styles.bgNewCommic}>

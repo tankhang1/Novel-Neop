@@ -5,6 +5,7 @@ import AnimatedBootSplash from '@screens/AnimatedBootSplash';
 import AppNavigation from '@navigation/AppNavigation';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import dayjs from 'dayjs';
+import {PortalProvider} from '@gorhom/portal';
 dayjs.extend(relativeTime);
 const App = () => {
   const [visible, setVisible] = useState(true);
@@ -15,25 +16,27 @@ const App = () => {
     }, 2000);
   }, []);
   return (
-    <View style={{flex: 1}}>
-      {visible ? (
-        <AnimatedBootSplash
-          onAnimationEnd={() => {
-            setVisible(false);
-          }}
-          isReady={isReady}
-        />
-      ) : (
-        <NavigationContainer
-          onReady={() => {
-            setTimeout(() => {
+    <PortalProvider>
+      <View style={{flex: 1}}>
+        {visible ? (
+          <AnimatedBootSplash
+            onAnimationEnd={() => {
               setVisible(false);
-            }, 2500);
-          }}>
-          <AppNavigation />
-        </NavigationContainer>
-      )}
-    </View>
+            }}
+            isReady={isReady}
+          />
+        ) : (
+          <NavigationContainer
+            onReady={() => {
+              setTimeout(() => {
+                setVisible(false);
+              }, 2500);
+            }}>
+            <AppNavigation />
+          </NavigationContainer>
+        )}
+      </View>
+    </PortalProvider>
   );
 };
 
