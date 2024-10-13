@@ -4,7 +4,6 @@ import {
   Pressable,
   Text,
   ScrollView,
-  ImageBackground,
   TouchableOpacity,
   FlatList,
   ActivityIndicator,
@@ -14,91 +13,19 @@ import {useNavigation} from '@react-navigation/native';
 import AppText from '@components/AppText';
 import ArrowBack from '@assets/icons/arrow-back.svg';
 import ArrowRight from '@assets/icons/arrow-right.svg';
-import Menu from '@assets/icons/menu.svg';
-import MenuFill from '@assets/icons/menu-fill.svg';
-
-import Moon from '@assets/icons/moon.svg';
-import Setting from '@assets/icons/setting.svg';
-
-import IconCheck from '@assets/icons/check.svg';
-import IconCheckWhite from '@assets/icons/check-white.svg';
-
-import SettingFill from '@assets/icons/setting-fill.svg';
-
 import {useSharedValue} from 'react-native-reanimated';
 import BottomSheet from '@components/AppBottomSheet';
-import {WIDTH} from '@constants/index';
-import AppImage from '@components/AppImage';
-import CloseX from '@assets/icons/CloseX';
-const LIST_CHAPTER = [
-  {
-    label: 'Chương 1: Sống lại 10 năm trước',
-    value: 'C1',
-  },
-  {
-    label: 'Chương 2: Không gian ổn định trang bị',
-    value: 'C2',
-  },
+import {ASSETS, COLORS, COMMIC, HEIGHT, WIDTH} from '@constants/index';
+import ChapterBottomSheet from './components/ChapterBottomSheet';
+
+const LIST_COLOR = [
+  'rgba(235, 188, 93, 0.05)',
+  'rgba(197,231,206,1)',
+  'rgba(246,238,220,1)',
+  'rgba(34,38,43,1)',
 ];
-
-const CHAPTER_CONTENT = new Map([
-  [
-    'C1',
-    {
-      title: 'Chương 1: Trùng sinh 10 năm trước',
-      content: `Kiến trúc được kiến tạo bằng sắt thép, mặt đất sạch sẽ trơn bóng như gương, các bác sĩ mặc đồ trắng đi lại lui tới. Bên trong khu vực chờ đợi là một đám thiếu niên với gương mặt tràn đầy non nớt, thần sắc kích động kèm với sự sợ hãi trên mặt đám nhỏ.
-
-“Đinh đinh đông, số hiệu số 2318, Tần Phong, tiến về khu tiêm thuốc số ba!”
-
-“Ta đến!”
-
-Thiếu niên kia liền vội vàng đứng lên, hai chân kích động đến mức có chút như nhũn ra, kết quả hai chân tự đẩy qua lại một chút liền ngã phịch xuống đất một tiếng. Cho dù là ai nghe được, đều biết đối phương lần này té có bao nhiêu thảm.
-
-“A, Tần Phong!” Chu Hạo cảm giác lần này thật sự là vô cùng thê thảm, liền vội vàng đi đến nâng lên. Kết quả không nghĩ tới, Tần Phong thế mà ngã đến hôn mê!
-
-“Mẹ nó, Tần Phong ngươi đùa cái gì vậy, ngay tại thời điểm quan trọng như vậy thế mà ngươi lại hôn mê, nhanh tỉnh lại, lập tức đến lượt ngươi tiêm dược tề thức tỉnh!”
-
-Công nguyên năm 2200, thế giới đại biến, nhân loại từ bá chủ hai ngàn năm nhanh chóng trở thành chuỗi thức ăn cấp thấp nhất. Nhưng bởi vì trong nhân loại vẫn còn dị năng giả, cổ võ giả cực mạnh tồn tại mới có thể dẫn dắt đến được không gian sinh tồn như cũ. Mà tiền đề để thức tỉnh dị năng giả, cổ võ giả, chính là vào thời điểm năm mười sáu tuổi tiêm vào bản thân dược tề thức tỉnh.
-
-Điều này đại biểu cho thời điểm có thể một bước lên trời, thế mà ngay lúc này Tần Phong hôn mê bất tỉnh, khiến Chu Hạo gấp gáp.
-
-“Đinh đinh đông, số hiệu số 2318, Tần Phong, tiến về khu tiêm thuốc số ba!”
-
-Lần nữa âm thanh từ loa truyền đến còn có từng tiếng kêu gọi khiến cho đầu óc Tần Phong hỗn độn càng thêm đau đớn như muốn nứt ra.
-
-‘Ta không chết?’ Trong đầu Tần Phong xuất hiện ra ý nghĩ này, hắn làm sao có thể không chết, rõ ràng tại thời điểm hắn đánh chiến thắng với Thú Vương cường đại vô danh đã đồng quy vu tận. Mà lúc này, thanh âm bên tai dần dần rõ ràng hơn.
-`,
-    },
-  ],
-  [
-    'C2',
-    {
-      title: 'Chương 2: Không gian ổn định trang bị',
-      content: `Kiến trúc được kiến tạo bằng sắt thép, mặt đất sạch sẽ trơn bóng như gương, các bác sĩ mặc đồ trắng đi lại lui tới. Bên trong khu vực chờ đợi là một đám thiếu niên với gương mặt tràn đầy non nớt, thần sắc kích động kèm với sự sợ hãi trên mặt đám nhỏ.
-
-“Đinh đinh đông, số hiệu số 2318, Tần Phong, tiến về khu tiêm thuốc số ba!”
-
-“Ta đến!”
-
-Thiếu niên kia liền vội vàng đứng lên, hai chân kích động đến mức có chút như nhũn ra, kết quả hai chân tự đẩy qua lại một chút liền ngã phịch xuống đất một tiếng. Cho dù là ai nghe được, đều biết đối phương lần này té có bao nhiêu thảm.
-
-“A, Tần Phong!” Chu Hạo cảm giác lần này thật sự là vô cùng thê thảm, liền vội vàng đi đến nâng lên. Kết quả không nghĩ tới, Tần Phong thế mà ngã đến hôn mê!
-
-“Mẹ nó, Tần Phong ngươi đùa cái gì vậy, ngay tại thời điểm quan trọng như vậy thế mà ngươi lại hôn mê, nhanh tỉnh lại, lập tức đến lượt ngươi tiêm dược tề thức tỉnh!”
-
-Công nguyên năm 2200, thế giới đại biến, nhân loại từ bá chủ hai ngàn năm nhanh chóng trở thành chuỗi thức ăn cấp thấp nhất. Nhưng bởi vì trong nhân loại vẫn còn dị năng giả, cổ võ giả cực mạnh tồn tại mới có thể dẫn dắt đến được không gian sinh tồn như cũ. Mà tiền đề để thức tỉnh dị năng giả, cổ võ giả, chính là vào thời điểm năm mười sáu tuổi tiêm vào bản thân dược tề thức tỉnh.
-
-Điều này đại biểu cho thời điểm có thể một bước lên trời, thế mà ngay lúc này Tần Phong hôn mê bất tỉnh, khiến Chu Hạo gấp gáp.
-
-“Đinh đinh đông, số hiệu số 2318, Tần Phong, tiến về khu tiêm thuốc số ba!”
-
-Lần nữa âm thanh từ loa truyền đến còn có từng tiếng kêu gọi khiến cho đầu óc Tần Phong hỗn độn càng thêm đau đớn như muốn nứt ra.
-
-‘Ta không chết?’ Trong đầu Tần Phong xuất hiện ra ý nghĩ này, hắn làm sao có thể không chết, rõ ràng tại thời điểm hắn đánh chiến thắng với Thú Vương cường đại vô danh đã đồng quy vu tận. Mà lúc này, thanh âm bên tai dần dần rõ ràng hơn.
-`,
-    },
-  ],
-]);
+const LIST_KEY = Array.from(COMMIC, ([key]) => key);
+const LIST_FONTFAMILY = ['Lora', 'Poppins', 'Times-New-Roman', 'OpenSans'];
 const ReadComic = () => {
   const navigation = useNavigation();
   const isOpen = useSharedValue(false);
@@ -112,10 +39,8 @@ const ReadComic = () => {
   const [fontSize, setFontSize] = useState(14);
   const [padding, setPadding] = useState(0);
   const [lineHeight, setLineHeight] = useState(16);
-  const [chapter, setChapter] = useState('C1');
-  const [fontFamily, setFontFamily] = useState<'Merriweather-Light' | 'Inter'>(
-    'Inter',
-  );
+  const [chapter, setChapter] = useState(1);
+  const [fontFamily, setFontFamily] = useState<string>(LIST_FONTFAMILY[0]);
   const [counterEnd, setCounterEnd] = useState(0);
   const toggleSheet = () => {
     isOpen.value = !isOpen.value;
@@ -125,14 +50,39 @@ const ReadComic = () => {
     isOpenMenu.value = !isOpenMenu.value;
     setTabBottomSheet(undefined);
   };
+  const onDecreaseFontSize = () => {
+    if (fontSize > 1) setFontSize(fontSize - 1);
+  };
+  const onIncreaseFontSize = () => {
+    setFontSize(fontSize + 1);
+  };
+  const onDecreaseLineHeight = () => {
+    if (lineHeight > 1) setLineHeight(lineHeight - 1);
+  };
+  const onIncreaseLineHeight = () => {
+    setLineHeight(lineHeight + 1);
+  };
+  const onDecreasePadding = () => {
+    if (padding > 1) setPadding(padding - 1);
+  };
+  const onIncreasePadding = () => {
+    setPadding(padding + 1);
+  };
+
+  const onDecreaseChapter = () => {
+    if (chapter > 1) setChapter(chapter - 1);
+  };
+  const onIncreaseChapter = () => {
+    if (chapter < LIST_KEY.length) setChapter(chapter + 1);
+  };
   return (
     <View style={styles.overall}>
       <View style={styles.headerContainer}>
-        <TouchableOpacity onPress={() => navigation.goBack()} hitSlop={10}>
-          <ArrowBack />
+        <TouchableOpacity onPress={() => navigation.goBack()} hitSlop={15}>
+          <ArrowBack width={20} />
         </TouchableOpacity>
-        <AppText style={styles.headerTitle}>
-          {CHAPTER_CONTENT.get(chapter)?.title}
+        <AppText style={styles.headerTitle} numberOfLines={1}>
+          {COMMIC.get(chapter)?.title}
         </AppText>
         <TouchableOpacity
           style={styles.headerContainer}
@@ -147,10 +97,10 @@ const ReadComic = () => {
           if (counterEnd === 1) {
             setIsLoading(true);
             setTimeout(() => {
-              setChapter('C2');
+              onIncreaseChapter();
               setIsLoading(false);
               setCounterEnd(0);
-            }, 1000);
+            }, 500);
           }
         }}
         onEndReachedThreshold={0.1}
@@ -165,16 +115,8 @@ const ReadComic = () => {
                 style={[
                   styles.comicTitle,
                   {
-                    color: themeColor === '#000000' ? 'white' : 'black',
-                  },
-                ]}>
-                {CHAPTER_CONTENT.get(chapter)?.title}
-              </Text>
-              <Text
-                style={[
-                  styles.comicContent,
-                  {
-                    color: themeColor === '#000000' ? 'white' : 'black',
+                    color:
+                      themeColor === 'rgba(34,38,43,1)' ? 'white' : 'black',
                   },
                   {
                     fontSize: fontSize,
@@ -183,7 +125,23 @@ const ReadComic = () => {
                     fontFamily: fontFamily,
                   },
                 ]}>
-                {CHAPTER_CONTENT.get(chapter)?.content}
+                {COMMIC.get(chapter)?.title}
+              </Text>
+              <Text
+                style={[
+                  styles.comicContent,
+                  {
+                    color:
+                      themeColor === 'rgba(34,38,43,1)' ? 'white' : 'black',
+                  },
+                  {
+                    fontSize: fontSize,
+                    lineHeight: lineHeight,
+                    padding: padding,
+                    fontFamily: fontFamily,
+                  },
+                ]}>
+                {COMMIC.get(chapter)?.content}
               </Text>
               <View style={{height: 100}} />
             </View>
@@ -198,7 +156,7 @@ const ReadComic = () => {
         toggleSheet={toggleSheet}
         duration={300}
         wrapperStyle={styles.bottomSheetContainer}>
-        <View style={{paddingHorizontal: 16, paddingVertical: 12, height: 340}}>
+        <View style={{paddingHorizontal: 16, height: HEIGHT * 0.45}}>
           <ScrollView>
             <View style={styles.bottomSheetHeaderContainer}>
               <TouchableOpacity
@@ -207,231 +165,139 @@ const ReadComic = () => {
                   setTabBottomSheet(undefined);
                   toggleSheet();
                 }}>
-                <CloseX />
+                <ASSETS.ICONS.ChervonDownIcon
+                  width={20}
+                  height={20}
+                  color={COLORS.lightmode.netrual[300]}
+                />
               </TouchableOpacity>
             </View>
             <View style={{gap: 24}}>
-              <View>
-                <AppText style={styles.themeText}>Màu nền</AppText>
-                <View style={styles.themeSelectionContainer}>
-                  <TouchableOpacity onPress={() => setThemeColor('#FFFFFF')}>
-                    <ImageBackground
-                      source={require('../../assets/images/bg-color-1.png')}
-                      style={styles.themeItem}>
-                      {themeColor === '#FFFFFF' && <IconCheck />}
-                    </ImageBackground>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}>
+                <View style={{gap: 5}}>
+                  <Text style={styles.label}>Size</Text>
+                  <View style={styles.container}>
+                    <TouchableOpacity
+                      style={[styles.button, {opacity: 0.5}]}
+                      onPress={onDecreaseFontSize}>
+                      <Text style={styles.buttonText}>A -</Text>
+                    </TouchableOpacity>
+                    <Text style={styles.numberText}>{fontSize}</Text>
+                    <TouchableOpacity
+                      style={styles.button}
+                      onPress={onIncreaseFontSize}>
+                      <Text style={styles.buttonText}>A +</Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+                <View style={{gap: 5}}>
+                  <Text style={styles.label}>Line height</Text>
+                  <View style={styles.container}>
+                    <TouchableOpacity
+                      style={[styles.button, {opacity: 0.5}]}
+                      onPress={onDecreaseLineHeight}>
+                      <ASSETS.ICONS.LineHeightIcon />
+                    </TouchableOpacity>
+                    <Text style={styles.numberText}>{lineHeight}</Text>
+                    <TouchableOpacity
+                      style={styles.button}
+                      onPress={onIncreaseLineHeight}>
+                      <ASSETS.ICONS.LineHeightIcon />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              </View>
+              <View style={{gap: 5}}>
+                <Text style={styles.label}>Margin</Text>
+                <View style={styles.container}>
+                  <TouchableOpacity
+                    style={[styles.button, {opacity: 0.5}]}
+                    onPress={onDecreasePadding}>
+                    <ASSETS.ICONS.MarginIcon />
                   </TouchableOpacity>
-                  <TouchableOpacity onPress={() => setThemeColor('#E5E3DF')}>
-                    <ImageBackground
-                      source={require('../../assets/images/bg-color-2.png')}
-                      style={styles.themeItem}>
-                      {themeColor === '#E5E3DF' && <IconCheck />}
-                    </ImageBackground>
+                  <Text style={styles.numberText}>{padding}</Text>
+                  <TouchableOpacity
+                    style={styles.button}
+                    onPress={onIncreasePadding}>
+                    <ASSETS.ICONS.MarginIcon />
                   </TouchableOpacity>
-                  <TouchableOpacity onPress={() => setThemeColor('#EAE4D3')}>
-                    <ImageBackground
-                      source={require('../../assets/images/bg-color-3.png')}
-                      style={styles.themeItem}>
-                      {themeColor === '#EAE4D3' && <IconCheck />}
-                    </ImageBackground>
-                  </TouchableOpacity>
+                </View>
+              </View>
 
-                  <TouchableOpacity onPress={() => setThemeColor('#000000')}>
-                    <ImageBackground
-                      source={require('../../assets/images/bg-color-4.png')}
-                      style={styles.themeItem}>
-                      {themeColor === '#000000' && <IconCheckWhite />}
-                    </ImageBackground>
-                  </TouchableOpacity>
-                </View>
-              </View>
-              <View>
-                <AppText style={styles.themeText}>Font chữ</AppText>
-                <View style={styles.themeSelectionContainer}>
-                  <Pressable
-                    onPress={() => setFontFamily('Merriweather-Light')}>
-                    <ImageBackground
-                      source={require('../../assets/images/bg-color-4.png')}
-                      style={styles.themeItem}>
-                      <AppText style={[{color: '#F8DE5E'}, styles.fontStyle]}>
-                        Aa
-                      </AppText>
-                    </ImageBackground>
-                  </Pressable>
-                  <Pressable
-                    onPress={() => setFontFamily('Merriweather-Light')}>
-                    <ImageBackground
-                      source={require('../../assets/images/bg-color-1.png')}
-                      style={styles.themeItem}>
-                      <AppText style={[{color: 'black'}, styles.fontStyle]}>
-                        Aa
-                      </AppText>
-                    </ImageBackground>
-                  </Pressable>
-                  <Pressable onPress={() => setFontFamily('Inter')}>
-                    <ImageBackground
-                      source={require('../../assets/images/bg-color-2.png')}
-                      style={styles.themeItem}
+              <View style={{gap: 5}}>
+                <Text style={styles.label}>Theme</Text>
+                <ScrollView horizontal contentContainerStyle={{gap: 17}}>
+                  {LIST_COLOR.map((item, index) => (
+                    <TouchableOpacity
+                      onPress={() => setThemeColor(item)}
+                      key={index}
+                      style={[
+                        styles.colorItem,
+                        {
+                          backgroundColor: item,
+                          borderColor:
+                            themeColor === item
+                              ? COLORS.lightmode.primary[600]
+                              : item,
+                        },
+                      ]}
                     />
-                  </Pressable>
-                </View>
+                  ))}
+                </ScrollView>
               </View>
-              <View style={styles.menuItemContainer}>
-                <View>
-                  <AppText style={{fontSize: 14, color: '#090A0B'}}>
-                    Cỡ chữ
-                  </AppText>
-                  <View style={styles.themeSelectionContainer}>
+              <View style={{gap: 5}}>
+                <Text style={styles.label}>Font</Text>
+                <ScrollView contentContainerStyle={{gap: 17}}>
+                  {LIST_FONTFAMILY.map((item, index) => (
                     <TouchableOpacity
-                      onPress={() => {
-                        if (fontSize > 0) {
-                          setFontSize(fontSize - 1);
-                        }
-                      }}>
-                      <AppImage
-                        source={require('../../assets/images/arrow-left-circle.png')}
-                        imageStyle={styles.arrowBtn}
-                        resizeMode="contain"
-                      />
+                      onPress={() => setFontFamily(item)}
+                      key={index}
+                      style={[
+                        styles.fontItem,
+                        {
+                          borderColor:
+                            fontFamily === item
+                              ? COLORS.lightmode.primary[600]
+                              : COLORS.lightmode.netrual[50],
+                        },
+                      ]}>
+                      <Text
+                        style={[
+                          styles.fontTxt,
+                          {
+                            fontFamily: item,
+                          },
+                        ]}>
+                        The brightly lit inner palace was a dazzling yet
+                        imposing sight.
+                      </Text>
                     </TouchableOpacity>
-                    <AppText style={{fontSize: 16, color: 'black'}}>
-                      {fontSize}
-                    </AppText>
-                    <TouchableOpacity
-                      onPress={() => {
-                        setFontSize(fontSize + 1);
-                      }}>
-                      <AppImage
-                        source={require('../../assets/images/arrow-right-circle.png')}
-                        imageStyle={styles.arrowBtn}
-                        resizeMode="contain"
-                      />
-                    </TouchableOpacity>
-                  </View>
-                </View>
-                <View>
-                  <AppText style={{fontSize: 14, color: '#090A0B'}}>
-                    Khoảng cách dòng
-                  </AppText>
-                  <View style={styles.themeSelectionContainer}>
-                    <TouchableOpacity
-                      onPress={() => {
-                        if (lineHeight > 0) {
-                          setLineHeight(lineHeight - 1);
-                        }
-                      }}>
-                      <AppImage
-                        source={require('../../assets/images/arrow-left-circle.png')}
-                        imageStyle={styles.arrowBtn}
-                        resizeMode="contain"
-                      />
-                    </TouchableOpacity>
-                    <AppText style={{fontSize: 16, color: 'black'}}>
-                      {lineHeight}
-                    </AppText>
-                    <TouchableOpacity
-                      onPress={() => {
-                        setLineHeight(lineHeight + 1);
-                      }}>
-                      <AppImage
-                        source={require('../../assets/images/arrow-right-circle.png')}
-                        imageStyle={styles.arrowBtn}
-                        resizeMode="contain"
-                      />
-                    </TouchableOpacity>
-                  </View>
-                </View>
-                <View>
-                  <AppText style={{fontSize: 14, color: '#090A0B'}}>
-                    Padding
-                  </AppText>
-                  <View style={styles.themeSelectionContainer}>
-                    <TouchableOpacity
-                      onPress={() => {
-                        if (padding > 0) {
-                          setPadding(padding - 1);
-                        }
-                      }}>
-                      <AppImage
-                        source={require('../../assets/images/arrow-left-circle.png')}
-                        imageStyle={styles.arrowBtn}
-                        resizeMode="contain"
-                      />
-                    </TouchableOpacity>
-                    <AppText style={{fontSize: 16, color: 'black'}}>
-                      {padding}
-                    </AppText>
-                    <TouchableOpacity
-                      onPress={() => {
-                        setPadding(padding + 1);
-                      }}>
-                      <AppImage
-                        source={require('../../assets/images/arrow-right-circle.png')}
-                        imageStyle={styles.arrowBtn}
-                        resizeMode="contain"
-                      />
-                    </TouchableOpacity>
-                  </View>
-                </View>
+                  ))}
+                </ScrollView>
               </View>
             </View>
           </ScrollView>
         </View>
       </BottomSheet>
-      <BottomSheet
-        isOpen={isOpenMenu}
-        toggleSheet={toggleSheetMenu}
-        duration={300}
-        wrapperStyle={styles.bottomSheetContainer}>
-        <View style={styles.bottomSheetContentContainer}>
-          <View style={styles.bottomSheetHeaderContainer1}>
-            <AppText style={styles.headerTitle1}>Danh sách chương</AppText>
 
-            <TouchableOpacity
-              hitSlop={10}
-              onPress={() => {
-                setTabBottomSheet(undefined);
-                toggleSheetMenu();
-              }}>
-              <CloseX />
-            </TouchableOpacity>
-          </View>
-          <View>
-            <ScrollView>
-              {LIST_CHAPTER.map((item, index) => (
-                <TouchableOpacity
-                  key={index}
-                  onPress={() => {
-                    setChapter(item.value);
-                    setCounterEnd(0);
-                  }}
-                  style={styles.chapterItem}>
-                  <AppText
-                    style={{
-                      fontSize: 14,
-                      color: chapter === item.value ? '#EBBC5D' : '#22262B',
-                    }}>
-                    {item.label}
-                  </AppText>
-                </TouchableOpacity>
-              ))}
-            </ScrollView>
-          </View>
-        </View>
-      </BottomSheet>
+      <ChapterBottomSheet
+        isOpenMenu={isOpenMenu}
+        toggleSheetMenu={toggleSheetMenu}
+        setTabBottomSheet={setTabBottomSheet}
+        themeColor={themeColor}
+        setChapter={setChapter}
+        chapter={chapter}
+        setCounterEnd={setCounterEnd}
+      />
       <View style={styles.menuContainer}>
         <View style={styles.menuItemContainer}>
-          <TouchableOpacity hitSlop={10} onPress={() => setChapter('C1')}>
-            <ArrowBack />
+          <TouchableOpacity hitSlop={10} onPress={onDecreaseChapter}>
+            <ArrowBack width={20} />
           </TouchableOpacity>
-          <AppText style={styles.themeText}>
-            {chapter === 'C1' ? 'Chương 01' : 'Chương 02'}
-          </AppText>
-          <TouchableOpacity hitSlop={10} onPress={() => setChapter('C2')}>
-            <ArrowRight fill="#EBBC5D" />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.menuItemContainer}>
           <Pressable
             hitSlop={10}
             onPress={() => {
@@ -442,11 +308,15 @@ const ReadComic = () => {
                 setTabBottomSheet('menu');
               }
             }}>
-            {tabBottomSheet === 'menu' ? <MenuFill /> : <Menu />}
+            <ASSETS.ICONS.MenuIcon
+              color={
+                tabBottomSheet === 'menu'
+                  ? COLORS.lightmode.primary[600]
+                  : COLORS.lightmode.netrual[900]
+              }
+            />
           </Pressable>
-          <Pressable>
-            <Moon />
-          </Pressable>
+
           <Pressable
             hitSlop={10}
             onPress={() => {
@@ -457,8 +327,17 @@ const ReadComic = () => {
                 setTabBottomSheet('setting');
               }
             }}>
-            {tabBottomSheet === 'setting' ? <SettingFill /> : <Setting />}
+            <ASSETS.ICONS.SubtractIcon
+              color={
+                tabBottomSheet === 'setting'
+                  ? COLORS.lightmode.primary[600]
+                  : COLORS.lightmode.netrual[900]
+              }
+            />
           </Pressable>
+          <TouchableOpacity hitSlop={10} onPress={onIncreaseChapter}>
+            <ArrowRight width={40} fill="#EBBC5D" />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -467,15 +346,16 @@ const ReadComic = () => {
 
 export default ReadComic;
 const styles = StyleSheet.create({
+  colorItem: {width: 87, height: 40, borderRadius: 100, borderWidth: 2},
   headerContainer: {
     paddingHorizontal: 16,
     paddingVertical: 8,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    backgroundColor: COLORS.lightmode.netrual[0],
   },
-  headerTitle: {fontSize: 14, color: '#090A0B'},
-  headerTitle1: {color: 'black', fontSize: 16},
+  headerTitle: {fontSize: 16, color: '#090A0B'},
   overall: {
     flex: 1,
   },
@@ -486,9 +366,8 @@ const styles = StyleSheet.create({
   bottomSheetContainer: {height: 430, flex: 1},
   bottomSheetContentContainer: {paddingHorizontal: 16, paddingVertical: 12},
   bottomSheetHeaderContainer: {
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
-    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   bottomSheetHeaderContainer1: {
     flexDirection: 'row',
@@ -510,11 +389,7 @@ const styles = StyleSheet.create({
   themeText: {fontSize: 14, color: '#090A0B'},
   fontStyle: {fontSize: 18},
   arrowBtn: {width: 32, height: 32},
-  chapterItem: {
-    borderBottomWidth: 1,
-    borderColor: '#E1E2E5',
-    paddingVertical: 10,
-  },
+
   menuContainer: {
     gap: 8,
     paddingHorizontal: 16,
@@ -529,5 +404,47 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8, // Note: gap property is not directly supported in React Native, use marginRight or padding as a workaround
+  },
+  button: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 6,
+    paddingHorizontal: 22,
+    width: 70,
+    height: 40,
+    backgroundColor: COLORS.lightmode.netrual[100],
+    borderRadius: 100,
+  },
+  buttonText: {
+    fontFamily: 'Montserrat',
+    color: COLORS.lightmode.netrual[900],
+  },
+  numberText: {
+    fontFamily: 'Montserrat',
+    fontSize: 15,
+    color: COLORS.lightmode.netrual[900],
+  },
+  label: {
+    fontSize: 14,
+    color: COLORS.lightmode.netrual[900],
+    fontFamily: 'Montserrat',
+    fontWeight: '600',
+  },
+  fontItem: {
+    backgroundColor: COLORS.lightmode.netrual[50],
+    paddingHorizontal: 22,
+    height: 47,
+    justifyContent: 'center',
+    borderRadius: 18,
+    borderWidth: 2,
+  },
+  fontTxt: {
+    fontSize: 13,
+    color: COLORS.lightmode.netrual[900],
   },
 });

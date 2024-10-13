@@ -7,7 +7,7 @@ import {
   ImageBackground,
   TextInput,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import ArrowBack from '@assets/icons/arrow-back.svg';
 import Card2 from '../HomeScreen/components/Card2';
 import {ASSETS, COLORS, HEIGHT, WIDTH} from '@constants/index';
@@ -121,6 +121,7 @@ const ListComments: TComment[] = [
 ];
 type Props = NativeStackScreenProps<RootStackParamList, 'ComicDetail'>;
 const ComicDetail = ({navigation}: Props) => {
+  const [isTimeoutLoading, setIsTimeOutLoading] = useState(true);
   const [tab, setTab] = useState<'info' | 'chapter'>('info');
   const transX = useSharedValue(0);
   const isOpenLanguage = useSharedValue(false);
@@ -141,7 +142,11 @@ const ComicDetail = ({navigation}: Props) => {
       ],
     };
   });
-
+  useEffect(() => {
+    setTimeout(() => {
+      setIsTimeOutLoading(false);
+    }, 100);
+  }, []);
   return (
     <View
       style={{
@@ -255,7 +260,9 @@ const ComicDetail = ({navigation}: Props) => {
         source={require('@assets/images/bottom-bg.png')}
         style={styles.bottomBar}>
         <View style={styles.bottomContainer}>
-          <TouchableOpacity style={styles.bottomItemContainer}>
+          <TouchableOpacity
+            style={styles.bottomItemContainer}
+            onPress={() => navigation.navigate('ReadComic')}>
             <ASSETS.ICONS.ExchangeIcon />
             <Text style={styles.bottomItemTextStyle}>Read</Text>
           </TouchableOpacity>
@@ -265,6 +272,7 @@ const ComicDetail = ({navigation}: Props) => {
           </TouchableOpacity>
         </View>
       </ImageBackground>
+
       <BottomSheet
         isOpen={isOpenLanguage}
         toggleSheet={toggleSheetLanguage}
@@ -275,15 +283,20 @@ const ComicDetail = ({navigation}: Props) => {
         }}>
         <View>
           <Text style={styles.bottomContainerStyle}>Language</Text>
-          <View>
-            {Language.map((language, index) => (
-              <TouchableOpacity key={index} style={styles.bottomTouchableItem}>
-                <Text style={styles.bottomTouchableTextItem}>{language}</Text>
-              </TouchableOpacity>
-            ))}
-          </View>
+          {!isTimeoutLoading && (
+            <View>
+              {Language.map((language, index) => (
+                <TouchableOpacity
+                  key={index}
+                  style={styles.bottomTouchableItem}>
+                  <Text style={styles.bottomTouchableTextItem}>{language}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          )}
         </View>
       </BottomSheet>
+
       <BottomSheet
         isOpen={isOpenComment}
         toggleSheet={toggleSheetComment}
@@ -305,16 +318,16 @@ const ComicDetail = ({navigation}: Props) => {
               <CloseX color="white" />
             </TouchableOpacity>
           </View>
-
-          <View style={styles.scrollContainer}>
-            <ScrollView contentContainerStyle={styles.commentList}>
-              {ListComments.map((comment, index) => (
-                <AppComment {...comment} key={index} />
-              ))}
-              <View style={styles.bottomSpacer} />
-            </ScrollView>
-          </View>
-
+          {!isTimeoutLoading && (
+            <View style={styles.scrollContainer}>
+              <ScrollView contentContainerStyle={styles.commentList}>
+                {ListComments.map((comment, index) => (
+                  <AppComment {...comment} key={index} />
+                ))}
+                <View style={styles.bottomSpacer} />
+              </ScrollView>
+            </View>
+          )}
           <View style={styles.commentInputContainer}>
             <AppImage
               source={{

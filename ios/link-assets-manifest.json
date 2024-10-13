@@ -14,12 +14,24 @@
       "sha1": "bb895d19b8a1fbe1c57fc89cac5da82fdc8fdef4"
     },
     {
+      "path": "src/assets/fonts/OpenSans.ttf",
+      "sha1": "02ff457da3d6a5cbd9b724d67ddfe04a475629e4"
+    },
+    {
+      "path": "src/assets/fonts/Poppins.ttf",
+      "sha1": "fdd3002e7d814ee47c1c1b8487c72c6bbb3a2d00"
+    },
+    {
       "path": "src/assets/fonts/SedgwickAve-Regular.ttf",
       "sha1": "b35432cfcecaa9021f68b67919b37ba43c724b1c"
     },
     {
       "path": "src/assets/fonts/SedgwickAveDisplay-Regular.ttf",
       "sha1": "38b59f4c8f422f1b136351d822e3462ebc1726e2"
+    },
+    {
+      "path": "src/assets/fonts/Times-New-Roman.ttf",
+      "sha1": "e763030b5cd2cc5a8ed9662bf7e8aa496999dd4b"
     },
     {
       "path": "src/assets/fonts/UVNBayBuomHepNang.ttf",
