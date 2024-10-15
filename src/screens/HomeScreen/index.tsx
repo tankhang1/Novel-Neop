@@ -99,7 +99,13 @@ const HomeScreen = ({navigation}: Props) => {
     item,
     index,
   }: ListRenderItemInfo<TComic>) => (
-    <Card {...item} key={index} onPress={onCardPress} />
+    <Card
+      {...item}
+      key={index}
+      onPress={onCardPress}
+      wrapperStyle={{height: 200}}
+      imageStyle={{height: 150}}
+    />
   );
 
   const renderCommicDoneItem = useCallback(
