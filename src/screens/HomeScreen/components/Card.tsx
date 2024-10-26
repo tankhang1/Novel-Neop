@@ -36,6 +36,7 @@ const Card = ({
         source={image}
         imageStyle={[styles.image, imageStyle]}
         resizeMode="cover"
+        type="YELLOW"
       />
       <AppText
         style={[styles.labelStyle, labelStyle]}
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   labelStyle: {
-    fontSize: 14,
+    fontSize: 16,
     color: 'black',
   },
 });

@@ -168,6 +168,7 @@ const ComicDetail = ({navigation}: Props) => {
             titleStyle={styles.cardTitleStyle}
             subTitleStyle={styles.cardSubTitleStyle}
             isReview={false}
+            rightSectionStyle={styles.card2RightSection}
           />
           <View style={styles.descriptionImageContainer}>
             <View style={styles.descriptionLeftContainer}>
@@ -214,7 +215,10 @@ const ComicDetail = ({navigation}: Props) => {
           </View>
         </View>
 
-        <View style={styles.bottomTabHeaderContainer}>
+        <ImageBackground
+          source={require('@assets/images/mask.png')}
+          resizeMode="stretch"
+          style={styles.bottomTabHeaderContainer}>
           <View style={styles.tabContainer}>
             <TouchableOpacity
               onPress={() => {
@@ -254,7 +258,7 @@ const ComicDetail = ({navigation}: Props) => {
           </View>
           {tab === 'info' ? <CommicDetailTab /> : <CommicChapterTab />}
           <Comments isOpenComment={isOpenComment} />
-        </View>
+        </ImageBackground>
       </ScrollView>
       <ImageBackground
         source={require('@assets/images/bottom-bg.png')}
@@ -278,7 +282,8 @@ const ComicDetail = ({navigation}: Props) => {
         toggleSheet={toggleSheetLanguage}
         duration={300}
         wrapperStyle={{
-          backgroundColor: COLORS.lightmode.netrual[0],
+          // backgroundColor: COLORS.lightmode.netrual[0],
+          width: WIDTH,
           height: HEIGHT * 0.4,
         }}>
         <View>
@@ -302,8 +307,8 @@ const ComicDetail = ({navigation}: Props) => {
         toggleSheet={toggleSheetComment}
         duration={300}
         wrapperStyle={{
-          backgroundColor: COLORS.lightmode.netrual[0],
-
+          // backgroundColor: COLORS.lightmode.netrual[0],
+          width: WIDTH,
           height: HEIGHT * 0.9,
         }}>
         <View style={styles.container}>
@@ -336,11 +341,16 @@ const ComicDetail = ({navigation}: Props) => {
               imageStyle={styles.commentImage}
               resizeMode="contain"
             />
-            <TextInput
-              placeholder={`Let's discuss`}
-              placeholderTextColor={COLORS.lightmode.netrual[200]}
-              style={styles.textInput}
-            />
+            <ImageBackground
+              source={require('@assets/images/mask-1.png')}
+              resizeMode="stretch"
+              style={{flex: 1}}>
+              <TextInput
+                placeholder={`Let's discuss`}
+                placeholderTextColor={COLORS.lightmode.netrual[200]}
+                style={styles.textInput}
+              />
+            </ImageBackground>
             <TouchableOpacity>
               <ASSETS.ICONS.SendFillIcon />
             </TouchableOpacity>
@@ -392,7 +402,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: 'Montserrat',
     color: COLORS.lightmode.netrual[900],
-    backgroundColor: COLORS.lightmode.netrual[50],
+    // backgroundColor: COLORS.lightmode.netrual[50],
     flex: 1,
     borderRadius: 5,
     paddingHorizontal: 15,
@@ -532,9 +542,9 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
   bottomTabHeaderContainer: {
-    backgroundColor: COLORS.lightmode.netrual[0],
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
+    paddingTop: 10,
   },
 
   comicMoreStyle: {
@@ -575,7 +585,7 @@ const styles = StyleSheet.create({
   },
   bottomItemTextStyle: {
     color: COLORS.lightmode.netrual[700],
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-SemiBold',
     fontSize: 14,
     fontWeight: '600',
   },
@@ -612,6 +622,7 @@ const styles = StyleSheet.create({
     color: COLORS.lightmode.netrual[900],
     fontFamily: 'UVNBayBuomHepNang_Regular',
   },
+  card2RightSection: {gap: 8},
 });
 
 export default ComicDetail;

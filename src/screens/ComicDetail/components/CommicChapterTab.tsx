@@ -61,7 +61,6 @@ const ComicChapterTab = () => {
         </View>
         <ChapterItem />
       </View>
-      <Text>ComicChapterTab</Text>
     </View>
   );
 };
@@ -73,10 +72,7 @@ const styles = StyleSheet.create({
     gap: 16,
     paddingHorizontal: 16,
   },
-  scrollView: {
-    borderBottomWidth: 1,
-    borderColor: COLORS.lightmode.netrual[50],
-  },
+  scrollView: {},
   scrollViewContainer: {
     gap: 18,
   },
@@ -113,7 +109,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.lightmode.netrual[500],
   },
   chapterItemContainer: {
-    borderBottomWidth: 1,
+    borderTopWidth: 1,
     borderColor: COLORS.lightmode.netrual[50],
     padding: 16,
     gap: 6,

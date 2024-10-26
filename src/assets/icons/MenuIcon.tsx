@@ -2,9 +2,9 @@ import React from 'react';
 import Svg, {Path} from 'react-native-svg';
 import {TIcon} from '@utils/types/meta';
 
-const MenuIcon = ({color = '#22262B'}: TIcon) => {
+const MenuIcon = ({color = '#22262B', width = 41, height = 40}: TIcon) => {
   return (
-    <Svg width={41} height={40} viewBox="0 0 41 40" fill="none">
+    <Svg width={width} height={height} viewBox="0 0 41 40" fill="none">
       <Path
         fillRule="evenodd"
         clipRule="evenodd"

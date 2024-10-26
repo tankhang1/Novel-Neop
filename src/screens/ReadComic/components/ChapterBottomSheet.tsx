@@ -33,24 +33,20 @@ const ChapterBottomSheet = ({
       duration={300}
       wrapperStyle={styles.bottomSheetContainer}>
       <View style={styles.bottomSheetContentContainer}>
-        <View style={styles.bottomSheetHeaderContainer1}>
-          <TouchableOpacity
-            hitSlop={20}
-            onPress={() => {
-              setTabBottomSheet(undefined);
-              toggleSheetMenu();
-            }}>
-            <ASSETS.ICONS.ChervonDownIcon
-              width={20}
-              height={20}
-              color={COLORS.lightmode.netrual[300]}
-            />
-          </TouchableOpacity>
-        </View>
-        <View
-          style={{
-            height: HEIGHT * 0.6,
-          }}>
+        <TouchableOpacity
+          hitSlop={30}
+          onPress={() => {
+            setTabBottomSheet(undefined);
+            toggleSheetMenu();
+          }}
+          style={styles.bottomSheetHeaderContainer1}>
+          <ASSETS.ICONS.ChervonDownIcon
+            width={20}
+            height={20}
+            color={COLORS.lightmode.netrual[300]}
+          />
+        </TouchableOpacity>
+        <View style={{flex: 1}}>
           <ScrollView>
             {LIST_CHAPTER.map((item, index) => (
               <TouchableOpacity
@@ -63,6 +59,7 @@ const ChapterBottomSheet = ({
                 <ChapterItem {...item} isActive={chapter === index + 1} />
               </TouchableOpacity>
             ))}
+            <View style={{height: 100}} />
           </ScrollView>
         </View>
       </View>
@@ -72,12 +69,17 @@ const ChapterBottomSheet = ({
 
 export default ChapterBottomSheet;
 const styles = StyleSheet.create({
-  bottomSheetContainer: {height: HEIGHT * 0.7, flex: 1},
-  bottomSheetContentContainer: {paddingHorizontal: 16, paddingVertical: 12},
+  bottomSheetContainer: {height: HEIGHT * 0.8, flex: 1},
+  bottomSheetContentContainer: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    flex: 1,
+  },
 
   bottomSheetHeaderContainer1: {
     justifyContent: 'center',
     alignItems: 'center',
+    paddingVertical: 10,
   },
   headerTitle1: {color: 'black', fontSize: 16},
   chapterItem: {},

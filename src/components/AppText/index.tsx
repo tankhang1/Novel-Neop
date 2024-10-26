@@ -19,6 +19,6 @@ const AppText = ({style, children, numberOfLines}: TAppText) => {
 export default AppText;
 const styles = StyleSheet.create({
   globalText: {
-    fontFamily: 'SedgwickAve-Regular',
+    fontFamily: 'UVNBayBuomHep_Bold',
   },
 });

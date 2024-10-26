@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
   categoryLabel: {
     textAlign: 'center',
-    fontSize: 14,
+    fontSize: 16,
     color: '#090A0B',
   },
   categoryWrapper: {gap: 4, alignItems: 'flex-start'},

@@ -36,44 +36,60 @@ const ReadComic = () => {
     'menu' | 'setting' | undefined
   >();
   const [themeColor, setThemeColor] = useState('#FFFFFF');
-  const [fontSize, setFontSize] = useState(14);
+  const [fontSize, setFontSize] = useState(15);
   const [padding, setPadding] = useState(0);
-  const [lineHeight, setLineHeight] = useState(16);
+  const [lineHeight, setLineHeight] = useState(28);
   const [chapter, setChapter] = useState(1);
   const [fontFamily, setFontFamily] = useState<string>(LIST_FONTFAMILY[0]);
   const [counterEnd, setCounterEnd] = useState(0);
   const toggleSheet = () => {
     isOpen.value = !isOpen.value;
+    if (isOpenMenu.value) {
+      toggleSheetMenu();
+    }
     setTabBottomSheet(undefined);
   };
   const toggleSheetMenu = () => {
     isOpenMenu.value = !isOpenMenu.value;
+    if (isOpen.value) {
+      toggleSheet();
+    }
     setTabBottomSheet(undefined);
   };
   const onDecreaseFontSize = () => {
-    if (fontSize > 1) setFontSize(fontSize - 1);
+    if (fontSize > 1) {
+      setFontSize(fontSize - 1);
+    }
   };
   const onIncreaseFontSize = () => {
     setFontSize(fontSize + 1);
   };
   const onDecreaseLineHeight = () => {
-    if (lineHeight > 1) setLineHeight(lineHeight - 1);
+    if (lineHeight > 1) {
+      setLineHeight(lineHeight - 1);
+    }
   };
   const onIncreaseLineHeight = () => {
     setLineHeight(lineHeight + 1);
   };
   const onDecreasePadding = () => {
-    if (padding > 1) setPadding(padding - 1);
+    if (padding > 1) {
+      setPadding(padding - 1);
+    }
   };
   const onIncreasePadding = () => {
     setPadding(padding + 1);
   };
 
   const onDecreaseChapter = () => {
-    if (chapter > 1) setChapter(chapter - 1);
+    if (chapter > 1) {
+      setChapter(chapter - 1);
+    }
   };
   const onIncreaseChapter = () => {
-    if (chapter < LIST_KEY.length) setChapter(chapter + 1);
+    if (chapter < LIST_KEY.length) {
+      setChapter(chapter + 1);
+    }
   };
   return (
     <View style={styles.overall}>
@@ -111,7 +127,8 @@ const ReadComic = () => {
             </View>
           ) : (
             <View style={styles.comicContainer}>
-              <Text
+              {/* <Text
+                selectable
                 style={[
                   styles.comicTitle,
                   {
@@ -126,8 +143,9 @@ const ReadComic = () => {
                   },
                 ]}>
                 {COMMIC.get(chapter)?.title}
-              </Text>
+              </Text> */}
               <Text
+                selectable
                 style={[
                   styles.comicContent,
                   {
@@ -156,22 +174,21 @@ const ReadComic = () => {
         toggleSheet={toggleSheet}
         duration={300}
         wrapperStyle={styles.bottomSheetContainer}>
-        <View style={{paddingHorizontal: 16, height: HEIGHT * 0.45}}>
+        <View style={{paddingHorizontal: 16, height: HEIGHT * 0.4}}>
           <ScrollView>
-            <View style={styles.bottomSheetHeaderContainer}>
-              <TouchableOpacity
-                hitSlop={10}
-                onPress={() => {
-                  setTabBottomSheet(undefined);
-                  toggleSheet();
-                }}>
-                <ASSETS.ICONS.ChervonDownIcon
-                  width={20}
-                  height={20}
-                  color={COLORS.lightmode.netrual[300]}
-                />
-              </TouchableOpacity>
-            </View>
+            <TouchableOpacity
+              hitSlop={10}
+              onPress={() => {
+                setTabBottomSheet(undefined);
+                toggleSheet();
+              }}
+              style={styles.bottomSheetHeaderContainer}>
+              <ASSETS.ICONS.ChervonDownIcon
+                width={20}
+                height={20}
+                color={COLORS.lightmode.netrual[300]}
+              />
+            </TouchableOpacity>
             <View style={{gap: 24}}>
               <View
                 style={{
@@ -308,7 +325,7 @@ const ReadComic = () => {
                 setTabBottomSheet('menu');
               }
             }}>
-            <ASSETS.ICONS.MenuIcon
+            <ASSETS.ICONS.MenuDotSquare
               color={
                 tabBottomSheet === 'menu'
                   ? COLORS.lightmode.primary[600]
@@ -327,7 +344,7 @@ const ReadComic = () => {
                 setTabBottomSheet('setting');
               }
             }}>
-            <ASSETS.ICONS.SubtractIcon
+            <ASSETS.ICONS.Settings
               color={
                 tabBottomSheet === 'setting'
                   ? COLORS.lightmode.primary[600]
@@ -360,7 +377,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   loadingContainer: {flex: 1, justifyContent: 'center', alignItems: 'center'},
-  comicContainer: {paddingHorizontal: 16, gap: 12, paddingVertical: 12},
+  comicContainer: {paddingHorizontal: 16, gap: 12, paddingVertical: 6},
   comicTitle: {fontSize: 16, fontWeight: 700, fontFamily: 'Lora'},
   comicContent: {fontSize: 16, fontFamily: 'Lora'},
   bottomSheetContainer: {height: 430, flex: 1},
@@ -368,6 +385,7 @@ const styles = StyleSheet.create({
   bottomSheetHeaderContainer: {
     justifyContent: 'center',
     alignItems: 'center',
+    paddingVertical: 10,
   },
   bottomSheetHeaderContainer1: {
     flexDirection: 'row',

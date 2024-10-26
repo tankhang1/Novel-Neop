@@ -22,6 +22,7 @@ import {COLORS} from '@constants/index';
 import {BottomTabParamList, RootStackParamList} from '@utils/types/navigation';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import SearchIcon from '@assets/icons/SearchIcon';
+import Tag from './components/Tag';
 type TComic = {
   image: any;
   label: string;
@@ -157,13 +158,67 @@ const HomeScreen = ({navigation}: Props) => {
         <AppCarousel />
 
         <View style={styles.mainWrapper}>
+          <ScrollView
+            horizontal
+            style={{
+              paddingHorizontal: 16,
+              marginVertical: 5,
+            }}
+            contentContainerStyle={{
+              gap: 5,
+            }}>
+            <Tag
+              isGray={true}
+              content="#Full"
+              textStyle={{
+                paddingHorizontal: 15,
+                paddingVertical: 10,
+                fontFamily: 'UVNBayBuomHepNang_Regular',
+                fontSize: 16,
+                color: COLORS.lightmode.netrual[900],
+              }}
+            />
+            <Tag
+              isGray={true}
+              content="#SwordFighting"
+              textStyle={{
+                paddingHorizontal: 15,
+                paddingVertical: 10,
+                fontFamily: 'UVNBayBuomHepNang_Regular',
+                fontSize: 16,
+                color: COLORS.lightmode.netrual[900],
+              }}
+            />
+            <Tag
+              isGray={true}
+              content="#MartialArtsNovel"
+              textStyle={{
+                paddingHorizontal: 15,
+                paddingVertical: 10,
+                fontFamily: 'UVNBayBuomHepNang_Regular',
+                fontSize: 16,
+                color: COLORS.lightmode.netrual[900],
+              }}
+            />
+            <Tag
+              isGray={true}
+              content="#KungFuAdventure"
+              textStyle={{
+                paddingHorizontal: 15,
+                paddingVertical: 10,
+                fontFamily: 'UVNBayBuomHepNang_Regular',
+                fontSize: 16,
+                color: COLORS.lightmode.netrual[900],
+              }}
+            />
+          </ScrollView>
           <Categories />
           <View style={styles.commicContainer}>
             <View style={styles.titleWrapper}>
               <Title
                 content="POPULAR NOVELS"
                 width={250}
-                height={42}
+                height={53}
                 textStyle={{paddingLeft: 16}}
               />
               <TouchableOpacity
@@ -178,6 +233,7 @@ const HomeScreen = ({navigation}: Props) => {
               renderItem={renderCommicPopularItem}
               numColumns={3}
               columnWrapperStyle={styles.gapColumnWrapper}
+              contentContainerStyle={styles.gapColumnWrapper}
               style={styles.gapColumnWrapper}
               scrollEnabled={false}
             />
@@ -185,7 +241,7 @@ const HomeScreen = ({navigation}: Props) => {
               <Title
                 content="COMPLETE NOVELS"
                 width={250}
-                height={42}
+                height={53}
                 textStyle={{paddingLeft: 16}}
               />
               <TouchableOpacity style={styles.moreBtn}>
@@ -235,7 +291,7 @@ const HomeScreen = ({navigation}: Props) => {
                   <Title
                     content="NEW NOVELS"
                     width={200}
-                    height={42}
+                    height={53}
                     textStyle={{paddingLeft: 16}}
                   />
                   <TouchableOpacity style={styles.moreBtn}>
@@ -298,7 +354,7 @@ const HomeScreen = ({navigation}: Props) => {
               <Title
                 content="ALL NOVELS"
                 width={191}
-                height={42}
+                height={53}
                 textStyle={{paddingLeft: 16}}
               />
               <TouchableOpacity style={styles.moreBtn}>

@@ -1,6 +1,6 @@
 import {View, Image, StyleSheet} from 'react-native';
 import React from 'react';
-import {HEIGHT, WIDTH} from '@constants/index';
+import {ASSETS, HEIGHT, WIDTH} from '@constants/index';
 type TAppWrapper = {
   children: React.ReactNode;
 };
@@ -8,7 +8,7 @@ const AppWrapper = ({children}: TAppWrapper) => {
   return (
     <View style={styles.overall}>
       <Image
-        source={require('@assets/images/app_background.png')}
+        source={ASSETS.IMAGES.AppBackground}
         style={[StyleSheet.absoluteFill, {width: WIDTH, height: HEIGHT}]}
       />
       {children}

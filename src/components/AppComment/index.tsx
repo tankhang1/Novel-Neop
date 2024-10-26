@@ -5,6 +5,7 @@ import {
   StyleSheet,
   StyleProp,
   ViewStyle,
+  ImageBackground,
 } from 'react-native';
 import React from 'react';
 import {ASSETS, COLORS} from '@constants/index';
@@ -27,7 +28,10 @@ const AppComment = ({
   containerStyle,
 }: TComment & {containerStyle?: StyleProp<ViewStyle>}) => {
   return (
-    <View style={[styles.container, containerStyle]}>
+    <ImageBackground
+      source={require('@assets/images/mask-1.png')}
+      resizeMode="stretch"
+      style={[styles.container, containerStyle]}>
       <View style={styles.header}>
         <View style={styles.senderInfo}>
           <Image
@@ -51,13 +55,13 @@ const AppComment = ({
       <Text numberOfLines={4} style={styles.message}>
         {message}
       </Text>
-    </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLORS.lightmode.netrual[50],
+    // backgroundColor: COLORS.lightmode.netrual[50],
     width: 362,
     padding: 15,
     gap: 5,

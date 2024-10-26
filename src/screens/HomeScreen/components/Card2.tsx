@@ -5,6 +5,7 @@ import {
   Text,
   TextStyle,
   View,
+  ViewStyle,
 } from 'react-native';
 import React from 'react';
 import AppImage from '@components/AppImage';
@@ -17,6 +18,7 @@ type TCard2 = {
   imageStyle?: StyleProp<ImageStyle>;
   titleStyle?: StyleProp<TextStyle>;
   subTitleStyle?: StyleProp<TextStyle>;
+  rightSectionStyle?: StyleProp<ViewStyle>;
   isReview?: boolean;
 };
 
@@ -24,6 +26,7 @@ const Card2 = ({
   imageStyle,
   titleStyle,
   subTitleStyle,
+  rightSectionStyle,
   isReview = true,
 }: TCard2) => {
   return (
@@ -32,9 +35,10 @@ const Card2 = ({
         source={require('../../../assets/images/card_1.png')}
         imageStyle={[styles.image, imageStyle]}
         resizeMode="stretch"
+        type="YELLOW"
       />
       <View style={styles.contentContainer}>
-        <View>
+        <View style={rightSectionStyle}>
           <AppText style={[styles.title, titleStyle]}>
             Phàm Nhân Tu Tiên
           </AppText>
@@ -63,7 +67,7 @@ const Card2 = ({
         {isReview && (
           <View style={styles.rowContainer}>
             <View style={styles.iconTextContainer}>
-              <ASSETS.ICONS.MenuIcon width={14} fill="gray" />
+              <ASSETS.ICONS.MenuIcon width={25} color="gray" />
               <Text style={styles.text}>653</Text>
             </View>
             <View style={styles.iconTextContainer}>
@@ -90,7 +94,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     color: 'black',
-    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontFamily: 'UVNBayBuomHep_Bold',
   },
   subtitleContainer: {
     flexDirection: 'row',
@@ -117,7 +121,7 @@ const styles = StyleSheet.create({
   },
   tagText: {
     color: 'white',
-    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontFamily: 'UVNBayBuomHep_Bold',
     fontSize: 14,
     paddingVertical: 4,
     paddingHorizontal: 15,
@@ -130,7 +134,7 @@ const styles = StyleSheet.create({
   iconTextContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 5,
+    gap: 4,
   },
   text: {
     fontSize: 10,

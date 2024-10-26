@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import AppWrapper from '@components/AppWrapper';
-import {COLORS, WIDTH} from '@constants/index';
+import {COLORS, HEIGHT, WIDTH} from '@constants/index';
 import Line from '@assets/icons/line.svg';
 import Animated, {FadeIn, FadeOut} from 'react-native-reanimated';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
@@ -111,9 +111,10 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat',
   },
   bottomSheet: {
+    height: HEIGHT * 0.4,
     width: WIDTH,
-
-    paddingVertical: 50,
+    paddingTop: 10,
+    marginTop: 10,
   },
   btnWrapper: {
     justifyContent: 'space-between',
@@ -127,7 +128,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  btnText: {fontFamily: 'UVNBayBuomHepNang', fontSize: 23, color: '#181818'},
+  btnText: {
+    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontSize: 23,
+    color: '#181818',
+  },
   indicatorWrapper: {
     width: WIDTH / 2,
     justifyContent: 'center',
@@ -138,7 +143,11 @@ const styles = StyleSheet.create({
     height: 2.25,
     backgroundColor: '#EBBC5D',
   },
-  orText: {fontFamily: 'UVNBayBuomHepNang', fontSize: 11, color: '#4E4E4E'},
+  orText: {
+    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontSize: 11,
+    color: '#4E4E4E',
+  },
   orWrapper: {
     flexDirection: 'row',
     alignItems: 'center',

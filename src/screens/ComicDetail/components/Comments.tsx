@@ -146,7 +146,7 @@ const Comments = ({isOpenComment}: TComments) => {
         key={index}
         onPress={() => {
           //@ts-ignore
-          navigation.navigate('ComicDetail');
+          // navigation.navigate('ComicDetail');
         }}
         wrapperStyle={styles.cardWrapper}
         imageStyle={{resizeMode: 'cover', height: 115}}

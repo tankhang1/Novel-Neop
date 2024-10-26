@@ -46,7 +46,7 @@ const AnimatedBootSplash = ({onAnimationEnd, isReady}: Props) => {
   });
   return (
     <ImageBackground
-      source={require('../../assets/images/app_background.png')}
+      source={ASSETS.IMAGES.AppBackground}
       style={[StyleSheet.absoluteFill, styles.overall]}>
       <Animated.Image
         entering={SlideInDown.duration(300)}
@@ -78,5 +78,6 @@ const styles = StyleSheet.create({
   neop_logo: {
     position: 'absolute',
     bottom: 20,
+    zIndex: 9999,
   },
 });

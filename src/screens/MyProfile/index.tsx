@@ -1,11 +1,34 @@
-import {Text, TouchableOpacity, View, StyleSheet} from 'react-native';
-import React from 'react';
+import {
+  Text,
+  TouchableOpacity,
+  View,
+  StyleSheet,
+  Modal,
+  Image,
+} from 'react-native';
+import React, {useState} from 'react';
 import {ASSETS, COLORS} from '@constants/index';
 import AppImageWrapper from '@components/AppImageWrapper';
 import AppImage from '@components/AppImage';
 import AppSwitch from '@components/AppSwitch';
+import CloseX from '@assets/icons/CloseX';
 
+const LIST_MALE_AVATAR = [
+  require('@assets/images/avatar/01.png'),
+  require('@assets/images/avatar/03.png'),
+  require('@assets/images/avatar/05.png'),
+  require('@assets/images/avatar/07.png'),
+  require('@assets/images/avatar/09.png'),
+];
+const LIST_FEMALE_AVATAR = [
+  require('@assets/images/avatar/02.png'),
+  require('@assets/images/avatar/04.png'),
+  require('@assets/images/avatar/06.png'),
+  require('@assets/images/avatar/08.png'),
+  require('@assets/images/avatar/10.png'),
+];
 const MyProfileScreen = () => {
+  const [openSelectAvatar, setOpenSelectAvatar] = useState(false);
   return (
     <View style={styles.container}>
       <View>
@@ -16,7 +39,9 @@ const MyProfileScreen = () => {
             resizeMode="contain"
             imageStyle={styles.avatarImage}
           />
-          <TouchableOpacity style={styles.editIcon}>
+          <TouchableOpacity
+            style={styles.editIcon}
+            onPress={() => setOpenSelectAvatar(true)}>
             <ASSETS.ICONS.EditIcon />
           </TouchableOpacity>
         </View>
@@ -62,6 +87,54 @@ const MyProfileScreen = () => {
           <ASSETS.ICONS.ArrowRightIcon />
         </TouchableOpacity>
       </View>
+      <Modal
+        visible={openSelectAvatar}
+        onRequestClose={() => setOpenSelectAvatar(false)}
+        transparent
+        animationType="slide">
+        <View style={styles.modalContainer}>
+          <View style={styles.modalContent}>
+            <View style={styles.header}>
+              <View style={styles.spacer} />
+              <Text style={styles.title}>Select avatar</Text>
+              <TouchableOpacity
+                onPress={() => setOpenSelectAvatar(false)}
+                style={styles.closeButton}>
+                <CloseX color="white" width={20} height={20} />
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.avatarContainer}>
+              <View style={styles.avatarColumn}>
+                <Text style={styles.avatarTitle}>Male</Text>
+                <View style={styles.avatarList}>
+                  {LIST_MALE_AVATAR.map((avatar, index) => (
+                    <Image
+                      source={avatar}
+                      key={index}
+                      resizeMode="cover"
+                      style={styles.modalAvatarImage}
+                    />
+                  ))}
+                </View>
+              </View>
+              <View style={styles.avatarColumn}>
+                <Text style={styles.avatarTitle}>Female</Text>
+                <View style={styles.avatarList}>
+                  {LIST_FEMALE_AVATAR.map((avatar, index) => (
+                    <Image
+                      source={avatar}
+                      key={index}
+                      resizeMode="cover"
+                      style={styles.modalAvatarImage}
+                    />
+                  ))}
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 };
@@ -135,6 +208,62 @@ const styles = StyleSheet.create({
   },
   logoutText: {
     color: COLORS.lightmode.error[700],
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust for backdrop effect
+  },
+  modalContent: {
+    backgroundColor: 'white',
+    padding: 25,
+    borderRadius: 50,
+    width: '90%',
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 15,
+  },
+  spacer: {
+    width: 20,
+  },
+  title: {
+    color: COLORS.lightmode.netrual[900],
+    fontSize: 24,
+    fontFamily: 'Montserrat',
+    fontWeight: '700',
+  },
+  closeButton: {
+    backgroundColor: COLORS.lightmode.netrual[300],
+    borderRadius: 100,
+  },
+  avatarContainer: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-around',
+  },
+  avatarColumn: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  avatarTitle: {
+    fontFamily: 'Montserrat',
+    fontSize: 16,
+    textAlign: 'center',
+    color: COLORS.lightmode.netrual[500],
+    fontWeight: '500',
+    marginBottom: 10,
+  },
+  avatarList: {
+    gap: 10,
+  },
+  modalAvatarImage: {
+    width: 103,
+    height: 103,
+    resizeMode: 'cover',
   },
 });
 
