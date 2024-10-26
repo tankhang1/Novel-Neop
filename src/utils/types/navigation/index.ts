@@ -2,7 +2,9 @@ type RootStackParamList = {
   Login: undefined;
   Main: undefined;
   ComicDetail: undefined;
-  ReadComic: undefined;
+  ReadComic: {
+    chapterKey?: number;
+  };
   SearchScreen: undefined;
   Category: undefined;
   More: undefined;

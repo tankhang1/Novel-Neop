@@ -262,7 +262,7 @@ const ComicDetail = ({navigation}: Props) => {
                   styles.tabText,
                   tab !== 'chapter' && {color: COLORS.lightmode.netrual[500]},
                 ]}>
-                Chapters (1k1)
+                Chapters (1k)
               </AppText>
             </TouchableOpacity>
           </View>
@@ -272,7 +272,15 @@ const ComicDetail = ({navigation}: Props) => {
               <Underline width={100} />
             </Animated.View>
           </View>
-          {tab === 'info' ? <CommicDetailTab /> : <CommicChapterTab />}
+          {tab === 'info' ? (
+            <CommicDetailTab />
+          ) : (
+            <CommicChapterTab
+              onPress={key =>
+                navigation.navigate('ReadComic', {chapterKey: key})
+              }
+            />
+          )}
           <Comments isOpenComment={isOpenComment} />
         </ImageBackground>
       </ScrollView>
@@ -282,7 +290,7 @@ const ComicDetail = ({navigation}: Props) => {
         style={styles.bottomBar}>
         <View style={styles.bottomContainer}>
           <BackgroundButton
-            onPress={() => navigation.navigate('ReadComic')}
+            onPress={() => navigation.navigate('ReadComic', {chapterKey: 1})}
             variant="gray"
             wrapStyle={styles.bottomItemWrapper}>
             <View style={styles.bottomItemContainer}>

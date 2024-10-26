@@ -5,67 +5,120 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
-import React from 'react';
-import {COLORS} from '@constants/index';
+import React, {useMemo, useState} from 'react';
+import {COLORS, COMMIC} from '@constants/index';
+import ChapterItem from '@screens/ReadComic/components/ChapterItem';
 
-const Ranges = [
-  {start: 0, end: 100},
-  {start: 101, end: 200},
-  {start: 201, end: 300},
-  {start: 301, end: 400},
-  {start: 401, end: 500},
-  {start: 501, end: 600},
-  {start: 601, end: 700},
-  {start: 701, end: 800},
-  {start: 801, end: 900},
-  {start: 901, end: 1000},
-];
+const LIST_CHAPTER = Array.from(COMMIC, ([key, value]) => ({
+  label: value.title,
+  createdAt: value.createdAt,
+  value: key,
+}));
 
-const ChapterItem = () => {
-  return (
-    <View style={styles.chapterItemContainer}>
-      <Text style={styles.chapterTitle}>
-        1000. Chapter 1000 Whispers of the Forgotten Sword
-      </Text>
-      <Text style={styles.chapterDate}>02/09/2024</Text>
-    </View>
-  );
+type TComicChapter = {
+  onPress?: (key: number) => void;
 };
+const ComicChapterTab = ({onPress}: TComicChapter) => {
+  const [rangeSelected, setRangeSelected] = useState<{
+    start: number;
+    end: number;
+  }>({start: 1, end: 10});
+  const [isChangeSort, setIsChangeSort] = useState<null | 'oldest' | 'newest'>(
+    null,
+  );
 
-const ComicChapterTab = () => {
+  const ranges = useMemo(() => {
+    const tmp = [];
+    const n = COMMIC.size;
+    for (let start = 1; start <= n; start += 10) {
+      tmp.push({start, end: Math.min(start + 10 - 1, n)});
+    }
+    return tmp;
+  }, []);
+
   return (
-    <View>
-      <View>
-        <View style={styles.headerContainer}>
-          <ScrollView
-            horizontal
-            contentContainerStyle={styles.scrollViewContainer}
-            style={styles.scrollView}>
-            {Ranges.map((range, index) => (
-              <TouchableOpacity key={index} style={styles.rangeButton}>
-                <Text style={styles.rangeText}>
-                  {range.start} - {range.end}
-                </Text>
-              </TouchableOpacity>
-            ))}
-          </ScrollView>
-          <View style={styles.sortingContainer}>
-            <TouchableOpacity>
-              <Text style={styles.sortingText}>Oldest</Text>
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        <ScrollView
+          horizontal
+          contentContainerStyle={styles.scrollViewContainer}
+          style={styles.scrollView}>
+          {ranges.map((range, index) => (
+            <TouchableOpacity
+              key={index}
+              hitSlop={10}
+              style={styles.rangeButton}
+              onPress={() => {
+                setRangeSelected(range);
+                setIsChangeSort(null);
+              }}>
+              <Text
+                style={[
+                  styles.rangeText,
+                  range.start === rangeSelected.start &&
+                    range.end === rangeSelected.end &&
+                    styles.textBold,
+                ]}>
+                {range.start} - {range.end}
+              </Text>
             </TouchableOpacity>
-            <View style={styles.divider} />
-            <TouchableOpacity>
-              <Text style={styles.sortingTextBold}>Newest</Text>
-            </TouchableOpacity>
-          </View>
+          ))}
+        </ScrollView>
+
+        <View style={styles.sortingContainer}>
+          <TouchableOpacity
+            onPress={() => {
+              setIsChangeSort('oldest');
+              setRangeSelected(ranges[0]);
+            }}>
+            <Text
+              style={[
+                styles.sortingText,
+                isChangeSort === 'oldest' && styles.textBold,
+              ]}>
+              Oldest
+            </Text>
+          </TouchableOpacity>
+          <View style={styles.divider} />
+          <TouchableOpacity
+            onPress={() => {
+              setIsChangeSort('newest');
+              setRangeSelected(ranges[ranges.length - 1]);
+            }}>
+            <Text
+              style={[
+                styles.sortingText,
+                isChangeSort === 'newest' && styles.textBold,
+              ]}>
+              Newest
+            </Text>
+          </TouchableOpacity>
         </View>
-        <ChapterItem />
       </View>
+      <ScrollView
+        nestedScrollEnabled
+        style={styles.chapterList}
+        persistentScrollbar={true}>
+        <View style={styles.chapterItemList}>
+          {LIST_CHAPTER.slice(rangeSelected.start - 1, rangeSelected.end).map(
+            (item, index) => (
+              <TouchableOpacity
+                key={index}
+                onPress={() => onPress?.(item.value)}>
+                <ChapterItem {...item} isActive={false} />
+              </TouchableOpacity>
+            ),
+          )}
+        </View>
+      </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -87,42 +140,29 @@ const styles = StyleSheet.create({
     color: COLORS.lightmode.netrual[900],
   },
   sortingContainer: {
-    gap: 8,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    gap: 8,
   },
   sortingText: {
     fontFamily: 'Montserrat',
     fontSize: 13,
     color: COLORS.lightmode.netrual[900],
   },
-  sortingTextBold: {
-    fontFamily: 'Montserrat',
-    fontSize: 13,
-    color: COLORS.lightmode.netrual[900],
-    fontWeight: '700',
-  },
   divider: {
     height: 14,
     width: 1,
     backgroundColor: COLORS.lightmode.netrual[500],
   },
-  chapterItemContainer: {
-    borderTopWidth: 1,
-    borderColor: COLORS.lightmode.netrual[50],
-    padding: 16,
-    gap: 6,
+  chapterList: {
+    maxHeight: 300,
   },
-  chapterTitle: {
-    fontFamily: 'UVNBayBuomHepNang_Regular',
-    color: COLORS.lightmode.netrual[700],
-    fontSize: 18,
+  chapterItemList: {
+    width: '100%',
+    marginBottom: 10,
   },
-  chapterDate: {
-    fontSize: 11,
-    fontFamily: 'Montserrat',
-    color: COLORS.lightmode.netrual[200],
+  textBold: {
+    fontWeight: 'bold',
   },
 });
 

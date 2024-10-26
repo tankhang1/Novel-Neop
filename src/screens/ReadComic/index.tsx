@@ -8,8 +8,7 @@ import {
   FlatList,
   ActivityIndicator,
 } from 'react-native';
-import React, {useState} from 'react';
-import {useNavigation} from '@react-navigation/native';
+import React, {useEffect, useState} from 'react';
 import AppText from '@components/AppText';
 import {useSharedValue} from 'react-native-reanimated';
 import BottomSheet from '@components/AppBottomSheet';
@@ -18,6 +17,8 @@ import ChapterBottomSheet from './components/ChapterBottomSheet';
 import ChevronLeft from '@assets/icons/common/Chevron-Left';
 import ChevronRight from '@assets/icons/common/Chevron-Right';
 import ChevronDown from '@assets/icons/common/Chevron-Down';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '@utils/types/navigation';
 
 const LIST_COLOR = [
   'rgba(235, 188, 93, 0.05)',
@@ -27,8 +28,9 @@ const LIST_COLOR = [
 ];
 const LIST_KEY = Array.from(COMMIC, ([key]) => key);
 const LIST_FONTFAMILY = ['Lora', 'Poppins', 'Times-New-Roman', 'OpenSans'];
-const ReadComic = () => {
-  const navigation = useNavigation();
+type Props = NativeStackScreenProps<RootStackParamList, 'ReadComic'>;
+const ReadComic = ({navigation, route}: Props) => {
+  const chapterKey = route.params.chapterKey;
   const isOpen = useSharedValue(false);
   const isOpenMenu = useSharedValue(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -92,6 +94,14 @@ const ReadComic = () => {
       setChapter(chapter + 1);
     }
   };
+  useEffect(() => {
+    if (chapterKey) {
+      setChapter(chapterKey);
+    } else {
+      setChapter(0);
+    }
+    setCounterEnd(0);
+  }, [chapterKey]);
   return (
     <View style={styles.overall}>
       <View style={styles.headerContainer}>
