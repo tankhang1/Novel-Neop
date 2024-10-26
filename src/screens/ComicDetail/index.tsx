@@ -35,6 +35,8 @@ import LikeLight from '@assets/icons/common/Like-Light';
 import BackgroundButton from '@assets/icons/common/Background-Button';
 import CloseX from '@assets/icons/common/CloseX';
 import Repeat from '@assets/icons/common/Repeat';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useFocusEffect} from '@react-navigation/native';
 type TComment = {
   avatar: string;
   sender: string;
@@ -130,6 +132,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'ComicDetail'>;
 const ComicDetail = ({navigation}: Props) => {
   const [isTimeoutLoading, setIsTimeOutLoading] = useState(true);
   const [tab, setTab] = useState<'info' | 'chapter'>('info');
+  const [oldReadChapter, setOldReadChapter] = useState<null | number>(null);
   const transX = useSharedValue(0);
   const isOpenLanguage = useSharedValue(false);
   const isOpenComment = useSharedValue(false);
@@ -149,11 +152,26 @@ const ComicDetail = ({navigation}: Props) => {
       ],
     };
   });
+  const resetStorageChapter = async () => {
+    await AsyncStorage.clear();
+  };
+  const readOldChapter = async () => {
+    const oldKey = await AsyncStorage.getItem('key');
+    if (oldKey) {
+      setOldReadChapter(+oldKey);
+    } else {
+      setOldReadChapter(1);
+    }
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setIsTimeOutLoading(false);
     }, 100);
   }, []);
+  useFocusEffect(() => {
+    readOldChapter();
+  });
   return (
     <View
       style={{
@@ -290,7 +308,10 @@ const ComicDetail = ({navigation}: Props) => {
         style={styles.bottomBar}>
         <View style={styles.bottomContainer}>
           <BackgroundButton
-            onPress={() => navigation.navigate('ReadComic', {chapterKey: 1})}
+            onPress={() => {
+              resetStorageChapter();
+              navigation.navigate('ReadComic', {chapterKey: 1});
+            }}
             variant="gray"
             wrapStyle={styles.bottomItemWrapper}>
             <View style={styles.bottomItemContainer}>
@@ -299,11 +320,18 @@ const ComicDetail = ({navigation}: Props) => {
             </View>
           </BackgroundButton>
           <BackgroundButton
+            onPress={() => {
+              navigation.navigate('ReadComic', {
+                chapterKey: oldReadChapter || 1,
+              });
+            }}
             wrapStyle={styles.bottomItemSecondWrapper}
             variant="yellow">
             <View style={styles.bottomItemSecondContainer}>
               <ASSETS.ICONS.PlayIcon />
-              <Text style={styles.bottomItemTextStyle}>Continue Chapter 2</Text>
+              <Text style={styles.bottomItemTextStyle}>
+                Continue Chapter {oldReadChapter}
+              </Text>
             </View>
           </BackgroundButton>
         </View>

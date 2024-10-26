@@ -23768,4 +23768,5 @@ Here ends the Journey to the West.
     },
   ],
 ]);
+
 export {WIDTH, HEIGHT, ASSETS, COLORS, COMMIC};

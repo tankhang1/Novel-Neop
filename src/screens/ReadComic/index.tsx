@@ -8,7 +8,7 @@ import {
   FlatList,
   ActivityIndicator,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import AppText from '@components/AppText';
 import {useSharedValue} from 'react-native-reanimated';
 import BottomSheet from '@components/AppBottomSheet';
@@ -19,6 +19,7 @@ import ChevronRight from '@assets/icons/common/Chevron-Right';
 import ChevronDown from '@assets/icons/common/Chevron-Down';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@utils/types/navigation';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const LIST_COLOR = [
   'rgba(235, 188, 93, 0.05)',
@@ -94,6 +95,9 @@ const ReadComic = ({navigation, route}: Props) => {
       setChapter(chapter + 1);
     }
   };
+  const checkNewChapter = useCallback(async () => {
+    await AsyncStorage.setItem('key', chapter.toString());
+  }, [chapter]);
   useEffect(() => {
     if (chapterKey) {
       setChapter(chapterKey);
@@ -102,6 +106,9 @@ const ReadComic = ({navigation, route}: Props) => {
     }
     setCounterEnd(0);
   }, [chapterKey]);
+  useEffect(() => {
+    checkNewChapter();
+  }, [chapter, checkNewChapter]);
   return (
     <View style={styles.overall}>
       <View style={styles.headerContainer}>
