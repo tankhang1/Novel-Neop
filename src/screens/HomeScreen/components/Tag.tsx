@@ -13,7 +13,7 @@ const Tag = ({wrapperStyle, textStyle, content, isGray}: TTag) => {
     <ImageBackground
       source={
         isGray
-          ? require('../../../assets/images/mask-1.png')
+          ? require('../../../assets/images/tag-gray.png')
           : require('../../../assets/images/tag.png')
       }
       style={wrapperStyle}

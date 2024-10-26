@@ -5,19 +5,16 @@ import {
   ListRenderItemInfo,
   ScrollView,
   TouchableOpacity,
-  Text,
-  ActivityIndicator,
 } from 'react-native';
-import React, {useCallback, useEffect, useState} from 'react';
+import React from 'react';
 import AppImage from '@components/AppImage';
 import AppCarousel from '@components/AppCarousel';
 import Categories from './Categories';
 import Title from './components/Title';
 import Card from './components/Card';
-import AppText from '@components/AppText';
-import Card2 from './components/Card2';
+// import AppText from '@components/AppText';
+// import Card2 from './components/Card2';
 import AppWrapper from '@components/AppWrapper';
-import IconRight from '@assets/icons/arrow-right.svg';
 import {COLORS} from '@constants/index';
 import {BottomTabParamList, RootStackParamList} from '@utils/types/navigation';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
@@ -29,70 +26,50 @@ type TComic = {
 };
 const ListComic = [
   {
-    image: require('@assets/images/card_1.png'),
-    label: 'Phàm Nhân Tu Tiên',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Cử Đầu Vọng Minh Nguyệt',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Chiến Thần Trừ Yêu Dẹp Loạn',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Tiểu Gia Là Siêu Cấp Thiên Tài',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Thần Lộ',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Nhật Ký Của Tôi Và Em Trai',
+    image: require('@assets/images/journey_banner.png'),
+    label: 'Journey to the West',
   },
 ];
-const ListComicNew = [
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Phàm Nhân Tu Tiên',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Phàm Nhân Tu Tiên',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Phàm Nhân Tu Tiên',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Phàm Nhân Tu Tiên',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Phàm Nhân Tu Tiên',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Phàm Nhân Tu Tiên',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Phàm Nhân Tu Tiên',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Phàm Nhân Tu Tiên',
-  },
-];
+// const ListComicNew = [
+//   {
+//     image: require('@assets/images/card_1.png'),
+//     label: 'Phàm Nhân Tu Tiên',
+//   },
+//   {
+//     image: require('@assets/images/card_1.png'),
+//     label: 'Phàm Nhân Tu Tiên',
+//   },
+//   {
+//     image: require('@assets/images/card_1.png'),
+//     label: 'Phàm Nhân Tu Tiên',
+//   },
+//   {
+//     image: require('@assets/images/card_1.png'),
+//     label: 'Phàm Nhân Tu Tiên',
+//   },
+//   {
+//     image: require('@assets/images/card_1.png'),
+//     label: 'Phàm Nhân Tu Tiên',
+//   },
+//   {
+//     image: require('@assets/images/card_1.png'),
+//     label: 'Phàm Nhân Tu Tiên',
+//   },
+//   {
+//     image: require('@assets/images/card_1.png'),
+//     label: 'Phàm Nhân Tu Tiên',
+//   },
+//   {
+//     image: require('@assets/images/card_1.png'),
+//     label: 'Phàm Nhân Tu Tiên',
+//   },
+// ];
 type Props = NativeStackScreenProps<
   RootStackParamList & Pick<BottomTabParamList, 'Home'>,
   'Home'
 >;
 const HomeScreen = ({navigation}: Props) => {
-  const [isTimeoutLoading, setIsTimeOutLoading] = useState(true);
+  // const [isTimeoutLoading, setIsTimeOutLoading] = useState(true);
   const onCardPress = () => {
     navigation.navigate('ComicDetail');
   };
@@ -104,43 +81,43 @@ const HomeScreen = ({navigation}: Props) => {
       {...item}
       key={index}
       onPress={onCardPress}
-      wrapperStyle={{height: 200}}
-      imageStyle={{height: 150}}
+      wrapperStyle={{maxWidth: 120}}
+      imageStyle={{height: 155, maxWidth: 120}}
     />
   );
 
-  const renderCommicDoneItem = useCallback(
-    ({item, index}: ListRenderItemInfo<TComic>) => (
-      <Card
-        {...item}
-        key={index}
-        imageStyle={styles.newsItemImage}
-        wrapperStyle={styles.newsItemWrapper}
-        numberOfLines={2}
-      />
-    ),
-    [],
-  );
+  // const renderCommicDoneItem = useCallback(
+  //   ({item, index}: ListRenderItemInfo<TComic>) => (
+  //     <Card
+  //       {...item}
+  //       key={index}
+  //       imageStyle={styles.newsItemImage}
+  //       wrapperStyle={styles.newsItemWrapper}
+  //       numberOfLines={2}
+  //     />
+  //   ),
+  //   [],
+  // );
 
-  const renderCommicNewsItem = useCallback(
-    ({item, index}: ListRenderItemInfo<TComic>) => (
-      <Card
-        {...item}
-        key={index}
-        imageStyle={styles.newsItemImage}
-        wrapperStyle={styles.newsItemWrapper}
-        labelStyle={styles.newsItemLabel}
-        numberOfLines={2}
-      />
-    ),
-    [],
-  );
+  // const renderCommicNewsItem = useCallback(
+  //   ({item, index}: ListRenderItemInfo<TComic>) => (
+  //     <Card
+  //       {...item}
+  //       key={index}
+  //       imageStyle={styles.newsItemImage}
+  //       wrapperStyle={styles.newsItemWrapper}
+  //       labelStyle={styles.newsItemLabel}
+  //       numberOfLines={2}
+  //     />
+  //   ),
+  //   [],
+  // );
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsTimeOutLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsTimeOutLoading(false);
+  //   }, 2000);
+  // }, []);
 
   return (
     <AppWrapper>
@@ -160,105 +137,72 @@ const HomeScreen = ({navigation}: Props) => {
         <View style={styles.mainWrapper}>
           <ScrollView
             horizontal
-            style={{
-              paddingHorizontal: 16,
-              marginVertical: 5,
-            }}
-            contentContainerStyle={{
-              gap: 5,
-            }}>
-            <Tag
-              isGray={true}
-              content="#Full"
-              textStyle={{
-                paddingHorizontal: 15,
-                paddingVertical: 10,
-                fontFamily: 'UVNBayBuomHepNang_Regular',
-                fontSize: 16,
-                color: COLORS.lightmode.netrual[900],
-              }}
-            />
+            style={styles.scrollView}
+            contentContainerStyle={styles.scrollContentContainer}>
+            <Tag isGray={true} content="#Full" textStyle={styles.tagText} />
             <Tag
               isGray={true}
               content="#SwordFighting"
-              textStyle={{
-                paddingHorizontal: 15,
-                paddingVertical: 10,
-                fontFamily: 'UVNBayBuomHepNang_Regular',
-                fontSize: 16,
-                color: COLORS.lightmode.netrual[900],
-              }}
+              textStyle={styles.tagText}
             />
             <Tag
               isGray={true}
               content="#MartialArtsNovel"
-              textStyle={{
-                paddingHorizontal: 15,
-                paddingVertical: 10,
-                fontFamily: 'UVNBayBuomHepNang_Regular',
-                fontSize: 16,
-                color: COLORS.lightmode.netrual[900],
-              }}
+              textStyle={styles.tagText}
             />
             <Tag
               isGray={true}
               content="#KungFuAdventure"
-              textStyle={{
-                paddingHorizontal: 15,
-                paddingVertical: 10,
-                fontFamily: 'UVNBayBuomHepNang_Regular',
-                fontSize: 16,
-                color: COLORS.lightmode.netrual[900],
-              }}
+              textStyle={styles.tagText}
             />
           </ScrollView>
           <Categories />
-          <View style={styles.commicContainer}>
+          <View style={styles.comicContainer}>
             <View style={styles.titleWrapper}>
               <Title
-                content="POPULAR NOVELS"
-                width={250}
+                content="Popular Novels"
+                width={206}
                 height={53}
-                textStyle={{paddingLeft: 16}}
+                textStyle={styles.titleText}
               />
-              <TouchableOpacity
+              {/* <TouchableOpacity
                 style={styles.moreBtn}
                 onPress={() => navigation.navigate('More')}>
                 <Text style={styles.moreText}>More</Text>
                 <IconRight fill={COLORS.lightmode.netrual[500]} />
-              </TouchableOpacity>
+              </TouchableOpacity> */}
             </View>
             <FlatList
               data={ListComic}
               renderItem={renderCommicPopularItem}
               numColumns={3}
-              columnWrapperStyle={styles.gapColumnWrapper}
-              contentContainerStyle={styles.gapColumnWrapper}
-              style={styles.gapColumnWrapper}
+              columnWrapperStyle={{gap: 10, paddingVertical: 10}}
+              style={styles.columnWrapper}
               scrollEnabled={false}
             />
-            <View style={styles.titleWrapper}>
-              <Title
-                content="COMPLETE NOVELS"
-                width={250}
-                height={53}
-                textStyle={{paddingLeft: 16}}
-              />
-              <TouchableOpacity style={styles.moreBtn}>
-                <Text style={styles.moreText}>More</Text>
-                <IconRight />
-              </TouchableOpacity>
-            </View>
+          </View>
+          {/**Complete novels */}
+          {/*   <View style={styles.titleWrapper}>
+            <Title
+              content="COMPLETE NOVELS"
+              width={250}
+              height={53}
+              textStyle={styles.titleText}
+            />
+            <TouchableOpacity style={styles.moreBtn}>
+              <Text style={styles.moreText}>More</Text>
+              <IconRight />
+            </TouchableOpacity>
           </View>
           {isTimeoutLoading ? (
-            <ActivityIndicator />
+            <ActivityIndicator style={styles.loader} />
           ) : (
             <View>
               <FlatList
                 data={ListComic}
                 renderItem={renderCommicDoneItem}
                 horizontal
-                contentContainerStyle={styles.gap}
+                contentContainerStyle={styles.horizontalGap}
                 showsHorizontalScrollIndicator={false}
                 ListHeaderComponent={<View style={styles.gapView} />}
                 ListFooterComponent={<View style={styles.gapView} />}
@@ -267,16 +211,16 @@ const HomeScreen = ({navigation}: Props) => {
                 data={ListComic}
                 renderItem={renderCommicDoneItem}
                 horizontal
-                contentContainerStyle={styles.gap}
+                contentContainerStyle={styles.horizontalGap}
                 showsHorizontalScrollIndicator={false}
                 ListHeaderComponent={<View style={styles.gapView} />}
                 ListFooterComponent={<View style={styles.gapView} />}
               />
             </View>
-          )}
+          )} */}
         </View>
-
-        {isTimeoutLoading ? (
+        {/**New Novels */}
+        {/* {isTimeoutLoading ? (
           <ActivityIndicator />
         ) : (
           <View style={styles.bgNewCommic}>
@@ -345,8 +289,9 @@ const HomeScreen = ({navigation}: Props) => {
               imageStyle={styles.newComicBackground}
             />
           </View>
-        )}
-        {isTimeoutLoading ? (
+        )} */}
+        {/**All Novel */}
+        {/* {isTimeoutLoading ? (
           <ActivityIndicator />
         ) : (
           <View style={{paddingHorizontal: 16, gap: 16, marginTop: 25}}>
@@ -367,7 +312,7 @@ const HomeScreen = ({navigation}: Props) => {
             <Card2 />
             <Card2 />
           </View>
-        )}
+        )} */}
 
         <View style={{height: 150}} />
       </ScrollView>
@@ -430,6 +375,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    paddingHorizontal: 16,
   },
   moreBtn: {flexDirection: 'row', alignItems: 'center', gap: 5},
   moreText: {
@@ -463,5 +409,44 @@ const styles = StyleSheet.create({
     fontWeight: 400,
     color: COLORS.lightmode.netrual[0],
     fontFamily: 'UVNBayBuomHepNang_Regular',
+  },
+
+  scrollView: {
+    paddingHorizontal: 16,
+    marginVertical: 5,
+  },
+  scrollContentContainer: {
+    gap: 5,
+  },
+  tagText: {
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontSize: 16,
+    color: COLORS.lightmode.netrual[900],
+  },
+  comicContainer: {
+    flex: 1,
+  },
+
+  titleText: {
+    paddingLeft: 10,
+    fontSize: 24,
+    letterSpacing: 1.5,
+    lineHeight: 27,
+  },
+
+  columnWrapper: {
+    flex: 1,
+    // justifyContent: 'space-between',
+    paddingHorizontal: 16,
+  },
+  horizontalGap: {
+    paddingHorizontal: 16,
+    gap: 10,
+  },
+
+  loader: {
+    marginVertical: 20,
   },
 });

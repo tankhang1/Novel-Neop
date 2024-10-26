@@ -12,14 +12,14 @@ import Item from './Item';
 import AppSearch from '@components/AppSearch';
 
 const Owned = () => {
-  const isEmpty = false;
+  const isEmpty = true;
   const renderItem = ({index}: ListRenderItemInfo<any>) => {
     return <Item key={index} />;
   };
   return (
     <View style={styles.container}>
       {isEmpty ? (
-        <View>
+        <View style={styles.emptyContainer}>
           <Image
             source={require('@assets/images/no-purchase.png')}
             style={styles.image}
@@ -28,6 +28,7 @@ const Owned = () => {
           <Text style={styles.text}>
             Explore the catalog and purchase stories to enjoy them anytime
           </Text>
+          <View style={styles.bottomSpacing} />
         </View>
       ) : (
         <View>
@@ -82,6 +83,12 @@ const styles = StyleSheet.create({
     height: 150,
   },
   listContainerStyle: {paddingHorizontal: 16, gap: 14},
+  emptyContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    opacity: 0.5,
+  },
 });
 
 export default Owned;

@@ -1,4 +1,4 @@
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, ScrollView} from 'react-native';
 import React from 'react';
 import Tag from '@screens/HomeScreen/components/Tag';
 import AppText from '@components/AppText';
@@ -7,7 +7,7 @@ import {COLORS} from '@constants/index';
 const CommicDetailTab = () => {
   return (
     <View>
-      <View style={styles.tagContainer}>
+      <ScrollView horizontal contentContainerStyle={styles.tagContainer}>
         <Tag
           isGray={true}
           content="#Popular"
@@ -16,17 +16,23 @@ const CommicDetailTab = () => {
         />
         <Tag
           isGray={true}
-          content="#Popular"
+          content="#Hot"
           textStyle={styles.tagTxtStyle}
           wrapperStyle={styles.tagItemStyle}
         />
         <Tag
           isGray={true}
-          content="#Popular"
+          content="#EpicAdventure"
           textStyle={styles.tagTxtStyle}
           wrapperStyle={styles.tagItemStyle}
         />
-      </View>
+        <Tag
+          isGray={true}
+          content="#MythicalCreatures"
+          textStyle={styles.tagTxtStyle}
+          wrapperStyle={styles.tagItemStyle}
+        />
+      </ScrollView>
       <View style={styles.descriptionContainer}>
         <View style={styles.descriptionWrapper}>
           <AppText style={styles.descriptionText}>
@@ -46,8 +52,6 @@ const CommicDetailTab = () => {
 export default CommicDetailTab;
 const styles = StyleSheet.create({
   tagContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
     gap: 5,
     paddingHorizontal: 16,
     paddingVertical: 8,

@@ -10,6 +10,10 @@
       "sha1": "74d9f537010e5ac0ffe25990d1433873d98c9339"
     },
     {
+      "path": "src/assets/fonts/Montserrat-SemiBold.ttf",
+      "sha1": "0754a3a23d8d68b0f0558df3109e0df86e968f24"
+    },
+    {
       "path": "src/assets/fonts/Montserrat.ttf",
       "sha1": "bb895d19b8a1fbe1c57fc89cac5da82fdc8fdef4"
     },
@@ -34,11 +38,11 @@
       "sha1": "e763030b5cd2cc5a8ed9662bf7e8aa496999dd4b"
     },
     {
-      "path": "src/assets/fonts/UVNBayBuomHepNang.ttf",
-      "sha1": "7fb5e7d5efe19e6c8ad908d4a5dd0d3183c2bd70"
+      "path": "src/assets/fonts/UVNBayBuomHepNang_Regular.ttf",
+      "sha1": "127b7020956dd4504deb5eece365241a39b5d037"
     },
     {
-      "path": "src/assets/fonts/UVNBayBuomHepNang_Regular.ttf",
+      "path": "src/assets/fonts/UVNBayBuomHep_Bold.ttf",
       "sha1": "127b7020956dd4504deb5eece365241a39b5d037"
     }
   ]

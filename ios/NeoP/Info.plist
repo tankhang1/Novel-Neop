@@ -53,12 +53,13 @@
 		<string>SedgwickAveDisplay-Regular.ttf</string>
 		<string>Lora.ttf</string>
 		<string>Merriweather-Light.ttf</string>
-		<string>UVNBayBuomHepNang.ttf</string>
 		<string>UVNBayBuomHepNang_Regular.ttf</string>
 		<string>Montserrat.ttf</string>
 		<string>OpenSans.ttf</string>
 		<string>Poppins.ttf</string>
 		<string>Times-New-Roman.ttf</string>
+		<string>Montserrat-SemiBold.ttf</string>
+		<string>UVNBayBuomHep_Bold.ttf</string>
 	</array>
 </dict>
 </plist>

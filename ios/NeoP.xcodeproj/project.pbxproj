@@ -18,12 +18,13 @@
 		C37FAD6DB63E48A291D15DA2 /* SedgwickAveDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB4FD54DC0F14E7E932A6E9C /* SedgwickAveDisplay-Regular.ttf */; };
 		FE64F1800E674F8282C56E11 /* Lora.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0B0C1CCDC294DE98336AF3F /* Lora.ttf */; };
 		D5F8BAB4A86D4B7E8F643B46 /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C16544DA94BDEA93C6D23 /* Merriweather-Light.ttf */; };
-		1BA7ED26EBBD481190AFBB76 /* UVNBayBuomHepNang.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62CC01A41AD3419AA60C3C7D /* UVNBayBuomHepNang.ttf */; };
 		1A998BE55C77409EB5620B68 /* UVNBayBuomHepNang_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAA552A90432495BB155367F /* UVNBayBuomHepNang_Regular.ttf */; };
 		1525F22CD1064A638C3D8906 /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8021D8C6A2D45C39FC946D3 /* Montserrat.ttf */; };
 		6475E83690E4400A99D84177 /* OpenSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D603EFD1CE154FA5A19044B7 /* OpenSans.ttf */; };
 		B4A82A430A8C4A9DB0BD488E /* Poppins.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F9FEDFCEBD043A7BC8A20A2 /* Poppins.ttf */; };
 		B2DE744440134A119F9B186B /* Times-New-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBE46666B14541A9917D0BE0 /* Times-New-Roman.ttf */; };
+		C21606E3786A4E7AA6015727 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4542591A93F49F5A3CAC69A /* Montserrat-SemiBold.ttf */; };
+		356BA65A0866447185A7E374 /* UVNBayBuomHep_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F00376A80FA4FD4817E17E1 /* UVNBayBuomHep_Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +60,13 @@
 		BB4FD54DC0F14E7E932A6E9C /* SedgwickAveDisplay-Regular.ttf */ = {isa = PBXFileReference; name = "SedgwickAveDisplay-Regular.ttf"; path = "../src/assets/fonts/SedgwickAveDisplay-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C0B0C1CCDC294DE98336AF3F /* Lora.ttf */ = {isa = PBXFileReference; name = "Lora.ttf"; path = "../src/assets/fonts/Lora.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1A1C16544DA94BDEA93C6D23 /* Merriweather-Light.ttf */ = {isa = PBXFileReference; name = "Merriweather-Light.ttf"; path = "../src/assets/fonts/Merriweather-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		62CC01A41AD3419AA60C3C7D /* UVNBayBuomHepNang.ttf */ = {isa = PBXFileReference; name = "UVNBayBuomHepNang.ttf"; path = "../src/assets/fonts/UVNBayBuomHepNang.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		AAA552A90432495BB155367F /* UVNBayBuomHepNang_Regular.ttf */ = {isa = PBXFileReference; name = "UVNBayBuomHepNang_Regular.ttf"; path = "../src/assets/fonts/UVNBayBuomHepNang_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A8021D8C6A2D45C39FC946D3 /* Montserrat.ttf */ = {isa = PBXFileReference; name = "Montserrat.ttf"; path = "../src/assets/fonts/Montserrat.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		D603EFD1CE154FA5A19044B7 /* OpenSans.ttf */ = {isa = PBXFileReference; name = "OpenSans.ttf"; path = "../src/assets/fonts/OpenSans.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		4F9FEDFCEBD043A7BC8A20A2 /* Poppins.ttf */ = {isa = PBXFileReference; name = "Poppins.ttf"; path = "../src/assets/fonts/Poppins.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		EBE46666B14541A9917D0BE0 /* Times-New-Roman.ttf */ = {isa = PBXFileReference; name = "Times-New-Roman.ttf"; path = "../src/assets/fonts/Times-New-Roman.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B4542591A93F49F5A3CAC69A /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; name = "Montserrat-SemiBold.ttf"; path = "../src/assets/fonts/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F00376A80FA4FD4817E17E1 /* UVNBayBuomHep_Bold.ttf */ = {isa = PBXFileReference; name = "UVNBayBuomHep_Bold.ttf"; path = "../src/assets/fonts/UVNBayBuomHep_Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,12 +180,13 @@
 				BB4FD54DC0F14E7E932A6E9C /* SedgwickAveDisplay-Regular.ttf */,
 				C0B0C1CCDC294DE98336AF3F /* Lora.ttf */,
 				1A1C16544DA94BDEA93C6D23 /* Merriweather-Light.ttf */,
-				62CC01A41AD3419AA60C3C7D /* UVNBayBuomHepNang.ttf */,
 				AAA552A90432495BB155367F /* UVNBayBuomHepNang_Regular.ttf */,
 				A8021D8C6A2D45C39FC946D3 /* Montserrat.ttf */,
 				D603EFD1CE154FA5A19044B7 /* OpenSans.ttf */,
 				4F9FEDFCEBD043A7BC8A20A2 /* Poppins.ttf */,
 				EBE46666B14541A9917D0BE0 /* Times-New-Roman.ttf */,
+				B4542591A93F49F5A3CAC69A /* Montserrat-SemiBold.ttf */,
+				0F00376A80FA4FD4817E17E1 /* UVNBayBuomHep_Bold.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -288,12 +291,13 @@
 				C37FAD6DB63E48A291D15DA2 /* SedgwickAveDisplay-Regular.ttf in Resources */,
 				FE64F1800E674F8282C56E11 /* Lora.ttf in Resources */,
 				D5F8BAB4A86D4B7E8F643B46 /* Merriweather-Light.ttf in Resources */,
-				1BA7ED26EBBD481190AFBB76 /* UVNBayBuomHepNang.ttf in Resources */,
 				1A998BE55C77409EB5620B68 /* UVNBayBuomHepNang_Regular.ttf in Resources */,
 				1525F22CD1064A638C3D8906 /* Montserrat.ttf in Resources */,
 				6475E83690E4400A99D84177 /* OpenSans.ttf in Resources */,
 				B4A82A430A8C4A9DB0BD488E /* Poppins.ttf in Resources */,
 				B2DE744440134A119F9B186B /* Times-New-Roman.ttf in Resources */,
+				C21606E3786A4E7AA6015727 /* Montserrat-SemiBold.ttf in Resources */,
+				356BA65A0866447185A7E374 /* UVNBayBuomHep_Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

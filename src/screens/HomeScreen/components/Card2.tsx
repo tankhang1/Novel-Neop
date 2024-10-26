@@ -32,15 +32,15 @@ const Card2 = ({
   return (
     <View style={styles.cardContainer}>
       <AppImageWrapper
-        source={require('../../../assets/images/card_1.png')}
+        source={require('../../../assets/images/journey_banner.png')}
         imageStyle={[styles.image, imageStyle]}
-        resizeMode="stretch"
+        resizeMode="cover"
         type="YELLOW"
       />
       <View style={styles.contentContainer}>
         <View style={rightSectionStyle}>
           <AppText style={[styles.title, titleStyle]}>
-            Phàm Nhân Tu Tiên
+            Journey to the West
           </AppText>
           <View style={styles.subtitleContainer}>
             <AppImage
@@ -48,16 +48,16 @@ const Card2 = ({
               resizeMode="contain"
               imageStyle={styles.penIcon}
             />
-            <AppText style={[styles.subTitle, subTitleStyle]}>Vong ngữ</AppText>
+            <AppText style={[styles.subTitle, subTitleStyle]}>Unknown</AppText>
           </View>
           <View style={styles.tagContainer}>
             <Tag
-              content="Tiên Hiệp"
+              content="Wuxia"
               wrapperStyle={styles.tagWrapper}
               textStyle={[styles.tagText, subTitleStyle]}
             />
             <Tag
-              content="Hoàn thành"
+              content="Fantasy"
               wrapperStyle={styles.tagWrapper}
               textStyle={[styles.tagText, subTitleStyle]}
             />

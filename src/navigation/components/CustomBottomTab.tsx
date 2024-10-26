@@ -24,7 +24,7 @@ const BottomTabs = [
   },
   {
     key: 'COMMIC',
-    url: require('@assets/images/card-8.png'),
+    url: require('@assets/images/journey_banner.png'),
   },
   {
     key: 'NOTIFICATION',
@@ -62,7 +62,7 @@ const CustomBottomTab = ({navigation}: BottomTabBarProps) => {
               <View style={styles.commicContainer}>
                 <AppImageWrapper
                   source={tab.url}
-                  resizeMode="contain"
+                  resizeMode="cover"
                   type="YELLOW"
                   imageStyle={styles.commicImage}
                 />

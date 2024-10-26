@@ -8,7 +8,6 @@ import {
   TextInput,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
-import ArrowBack from '@assets/icons/arrow-back.svg';
 import Card2 from '../HomeScreen/components/Card2';
 import {ASSETS, COLORS, HEIGHT, WIDTH} from '@constants/index';
 import AppText from '@components/AppText';
@@ -28,6 +27,13 @@ import Comments from './components/Comments';
 import CloseX from '@assets/icons/CloseX';
 import AppComment from '@components/AppComment';
 import AppImage from '@components/AppImage';
+import ChevronLeft from '@assets/icons/common/Chevron-Left';
+import ViewAltLight from '@assets/icons/common/View-Alt-Light';
+import RoundStar from '@assets/icons/common/Round-Star';
+import ChevronDown from '@assets/icons/common/Chevron-Down';
+import BookMark from '@assets/icons/common/BookMark';
+import LikeLight from '@assets/icons/common/Like-Light';
+import BackgroundButton from '@assets/icons/common/Background-Button';
 type TComment = {
   avatar: string;
   sender: string;
@@ -157,7 +163,7 @@ const ComicDetail = ({navigation}: Props) => {
           onPress={() => navigation.goBack()}
           style={styles.backButtonContainer}>
           <View style={styles.backButton} hitSlop={10}>
-            <ArrowBack width={20} />
+            <ChevronLeft width={24} height={24} color="rgba(0,0,0,1)" />
           </View>
           <Text style={styles.backTxtButton}>Back</Text>
         </TouchableOpacity>
@@ -173,12 +179,16 @@ const ComicDetail = ({navigation}: Props) => {
           <View style={styles.descriptionImageContainer}>
             <View style={styles.descriptionLeftContainer}>
               <View style={styles.descriptionItemContainer}>
-                <ASSETS.ICONS.EyeFillIcon />
+                <ViewAltLight width={14} height={14} />
                 <Text style={styles.descriptionItemTxtContainer}>300k</Text>
               </View>
               <View style={styles.descriptionItemContainer}>
                 <Text style={styles.descriptionItemTxtContainer}>4.8</Text>
-                <ASSETS.ICONS.StarFillIcon />
+                <RoundStar
+                  width={14}
+                  height={14}
+                  color={COLORS.lightmode.primary[600]}
+                />
               </View>
             </View>
             <View style={styles.descriptionRightContainer}>
@@ -186,7 +196,7 @@ const ComicDetail = ({navigation}: Props) => {
                 style={styles.descriptionRightButtonItem}
                 onPress={() => (isOpenLanguage.value = !isOpenLanguage.value)}>
                 <Text style={styles.descriptionRightTxtItem}>English</Text>
-                <ASSETS.ICONS.ChervonDownIcon />
+                <ChevronDown width={14} height={14} />
               </TouchableOpacity>
               <TouchableOpacity
                 style={[
@@ -195,9 +205,10 @@ const ComicDetail = ({navigation}: Props) => {
                     backgroundColor: COLORS.lightmode.netrual[100],
                   },
                 ]}>
-                <ASSETS.ICONS.BookMarkIcon
-                  fill={'none'}
-                  stroke={COLORS.lightmode.netrual[500]}
+                <BookMark
+                  color={COLORS.lightmode.netrual[500]}
+                  width={16}
+                  height={16}
                 />
                 <Text style={styles.descriptionRightTxtItem}>5.4k</Text>
               </TouchableOpacity>
@@ -208,7 +219,11 @@ const ComicDetail = ({navigation}: Props) => {
                     backgroundColor: COLORS.lightmode.netrual[100],
                   },
                 ]}>
-                <ASSETS.ICONS.LikeIcon />
+                <LikeLight
+                  width={16}
+                  height={16}
+                  color={COLORS.lightmode.netrual[500]}
+                />
                 <Text style={styles.descriptionRightTxtItem}>5.4k</Text>
               </TouchableOpacity>
             </View>
@@ -260,20 +275,28 @@ const ComicDetail = ({navigation}: Props) => {
           <Comments isOpenComment={isOpenComment} />
         </ImageBackground>
       </ScrollView>
+
       <ImageBackground
         source={require('@assets/images/bottom-bg.png')}
         style={styles.bottomBar}>
         <View style={styles.bottomContainer}>
-          <TouchableOpacity
-            style={styles.bottomItemContainer}
-            onPress={() => navigation.navigate('ReadComic')}>
-            <ASSETS.ICONS.ExchangeIcon />
-            <Text style={styles.bottomItemTextStyle}>Read</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.bottomItemSecondContainer}>
-            <ASSETS.ICONS.PlayIcon />
-            <Text style={styles.bottomItemTextStyle}>Continue Chapter 2</Text>
-          </TouchableOpacity>
+          <BackgroundButton
+            onPress={() => navigation.navigate('ReadComic')}
+            variant="gray"
+            wrapStyle={styles.bottomItemWrapper}>
+            <View style={styles.bottomItemContainer}>
+              <ASSETS.ICONS.ExchangeIcon />
+              <Text style={styles.bottomItemTextStyle}>Read</Text>
+            </View>
+          </BackgroundButton>
+          <BackgroundButton
+            wrapStyle={styles.bottomItemSecondWrapper}
+            variant="yellow">
+            <View style={styles.bottomItemSecondContainer}>
+              <ASSETS.ICONS.PlayIcon />
+              <Text style={styles.bottomItemTextStyle}>Continue Chapter 2</Text>
+            </View>
+          </BackgroundButton>
         </View>
       </ImageBackground>
 
@@ -409,7 +432,7 @@ const styles = StyleSheet.create({
   },
   backTxtButton: {
     fontSize: 15,
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-SemiBold',
     lineHeight: 24,
     fontWeight: '500',
     color: 'rgba(0, 0, 0, 1)',
@@ -468,12 +491,14 @@ const styles = StyleSheet.create({
   descriptionItemContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 5,
+    gap: 2,
   },
   descriptionItemTxtContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
+    fontFamily: 'Montserrat-SemiBold',
+    fontSize: 12,
     color: COLORS.lightmode.netrual[900],
   },
 
@@ -563,23 +588,21 @@ const styles = StyleSheet.create({
     gap: 10,
     paddingTop: 30,
   },
+  bottomItemWrapper: {
+    borderRadius: 14,
+  },
   bottomItemContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
-    backgroundColor: COLORS.lightmode.netrual[0],
     paddingHorizontal: 20,
     paddingVertical: 16,
-    borderRadius: 14,
   },
+  bottomItemSecondWrapper: {flex: 1, height: 50, borderRadius: 14},
   bottomItemSecondContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
-    backgroundColor: COLORS.lightmode.primary[500],
-    paddingHorizontal: 20,
-    paddingVertical: 16,
-    borderRadius: 14,
     flex: 1,
     justifyContent: 'center',
   },

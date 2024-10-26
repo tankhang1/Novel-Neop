@@ -30,12 +30,11 @@ const AppImageWrapper = ({
   type = 'UP',
 }: TAppImageWrapper) => {
   return (
-    <View style={[imageStyle, styles.overall, wrapperStyle]}>
+    <View style={[imageStyle, wrapperStyle, styles.overall]}>
       <AppImage
         imageStyle={imageStyle}
-        resizeMode={resizeMode}
+        resizeMode={'stretch'}
         source={mapImage.get(type)}
-        globalStyle={[imageStyle]}
       />
       <AppImage
         imageStyle={imageStyle}
@@ -52,6 +51,7 @@ export default AppImageWrapper;
 const styles = StyleSheet.create({
   overall: {
     position: 'relative',
+    overflow: 'hidden',
   },
   image: {
     position: 'absolute',

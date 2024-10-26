@@ -8,10 +8,11 @@ import {
 } from 'react-native';
 import React from 'react';
 import Title from '@screens/HomeScreen/components/Title';
-import {ASSETS, COLORS, HEIGHT, WIDTH} from '@constants/index';
-import Card from '@screens/HomeScreen/components/Card';
+import {COLORS, HEIGHT, WIDTH} from '@constants/index';
+// import Card from '@screens/HomeScreen/components/Card';
 import AppComment from '@components/AppComment';
 import {SharedValue} from 'react-native-reanimated';
+import ChevronRight from '@assets/icons/common/Chevron-Right';
 type TComment = {
   avatar: string;
   sender: string;
@@ -19,36 +20,36 @@ type TComment = {
   countLike: number;
   message: string;
 };
-type TComic = {
-  image: any;
-  label: string;
-};
-const ListComic = [
-  {
-    image: require('../../../assets/images/card_1.png'),
-    label: 'Phàm Nhân Tu Tiên',
-  },
-  {
-    image: require('../../../assets/images/card_1.png'),
-    label: 'Cử Đầu Vọng Minh Nguyệt',
-  },
-  {
-    image: require('../../../assets/images/card_1.png'),
-    label: 'Chiến Thần Trừ Yêu Dẹp Loạn',
-  },
-  {
-    image: require('../../../assets/images/card_1.png'),
-    label: 'Tiểu Gia Là Siêu Cấp Thiên Tài',
-  },
-  {
-    image: require('../../../assets/images/card_1.png'),
-    label: 'Thần Lộ',
-  },
-  {
-    image: require('../../../assets/images/card_1.png'),
-    label: 'Nhật Ký Của Tôi Và Em Trai',
-  },
-];
+// type TComic = {
+//   image: any;
+//   label: string;
+// };
+// const ListComic = [
+//   {
+//     image: require('../../../assets/images/card_1.png'),
+//     label: 'Phàm Nhân Tu Tiên',
+//   },
+//   {
+//     image: require('../../../assets/images/card_1.png'),
+//     label: 'Cử Đầu Vọng Minh Nguyệt',
+//   },
+//   {
+//     image: require('../../../assets/images/card_1.png'),
+//     label: 'Chiến Thần Trừ Yêu Dẹp Loạn',
+//   },
+//   {
+//     image: require('../../../assets/images/card_1.png'),
+//     label: 'Tiểu Gia Là Siêu Cấp Thiên Tài',
+//   },
+//   {
+//     image: require('../../../assets/images/card_1.png'),
+//     label: 'Thần Lộ',
+//   },
+//   {
+//     image: require('../../../assets/images/card_1.png'),
+//     label: 'Nhật Ký Của Tôi Và Em Trai',
+//   },
+// ];
 const ListComments: TComment[] = [
   {
     avatar:
@@ -136,24 +137,24 @@ type TComments = {
   isOpenComment: SharedValue<boolean>;
 };
 const Comments = ({isOpenComment}: TComments) => {
-  const renderCommicPopularItem = ({
-    item,
-    index,
-  }: ListRenderItemInfo<TComic>) => {
-    return (
-      <Card
-        {...item}
-        key={index}
-        onPress={() => {
-          //@ts-ignore
-          // navigation.navigate('ComicDetail');
-        }}
-        wrapperStyle={styles.cardWrapper}
-        imageStyle={{resizeMode: 'cover', height: 115}}
-        numberOfLines={2}
-      />
-    );
-  };
+  // const renderCommicPopularItem = ({
+  //   item,
+  //   index,
+  // }: ListRenderItemInfo<TComic>) => {
+  //   return (
+  //     <Card
+  //       {...item}
+  //       key={index}
+  //       onPress={() => {
+  //         //@ts-ignore
+  //         // navigation.navigate('ComicDetail');
+  //       }}
+  //       wrapperStyle={styles.cardWrapper}
+  //       imageStyle={{resizeMode: 'cover', height: 115}}
+  //       numberOfLines={2}
+  //     />
+  //   );
+  // };
   const renderComments = ({item, index}: ListRenderItemInfo<TComment>) => {
     return <AppComment {...item} key={index} />;
   };
@@ -170,7 +171,7 @@ const Comments = ({isOpenComment}: TComments) => {
           style={styles.comicMoreButton}
           onPress={() => (isOpenComment.value = !isOpenComment.value)}>
           <Text style={styles.comicMoreStyle}>More (8.5k)</Text>
-          <ASSETS.ICONS.ArrowRightIcon fill={COLORS.lightmode.netrual[500]} />
+          <ChevronRight color={COLORS.lightmode.netrual[500]} />
         </TouchableOpacity>
       </View>
       <View style={styles.commentContainer}>
@@ -185,7 +186,7 @@ const Comments = ({isOpenComment}: TComments) => {
           ListFooterComponent={<View style={styles.commentGap} />}
         />
       </View>
-      <View style={styles.comicHeaderContainer}>
+      {/* <View style={styles.comicHeaderContainer}>
         <Title
           content="Same Genre"
           width={195}
@@ -213,7 +214,7 @@ const Comments = ({isOpenComment}: TComments) => {
           ListFooterComponent={<View style={styles.listSpacer} />}
           scrollEnabled={false}
         />
-      </View>
+      </View> */}
       <View style={styles.listBottomSpacer} />
     </View>
   );

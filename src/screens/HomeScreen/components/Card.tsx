@@ -61,5 +61,6 @@ const styles = StyleSheet.create({
   labelStyle: {
     fontSize: 16,
     color: 'black',
+    fontFamily: 'UVNBayBuomHep_Bold',
   },
 });

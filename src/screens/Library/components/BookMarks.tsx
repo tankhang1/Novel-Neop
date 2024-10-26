@@ -1,6 +1,7 @@
-import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {COLORS} from '@constants/index';
+import BackgroundButton from '@assets/icons/common/Background-Button';
 
 const BookMarks = () => {
   return (
@@ -12,12 +13,9 @@ const BookMarks = () => {
       <Text style={styles.text}>
         Log in to view your bookmarks, purchased stories, and more.
       </Text>
-      <TouchableOpacity>
-        <Image
-          source={require('@assets/images/click-login-btn.png')}
-          style={styles.buttonImage}
-        />
-      </TouchableOpacity>
+      <BackgroundButton variant="yellow" wrapStyle={styles.buttonWrapper}>
+        <Text style={styles.buttonText}>Click to login</Text>
+      </BackgroundButton>
       <View style={styles.bottomSpacing} />
     </View>
   );
@@ -35,6 +33,7 @@ const styles = StyleSheet.create({
     height: 190,
   },
   text: {
+    fontFamily: 'Montserrat',
     color: COLORS.lightmode.netrual[300],
     fontSize: 13,
     letterSpacing: 1,
@@ -43,9 +42,17 @@ const styles = StyleSheet.create({
     lineHeight: 18,
     opacity: 0.5,
   },
-  buttonImage: {
-    width: 220,
-    height: 48,
+  buttonWrapper: {
+    width: 183,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 14,
+  },
+  buttonText: {
+    fontSize: 14,
+    color: COLORS.lightmode.netrual[900],
+    fontFamily: 'Montserrat-SemiBold',
   },
   bottomSpacing: {
     height: 150,

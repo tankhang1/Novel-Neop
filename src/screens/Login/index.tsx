@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat',
   },
   bottomSheet: {
-    height: HEIGHT * 0.4,
+    height: HEIGHT * 0.5,
     width: WIDTH,
     paddingTop: 10,
     marginTop: 10,

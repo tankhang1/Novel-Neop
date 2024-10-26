@@ -77,7 +77,7 @@ const AppCarousel = () => {
 export default AppCarousel;
 
 const styles = StyleSheet.create({
-  banner: {width: WIDTH, height: 270},
+  banner: {width: WIDTH, height: 264},
 
   dotWrapper: {
     flexDirection: 'row',
