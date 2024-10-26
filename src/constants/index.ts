@@ -7,25 +7,12 @@ import NotificationInActiveIcon from '@assets/icons/navigation/notification-inac
 import NotificationActiveIcon from '@assets/icons/navigation/notification-active.svg';
 import ProfileInActiveIcon from '@assets/icons/navigation/profile-inactive.svg';
 import ProfileActiveIcon from '@assets/icons/navigation/profile-active.svg';
-import ArrowLeftIcon from '@assets/icons/arrow-back.svg';
 import SortIcon from '@assets/icons/sort.svg';
 import SortUpIcon from '@assets/icons/sort-up.svg';
 import TopTabIndicatorIcon from '@assets/icons/top-tab-indicator.svg';
-import BackgroundBtn from '@assets/icons/bg-btn.svg';
-import ArrowRightIcon from '@assets/icons/arrow-right.svg';
-import DoneAllIcon from '@assets/icons/done-all.svg';
-import NotificationICon from '@assets/icons/notification-icon.svg';
 import RemoveIcon from '@assets/icons/remove.svg';
-import InfoWarningIcon from '@assets/icons/info-warning.svg';
-import EditIcon from '@assets/icons/edit.svg';
 import NeopLogoIcon from '@assets/icons/logo-neop.svg';
-import EyeIcon from '@assets/icons/eye.svg';
-import EyeFillIcon from '@assets/icons/eye-fill.svg';
 import StarFillIcon from '@assets/icons/star-fill.svg';
-import ChervonDownIcon from '@assets/icons/ChervonDown';
-import BookMarkIcon from '@assets/icons/bookmark.tsx';
-import LikeIcon from '@assets/icons/like';
-import ExchangeIcon from '@assets/icons/exchange.svg';
 import PlayIcon from '@assets/icons/play.svg';
 import SendFillIcon from '@assets/icons/send-fill.svg';
 import MenuIcon from '@assets/icons/MenuIcon';
@@ -54,29 +41,16 @@ const ASSETS = {
     NotificationActiveIcon,
     ProfileActiveIcon,
     ProfileInActiveIcon,
-    ArrowLeftIcon,
     SortIcon,
     SortUpIcon,
     TopTabIndicatorIcon,
-    BackgroundBtn,
-    ArrowRightIcon,
-    DoneAllIcon,
     RemoveIcon,
-    NotificationICon,
-    InfoWarningIcon,
-    EditIcon,
     NeopLogoIcon,
     MenuIcon,
-    EyeIcon,
-    EyeFillIcon,
     StarFillIcon,
-    ChervonDownIcon,
-    BookMarkIcon,
-    LikeIcon,
     SubtractIcon,
     MarginIcon,
     LineHeightIcon,
-    ExchangeIcon,
     PlayIcon,
     SendFillIcon,
     MenuDotSquare,

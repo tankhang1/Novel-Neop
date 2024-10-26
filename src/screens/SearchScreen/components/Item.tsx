@@ -8,8 +8,9 @@ import {
 import React from 'react';
 import AppImageWrapper from '@components/AppImageWrapper';
 import {ASSETS, COLORS} from '@constants/index';
-import CloseX from '@assets/icons/CloseX';
+import CloseX from '@assets/icons/common/CloseX';
 import Animated, {FadeIn} from 'react-native-reanimated';
+import ViewAltLight from '@assets/icons/common/View-Alt-Light';
 
 type TItem = {
   source: ImageSourcePropType;
@@ -33,7 +34,7 @@ const Item = ({label, onClose, source, index}: TItem) => {
             <Text style={styles.text}>653</Text>
           </View>
           <View style={styles.iconTextContainer}>
-            <ASSETS.ICONS.EyeIcon width={14} />
+            <ViewAltLight width={14} />
             <Text style={styles.text}>200k</Text>
           </View>
         </View>

@@ -11,12 +11,13 @@ import {
 import React, {useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import AppText from '@components/AppText';
-import ArrowBack from '@assets/icons/arrow-back.svg';
-import ArrowRight from '@assets/icons/arrow-right.svg';
 import {useSharedValue} from 'react-native-reanimated';
 import BottomSheet from '@components/AppBottomSheet';
 import {ASSETS, COLORS, COMMIC, HEIGHT, WIDTH} from '@constants/index';
 import ChapterBottomSheet from './components/ChapterBottomSheet';
+import ChevronLeft from '@assets/icons/common/Chevron-Left';
+import ChevronRight from '@assets/icons/common/Chevron-Right';
+import ChevronDown from '@assets/icons/common/Chevron-Down';
 
 const LIST_COLOR = [
   'rgba(235, 188, 93, 0.05)',
@@ -95,16 +96,12 @@ const ReadComic = () => {
     <View style={styles.overall}>
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={() => navigation.goBack()} hitSlop={15}>
-          <ArrowBack width={20} />
+          <ChevronLeft width={20} />
         </TouchableOpacity>
         <AppText style={styles.headerTitle} numberOfLines={1}>
           {COMMIC.get(chapter)?.title}
         </AppText>
-        <TouchableOpacity
-          style={styles.headerContainer}
-          onPress={() => navigation.goBack()}
-          hitSlop={10}
-        />
+        <View style={{width: 20}} />
       </View>
       <FlatList
         data={[12]}
@@ -183,7 +180,7 @@ const ReadComic = () => {
                 toggleSheet();
               }}
               style={styles.bottomSheetHeaderContainer}>
-              <ASSETS.ICONS.ChervonDownIcon
+              <ChevronDown
                 width={20}
                 height={20}
                 color={COLORS.lightmode.netrual[300]}
@@ -313,7 +310,7 @@ const ReadComic = () => {
       <View style={styles.menuContainer}>
         <View style={styles.menuItemContainer}>
           <TouchableOpacity hitSlop={10} onPress={onDecreaseChapter}>
-            <ArrowBack width={20} />
+            <ChevronLeft width={20} />
           </TouchableOpacity>
           <Pressable
             hitSlop={10}
@@ -353,7 +350,7 @@ const ReadComic = () => {
             />
           </Pressable>
           <TouchableOpacity hitSlop={10} onPress={onIncreaseChapter}>
-            <ArrowRight width={40} fill="#EBBC5D" />
+            <ChevronRight variant="bold" />
           </TouchableOpacity>
         </View>
       </View>
@@ -370,9 +367,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    width: WIDTH,
     backgroundColor: COLORS.lightmode.netrual[0],
   },
-  headerTitle: {fontSize: 16, color: '#090A0B'},
+  headerTitle: {fontSize: 16, color: '#090A0B', flex: 1},
   overall: {
     flex: 1,
   },

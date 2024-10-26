@@ -13,6 +13,7 @@ import AppText from '@components/AppText';
 import Tag from './Tag';
 import AppImageWrapper from '@components/AppImageWrapper';
 import {ASSETS, COLORS} from '@constants/index';
+import ViewAltLight from '@assets/icons/common/View-Alt-Light';
 
 type TCard2 = {
   imageStyle?: StyleProp<ImageStyle>;
@@ -71,7 +72,7 @@ const Card2 = ({
               <Text style={styles.text}>653</Text>
             </View>
             <View style={styles.iconTextContainer}>
-              <ASSETS.ICONS.EyeIcon width={14} />
+              <ViewAltLight width={14} />
               <Text style={styles.text}>200k</Text>
             </View>
           </View>

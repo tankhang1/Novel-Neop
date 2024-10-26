@@ -1,21 +1,36 @@
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
-import {ASSETS, COLORS} from '@constants/index';
+import NotificationBellCheck from '@assets/icons/common/Notification-Bell-Check';
+import NotificationBellCross from '@assets/icons/common/Notification-Bell-Cross';
+import BellNotificationSquare from '@assets/icons/common/Bell-Notification-Square';
+import {COLORS} from '@constants/index';
 
 const Header = () => {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <ASSETS.ICONS.NotificationICon />
+        <BellNotificationSquare
+          color={COLORS.lightmode.primary[600]}
+          width={36}
+          height={36}
+        />
         <Text style={styles.titleText}>Notifications</Text>
         <Text style={styles.notificationCount}>(99+)</Text>
       </View>
       <View style={styles.iconContainer}>
-        <TouchableOpacity>
-          <ASSETS.ICONS.DoneAllIcon />
+        <TouchableOpacity style={styles.iconButtonWarning}>
+          <NotificationBellCheck
+            color={COLORS.lightmode.netrual[0]}
+            width={24}
+            height={24}
+          />
         </TouchableOpacity>
-        <TouchableOpacity>
-          <ASSETS.ICONS.RemoveIcon />
+        <TouchableOpacity style={styles.iconButtonError}>
+          <NotificationBellCross
+            color={COLORS.lightmode.netrual[0]}
+            width={24}
+            height={24}
+          />
         </TouchableOpacity>
       </View>
     </View>
@@ -38,15 +53,14 @@ const styles = StyleSheet.create({
     gap: 14,
   },
   titleText: {
-    fontSize: 32,
-    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontSize: 20,
+    fontFamily: 'Montserrat-SemiBold',
     lineHeight: 45,
     color: COLORS.lightmode.netrual[900],
   },
   notificationCount: {
     fontSize: 16,
-    fontFamily: 'Montserrat',
-    fontWeight: '700', // Use string for fontWeight
+    fontFamily: 'Montserrat-SemiBold',
     lineHeight: 23,
     color: COLORS.lightmode.netrual[300],
   },
@@ -54,6 +68,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 14,
+  },
+  iconButtonWarning: {
+    width: 36,
+    height: 36,
+    borderRadius: 11,
+    backgroundColor: COLORS.lightmode.warning[500],
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  iconButtonError: {
+    width: 36,
+    height: 36,
+    borderRadius: 11,
+    backgroundColor: COLORS.lightmode.error[500],
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

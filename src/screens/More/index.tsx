@@ -1,11 +1,12 @@
 import {ScrollView, TouchableOpacity, View, StyleSheet} from 'react-native';
 import React from 'react';
 import AppHeader from '@components/AppHeader';
-import {ASSETS, WIDTH} from '@constants/index';
+import {WIDTH} from '@constants/index';
 import Card2 from '@screens/HomeScreen/components/Card2';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@utils/types/navigation';
 import AppSearch from '@components/AppSearch';
+import ChevronLeft from '@assets/icons/common/Chevron-Left';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'More'>;
 const MoreScreen = ({navigation}: Props) => {
@@ -15,7 +16,7 @@ const MoreScreen = ({navigation}: Props) => {
         title="Wuxia"
         leftSection={
           <TouchableOpacity onPress={() => navigation.goBack()}>
-            <ASSETS.ICONS.ArrowLeftIcon />
+            <ChevronLeft />
           </TouchableOpacity>
         }
         rightSection={<View style={styles.rightSection} />}

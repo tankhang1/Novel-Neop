@@ -24,7 +24,6 @@ import Animated, {
 import CommicDetailTab from './components/CommicDetailTab';
 import CommicChapterTab from './components/CommicChapterTab';
 import Comments from './components/Comments';
-import CloseX from '@assets/icons/CloseX';
 import AppComment from '@components/AppComment';
 import AppImage from '@components/AppImage';
 import ChevronLeft from '@assets/icons/common/Chevron-Left';
@@ -34,6 +33,8 @@ import ChevronDown from '@assets/icons/common/Chevron-Down';
 import BookMark from '@assets/icons/common/BookMark';
 import LikeLight from '@assets/icons/common/Like-Light';
 import BackgroundButton from '@assets/icons/common/Background-Button';
+import CloseX from '@assets/icons/common/CloseX';
+import Repeat from '@assets/icons/common/Repeat';
 type TComment = {
   avatar: string;
   sender: string;
@@ -285,7 +286,7 @@ const ComicDetail = ({navigation}: Props) => {
             variant="gray"
             wrapStyle={styles.bottomItemWrapper}>
             <View style={styles.bottomItemContainer}>
-              <ASSETS.ICONS.ExchangeIcon />
+              <Repeat />
               <Text style={styles.bottomItemTextStyle}>Read</Text>
             </View>
           </BackgroundButton>

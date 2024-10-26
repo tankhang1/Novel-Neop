@@ -9,9 +9,10 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import Header from './components/Header';
-import {ASSETS, COLORS} from '@constants/index';
+import {COLORS} from '@constants/index';
 import Item from './components/Item';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import NotificationBellCross from '@assets/icons/common/Notification-Bell-Cross';
 
 const NotificationScreen = () => {
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
@@ -55,7 +56,7 @@ const NotificationScreen = () => {
         animationType="slide">
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
-            <ASSETS.ICONS.InfoWarningIcon />
+            <NotificationBellCross color="red" width={36} height={36} />
             <View style={styles.modalTextContainer}>
               <Text style={styles.modalTitle}>Delete All This ?</Text>
               <Text style={styles.modalMessage}>
@@ -125,6 +126,8 @@ const styles = StyleSheet.create({
   },
   modalContent: {
     backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
     width: '90%',
     padding: 24,
     gap: 15,
@@ -132,6 +135,8 @@ const styles = StyleSheet.create({
   },
   modalTextContainer: {
     gap: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   modalTitle: {
     fontSize: 24,
@@ -145,6 +150,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat',
     lineHeight: 20,
     letterSpacing: 1,
+    textAlign: 'center',
     color: COLORS.lightmode.netrual[500],
   },
   modalButtons: {

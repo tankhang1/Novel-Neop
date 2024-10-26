@@ -8,8 +8,9 @@ import {
   ImageBackground,
 } from 'react-native';
 import React from 'react';
-import {ASSETS, COLORS} from '@constants/index';
+import {COLORS} from '@constants/index';
 import dayjs from 'dayjs';
+import LikeLight from '@assets/icons/common/Like-Light';
 
 type TComment = {
   avatar: string;
@@ -45,10 +46,7 @@ const AppComment = ({
           </View>
         </View>
         <View style={styles.likeInfo}>
-          <ASSETS.ICONS.LikeIcon
-            stroke={COLORS.lightmode.netrual[300]}
-            fill="none"
-          />
+          <LikeLight color={COLORS.lightmode.netrual[300]} />
           <Text style={styles.likeCount}>{countLike}</Text>
         </View>
       </View>

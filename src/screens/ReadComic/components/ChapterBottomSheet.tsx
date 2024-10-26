@@ -2,8 +2,9 @@ import {View, ScrollView, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import BottomSheet from '@components/AppBottomSheet';
 import {SharedValue} from 'react-native-reanimated';
-import {ASSETS, COLORS, COMMIC, HEIGHT} from '@constants/index';
+import {COLORS, COMMIC, HEIGHT} from '@constants/index';
 import ChapterItem from './ChapterItem';
+import ChevronDown from '@assets/icons/common/Chevron-Down';
 const LIST_CHAPTER = Array.from(COMMIC, ([key, value]) => ({
   label: value.title,
   createdAt: value.createdAt,
@@ -40,7 +41,7 @@ const ChapterBottomSheet = ({
             toggleSheetMenu();
           }}
           style={styles.bottomSheetHeaderContainer1}>
-          <ASSETS.ICONS.ChervonDownIcon
+          <ChevronDown
             width={20}
             height={20}
             color={COLORS.lightmode.netrual[300]}

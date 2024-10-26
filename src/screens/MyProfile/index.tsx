@@ -11,7 +11,9 @@ import {ASSETS, COLORS} from '@constants/index';
 import AppImageWrapper from '@components/AppImageWrapper';
 import AppImage from '@components/AppImage';
 import AppSwitch from '@components/AppSwitch';
-import CloseX from '@assets/icons/CloseX';
+import CloseX from '@assets/icons/common/CloseX';
+import ChevronRight from '@assets/icons/common/Chevron-Right';
+import Edit from '@assets/icons/common/Edit';
 
 const LIST_MALE_AVATAR = [
   require('@assets/images/avatar/01.png'),
@@ -42,7 +44,7 @@ const MyProfileScreen = () => {
           <TouchableOpacity
             style={styles.editIcon}
             onPress={() => setOpenSelectAvatar(true)}>
-            <ASSETS.ICONS.EditIcon />
+            <Edit color="white" width={18} height={18} />
           </TouchableOpacity>
         </View>
         <View style={styles.nameWrapper}>
@@ -72,7 +74,7 @@ const MyProfileScreen = () => {
             />
             <Text style={styles.optionText}>Settings</Text>
           </View>
-          <ASSETS.ICONS.ArrowRightIcon />
+          <ChevronRight variant="bold" />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.optionItem}>
@@ -84,7 +86,7 @@ const MyProfileScreen = () => {
             />
             <Text style={[styles.optionText, styles.logoutText]}>Log out</Text>
           </View>
-          <ASSETS.ICONS.ArrowRightIcon />
+          <ChevronRight variant="bold" />
         </TouchableOpacity>
       </View>
       <Modal
@@ -163,6 +165,12 @@ const styles = StyleSheet.create({
     bottom: 0,
     right: 5,
     zIndex: 999,
+    backgroundColor: COLORS.lightmode.netrual[900],
+    borderRadius: 100,
+    width: 28,
+    height: 28,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   nameWrapper: {
     marginTop: 15,
