@@ -211,40 +211,42 @@ const ComicDetail = ({navigation}: Props) => {
               </View>
             </View>
             <View style={styles.descriptionRightContainer}>
-              <TouchableOpacity
-                style={styles.descriptionRightButtonItem}
+              <BackgroundButton
+                wrapStyle={styles.descriptionButtonWraper}
+                variant="yellow"
                 onPress={() => (isOpenLanguage.value = !isOpenLanguage.value)}>
-                <Text style={styles.descriptionRightTxtItem}>English</Text>
-                <ChevronDown width={14} height={14} />
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[
-                  styles.descriptionRightButtonItem,
-                  {
-                    backgroundColor: COLORS.lightmode.netrual[100],
-                  },
-                ]}>
-                <BookMark
-                  color={COLORS.lightmode.netrual[500]}
-                  width={16}
-                  height={16}
-                />
-                <Text style={styles.descriptionRightTxtItem}>5.4k</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[
-                  styles.descriptionRightButtonItem,
-                  {
-                    backgroundColor: COLORS.lightmode.netrual[100],
-                  },
-                ]}>
-                <LikeLight
-                  width={16}
-                  height={16}
-                  color={COLORS.lightmode.netrual[500]}
-                />
-                <Text style={styles.descriptionRightTxtItem}>5.4k</Text>
-              </TouchableOpacity>
+                <View style={styles.descriptionRightButtonItem}>
+                  <Text style={styles.descriptionRightTxtItem}>English</Text>
+                  <ChevronDown width={14} height={14} />
+                </View>
+              </BackgroundButton>
+              <BackgroundButton
+                wrapStyle={styles.descriptionButtonWraper}
+                variant="gray-bold"
+                onPress={() => (isOpenLanguage.value = !isOpenLanguage.value)}>
+                <TouchableOpacity style={[styles.descriptionRightButtonItem]}>
+                  <BookMark
+                    color={COLORS.lightmode.netrual[500]}
+                    width={16}
+                    height={16}
+                  />
+                  <Text style={styles.descriptionRightTxtItem}>5.4k</Text>
+                </TouchableOpacity>
+              </BackgroundButton>
+
+              <BackgroundButton
+                wrapStyle={styles.descriptionButtonWraper}
+                variant="gray-bold"
+                onPress={() => (isOpenLanguage.value = !isOpenLanguage.value)}>
+                <TouchableOpacity style={[styles.descriptionRightButtonItem]}>
+                  <LikeLight
+                    width={16}
+                    height={16}
+                    color={COLORS.lightmode.netrual[500]}
+                  />
+                  <Text style={styles.descriptionRightTxtItem}>5.4k</Text>
+                </TouchableOpacity>
+              </BackgroundButton>
             </View>
           </View>
         </View>
@@ -402,7 +404,7 @@ const ComicDetail = ({navigation}: Props) => {
               resizeMode="contain"
             />
             <ImageBackground
-              source={require('@assets/images/mask-1.png')}
+              source={require('@assets/images/mask-2.png')}
               resizeMode="stretch"
               style={{flex: 1}}>
               <TextInput
@@ -510,15 +512,17 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   descriptionRightButtonItem: {
-    backgroundColor: COLORS.lightmode.primary[500],
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
     width: 'auto',
     paddingHorizontal: 14,
-    borderRadius: 10,
     paddingVertical: 8,
   },
+  descriptionButtonWraper: {
+    borderRadius: 8,
+  },
+
   descriptionRightTxtItem: {
     fontSize: 11,
     fontFamily: 'Montserrat',
@@ -672,7 +676,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 15,
-    paddingVertical: 15,
+    paddingVertical: 20,
   },
   headerSpacer: {
     width: 18,

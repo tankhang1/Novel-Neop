@@ -11,8 +11,13 @@ type TBackgroundButton = {
   children: React.ReactNode;
   onPress?: () => void;
   wrapStyle?: StyleProp<ViewStyle>;
-  variant: 'yellow' | 'gray';
+  variant: 'yellow' | 'gray' | 'gray-bold';
 };
+const MapBg = new Map([
+  ['yellow', require('@assets/images/btn-yellow.png')],
+  ['gray', require('@assets/images/btn-gray.png')],
+  ['gray-bold', require('@assets/images/mask-1.png')],
+]);
 const BackgroundButton = ({
   children,
   onPress,
@@ -22,11 +27,7 @@ const BackgroundButton = ({
   return (
     <TouchableOpacity onPress={onPress} style={[wrapStyle, styles.overall]}>
       <ImageBackground
-        source={
-          variant === 'yellow'
-            ? require('@assets/images/btn-yellow.png')
-            : require('@assets/images/btn-gray.png')
-        }
+        source={MapBg.get(variant)}
         style={wrapStyle}
         resizeMode="stretch">
         {children}

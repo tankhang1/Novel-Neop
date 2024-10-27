@@ -30,7 +30,7 @@ const AppComment = ({
 }: TComment & {containerStyle?: StyleProp<ViewStyle>}) => {
   return (
     <ImageBackground
-      source={require('@assets/images/mask-1.png')}
+      source={require('@assets/images/mask-2.png')}
       resizeMode="stretch"
       style={[styles.container, containerStyle]}>
       <View style={styles.header}>
@@ -46,7 +46,11 @@ const AppComment = ({
           </View>
         </View>
         <View style={styles.likeInfo}>
-          <LikeLight color={COLORS.lightmode.netrual[300]} />
+          <LikeLight
+            color={COLORS.lightmode.netrual[300]}
+            width={14}
+            height={14}
+          />
           <Text style={styles.likeCount}>{countLike}</Text>
         </View>
       </View>
