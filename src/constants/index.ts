@@ -113,8 +113,7 @@ const COMMIC = new Map([
       createdAt: new Date(),
       title: `Chapter 1: The Divine Root Conceives and the Spring Breaks Forth 
 As the Heart's Nature Is Cultivated, the Great Way Arises`,
-      content: `
-Before Chaos was divided, Heaven and Earth were one; 
+      content: `Before Chaos was divided, Heaven and Earth were one; 
 All was a shapeless blur, and no men had appeared. 
 Once Pan Gu destroyed the Enormous Vagueness 
 The separation of clear and impure began. 
@@ -430,8 +429,7 @@ If you want to know what success he had in cultivating his conduct, you must lis
       title: `Chapter 2: He Becomes Aware of the Wonderful Truth of Enlightenment 
 By Killing the Demon He Realizes His Spirit−Nature 
 `,
-      content: `s
-The story goes on to tell how after being given a name the Handsome Monkey King jumped for joy and bowed to Subhuti to express his thanks. The Patriarch then ordered the others to take Sun Wukong out through the double doors and teach him how to sprinkle and sweep the floor, answer orders, and deport himself properly. All the Immortals went out in obedience to this command. When Sun Wukong was outside the doors he bowed to all his spiritual elder brothers and laid out his bed on the verandah. The next morning and every following day he studied language and deportment under his spiritual elder brothers, expounded the scriptures, discussed the Way, practiced calligraphy, and burnt incense. When he had any spare time he would sweep the grounds, dig the vegetable patch, grow flowers, tend trees, look for kindling, light the fire, carry water, and fetch soy. Everything he needed was provided. Thus six or seven years slipped by in the cave without his noticing them. One day the Patriarch took his seat on the dais, called all the Immortals together, and began to explain the Great Way. 
+      content: `The story goes on to tell how after being given a name the Handsome Monkey King jumped for joy and bowed to Subhuti to express his thanks. The Patriarch then ordered the others to take Sun Wukong out through the double doors and teach him how to sprinkle and sweep the floor, answer orders, and deport himself properly. All the Immortals went out in obedience to this command. When Sun Wukong was outside the doors he bowed to all his spiritual elder brothers and laid out his bed on the verandah. The next morning and every following day he studied language and deportment under his spiritual elder brothers, expounded the scriptures, discussed the Way, practiced calligraphy, and burnt incense. When he had any spare time he would sweep the grounds, dig the vegetable patch, grow flowers, tend trees, look for kindling, light the fire, carry water, and fetch soy. Everything he needed was provided. Thus six or seven years slipped by in the cave without his noticing them. One day the Patriarch took his seat on the dais, called all the Immortals together, and began to explain the Great Way. 
 Heavenly flowers fell in profusion, 
 While golden lotuses burst forth from the earth. 
 Brilliantly he expounded the doctrine of the Three Vehicles, 
@@ -660,8 +658,7 @@ If you don't know how this ended and want to know about the rest of their lives 
       title: `Chapter 3: The Four Seas and Thousand Mountains All Submit 
 In the Ninth Hell the Tenth Category Is Struck Off the Register 
 `,
-      content: `
-We have related how the Handsome Monkey King returned home in glory, bringing a large sword he had captured when he killed the Demon King of Confusion. From then on they practiced the military arts every day. He asked the little monkeys to cut down bamboo to make spears, carve swords out of wood, and learn to use banners and whistles. They learned to advance and retreat, and build a camp with a stockade round it. 
+      content: `We have related how the Handsome Monkey King returned home in glory, bringing a large sword he had captured when he killed the Demon King of Confusion. From then on they practiced the military arts every day. He asked the little monkeys to cut down bamboo to make spears, carve swords out of wood, and learn to use banners and whistles. They learned to advance and retreat, and build a camp with a stockade round it. 
 They spent a lot of time playing at this. 
 Once Sun Wukong was sitting in his seat of meditation when he wondered: "What would happen to us if our games were taken for the real thing? What if it alarmed some human monarch or gave offence to some king of birds or beasts? They might say that we were having military training for a rebellion, and attack us with their armies. You would be no match for them with your bamboo spears and wooden swords. We must have really sharp swords and halberds. What are we to do about it?" 
 When the monkeys heard this they all said with alarm, "Your Majesty has great foresight, but there's nowhere we can get them." When it was the turn of four older monkeys to speak−−two bare−bottomed apes and two 
@@ -825,11 +822,7 @@ If you don't know what office he was given, listen to the explanation in the nex
 Not Content with the Title of Equal of Heaven 
 `,
       createdAt: new Date(),
-      content: `<ChapterStart>
-Chapter 1: The Divine Root Conceives and the Spring Breaks Forth 
-As the Heart's Nature Is Cultivated, the Great Way Arises 
-
-Before Chaos was divided, Heaven and Earth were one; 
+      content: `Before Chaos was divided, Heaven and Earth were one; 
 All was a shapeless blur, and no men had appeared. 
 Once Pan Gu destroyed the Enormous Vagueness 
 The separation of clear and impure began. 
@@ -1144,11 +1137,7 @@ If you want to know what success he had in cultivating his conduct, you must lis
       title: `Chapter 5: After Chaos Among the Peaches the Great Sage Steals the Pills 
 In the Revolt Against Heaven the Gods Capture the Demons`,
       createdAt: new Date(),
-      content: `<ChapterStart>
-Chapter 5: After Chaos Among the Peaches the Great Sage Steals the Pills 
-In the Revolt Against Heaven the Gods Capture the Demons 
-
-The story goes on to relate that the Great Sage Equaling Heaven, a mere monkey devil after all, was quite satisfied that his name was on the register of office without caring about the grading of his job and his own rank, or the size of his salary. The immortal clerks in the two offices in his residence were in constant attendance on him, he had three meals a day and a bed to sleep on at night, and he lived a free and easy life without worries. In his spare time he would visit the other palaces, get together with his old friends, and make new ones. When he saw the Three Pure Ones, he would address them as "venerable," and when he met the Four Emperors he called them "Your Majesty." He was on fraternal terms with the Nine Bright Shiners, the Generals of the Five Regions, the Twenty−Eight Constellations, the Four Great Heavenly Kings, the Gods of the Twelve Branches, the Five Ancients of the Five Regions, the star ministers of the whole sky, and the countless gods of the Milky Way. Today he would wander East, and tomorrow he would go West, coming and going by cloud, and never staying anywhere for long. 
+      content: `The story goes on to relate that the Great Sage Equaling Heaven, a mere monkey devil after all, was quite satisfied that his name was on the register of office without caring about the grading of his job and his own rank, or the size of his salary. The immortal clerks in the two offices in his residence were in constant attendance on him, he had three meals a day and a bed to sleep on at night, and he lived a free and easy life without worries. In his spare time he would visit the other palaces, get together with his old friends, and make new ones. When he saw the Three Pure Ones, he would address them as "venerable," and when he met the Four Emperors he called them "Your Majesty." He was on fraternal terms with the Nine Bright Shiners, the Generals of the Five Regions, the Twenty−Eight Constellations, the Four Great Heavenly Kings, the Gods of the Twelve Branches, the Five Ancients of the Five Regions, the star ministers of the whole sky, and the countless gods of the Milky Way. Today he would wander East, and tomorrow he would go West, coming and going by cloud, and never staying anywhere for long. 
 When the Jade Emperor was holding his morning court one day the Immortal Xu of Jingyang came forward from the body of officials, kowtowed, and suggested, "The Great Sage Equaling Heaven is spending his time in idle travel, and is making the acquaintance of all the stars in the sky, calling them all his friends irrespective of their rank. It would be as well to give him some responsibility, and prevent his idleness leading to trouble later on." 
 The Jade Emperor's response to this suggestion was to send for the Monkey King at once. He came in a cheerful mood and asked, "What promotion and reward have you summoned me here to receive, Your Majesty?" 
 "Seeing that you are idle and have nothing to do," replied the Jade Emperor, "we are giving you a job. You are to administer the Peach Orchard, and you will give it your attention day and night." The Great Sage was overjoyed, and after expressing his thanks and chanting "na−a−aw" he withdrew. 
@@ -1341,11 +1330,7 @@ Listen to the next installment to hear how he was dealt with the following morni
       title: `Chapter 6: Guanyin Comes to the Feast and Asks the Reason Why 
 The Little Sage Uses His Might to Subdue the Great Sage`,
       createdAt: new Date(),
-      content: `<ChapterStart>
-Chapter 6: Guanyin Comes to the Feast and Asks the Reason Why 
-The Little Sage Uses His Might to Subdue the Great Sage 
-
-We shall leave for the moment the Heavenly Generals making their encirclement and the soundly sleeping Great Sage. The story goes on to tell how the Compassionate and Merciful Miraculous Savior from Suffering, the Bodhisattva Guanyin of Mount Potaraka in the Southern Sea, having been invited by the Queen Mother to the Peach Banquet, went to the precious pavilions at the Jade Pool with her great disciple Huian the Novice. 
+      content: `We shall leave for the moment the Heavenly Generals making their encirclement and the soundly sleeping Great Sage. The story goes on to tell how the Compassionate and Merciful Miraculous Savior from Suffering, the Bodhisattva Guanyin of Mount Potaraka in the Southern Sea, having been invited by the Queen Mother to the Peach Banquet, went to the precious pavilions at the Jade Pool with her great disciple Huian the Novice. 
 She found the place deserted and the banquet ruined. The few Immortals present were not sitting at their places but holding confused discussions. When greetings were over the Immortals gave the Bodhisattva an account of what had happened. 
 "If there is to be no banquet and no drinking," said the Bodhisattva, "you had better all come with me to the Jade Emperor." The Immortals were delighted to follow her, and when they arrived before the Hall of Universal Brightness the Four Heavenly Teachers, the Bare−Foot Immortal and many others were all there to greet the Bodhisattva. They told her that the Jade Emperor had sent heavenly armies to capture the demon, but they had not yet returned. 
 "I wish to see the Jade Emperor," said the Bodhisattva, "so may I trouble you to inform him on my behalf?" 
@@ -1512,11 +1497,7 @@ If you don't know what happened to the Monkey King's life, then listen to the ex
       title: `Chapter 7: The Great Sage Escapes from the Eight Trigrams Furnace 
 The Mind−Ape Is Fixed Beneath Five Elements Mountain `,
       createdAt: new Date(),
-      content: `<ChapterStart>
-Chapter 7: The Great Sage Escapes from the Eight Trigrams Furnace 
-The Mind−Ape Is Fixed Beneath Five Elements Mountain 
-
-Wealth and honour, glory and fame, 
+      content: `Wealth and honour, glory and fame, 
 Are predetermined by fate: 
 No one should act against conscience to covet any of them. 
 Are the good results of true enlightenment and loyalty. 
@@ -1727,11 +1708,7 @@ It you don't know in what month of what year his sufferings ended, listen to the
       title: `Chapter 8: Our Buddha Creates the Scriptures and Passes on Perfect Bliss 
 Guanyin Obeys a Decree and Goes to Chang'an`,
       createdAt: new Date(),
-      content: `<ChapterStart>
-Chapter 8: Our Buddha Creates the Scriptures and Passes on Perfect Bliss 
-Guanyin Obeys a Decree and Goes to Chang'an 
-
-If you try to ask about the dhyana 
+      content: `If you try to ask about the dhyana 
 Or investigate the innumerable 
 You will waste your life and achieve nothing. 
 Polishing bricks to make mirrors, 
@@ -2000,11 +1977,7 @@ If you don't know whom they found to fetch the scriptures, listen to the explana
       title: `Chapter 9: Chen Guangrui Comes to Grief on His Way to His Post 
 The Monk of the River Current Avenges His Parents `,
       createdAt: new Date(),
-      content: `<ChapterStart>
-Chapter 9: Chen Guangrui Comes to Grief on His Way to His Post 
-The Monk of the River Current Avenges His Parents 
-
-The story goes on to tell that Chang'an city in the great land of Shaanxi had been a place where emperors and kings had made their capitals for generation after generation. Ever since the Zhou, Qin and Han dynasties, the Three Prefectures had been as rich as brocade, and the eight rivers had flowed round its walls. It was indeed a famous country. At that time Emperor Taizong of the Great Tang was on the throne. He had changed the name of the reign−period to Zhenguan, and had been reigning for thirteen years. The year was ji si and the world was at peace; tribute was being sent in from the eight directions, and all within the four seas acknowledged themselves as subjects. 
+      content: `The story goes on to tell that Chang'an city in the great land of Shaanxi had been a place where emperors and kings had made their capitals for generation after generation. Ever since the Zhou, Qin and Han dynasties, the Three Prefectures had been as rich as brocade, and the eight rivers had flowed round its walls. It was indeed a famous country. At that time Emperor Taizong of the Great Tang was on the throne. He had changed the name of the reign−period to Zhenguan, and had been reigning for thirteen years. The year was ji si and the world was at peace; tribute was being sent in from the eight directions, and all within the four seas acknowledged themselves as subjects. 
 One day Taizong took his seat on the throne and assembled all his military and civilian officials. When they had finished making their greetings, the minister Wei Zheng came forward from the ranks of officials and memorialized, "As the world is now at peace and the eight directions are calm, an examination should be held in accordance with the practice of the ancients. Thus we could recruit wise scholars and select men of talent to help with our civilizing mission." 
 "The suggestion of our wise minister is right," said the Emperor, and notices inviting worthy men to compete in the examinations were posted throughout the empire. All the Confucian scholars on the civil or military rolls in every prefecture, district and county who had distinguished themselves in the three−stage examinations for their understanding of literature were to go to Chang'an for a final test. 
 When this notice reached the district of Haizhou it was seen by a man called Chen E, whose courtesy name was Guangrui. He returned home and said to Madame Zhang, his mother, "The court has issued a yellow notice saying that the Chancellery will be opened for an examination to select men of wisdom and talent. 
@@ -2118,11 +2091,7 @@ If you don't know what happened afterwards, listen to the explanation in the nex
       title: `Chapter 10: With a Stupid Plan the Dragon King Breaks the Laws of Heaven 
 Minister Wei Sends a Letter to an Officer of Hell `,
       createdAt: new Date(),
-      content: `<ChapterStart>
-Chapter 10: With a Stupid Plan the Dragon King Breaks the Laws of Heaven 
-Minister Wei Sends a Letter to an Officer of Hell 
-
-We shall not discuss how Chen Guangrui performed his duties or Xuanzang cultivated his conduct; instead we shall talk about two wise men who lived beside the banks of the River Jing outside the city of Chang'an. One was an old fisherman called Zhang Shao and the other was a woodcutter called Li Ding. They were both advanced scholars who had never taken the official examination, lettered men of the mountains. One day, when Li Ding had sold his load of firewood and Zhang Shao had sold his basketful of carp in Chang'an city, they went into a tavern, drank till they were half tipsy, and strolled slowly home along the banks of the Jing, each holding a bottle in his hand. 
+      content: `We shall not discuss how Chen Guangrui performed his duties or Xuanzang cultivated his conduct; instead we shall talk about two wise men who lived beside the banks of the River Jing outside the city of Chang'an. One was an old fisherman called Zhang Shao and the other was a woodcutter called Li Ding. They were both advanced scholars who had never taken the official examination, lettered men of the mountains. One day, when Li Ding had sold his load of firewood and Zhang Shao had sold his basketful of carp in Chang'an city, they went into a tavern, drank till they were half tipsy, and strolled slowly home along the banks of the Jing, each holding a bottle in his hand. 
 "Brother Li," said Zhang Shao, "it seems to me that people who struggle for fame kill themselves for it; those who compete for profit die for it; those who accept honors sleep with a tiger in their arms; and those who receive imperial favours walk around with snakes in their sleeves. Taking all in all, we are much better off living free among our clear waters and blue hills: we delight in our poverty and follow our destinies." 
 "You are right, Brother Zhang," said Li Ding, "but your clear waters have nothing on my blue hills." 
 "Your blue hills are not a patch on my clear waters," retorted Zhang Shao, "and here is a lyric to the tune of The Butterfly Loves the Flowers to prove it: 
@@ -2523,8 +2492,7 @@ Chapter 11: After Touring the Underworld, Taizong Returns to Life.
 	By Presenting a Pumpkin Liu Quan Continues His Marriage 
 `,
       createdAt: new Date(),
-      content: `
-A hundred years flow by like water; 
+      content: `A hundred years flow by like water; 
 A lifetime's career is no more than a bubble, 
 The face that yesterday was the color of peach−blossom 
 Today is edged with snow. 
@@ -2811,8 +2779,7 @@ If you don't know how they returned to life, listen to the explanation in the ne
 Guanyin Appears to the Reincarnated Golden Cicada 
 `,
       createdAt: new Date(),
-      content: `
-When the devil officers left the underworld with Liu Quan and his wife, a dark and whirling wind blew them straight to the great capital Chang'an, where Liu Quan's soul was sent to the Golden Pavilion and Li Cuilian's to an inner courtyard of the palace, where Princess Yuying could be seen walking slowing beside some moss under the shade of some blossoming trees. Suddenly the devil officers struck her full in the chest and knocked her over; they snatched the soul from her living body and put Li Cuilian's soul into the body in its place. With that they returned to the underworld. 
+      content: `When the devil officers left the underworld with Liu Quan and his wife, a dark and whirling wind blew them straight to the great capital Chang'an, where Liu Quan's soul was sent to the Golden Pavilion and Li Cuilian's to an inner courtyard of the palace, where Princess Yuying could be seen walking slowing beside some moss under the shade of some blossoming trees. Suddenly the devil officers struck her full in the chest and knocked her over; they snatched the soul from her living body and put Li Cuilian's soul into the body in its place. With that they returned to the underworld. 
 When the palace serving−women saw her drop dead they rushed to the throne hall to report to the three empresses that Her Royal Highness the Princess had dropped dead. The shocked empresses passed the news on to Taizong who sighed and said, "We can well believe it. When we asked the Ten Lords of Hell if young and old in our palace would all be well, they replied that they would all be well except that our younger sister was going to die suddenly. How true that was." 
 He and everyone else in the palace went with great sorrow to look at her lying under the trees, only to see that she was breathing very lightly. 
 "Don't wail," the Tang Emperor said, "don't wail; it might alarm her." Then he raised her head with his own hand and said, "Wake up, sister, wake up." 
@@ -3156,8 +3123,7 @@ If you don't know what happened on the journey, listen to the explanation in the
 On Double−Forked Peak Boqin Entertains the Priest 
 `,
       createdAt: new Date(),
-      content: `
-The Great Tang Emperor issued an edict 
+      content: `The Great Tang Emperor issued an edict 
 Sending Sanzang to learn the Dhyana teachings. 
 With firmness and patience he seeks the dragon's lair, 
 Determined to carry on till he climbs the Vulture Peak. 
@@ -3358,8 +3324,7 @@ If you don't know who it was who shouted, listen to the explanation in the next 
 The Six Bandits Disappear Without Trace 
 `,
       createdAt: new Date(),
-      content: `
-Buddha is the mind, the mind is Buddha, 
+      content: `Buddha is the mind, the mind is Buddha, 
 Mind and Buddha have always needed things. 
 When you know that there are no things and no mind 
 Then you are a Buddha with a true mind and a Dharma body. 
@@ -3592,8 +3557,7 @@ If you want to know what other stories there are about the journey, then listen 
 In the Eagle's Sorrow Gorge the Thought−Horse Is Reined in 
 `,
       createdAt: new Date(),
-      content: `
-Monkey looked after the Tang Priest as they headed West. They had been travelling for several days in the twelfth month of the year, with its freezing North winds and biting cold. Their path wound along overhanging precipices and steep cliffs, and they crossed range after range of dangerous mountains. One day Sanzang heard the sound of water as he rode along, and he turned around to shout, "Monkey, where's that sound of water coming from?" 
+      content: `Monkey looked after the Tang Priest as they headed West. They had been travelling for several days in the twelfth month of the year, with its freezing North winds and biting cold. Their path wound along overhanging precipices and steep cliffs, and they crossed range after range of dangerous mountains. One day Sanzang heard the sound of water as he rode along, and he turned around to shout, "Monkey, where's that sound of water coming from?" 
 "As I remember, this place is called Eagle's Sorrow Gorge in the Coiled Snake Mountain. It must be the water in the gorge." Before he had finished speaking, the horse reached the edge of the gorge. Sanzang reined in and looked. He saw: 
 A thin cold stream piercing the clouds, 
 Deep, clear waves shining red in the sun. 
@@ -3762,8 +3726,7 @@ If you don't know what sort of place it was that they were going to, listen to t
 The Monster of the Black Wind Mountain Steals the Cassock 
 `,
       createdAt: new Date(),
-      content: `
-The master whipped on his horse and hurried straight to the temple gate with his disciple to have a look. They saw that it was indeed a monastery: 
+      content: `The master whipped on his horse and hurried straight to the temple gate with his disciple to have a look. They saw that it was indeed a monastery: 
 Countless coloured clouds are massed; 
 Before the Hall of Five Blessings 
 Coil a thousand wisps of red mist. 
@@ -3996,8 +3959,7 @@ If you don't know whether the cassock was found on this journey or how things tu
 Guanyin Subdues the Bear Spirit 
 `,
       createdAt: new Date(),
-      content: `
-As Monkey leapt up with a somersault, the senior and junior monks, the novices, the page−boys, and the servants of the monastery all bowed low to the sky and said, "Master, you must be a cloud−riding Immortal come down from Heaven. No wonder that fire can't burn you. Damn that stupid old skinflint of ours: he destroyed himself with his own scheming." 
+      content: `As Monkey leapt up with a somersault, the senior and junior monks, the novices, the page−boys, and the servants of the monastery all bowed low to the sky and said, "Master, you must be a cloud−riding Immortal come down from Heaven. No wonder that fire can't burn you. Damn that stupid old skinflint of ours: he destroyed himself with his own scheming." 
 "Please rise, gentlemen," replied Sanzang, "there's no need to hate him. If my disciple finds the cassock our troubles will all come to an end; but if he doesn't find it, he has rather a nasty temper and I'm afraid that none of you will escape with your lives." When they heard this warning, the monks' hearts were in their mouths, and they implored Heaven to let him find the cassock and spare their lives. 
 Once in mid−air, the Great Sage Sun Wukong reached at the Black Wind Mountain with one twist of his waist. Stopping his cloud while he took a careful look around, he saw that it was indeed a fine mountain. It was a spring day: 
 The myriad valleys' streams compete, 
@@ -4322,8 +4284,7 @@ If you don't know how things developed, listen to the explanation in the next ch
     {
       title:
         'Chapter 18: The Tang Priest Is Rescued in the Guanyin Temple The Great Sage Removes a Monster from Gao Village',
-      content: `
-Taking his leave of the Bodhisattva, Monkey brought his cloud in to land, hung the cassock on a nanmu tree, pulled out his cudgel, charged into the Black Wind Cave, and found not a single goblin inside. This was because the appearance of the Bodhisattva in her true form had so terrified them that they had fled in all directions. Evil thoughts welled up in Brother Monkey, and after piling dry firewood all around the multi−storied gate he set it alight, turning the Black Wind Cave into a Red Wind Cave. Then he went back to the North on a beam of magic light. 
+      content: `Taking his leave of the Bodhisattva, Monkey brought his cloud in to land, hung the cassock on a nanmu tree, pulled out his cudgel, charged into the Black Wind Cave, and found not a single goblin inside. This was because the appearance of the Bodhisattva in her true form had so terrified them that they had fled in all directions. Evil thoughts welled up in Brother Monkey, and after piling dry firewood all around the multi−storied gate he set it alight, turning the Black Wind Cave into a Red Wind Cave. Then he went back to the North on a beam of magic light. 
 Sanzang, who had been anxiously waiting for him, was beginning to wonder why he had not come back. Had the Bodhisattva not come when asked to, or had Monkey just made up a story to escape? As he was being racked by these desperate thoughts, a shimmering cloud appeared in mid−air and Monkey came down and knelt before him. 
 "Master, here's the cassock," he announced, to Sanzang's great joy. 
 All the monks of the temple were delighted too, and they exclaimed, "Wonderful, wonderful, our lives are safe at last." 
@@ -4471,8 +4432,7 @@ Goodness! If you don't know how far he chased the monster, or who won in the end
     {
       title:
         'Chapter 19: In the Cloud Pathway Cave Sun Wukong Wins over Zhu Bajie On Pagoda Mountain Xuanzang Receives the Heart Sutra ',
-      content: `
-The monster shot forward as a stream of sparks, with the Great Sage behind him on his coloured cloud. As he was racing along, Monkey saw a tall mountain appear in front of them. Here the monster put himself together again by reassembling the sparks, rushed into a cave, and came out with a nine−pronged rake in his hand to do battle. 
+      content: `The monster shot forward as a stream of sparks, with the Great Sage behind him on his coloured cloud. As he was racing along, Monkey saw a tall mountain appear in front of them. Here the monster put himself together again by reassembling the sparks, rushed into a cave, and came out with a nine−pronged rake in his hand to do battle. 
 "Wretch," shouted Monkey, "where are you from? How do you know my name, you evil demon? What powers have you got? Tell me honestly, and I'll spare your life." 
 "You don't know what I can do," the monster replied. "Come a little nearer and stand still while I tell you: I was born stupid, 
 I never nourished my nature or cultivated the truth, 
@@ -4746,8 +4706,7 @@ If you don't know what lay in store for them, listen to the explanation in the n
       title: `Chapter 20: The Tang Priest Meets Trouble on the Yellow Wind Ridge 
 Pig Wins Mastery Halfway up the Mountain 
 `,
-      content: `
-The Dharma is born in the mind, 
+      content: `The Dharma is born in the mind, 
 And in turn is destroyed by the mind. 
 Who do life and death come from? 
 If it is all from your own mind, 
@@ -4976,8 +4935,7 @@ If you don't know whether he defeated the evil monsters and saved Sanzang, liste
       title: `Chapter 21: The Protectors of the Faith Build a Farm for the Great Sage 
 Lingji from Sumeru Pacifies the Wind Devil 
 `,
-      content: `
-The fifty petty devils fled routed into the cave, their banners and drums smashed, to report, "Your Majesty, the Tiger of the Vanguard is no match for the hairy−faced monk, who chased him down the mountain." The old fiend was very angry at the news, and he sat silent with his head bowed as he thought over what to do. 
+      content: `The fifty petty devils fled routed into the cave, their banners and drums smashed, to report, "Your Majesty, the Tiger of the Vanguard is no match for the hairy−faced monk, who chased him down the mountain." The old fiend was very angry at the news, and he sat silent with his head bowed as he thought over what to do. 
 Then the petty demons from the gate came in to announce, "Your Majesty, the hairy−faced monk has killed the Tiger of the Vanguard and dragged his body to the gates, where he's insulting us to provoke us to fight." 
 The old fiend was angrier than ever when he heard this, and he said, "This wretch doesn't know what he's doing, killing my Commander of the Vanguard although I haven't eaten his master. Hateful beast. Bring my armour. I've heard of this Brother Monkey, and now I think I'll go out to have a look at this nine−headed, eight−tailed monk. I'll capture him to avenge my Tiger of the Vanguard." The junior devils brought the armour as fast as they could, and when the old fiend had put it all on properly, he took his steel trident and led his devilish host out of the cave. He was full of martial dignity as he came out, and you can see how he was equipped: 
 His golden helmet shone in the sun, 
@@ -5224,8 +5182,7 @@ If you don't know what happened later, listen to the explanation in the next ins
       title: `Chapter 22: Pig Fights a Great Battle in the Flowing Sands River 
 Moksa Obeys the Dharma and Wins Friar Sand Over 
 `,
-      content: `
-The story tells how the Tang Priest and his two disciples escaped from their troubles and pressed forward. 
+      content: `The story tells how the Tang Priest and his two disciples escaped from their troubles and pressed forward. 
 Before long they had crossed the Yellow Wind Ridge and were heading West across a plain. The time passed rapidly, and summer gave way to autumn. Cold cicadas sang in moulting willow trees, and the Great Fire Star sank below the Western horizon. As they were travelling one day they saw the mighty waves of a great river, boiling and raging. "Disciple," called out Sanzang from his horse, "do you see that broad river in front of us? 
 Why are there no boats on it, and how are we going to get across?" 
 "Those are really terrible waves," said Pig when he saw the river, "and there aren't any boats to ferry us over." 
@@ -5482,8 +5439,7 @@ If you don't know when they won their reward and fetched the scriptures, listen 
     {
       title: `Chapter 23: Sanzang Does Not Forget the Basic 
 The Four Holy Ones Have Their Piety Tested `,
-      content: `
-Long is the road as they travel West; 
+      content: `Long is the road as they travel West; 
 In the rustling autumn breeze the frost−killed flowers fall. 
 The cunning ape is firmly chained−−do not untie him; 
 The wicked horse is tightly reined−−don't whip him on. 
@@ -5711,8 +5667,7 @@ If you don't know whether the blockhead survived or not, listen to the explanati
     {
       title: `Chapter 24: On the Mountain of Infinite Longevity a Great Immortal Entertains an
 Old Friend - In the Wuzhuang Temple Monkey Steals Manfruit `,
-      content: `
-The three of them went into the wood and saw the idiot tied up under a tree, yelling and howling in unbearable pain. Monkey went over to him and said with a laugh, "What a son−in−law! So late, and you still haven't got up to thank your mother−in−law or come to tell the good news to the master. Why are you still playing around here? Where's your mother−in−law? Where's your wife? You make a fine, strapped−up, well−beaten son−in−law!" 
+      content: `The three of them went into the wood and saw the idiot tied up under a tree, yelling and howling in unbearable pain. Monkey went over to him and said with a laugh, "What a son−in−law! So late, and you still haven't got up to thank your mother−in−law or come to tell the good news to the master. Why are you still playing around here? Where's your mother−in−law? Where's your wife? You make a fine, strapped−up, well−beaten son−in−law!" 
 The blockhead, burning with humiliation at being thus mocked, gritted his teeth to stop himself howling in his agony. Friar Sand was overcome with pity when he saw him, and putting down the luggage he went over and untied him. The idiot kowtowed to him in gratitude. He was suffering terrible remorse. There is a poem to the tune The Moon in the West River to prove it: 
 Sex is a sword that wounds the body; 
 Whoever lusts for it will suffer. 
@@ -5944,8 +5899,7 @@ If you don't know how they denied it, listen to the explanation in the next inst
       title: `Chapter 25: The Immortal Zhen Yuan Captures the Pilgrim Priest 
 Monkey Makes Havoc in the Wuzhuang Temple 
 `,
-      content: `
-"The meal is cooked," the three disciples said as they entered the hall, "what did you call us for?" 
+      content: `"The meal is cooked," the three disciples said as they entered the hall, "what did you call us for?" 
 "I'm not asking about the meal, disciples," said Sanzang. "This temple has things called manfruit or something that look like babies. Which of you stole and ate some?" 
 "I don't know anything about it, honest I don't−−I never saw any," said Pig. 
 "That grinning one did it," said Pure Wind, "that grinning one." 
@@ -6116,8 +6070,7 @@ If you don't know how the story goes or how he escaped, listen to the explanatio
       title: `Chapter 26: Sun Wukong Looks for the Formula in the Three Islands 
 Guanyin Revives the Tree with a Spring of Sweet Water 
 `,
-      content: `
-When living in the world you must be forbearing; 
+      content: `When living in the world you must be forbearing; 
 Patience is essential when training oneself. 
 Although it's often said that violence is good business, 
 Think before you act, and never bully or be angry. 
@@ -6358,8 +6311,7 @@ Listen to the next installment to hear how they took their leave the next day.
       title: `Chapter 27: The Corpse Fiend Thrice Tricks Tang Sanzang 
 The Holy Monk Angrily Dismisses the Handsome Monkey King
 `,
-      content: `
-At dawn the next day Sanzang and his three disciples packed their things before setting off. Now that Master Zhen Yuan had made Monkey his sworn brother and was finding him so congenial, he did not want to let him go, so he entertained him for another five or six days. Sanzang had really become a new man, and was livelier and healthier now that he had eaten the Grass−returning Cinnabar. His determination to fetch the scriptures was too strong to let him waste any more time, so there was nothing for it but to be on their way. 
+      content: `At dawn the next day Sanzang and his three disciples packed their things before setting off. Now that Master Zhen Yuan had made Monkey his sworn brother and was finding him so congenial, he did not want to let him go, so he entertained him for another five or six days. Sanzang had really become a new man, and was livelier and healthier now that he had eaten the Grass−returning Cinnabar. His determination to fetch the scriptures was too strong to let him waste any more time, so there was nothing for it but to be on their way. 
 Soon after they had set out again, master and disciples saw a high mountain in front of them. "I'm afraid that the mountain ahead may be too steep for the horse," Sanzang said, "so we must think this over carefully." 
 "Don't worry, master," said Monkey, "we know how to cope." He went ahead of the horse with his cudgel over his shoulder and cleared a path up to the top of the cliff. He saw no end of Row upon row of craggy peaks, 
 Twisting beds of torrents. 
@@ -6536,8 +6488,7 @@ If you don't know what happened when he went, listen to the explanation in the n
       title: `Chapter 28: On the Mountain of Flowers and Fruit the Devils Rise 
 Sanzang Meets a Monster in the Black Pine Forest 
 `,
-      content: `
-The Great Sage was gazing at the Eastern Ocean, sighing sadly at being driven away by the Tang Priest. "I haven't been this way for five hundred years," he said. As he looked at the sea, Vast were the misty waters, 
+      content: `The Great Sage was gazing at the Eastern Ocean, sighing sadly at being driven away by the Tang Priest. "I haven't been this way for five hundred years," he said. As he looked at the sea, Vast were the misty waters, 
 Boundless the mighty waves. 
 The vast and misty waters stretched to the Milky Way; 
 The boundless and mighty waves were linked to the earth's arteries. 
@@ -6804,8 +6755,7 @@ If you don't know how they saved the Tang Priest, listen to the explanation in t
       title: `Chapter 29: Sanzang, Delivered, Crosses a Border 
 A Grateful Pig Tours Mountains and Forests 
 `,
-      content: `
-If wild thoughts are not firmly suppressed 
+      content: `If wild thoughts are not firmly suppressed 
 There is no point in seeking for the Truth; 
 If you wish to cultivate your nature before the Buddha, 
 Why stay halfway between awakening and confusion? 
@@ -6982,8 +6932,7 @@ If you don't know what became of him, listen to the explanation in the next chap
     {
       title: `Chapter 30: An Evil Monster Harms the True Law 
 The Mind−Horse Remembers the Heart−Ape `,
-      content: `
-Now that he had tied up Friar Sand, the monster did not kill him, hit him, or even swear at him. Instead he raised his sword and thought, "Coming from so great a country the Tang priest must have a sense of propriety−−he can't have sent his disciples to capture me after I spared his life. Hmm. That wife of mine must have sent some kind of letter to her country and let the secret out. Just wait till I question her." The monster became so furious that he was ready to kill her. 
+      content: `Now that he had tied up Friar Sand, the monster did not kill him, hit him, or even swear at him. Instead he raised his sword and thought, "Coming from so great a country the Tang priest must have a sense of propriety−−he can't have sent his disciples to capture me after I spared his life. Hmm. That wife of mine must have sent some kind of letter to her country and let the secret out. Just wait till I question her." The monster became so furious that he was ready to kill her. 
 The unwitting princess, who had just finished making herself up, came out to see the ogre knitting his brows and gnashing his teeth in anger. 
 "What is bothering you, my lord?" she asked with a smile. The monster snorted and started to insult her. 
 "You low bitch," he said, "you haven't a shred of human decency. You never made the slightest complaint when I first brought you here. You wear clothes of brocade and a crown of gold, and I go out to find anything you need. You live in luxury all four seasons of the year, and we've always been very close to each other. So why do you think only of your mother and father? Why do you have no wifely feelings?" 
@@ -7196,8 +7145,7 @@ If you don't know how he was dealt with or whether he survived, listen to the ex
     {
       title: `Chapter 31: Pig Moves the Monkey King Through His Goodness 
 `,
-      content: `
-Sun the Novice Subdues the Ogre Through Cunning 
+      content: `Sun the Novice Subdues the Ogre Through Cunning 
 They swore to become brothers, 
 And the dharma brought them back to their true nature. 
 When metal and Wood were tamed, the True Result could be achieved; The Mind−Ape and the Mother of Wood combined to make the elixir. 
@@ -7387,8 +7335,7 @@ If you don't know what happened next or when they reached the Western Heaven, li
       title: `Chapter 32: On Flat−Top Mountain the Duty God Delivers a Message 
 In Lotus Flower Cave Pig Runs into Trouble 
 `,
-      content: `
-The story tells how after Monkey had rejoined the Tang Priest the four of them headed West, united in their shared determination. The king of Elephantia had escorted them beyond his capital to thank them for bringing back his daughter. From there they traveled on, eating when hungry and drinking when thirsty, moving by day and resting at night. By now it was spring. 
+      content: `The story tells how after Monkey had rejoined the Tang Priest the four of them headed West, united in their shared determination. The king of Elephantia had escorted them beyond his capital to thank them for bringing back his daughter. From there they traveled on, eating when hungry and drinking when thirsty, moving by day and resting at night. By now it was spring. 
 A light breeze ruffled the silky green catkins of willows, 
 And the view was splendid. 
 The season encouraged the birds to sing; 
@@ -7634,8 +7581,7 @@ If you don't know whether Pig lived or not, listen to the explanation in the nex
     {
       title: `Chapter 33: Heterodoxy Confuses the True Nature 
 The Primal Deity Helps the Original Heart `,
-      content: `
-Taking Pig into the cave the monster said, "Here's one, brother." 
+      content: `Taking Pig into the cave the monster said, "Here's one, brother." 
 "Let me have a look at him," said the older demon with delight. 
 "Isn't this the one?" asked the younger demon. 
 "No," the other replied, "you've caught the wrong one. He's useless." 
@@ -7860,8 +7806,7 @@ If you don't know how things turned out, listen to the explanation in the next i
       title: `Chapter 34: The Demon King's Cunning Causes the Mind−Ape Trouble 
 The Great Sage Wins the Treasures Through Improvisation 
 `,
-      content: `
-With the imitation gourd in their hands the two little devils were quarrelling over who should examine it when they looked up and saw that Monkey had disappeared. "Brother," said Skilful Beast, "even immortals tell lies sometimes. He said that when we'd swapped the treasures he would make us into immortals. How come he's vanished without a word?" 
+      content: `With the imitation gourd in their hands the two little devils were quarrelling over who should examine it when they looked up and saw that Monkey had disappeared. "Brother," said Skilful Beast, "even immortals tell lies sometimes. He said that when we'd swapped the treasures he would make us into immortals. How come he's vanished without a word?" 
 "We got ourselves a very good bargain," said Dexterous Ghost, "and he would not dare disappear. Pass the gourd over−−I want to put the sky in it and try it out." He tossed the gourd into the air, but it came crashing down again, to the distress of Skilful Beast, who asked, "Why won't it take in the sky? Could it be that it was Sun the Novice disguised as an immortal, and that he swapped an imitation gourd for our real one?" 
 "Nonsense," said Dexterous Ghost. "Sun the Novice is crushed under those three mountains. How could he possibly have got out? Pass the gourd over. I'll say the words of the spell he made and we'll put the sky inside." He too then threw the gourd up into the air, saying, "If there's so much as a hint of a refusal I'll be coming up to the Hall of Miraculous Mist to give battle." The gourd hit the ground before he could even finish saying the spell. 
 "The sky hasn't gone in," they both said, "it must surely be a fake." 
@@ -8092,8 +8037,7 @@ If you don't know what he had to do to save his master and destroy the demons, l
       title: `Chapter 35: The Power of Heterodoxy Oppresses the True Nature 
 The Mind−Ape Wins the Treasures and Beats the Demons 
 `,
-      content: `
-Lucid the true nature; the Way explains itself; 
+      content: `Lucid the true nature; the Way explains itself; 
 With one turn one jumps out of the net. 
 To learn transformations is very hard indeed; 
 To become immortal is no common deed. 
@@ -8320,8 +8264,7 @@ If you don't know what happened afterwards, or how the Great Sage Sun protected 
       title: `Chapter 36: When the Mind−Ape Stands Correct All Evil Causes Submit 
 When the Side−Gate Is Smashed the Moon Appears in Its Brightness 
 `,
-      content: `
-The story tells how Sun the Novice brought his cloud down to land and told the master and his fellow−disciples all about the Bodhisattva borrowing the two servant lads and Lord Lao recovering his treasures. Sanzang expressed his thanks at great length, then with great determination and pious sincerity prepared to head West for all he was worth. As he climbed into the saddle, Pig shouldered the luggage, Friar Sand held the horse's bridle, and Monkey cleared a path straight ahead down the mountainside with his iron cudgel. We can give no full account of how they slept in the rain, dined off the wind, were wrapped in frost and exposed to the dew. When they had been travelling for a long time they found the way forward blocked by another mountain. 
+      content: `The story tells how Sun the Novice brought his cloud down to land and told the master and his fellow−disciples all about the Bodhisattva borrowing the two servant lads and Lord Lao recovering his treasures. Sanzang expressed his thanks at great length, then with great determination and pious sincerity prepared to head West for all he was worth. As he climbed into the saddle, Pig shouldered the luggage, Friar Sand held the horse's bridle, and Monkey cleared a path straight ahead down the mountainside with his iron cudgel. We can give no full account of how they slept in the rain, dined off the wind, were wrapped in frost and exposed to the dew. When they had been travelling for a long time they found the way forward blocked by another mountain. 
 "Disciples," shouted Sanzang from the back of his horse, "just look at how high and craggy that mountain is. 
 You must be very careful and on your guard; I'm afraid that monsters may attack us." 
 "Stop your wild imaginings, Master," replied Monkey, "and calm yourself. Of course nothing will happen." 
@@ -8618,8 +8561,7 @@ If you don't know how the venerable elder left the temple, listen to the explana
     {
       title: `Chapter 37: The Royal Ghost Visits the Tang Priest at Night 
 Wukong's Magic Transformation Lures the Boy `,
-      content: `
-Sanzang sat in the meditation hall of the Precious Wood Monastery reading the Litany of Emperor Wu of Liang and the Peacock Sutra until the third watch, when he finally put the scriptures back into their bags. Just when he was about to go to bed he heard a rushing noise and the whistling of a fiendish wind. Fearing that it would blow out his lamp, the venerable elder shielded the lamp with his sleeve as quickly as he could. To his consternation the lamp kept going on and off. By now he was so tired that he pillowed his head on the reading desk and took a nap. Although he had closed his eyes and was dozing, his mind stayed wide awake as he listened to the howling of the devil wind outside the window. It was a splendid wind. Indeed, there were Soughs and whistles, 
+      content: `Sanzang sat in the meditation hall of the Precious Wood Monastery reading the Litany of Emperor Wu of Liang and the Peacock Sutra until the third watch, when he finally put the scriptures back into their bags. Just when he was about to go to bed he heard a rushing noise and the whistling of a fiendish wind. Fearing that it would blow out his lamp, the venerable elder shielded the lamp with his sleeve as quickly as he could. To his consternation the lamp kept going on and off. By now he was so tired that he pillowed his head on the reading desk and took a nap. Although he had closed his eyes and was dozing, his mind stayed wide awake as he listened to the howling of the devil wind outside the window. It was a splendid wind. Indeed, there were Soughs and whistles, 
 It soughs and whistles, carrying the fallen leaves, 
 Blows the clouds scudding away. 
 All the stars in the sky go dark, 
@@ -8849,8 +8791,7 @@ If you don't know what was said when he met the queen, listen to the explanation
     {
       title: `Chapter 38: Questioning His Mother, the Boy Sorts Right from Wrong 
 When Metal and Wood Join in the Mystery, Truth and Falsehood Are Clear `,
-      content: `
-If you speak only of the causation arising from birth, 
+      content: `If you speak only of the causation arising from birth, 
 You can be present at the Buddha's assembly. 
 The Buddha of the dusty world thinks only peaceful thoughts; 
 People of all quarters watch while the spirit is subdued. 
@@ -9080,8 +9021,7 @@ If you don't know how the king was revived, listen to the explanation in the nex
       title: `Chapter 39: A Pill of Red Cinnabar Is Brought from Heaven 
 After Three Years the Monarch Is Revived
 `,
-      content: `
-The story tells how the Great Sage Sun, his head aching unbearably, pleaded with his master: "Stop, stop, I'll bring him back to life." When Sanzang asked how, Monkey replied, "The only way is to go to the Underworld, find out which of the kings down there has his soul, and ask for it back to revive him with." 
+      content: `The story tells how the Great Sage Sun, his head aching unbearably, pleaded with his master: "Stop, stop, I'll bring him back to life." When Sanzang asked how, Monkey replied, "The only way is to go to the Underworld, find out which of the kings down there has his soul, and ask for it back to revive him with." 
 "Don't trust Monkey, Master," said Pig. "He told me earlier there'd be no need to go to the Underworld because he could get him brought back to life in the world of the living. He thought that would be a good way of showing off his powers." 
 The venerable elder, taken in once again by this breath of evil, started reciting the Band−tightening Spell, which threw Monkey into such a desperate state that he accepted the condition gladly: "I'll cure him within the world of the living, I really will." 
 "Don't stop," said Pig, "carry on saying the spell." 
@@ -9299,8 +9239,7 @@ If you don't know how the Tang Priest and his disciples left the city, listen to
       title: `Chapter 40: The Boy Fools with Transformations, Disturbing the Dhyana Heart 
 Ape and Horse Return with a Knife; the Mother of Wood Is Empty
 `,
-      content: `
-The story goes on to tell how the Great Sage Monkey and his two fellow−disciples landed their clouds and went straight into the palace. Here monarch, ministers, queen and prince bowed to them in thanks, a group at a time, and Monkey told everyone the story of how Manjusri had recovered the demon. They all knelt and bowed to the ground repeatedly. 
+      content: `The story goes on to tell how the Great Sage Monkey and his two fellow−disciples landed their clouds and went straight into the palace. Here monarch, ministers, queen and prince bowed to them in thanks, a group at a time, and Monkey told everyone the story of how Manjusri had recovered the demon. They all knelt and bowed to the ground repeatedly. 
 Amid all the congratulations the gatekeeper came to report, "My lord, there are four more monks at the gates." 
 This news threw Pig into a panic. 
 "Brother," he said, "has the fiend used his magic to make a false Manjusri to fool us? Perhaps he's turned into a monk now for another battle of wits with us." 
@@ -9475,8 +9414,7 @@ If you don't know whether things turned out for good or for ill, listen to the e
       title: `Chapter 41: The Mind−Ape Is Defeated by Fire 
 The Mother of Wood Is Captured by a Demon 
 `,
-      content: `
-Good and evil are quickly forgotten, 
+      content: `Good and evil are quickly forgotten, 
 Flowering and fading are of no concern. 
 When perception is half−revealed it may sink or swim; 
 Follow fate and take your food and drink when they come. 
@@ -9738,8 +9676,7 @@ If you don't know how the Old King was invited there, listen to the explanation 
     {
       title: `Chapter 42: The Great Sage Reverently Visits the Southern Sea 
 Guanyin in Her Mercy Binds the Red Boy `,
-      content: `
-The story tells how the six warriors left the cave and headed Southwest. Monkey thought, "They are going to invite the Old King to eat our master. I'm sure he must be the Bull Demon King. In the old days we got on very well and were the best of friends, but now I've gone straight and he's still an evil monster. Although it's a long time since I last saw him, I remember what he looks like. I think I'll turn myself into a Bull Demon King, try to fool them, and see how it goes." Splendid Monkey gave the six little demons the slip, spread his wings, flew about a dozen miles ahead of them, shook himself, and turned into a Bull Demon King. He pulled out some hairs, shouted, "Change," and turned them into little devils with dogs, falcons, bows and crossbows as if they were a hunting party in the mountain valley. He then waited for the six warriors. 
+      content: `The story tells how the six warriors left the cave and headed Southwest. Monkey thought, "They are going to invite the Old King to eat our master. I'm sure he must be the Bull Demon King. In the old days we got on very well and were the best of friends, but now I've gone straight and he's still an evil monster. Although it's a long time since I last saw him, I remember what he looks like. I think I'll turn myself into a Bull Demon King, try to fool them, and see how it goes." Splendid Monkey gave the six little demons the slip, spread his wings, flew about a dozen miles ahead of them, shook himself, and turned into a Bull Demon King. He pulled out some hairs, shouted, "Change," and turned them into little devils with dogs, falcons, bows and crossbows as if they were a hunting party in the mountain valley. He then waited for the six warriors. 
 As the six warriors were making their way sloppily along they suddenly noticed that the Bull Demon King was sitting in their midst. Heater and Cooker fell to their knees in a panic and said, "Your Majesty, you're here already." 
 Mist in the Clouds, Clouds in the Mist, Fire−fast and Wind−speedy were also all common mortals with fleshly eyes, unable to tell the true from the false, and they too fell to their knees, kowtowed and said, "Your Majesty, we've been sent by the Sage Boy King of the Fire−cloud Cave to invite Your Senior Majesty to a meal of Tang Priest meat that will lengthen your life by a thousand ages." 
 "Get up, children," said Monkey, "and come back to my cave with me while I change." 
@@ -9968,8 +9905,7 @@ If you don't know how the boy was finally converted, listen to the explanation i
     {
       title: `Chapter 43: At the Black River a Monster Carries Off the Priest 
 The Dragon Prince of the West Captures an Alligator `,
-      content: `
-The story tell how the Bodhisattva recited the spell several times before stopping. Only then did the evil spirit's agony cease. When he recovered, stood up and looked at himself he found that he had gold bands rounds his neck, hands and feet. They were painfully tight, and try as he would he could not move them at all. 
+      content: `The story tell how the Bodhisattva recited the spell several times before stopping. Only then did the evil spirit's agony cease. When he recovered, stood up and looked at himself he found that he had gold bands rounds his neck, hands and feet. They were painfully tight, and try as he would he could not move them at all. 
 The treasures had already taken root in his flesh, and the more he rubbed them the more they hurt. 
 "There, there, little darling," mocked Monkey. "The Bodhisattva's put a lucky amulet ring round your neck to make sure you grow up safely." 
 This jibe infuriated the boy, who grabbed his spear once more and started lunging wildly at Monkey. Monkey nimbly avoided it and went behind the Bodhisattva, yelling, "Say the spell, say the spell." 
@@ -10231,9 +10167,7 @@ If you don't know how they visited the Buddha and obtained the scriptures, liste
     {
       title: `Chapter 44: Evil in the Heart's Centre Crosses the Backbone Pass 
 There is a poem that goes: `,
-      content: ` 
-
-They travel West escaping dangers to seek the scriptures; 
+      content: ` They travel West escaping dangers to seek the scriptures; 
 Nor can they stop at all the famous mountains. 
 They press on night and day, starting crows and hares; 
 The seasons turn amid falling blossom and bird−song. 
@@ -10461,8 +10395,7 @@ If you don't know what they found, listen to the explanation in the next install
       title: `Chapter 45: In the Hall of the Three Pure Ones the Great Sage Leaves His Name 
 In the Kingdom of Tarrycart the Monkey King Shows His Powers
 `,
-      content: `
-The story tells how the Great Sage Monkey pinched Friar Sand with his left hand and Pig with his right. The two of them realized what was happening and sat there on high, their heads bowed in silence, while the Taoists lit their lamps and shone them all around as they searched. The three of them looked just as if they really were made of clay covered with gold leaf. 
+      content: `The story tells how the Great Sage Monkey pinched Friar Sand with his left hand and Pig with his right. The two of them realized what was happening and sat there on high, their heads bowed in silence, while the Taoists lit their lamps and shone them all around as they searched. The three of them looked just as if they really were made of clay covered with gold leaf. 
 "If no evildoers have been here," said the Great Immortal Tiger Power, "how have the offerings all been eaten?" 
 "It looks as though people have eaten them," said the Great Immortal Deer Power. "The fruit with skins has all been peeled and the stones have all been spat out of the stone fruit. But why can't we see anybody?" 
 "There is no need to be so suspicious, brother," said the Great Immortal Antelope Power. "I think that the Heavenly Honoured Ones must have been moved by our reverence and respect in reciting scriptures and making readings day and night, and by the name of His Majesty. Evidently the Three Pure Lords came down to the mortal world to enjoy these offerings. I suggest that we should worship the Heavenly Honoured Ones before they fly away on their cranes. We should beg them for some holy water and golden elixir pills that we can present to His Majesty and thereby win credit for giving him immortality." 
@@ -10690,8 +10623,7 @@ If you don't know how evil was eliminated, listen to the explanation in the next
     {
       title: `Chapter 46: False Faith Oppresses the True Dharma 
 The Sage Mind−Ape Eliminates Evil `,
-      content: `
-The story tells how when the king saw that Monkey had the power to summon dragons and order gods about he put his seal on the passports and handed them to the Tang Priest, whom he allowed to continue on his journey West. The three Taoist masters were so terrified that they prostrated themselves in the Hall of Golden Bells and submitted a memorial to the king, who came down from his dragon throne, helped them to their feet with his own hand, and said, "Why are you performing this obeisance to me today?" 
+      content: `The story tells how when the king saw that Monkey had the power to summon dragons and order gods about he put his seal on the passports and handed them to the Tang Priest, whom he allowed to continue on his journey West. The three Taoist masters were so terrified that they prostrated themselves in the Hall of Golden Bells and submitted a memorial to the king, who came down from his dragon throne, helped them to their feet with his own hand, and said, "Why are you performing this obeisance to me today?" 
 "Your Majesty," the Taoists replied, "we came here to help the country, protect the state and look after the people. We have toiled here for twenty years but now these Buddhist monks have put themselves ahead of us and ruined our reputation with a magic trick. Are you not insulting us by letting them off their death sentences just because of some rain? We implore you to keep their papers and allow us three brothers to challenge them to another competition. What do you think?" 
 The king of Tarrycart really was muddle−headed: when he heard advice from the East he inclined to the East, and when he was advised from the West he inclined to the West. "What sort of competition with them do you propose, Teachers of the Nation?" he asked. 
 "We would like to compete with them in sitting in meditation," said the Great Immortal Tiger Power. 
@@ -11164,8 +11096,7 @@ If you do not know whether they lost their lives or not, listen to the explanati
     {
       title: `Chapter 48: A Devilish Blizzard Makes the Snow Whirl 
 The Monk Who Seeks to Worship Buddha Walks on Ice`,
-      content: `
-The story tells how the believers in Chen Village noisily carried Monkey and Pig with pork, mutton, beef and wine straight to the Temple of Miraculous Response, where they set them all out with the young boy and girl in the most prominent place. Monkey looked around and saw that the offertory tables were covered with fragrant flowers and wax candles. In front of him was a tablet on which were inscribed in letters of gold, GREAT KING OF MIRACULOUS RESPONSE. There were no statues of any other gods. When the believers had set everything out properly they all kowtowed and made this prayer: 
+      content: `The story tells how the believers in Chen Village noisily carried Monkey and Pig with pork, mutton, beef and wine straight to the Temple of Miraculous Response, where they set them all out with the young boy and girl in the most prominent place. Monkey looked around and saw that the offertory tables were covered with fragrant flowers and wax candles. In front of him was a tablet on which were inscribed in letters of gold, GREAT KING OF MIRACULOUS RESPONSE. There were no statues of any other gods. When the believers had set everything out properly they all kowtowed and made this prayer: 
 "Great King, our lord, at this hour of this day of this month of this year Chen Cheng, the master of the sacrifice, and all the other faithful of different ages beg to offer in accordance with annual custom the little boy Chen Guan−given, the little girl Pan of Gold, pork, mutton, beef and wine for the delectation of the Great King. We beg you to give us the right amounts of wind and rain and to grant a good harvest for all our crops." 
 After praying they burnt paper horses and all went home. 
 When they had all gone Pig said to Monkey, "Let's go home." 
@@ -11409,8 +11340,7 @@ If you do not know how they rescued the Tang Priest listen to the explanation in
     {
       title: `Chapter 49: Sanzang's Great Misfortune Is to Fall into the River 
 Guanyin's Fish Basket Saves the Tang Priest `,
-      content: `
-The story tells how the Great Sage Monkey took his leave of the old Chen brothers, went with Pig and Friar Sand to the bank of the river, and told the two of them to decide which of them would go into the water first. 
+      content: `The story tells how the Great Sage Monkey took his leave of the old Chen brothers, went with Pig and Friar Sand to the bank of the river, and told the two of them to decide which of them would go into the water first. 
 "Brother," said Pig, "you should go first; neither of us two has very special powers." 
 "To be frank with you, brother," replied Monkey. "I wouldn't need any help from either of you in dealing with mountain spirits, but I can't cope in the water. If I go into rivers or seas I have to make hand spells to keep the water away, or else change into something like a fish or a crab. But if I'm making a hand spell I can't get a good swing with my cudgel, use my powers, or kill evil spirits. I asked you two to go in because I've long known that you're both good swimmers." 
 "Brother," said Friar Sand, "I'll go, but I don't know what we'll find at the bottom of the river. I think we should all go. You should turn yourself into something or else let me carry you through the water to find the monster's den. You go first and discover what's been happening. If the master hasn't been hurt and is still there we can do our best to attack the monster. But if the monster has used magic on the master and he's has been drowned or eaten there will be no point in searching too hard; we'd better find something else to do instead." 
@@ -11699,8 +11629,7 @@ If you don't know how much further they had to go, or what other terrible trials
       title: `Chapter 50: Feelings Run Wild and Nature Gets Loose Because of Desire 
 In Confusion of Spirit the Heart Is Disturbed and the Demon Encountered
 `,
-      content: `
-The poem goes: 
+      content: `The poem goes: 
 The heart must be frequently swept, 
 The dust of emotions removed, 
 Lest the Buddha be trapped in the pit. 
@@ -11906,8 +11835,7 @@ If you don't know how all this ended, listen to the explanation in the next inst
       title: `Chapter 51: In Vain Does the Mind−Ape Use a Thousand Tricks 
 Fire and Water Fail to Harm the Demon 
 `,
-      content: `
-The story tells how the Great Sage Equaling Heaven went empty−handed and beaten to sit down behind Mount Jindou, tears streaming from both eyes. 
+      content: `The story tells how the Great Sage Equaling Heaven went empty−handed and beaten to sit down behind Mount Jindou, tears streaming from both eyes. 
 "Master," he called out, "I had hoped 
 As Lord Buddha graciously brought us together 
 To go on to live with you, Master, for ever, 
@@ -12138,8 +12066,7 @@ If you don't know whether all turned out for good or for ill, listen to the expl
     {
       title: `Chapter 52: Monkey Makes Havoc in the Jindou Cave 
 The Buddha Gives a Hint About the Owner `,
-      content: `
-The story tells how after recovering his gold−banded cudgel Monkey fought his way out of the cave and jumped up to the peak to see all the gods. He was very pleased with himself. "How did it go this time?" asked Heavenly King Li. "I did a transformation and went into the cave," said Monkey, "where I saw the devils dancing, singing and drinking to celebrate their victory. But I heard nothing about where the demon keeps his treasure. When I went round to the back I heard the horses and dragons whimpering and realized they must be the fire beasts. My gold−banded cudgel was leaning against the Eastern wall, so I took it and fought my way out of the cave." 
+      content: `The story tells how after recovering his gold−banded cudgel Monkey fought his way out of the cave and jumped up to the peak to see all the gods. He was very pleased with himself. "How did it go this time?" asked Heavenly King Li. "I did a transformation and went into the cave," said Monkey, "where I saw the devils dancing, singing and drinking to celebrate their victory. But I heard nothing about where the demon keeps his treasure. When I went round to the back I heard the horses and dragons whimpering and realized they must be the fire beasts. My gold−banded cudgel was leaning against the Eastern wall, so I took it and fought my way out of the cave." 
 "You have your treasure now," said the gods, "but how are we going to get ours back?" 
 "Easy," said Monkey, "easy. With this iron cudgel I can beat him whatever he does. I'll recover your treasures." As they were talking there rose from the mountainside a concerted sound of gongs and drums as well as earth−shaking shouts: the Great Rhinoceros King was leading his host of spirits out in pursuit of Monkey, who called out at the sight of them, "Great, great, Just what I want. Please sit down, gentlemen, while I go to capture him." 
 The splendid Great Sage raised his iron cudgel and struck at the demon's face with a shout, "Where do you think you're going, damned demon? Take this!" Warding the blow off with his spear, the demon insulted him back: "Thieving ape! You're a disgrace. How dare you steal my property in broad daylight?" 
@@ -12421,8 +12348,7 @@ As they were walking along they heard a call of "Holy Tang Priest, have a vegeta
       title: `Chapter 53: The Dhyana Master Conceives after Eating a Meal 
 The Yellow−Wife Brings Waster to Remove a Devil Foetus
 `,
-      content: `
-Eight hundred kinds of virtue must be cultivated, 
+      content: `Eight hundred kinds of virtue must be cultivated, 
 Three thousand good deeds must be secretly performed. 
 Do not distinguish objects from self, or friend from foe: 
 That conforms with the teaching of the Western Heaven. 
@@ -12706,8 +12632,7 @@ If you don't know what else happened in that country listen to the explanation i
       title: `Chapter 54: The Buddha−Nature Traveling West Enters Womankind 
 The Mind−Ape Makes a Plan to Escape from the Beauties 
 `,
-      content: `
-When Sanzang and his disciples left the cottage they headed West, and about a dozen miles later they entered the country of Western Liang. "Wukong," said the Tang Priest on his horse, "there is a city not far ahead, and I can hear a great hubbub of voices from the marketplace. You must all be very, very careful and on your best behavior. Do not make nonsense of the teachings of our Buddhist faith by running wild or becoming infatuated." The three disciples were determined to obey his instructions. 
+      content: `When Sanzang and his disciples left the cottage they headed West, and about a dozen miles later they entered the country of Western Liang. "Wukong," said the Tang Priest on his horse, "there is a city not far ahead, and I can hear a great hubbub of voices from the marketplace. You must all be very, very careful and on your best behavior. Do not make nonsense of the teachings of our Buddhist faith by running wild or becoming infatuated." The three disciples were determined to obey his instructions. 
 Before the Tang Priest had finished speaking they reached the street leading in from the Eastern gate. 
 Everyone they saw was wearing a skirt and a woman's jacket, a powdered face and oiled hair. All the people, young and old, were women. When those buying and selling in the street saw the four of them coming they started to applaud, laugh and say with smiles all over their faces, "Men, men!" Sanzang was so alarmed that he reined in his horse, unable to go any further forward. In a moment the streets were packed and the air was ringing with happy voices. 
 "I'm a gelded pig, a gelded pig!" yelled Pig in a panic. 
@@ -12926,8 +12851,7 @@ If you don't know whether the woman was a human being or a monster, or whether t
       title: `Chapter 55: The Tang Priest Is Tempted with Sex and Debauchery 
 Because His Nature Is Upright He Resists Unharmed 
 `,
-      content: `
-The story tells how the Great Sage and Pig were just about to use their magic to immobilize all the women when they suddenly heard the noise of a wind. Friar Sand, who was shouting, looked round at once to find the Tang Priest gone. 
+      content: `The story tells how the Great Sage and Pig were just about to use their magic to immobilize all the women when they suddenly heard the noise of a wind. Friar Sand, who was shouting, looked round at once to find the Tang Priest gone. 
 "Who's taken the master?" Monkey asked. 
 "A woman made a whirlwind and carried him off in it," Friar Sand reported. At this news Monkey jumped up with a whoosh to stand on his cloud and shade his eyes as he looked all around. He saw the gray dust cloud of a whirlwind that was heading Northwest. 
 "Brothers," he turned back to shout, "come straight up on your clouds. We're going after the master." Pig and Friar Sand tied the luggage on the horse and both sprang noisily into the air. 
@@ -13163,8 +13087,7 @@ If you don't know how many years were to pass before they finally won their true
       title: `Chapter 56: The Spirit Goes Wild and Wipes Out the Bandits 
 The Way in Confusion Sends the Mind−Ape Away
 `,
-      content: `
-The heart that is empty of all things is said to be pure, 
+      content: `The heart that is empty of all things is said to be pure, 
 In utter placidity not giving rise to a thought. 
 The ape and the horse must be tethered, not left to run wild; 
 The spirit must always be cautious, not seeking for glory. 
@@ -13406,8 +13329,7 @@ If you don't know where the Great Sage had gone listen to the explanation in the
       title: `Chapter 57: The True Sun Wukong Makes His Complaint at Potaraka 
 The False Monkey King Copies a Document in the Water Curtain Cave 
 `,
-      content: `
-Angry and depressed, the Great Sage Sun rose up into the air. There were many places he would have liked to go to but could not. In the Water Curtain Cave on the Mountain of Flowers and Fruit he was afraid of being teased for coming back so soon after he had gone, not like a real man. He did not think he would be allowed to stay long in the palaces of Heaven; he could not face the immortals in the three magic islands in the sea; and he could not bring himself to beg for the help of the dragon king in his dragon palace. He had nobody to turn to. 
+      content: `Angry and depressed, the Great Sage Sun rose up into the air. There were many places he would have liked to go to but could not. In the Water Curtain Cave on the Mountain of Flowers and Fruit he was afraid of being teased for coming back so soon after he had gone, not like a real man. He did not think he would be allowed to stay long in the palaces of Heaven; he could not face the immortals in the three magic islands in the sea; and he could not bring himself to beg for the help of the dragon king in his dragon palace. He had nobody to turn to. 
 "There's nothing for it," he thought bitterly. "I'll just have to go back to the master and pursue the true achievement." 
 He then brought his cloud straight down to stand in front of the Tang Priest's horse and say, "Please forgive me this time, Master. I'll never commit another murder, and I'll do every thing you tell me. You must, must let me escort you to the Western Heaven." The moment the Tang Priest saw him he reined in the horse. His only reply was to start reciting the Band−tightening Spell, which he did over and over again more than twenty times, not stopping until Monkey lay weeping on the ground, the band sunk a good inch into his head. 
 "Why haven't you gone back? Why are you still bothering me?" Sanzang asked. 
@@ -13550,8 +13472,7 @@ If you don't know how they told them apart you had better listen to the explanat
     {
       title: `Chapter 58: Two Minds Throw Heaven and Earth into Uproar 
 One Body Cannot Achieve True Nirvana `,
-      content: `
-When Monkey and Friar Sand took their leave of the Bodhisattva they departed from the Southern Ocean by two beams of auspicious light. Now Monkey's somersault cloud was much faster than Friar Sand's immortal's cloud, so Monkey was drawing ahead when Friar Sand pulled him back and said, "There's no need for you to show me your heels like that, brother, rushing ahead to sort things out at home. Wait for me to come with you." 
+      content: `When Monkey and Friar Sand took their leave of the Bodhisattva they departed from the Southern Ocean by two beams of auspicious light. Now Monkey's somersault cloud was much faster than Friar Sand's immortal's cloud, so Monkey was drawing ahead when Friar Sand pulled him back and said, "There's no need for you to show me your heels like that, brother, rushing ahead to sort things out at home. Wait for me to come with you." 
 Although Brother Monkey's intentions were good Friar Sand could not help being suspicious. The two of them then flew their clouds together and were soon in sight of the Mountain of Flowers and Fruit. They brought their clouds down and had a good look at the outside of the cave, where there was indeed a Monkey sitting on a high stone terrace, drinking and making merry with his monkey hosts. He looked exactly the same as the Great Sage: yellow hair held in a golden band, fiery eyes with golden pupils, a brocade tunic, a tigerskin kilt, a gold−banded iron cudgel in his hands, and deerskin boots. He had the same Hairy face like a thunder god, 
 Cheeks like the planet Saturn; 
 Pointed ears and a forehead broad, 
@@ -13726,8 +13647,7 @@ If you don't know how long it was till Sanzang saw the Buddha and asked for the 
     {
       title: `Chapter 59: Sanzang's Way Is Blocked at the Fiery Mountains 
 Monkey First Tries to Borrow the Plantain Fan`,
-      content: `
-The many species are at root the same; 
+      content: `The many species are at root the same; 
 All flows into the boundless sea. 
 Every thought and worry is in vain; 
 All types and forms together blend. 
@@ -13973,8 +13893,7 @@ If you don't know all about the Strongarm King listen to the explanation in the 
     {
       title: `Chapter 60: The Bull Demon King Gives Up the Fight to Go to a Feast
 	Monkey Tries the Second Time to Borrow the Plantain Fan`,
-      content: `
-"The Strongarm King is the Bull Demon King," the local god explained.
+      content: `"The Strongarm King is the Bull Demon King," the local god explained.
 "Did he set these mountains ablaze and pretend they were the Fiery Mountains?" Monkey asked. "No, no," the local god replied. "If you'll promise to forgive me for doing so, Great Sage, I'll speak frankly."
 "What's there to forgive?" Monkey said. "Speak frankly." "You started this fire, Great Sage," the local god replied.  
 "That's nonsense," said Monkey angrily. "I wasn't here. Do you take me for an arsonist?" 
@@ -14216,8 +14135,7 @@ If you don't know whether this journey was ill−fated or not, listen to the exp
     {
       title: `Chapter 61: Zhu Bajie Helps to Defeat a Demon King 
 Monkey's Third Attempt to Borrow the Fan `,
-      content: `
-The story tells how the Bull Demon King caught up with the Great Sage Sun and saw him looking very cheerful as he went along with the plantain fan over his shoulder. "So the macaque has also tricked the art of using the fan out of her," the demon king thought. "If I ask him for it back to his face he's bound to refuse, and if he fans me with it and sends me sixty thousand miles away that would be just what he wants. Now I know that the Tang Priest is sitting waiting by the main road. When I was an evil spirit in the old days I used to know his second disciple the Pig Spirit. I think I'll turn myself into a double of the Pig Spirit and play a trick back on him. That macaque will no doubt be so pleased with himself that he won't really be on his guard." 
+      content: `The story tells how the Bull Demon King caught up with the Great Sage Sun and saw him looking very cheerful as he went along with the plantain fan over his shoulder. "So the macaque has also tricked the art of using the fan out of her," the demon king thought. "If I ask him for it back to his face he's bound to refuse, and if he fans me with it and sends me sixty thousand miles away that would be just what he wants. Now I know that the Tang Priest is sitting waiting by the main road. When I was an evil spirit in the old days I used to know his second disciple the Pig Spirit. I think I'll turn myself into a double of the Pig Spirit and play a trick back on him. That macaque will no doubt be so pleased with himself that he won't really be on his guard." 
 The splendid demon king could also do seventy−two transformations and his martial skills were on a par with those of the Great Sage: it was just that he was rather more clumsily built, was less quick and penetrating, and not so adaptable. 
 First he hid the swords then he said the words of the spell, turned himself into the exact likeness of Pig, went down, and met Monkey face to face. "I'm here, brother," he called. 
 The Great Sage was indeed delighted. As the ancient saying goes, a cat that's won a fight is more pleased with himself than a tiger. Monkey was so confident of his powers that he did not bother to investigate why the new arrival was here, but seeing that he looked like Pig, called out, "Where are you going brother?" 
@@ -14460,8 +14378,7 @@ If you don't know how many years it was till they returned to the East, listen t
     {
       title: `Chapter 62: Cleansed and with a Washed Heart He Sweeps the Pagoda 
 The Devils Are Captured and Converted; the Body Is Cultivated`,
-      content: `
-Through all the hours it must never be forgotten: 
+      content: `Through all the hours it must never be forgotten: 
 When success is won all time will be put away. 
 For five years and sixty thousand miles 
 Do not let the holy water dry up, 
@@ -14696,8 +14613,7 @@ If you don't know how the capture went and what they found, listen to the explan
     {
       title: `Chapter 63: Two Monks Wipe out the Demons in the Dragon Palace 
 The Sages Destroy Evil and Recover the Treasure`,
-      content: `
-The story tells how the king of Jisai and his officials high and low watched as the Great Sage Monkey and Pig disappeared by wind and cloud, carrying the two demons with them. Then all of them bowed in homage to heaven, saying, "Their fame is well founded. Only today can we really believe that such immortals and living Buddhas exist." As Monkey and Pig vanished into the distance the king bowed again to thank Sanzang and Friar Sand. 
+      content: `The story tells how the king of Jisai and his officials high and low watched as the Great Sage Monkey and Pig disappeared by wind and cloud, carrying the two demons with them. Then all of them bowed in homage to heaven, saying, "Their fame is well founded. Only today can we really believe that such immortals and living Buddhas exist." As Monkey and Pig vanished into the distance the king bowed again to thank Sanzang and Friar Sand. 
 "Our mortal eyes were only able to see that your illustrious disciples had the power to capture thieving devils. 
 We never realized that you were superior immortals with the power to ride on winds and clouds." 
 "I do not have any dharma powers," Sanzang replied. "On my journey I have depended very much on my three disciples." 
@@ -14926,8 +14842,7 @@ If you don't know what happened on the journey ahead listen to the explanation i
     {
       title: `Chapter 64: Wuneng Works Hard on Thorn Ridge 
 Sanzang Talks of Poetry in the Wood Immortals' Hermitage `,
-      content: `
-The story has been told how the king of Jisai thanked Tang Sanzang and his three disciples for capturing the demons and pressed on them gold and jade, none of which they would accept. The king therefore told his aides to have made for each of them two suits of clothing like those they were wearing, two pairs of socks, two pairs of shoes and two belts. They were also provided with dry rations, and their passport was duly examined and returned. They were seen out of the city by a procession of carriages, the civil and military officials, the common people of the city and the monks of the Subdued Dragon Monastery. There was also loud music. After six or seven miles they took their leave of the king, to be accompanied for a further six or seven miles by everyone else. Then all the others turned back except the monks of the Subdued Dragon Monastery, who were still with them after twenty miles. Some of the monks wanted to accompany them to the Western Heaven and the others wanted to cultivate their conduct and wait on them. 
+      content: `The story has been told how the king of Jisai thanked Tang Sanzang and his three disciples for capturing the demons and pressed on them gold and jade, none of which they would accept. The king therefore told his aides to have made for each of them two suits of clothing like those they were wearing, two pairs of socks, two pairs of shoes and two belts. They were also provided with dry rations, and their passport was duly examined and returned. They were seen out of the city by a procession of carriages, the civil and military officials, the common people of the city and the monks of the Subdued Dragon Monastery. There was also loud music. After six or seven miles they took their leave of the king, to be accompanied for a further six or seven miles by everyone else. Then all the others turned back except the monks of the Subdued Dragon Monastery, who were still with them after twenty miles. Some of the monks wanted to accompany them to the Western Heaven and the others wanted to cultivate their conduct and wait on them. 
 Seeing that none of them was willing to turn back Monkey decided to use his powers. He pulled out thirty or forty of his hairs, blew on them with magic breath, shouted, "Change!" and turned them into ferocious striped tigers that leapt roaring about on the path ahead. Only then were the monks scared into going back. The Great Sage then led the master as he whipped his horse forward and they were soon far away. 
 At this the monks began to weep aloud, shouting, "Kind and honorable sirs, fate must be against us since you won't take us with you." 
 Let us tell not of the wailing monks but of how the master and his three disciples headed along the main path West for a while before Monkey took his hairs back. Once again the seasons were changing, and it was now the end of winter and the beginning of spring, neither hot nor cold. As they were making their way along without a care they saw a long ridge in front of them over which the road led. Sanzang reined in his horse to look. He saw that the ridge was overgrown with brambles and creepers. Although the line of the path could be made out there were brambles and thorns all over it. "How are we going to manage that path, disciples?" he asked. 
@@ -15206,8 +15121,7 @@ If you don't know what happened as they pressed ahead, listen to the explanation
     {
       title: `Chapter 65: A Demon Creates a False Thunder Peak 
 All Four Pilgrims Meet with Disaster`,
-      content: `
-The cause and effect this time revealed 
+      content: `The cause and effect this time revealed 
 Should make one do what's good and shun the evil. 
 The Intelligence is aware of it. 
 And lets it become action. 
@@ -15441,8 +15355,7 @@ If you don't know what happened on this journey listen to the explanation in the
     {
       title: `Chapter 66: All the Gods Meet a Vicious Foe 
 Maitreya Binds the Evil Monster`,
-      content: `
-The story tells how the Great Sage Sun, finding himself at his wit's end, somersaulted by auspicious cloud straight to Mount Wudang in the Southern Continent of Jambu to ask the Heavenly Honoured Demon Suppressor to save Sanzang, Pig, Friar Sand, the heavenly soldiers and all the rest of them. He flew non−stop and was soon in sight of the patriarch's immortal domain. As he brought his cloud gently down to land and took a good look around this is what he saw: 
+      content: `The story tells how the Great Sage Sun, finding himself at his wit's end, somersaulted by auspicious cloud straight to Mount Wudang in the Southern Continent of Jambu to ask the Heavenly Honoured Demon Suppressor to save Sanzang, Pig, Friar Sand, the heavenly soldiers and all the rest of them. He flew non−stop and was soon in sight of the patriarch's immortal domain. As he brought his cloud gently down to land and took a good look around this is what he saw: 
 The great fortress of the Southeast, 
 A divine pillar of the central heaven. 
 Lotus Pinnacle soared in its majesty, 
@@ -15714,8 +15627,7 @@ If you don't know when they reached the Great Thunder Monastery, listen to the e
       title: `Chapter 67: The Dhyana−Nature Is Stable and Tuoluo Village Is Saved 
 The Mind of the Way Is Purified As Corruption Is Removed 
 `,
-      content: `
-The story tells how Sanzang and his three disciples happily continued along their way after leaving the Lesser Western Heaven. They had been going for over a month, and it was now late spring. The flowers were in bloom and all the woods they could see were full of green shade. After a spell of wind and rain dusk was falling once more. 
+      content: `The story tells how Sanzang and his three disciples happily continued along their way after leaving the Lesser Western Heaven. They had been going for over a month, and it was now late spring. The flowers were in bloom and all the woods they could see were full of green shade. After a spell of wind and rain dusk was falling once more. 
 "Disciple," said Sanzang, reining in his horse, "it's getting late. Which way shall we go to look for somewhere to spend the night?" 
 "Don't worry, Master," said Monkey with a smile. "Even if we can't find anywhere to stay we three all have our skills. Tell Pig to cut some grass and Friar Sand to fell some pines. I know a bit of carpentry. We can make ourselves a hut by the road here good enough to stay in for a year. Why the rush?" 
 "But this is no place to stay, brother," said Pig. "The mountain's crawling with wild beasts like tigers, leopards and wolves. Mountain ogres and hobgoblins are all over the place. It's hard enough travelling by daylight. I wouldn't dare spend the night here." 
@@ -15979,8 +15891,7 @@ If you don't know how much longer their journey was going to be or what evil mon
     {
       title: `Chapter 68: In the Land of Purpuria the Tang Priest Discusses History 
 Sun the Pilgrim in His Charity Offers to Be a Doctor `,
-      content: `
-When good is right all causes disappear; 
+      content: `When good is right all causes disappear; 
 Its fame is spread through all four continents. 
 In the light of wisdom they climb the other shore; 
 Soughing dark clouds are blown from the edge of the sky. 
@@ -16243,8 +16154,7 @@ If you do not know what illness was diagnosed or what medicines were used and wi
       title: `Chapter 69: The Heart's Master Prepares Medicine in the Night 
 The Monarch Discusses a Demon at the Banquet 
 `,
-      content: `
-The story tells how the Great Sage Sun went with the eunuchs in attendance on the king to the inner quarters of the palace and stood outside the doors of the royal bed−chamber. Handing the three golden threads to the eunuchs to take inside he gave them these instructions: 
+      content: `The story tells how the Great Sage Sun went with the eunuchs in attendance on the king to the inner quarters of the palace and stood outside the doors of the royal bed−chamber. Handing the three golden threads to the eunuchs to take inside he gave them these instructions: 
 "Tell the queens and consorts of the inner palace or the eunuchs in personal attendance to fasten these threads to His Majesty's left wrist at the inch, the bar and the cubit, then pass them out of the window to me." The eunuchs did as he said, asking the king to sit on his dragon bed while they fastened one end of the golden threads to the inch, the bar and the cubit and passed the other ends outside. 
 Monkey took these ends and first held the end of one between the thumb and the forefinger of his right hand and felt the pulse at the inch point. He held the next against his middle finger and felt the pulse at the bar, and then pressed his thumb against his third finger and felt the cubit pulse. Next he regulated his own breathing to examine the four functions, the five depressions, the seven exterior and eight interior symptoms, the nine tempers, the deep pulses within the floating ones and the floating ones within the deep ones. He thus determined the insufficiencies and excesses of the functioning of organs, then told the eunuchs to take the threads off the king's left wrist and fasten them to the same points on the right wrist. He felt the threads one by one with the fingers of his left hand. 
 With a shake he put the golden threads back on his body and shouted at the top of his voice, "Your Majesty, the inch pulse on your left wrist is strong and tense, the bar pulse is sluggish and tardy, and the cubit is hollow and deep. On your right wrist the inch is floating and slippery, the bar is slow and knotted, and the cubit is frequent and firm. The left inch being strong and tense means that you have an internal emptiness and pains in the heart. The left bar being sluggish and tardy shows that you sweat and that your muscles feel numb. The hollowness and depth of the cubit suggest red urine and bloody stools. The floating, slippery inch pulse on the right wrist shows internal accumulations and blocked channels. The bar being slow and knotted is from indigestion and retained drinking. The frequency and wiriness of the cubit shows a chronic opposition of irritable fullness and empty coldness. My diagnosis of Your Majesty's ailment is that you are suffering from alarm and worry. The condition is the one known as the 'pair of birds parted.'" 
@@ -16463,8 +16373,7 @@ If you don't know who won the battle that followed when Monkey rose up into the 
       title: `Chapter 70: The Evil Monster's Treasures Emit Smoke, 
 Sand and Fire Wukong Steals the Golden Bells by Trickery
 `,
-      content: `
-The story tells how Brother Monkey summoned up his divine prestige and rose up into the air on his magic light, wielding his iron cudgel. "Where are you from, evil monster?" he asked, shouting in the evil spirit's face. "And where are you going to wreak havoc?" 
+      content: `The story tells how Brother Monkey summoned up his divine prestige and rose up into the air on his magic light, wielding his iron cudgel. "Where are you from, evil monster?" he asked, shouting in the evil spirit's face. "And where are you going to wreak havoc?" 
 "I'm the vanguard warrior under the Great King Evil Star Matcher from Horndog Cave on Mount Unicorn," 
 shouted the demon at the top of his voice, "that's who I am. His Majesty has ordered me to fetch two ladies−in−waiting to serve Her Majesty the Golden Queen. Who are you and how dare you question me?" 
 "I'm Sun Wukong, the Great Sage Equaling Heaven," Monkey replied. "I was passing through this country while escorting the Tang Priest to worship the Buddha in the Western Heaven. Now I know that your gang of monsters was oppressing the king I'm going to use my heroic powers to bring the country back to order and wipe out this evil. And now you've come along to throw your life away just when I didn't know where to find you." When the monster heard this he foolishly thrust his spear at Monkey, who struck back at his face with the iron cudgel. They fought a splendid battle up in mid−air: 
@@ -16731,8 +16640,7 @@ If you don't know how Brother Monkey got out through the demons' gates, listen t
       title: `Chapter 71: Under a False Name Monkey Beats the Demon Hound 
 Guanyin Appears to Subdue the Demon King 
 `,
-      content: `
-Matter has always been empty; 
+      content: `Matter has always been empty; 
 Emptiness said to be matter is only natural. 
 When one penetrates the dhyana of matter's emptiness 
 There is no need for cinnabar to be refined into elixir. 
@@ -16998,8 +16906,7 @@ If you do not know what of good or ill lay in store for them on the way ahead li
       title: `Chapter 72: The Seven Emotions Confuse the Basic in Gossamer Cave 
 At Filth−Cleansing Spring Pig Forgets Himself 
 `,
-      content: `
-The story tells how Sanzang took his leave of the king of Purpuria, got everything ready, saddled the horse and headed Westwards. They crossed many a mountain and river. Before they realized it autumn and winter were over and spring's brightness and charm were back. Master and disciples were enjoying the scenery as their way led them across the greenery when they suddenly noticed a building amid trees. Sanzang dismounted and stood beside the main track. 
+      content: `The story tells how Sanzang took his leave of the king of Purpuria, got everything ready, saddled the horse and headed Westwards. They crossed many a mountain and river. Before they realized it autumn and winter were over and spring's brightness and charm were back. Master and disciples were enjoying the scenery as their way led them across the greenery when they suddenly noticed a building amid trees. Sanzang dismounted and stood beside the main track. 
 "Master," Brother Monkey asked, "the road is easy and there is no evil about, so why have you stopped?" 
 "You aren't at all understanding, brother," Pig said. "The master is feeling sleepy after being in the saddle for so long. You ought to let him come down and have a rest." 
 "It's not that," Sanzang said. "I can see a house over there. I was thinking of going there myself to beg for some food." 
@@ -17283,8 +17190,7 @@ If you don't know what of good or evil the demons were to do to them, listen to 
       title: `Chapter 73: The Emotions Bear a Grudge and Inflict Disaster 
 The Heart's Master Smashes the Light When He Meets the Demons
 `,
-      content: `
-The story tells how the Great Sage Sun supported the Tang Priest as they hurried along the main road to the West together with Pig and Friar Sand. Within a few hours they were in sight of a compound with many tall towers and imposing buildings. "Disciple," said Sanzang, reining in his horse, "what's that place?" Monkey looked up to gaze at it and this is what he saw. 
+      content: `The story tells how the Great Sage Sun supported the Tang Priest as they hurried along the main road to the West together with Pig and Friar Sand. Within a few hours they were in sight of a compound with many tall towers and imposing buildings. "Disciple," said Sanzang, reining in his horse, "what's that place?" Monkey looked up to gaze at it and this is what he saw. 
 Tall towers girdled by hills, 
 Streams winding round pavilions. 
 Dense grew the wood in front of the gates, 
@@ -17532,8 +17438,7 @@ As for what happened on the way ahead, listen to the explanations in the next in
       title: `Chapter 74: Li Changgeng Reports the Demons' Vicious Nature 
 The Novice Displays His Powers of Transformation 
 `,
-      content: `
-Emotions and desires are in origin all the same; 
+      content: `Emotions and desires are in origin all the same; 
 Both emotions and desires are completely natural. 
 Many a gentleman refines himself in the Buddhist faith; 
 When desire and emotions are forgotten, dhyana conies. 
@@ -17726,8 +17631,7 @@ If you don't know what of good or ill was to come from the demon chieftains list
       title: `Chapter 75: The Mind−Ape Bores a Hole in the Male and Female Jar 
 The Demon King Returns and the Way Is Preserved
 `,
-      content: `
-The story tells how the Great Sage Sun went in through the entrance of the cave and looked to either side. 
+      content: `The story tells how the Great Sage Sun went in through the entrance of the cave and looked to either side. 
 Human heads and hair trampled into felt, 
 Human skin and flesh rotted into mud, 
 Sinews twisted round trees, 
@@ -18039,8 +17943,7 @@ If you don't know whether he lived or died listen to the explanation in the next
       title: `Chapter 76: When the Heart Spirit Stays in the Home the Demons Submit 
 The Mother of Wood Helps Bring Monsters to the Truth
 `,
-      content: `
-The story tells how after the Great Sage had struggled in his stomach for a while the senior demon collapsed in the dust. He made no sound and was not breathing either. As he said nothing Monkey thought the demon was dead, so he stopped hitting him. When the demon chief recovered his breath he called out, "Most merciful and most compassionate Bodhisattva, Great Sage Equaling Heaven." 
+      content: `The story tells how after the Great Sage had struggled in his stomach for a while the senior demon collapsed in the dust. He made no sound and was not breathing either. As he said nothing Monkey thought the demon was dead, so he stopped hitting him. When the demon chief recovered his breath he called out, "Most merciful and most compassionate Bodhisattva, Great Sage Equaling Heaven." 
 "My boy," said Monkey when he heard this, "don't waste your effort. You could save yourself a few words by simply calling me Grandpa Sun." 
 Desperate to save his skin, the evil monster really did call out, "Grandpa! Grandpa! I was wrong. I shouldn't have eaten you, and now you're destroying me. I beg you, Great Sage, in your mercy and compassion take pity on my antlike greed for life and spare me. If you do I'll escort your master across the mountain." 
 Although the Great Sage was a tough hero he was most eager to help the Tang Priest in his journey, so on hearing the evil monster's pathetic pleas and flattery he decided once more to be kind. 
@@ -18238,8 +18141,7 @@ If you don't know whether he was to escape with his life listen to the explanati
       title: `Chapter 77: The Demon Host Mistreats the Fundamental Nature 
 The One Body Pays His Respects to the Buddha 
 `,
-      content: `
-We will tell now not of the sufferings of the venerable Tang Elder but of the three demon chiefs in strenuous combat with the Great Sage and his two brother disciples in the low hills to the East outside the city. It was indeed a good hard battle, like an iron brush against a copper pan: Six types of body, six types of weapon, 
+      content: `We will tell now not of the sufferings of the venerable Tang Elder but of the three demon chiefs in strenuous combat with the Great Sage and his two brother disciples in the low hills to the East outside the city. It was indeed a good hard battle, like an iron brush against a copper pan: Six types of body, six types of weapon, 
 Six physical forms, six feelings. 
 The six evils arise from the six sense organs and the six desires; The six gates to nirvana and the six ways of rebirth are struggling for victory. 
 In the thirty−six divine palaces spring comes of itself; 
@@ -18446,8 +18348,7 @@ If you don't know when on this journey they were to see the Tathagata listen to 
     {
       title: `Chapter 78: In Bhiksuland the Hidden Gods Are Sent on an Errand of Mercy 
 In the Palace the Monster Is Revealed and the Way Discussed `,
-      content: `
-A single thought at once disturbs a hundred monsters; 
+      content: `A single thought at once disturbs a hundred monsters; 
 The hardest efforts are all to no avail. 
 One can only wash away each speck of dust, 
 Tidy everything and polish well. 
@@ -18654,9 +18555,7 @@ If you don't know whether they were to survive this departure listen to the expl
     {
       title: `Chapter 79: Searching the Cave to Capture the Fiend They Meet Longevity 
 The Reigning Monarch Saves the Little Boys `,
-      content: `
-
-The story tells how the royal aide dragged the imitation Tang Priest out of the government hostel and marched him, heavily surrounded by royal guardsmen, straight to the gates of the palace, where he said to the eunuch gate officer, "Please be so good as to report to His Majesty that we have brought the Tang Priest." The eunuch officer hurried into the palace to pass this on to the deluded king, who ordered that they be brought in. 
+      content: `The story tells how the royal aide dragged the imitation Tang Priest out of the government hostel and marched him, heavily surrounded by royal guardsmen, straight to the gates of the palace, where he said to the eunuch gate officer, "Please be so good as to report to His Majesty that we have brought the Tang Priest." The eunuch officer hurried into the palace to pass this on to the deluded king, who ordered that they be brought in. 
 All the officials knelt at the foot of the steps to the throne hall, leaving the imitation Tang Priest standing alone in the middle of them. 
 "King of Bhiksuland," he shouted, "what have you summoned me here to say to me?" 
 "We are sick with a chronic illness that has dragged on for many a day without any improvement," the king replied. "Now the Elder of the Nation has to our good fortune presented us with a prescription that has been made up. All that is needed now is an adjuvant. The reason we have sent for you, reverend sir, is to ask you for the adjuvant. If we recover we will build a temple to you in which offerings will be made in all four seasons and incense will be burnt to you in perpetuity by our country." 
@@ -18849,8 +18748,7 @@ If you don't know what happened later listen to the explanation in the next inst
     {
       title: `Chapter 80: The Young Girl Seeks a Mate to Build Up the Male 
 Protecting His Master the Mind−Ape Sees Through a Demon`,
-      content: `
-The story tells how the king, ministers and common people of Bhiksuland escorted the Tang Priest and his three disciples out of the city. Seven miles later they were still unwilling to part from the pilgrims, but Sanzang insisted on getting out of the coach, mounting the horse and taking his leave of them. The people who had been seeing him off did not return to the city until the travelers had vanished from view. 
+      content: `The story tells how the king, ministers and common people of Bhiksuland escorted the Tang Priest and his three disciples out of the city. Seven miles later they were still unwilling to part from the pilgrims, but Sanzang insisted on getting out of the coach, mounting the horse and taking his leave of them. The people who had been seeing him off did not return to the city until the travelers had vanished from view. 
 When the four had been travelling for a long time the winter and the spring too were over. There was no end of wild flowers and mountain trees to be seen; fragrant blossoms filled the view. To Sanzang's alarm another towering mountain appeared in front of them. 
 "Disciples," he asked, "is there a way across the high mountain before us? We must be careful." 
 "Master," laughed Brother Monkey, "that's not what a seasoned traveler should be saying. You sound much more like some pampered prince trying to look at the whole sky from the bottom of a well. As the old saying goes, a mountain can't stop the road: it can find its own way across. So why ask whether there's a way?" 
@@ -19113,8 +19011,7 @@ If you do not know how they left the monastery, listen to the explanation in the
     {
       title: `Chapter 81: The Mind−Ape Recognizes a Monster in the Monastery 
 The Three Search for Their Master in Black Pine Forest `,
-      content: `
-The story tells how Sanzang and his disciples came to the Meditation Monastery where they met the lamas and were given a vegetarian meal. When the four of them had eaten the girl was also fed. By now night was gradually falling and the lamp was lit in the abbot's lodgings. The lamas, who wanted to ask the Tang Priest about why he was going to fetch the scriptures and were also eager for a look at the girl, stood packed together in rows under the lamp. "Abbot," said Sanzang to the lama he had first met, "when we leave your monastery tomorrow what will the road West be like?" Before answering, the lama fell to his knees. Sanzang quickly helped him up and said, "Stand up, please. Why do you greet me in this way when I ask about the road?" 
+      content: `The story tells how Sanzang and his disciples came to the Meditation Monastery where they met the lamas and were given a vegetarian meal. When the four of them had eaten the girl was also fed. By now night was gradually falling and the lamp was lit in the abbot's lodgings. The lamas, who wanted to ask the Tang Priest about why he was going to fetch the scriptures and were also eager for a look at the girl, stood packed together in rows under the lamp. "Abbot," said Sanzang to the lama he had first met, "when we leave your monastery tomorrow what will the road West be like?" Before answering, the lama fell to his knees. Sanzang quickly helped him up and said, "Stand up, please. Why do you greet me in this way when I ask about the road?" 
 "When you travel West tomorrow, reverend sir, you will find that the road is level," the lama replied. "There is no need to worry. There is just one thing at present that is rather awkward. I wanted to tell you about it as soon as you came in, but I was afraid that it would offend your distinguished self. I only venture to tell you now that the meal is over that you will be most welcome to spend the night in the young lamas' room after your long, hard journey from the East. But it would not be right for the lady Bodhisattva to do so. I don't know where I should invite her to sleep." 
 "Your suspicions are not called for, abbot," Sanzang replied, "and you should not suppose that my disciples and I have wicked ideas. When we were coming through Black Pine Forest this morning we found this girl tied to a tree. My disciple Sun Wukong refused to save her, but out of my enlightened heart I rescued her and have brought her here for you to put up, abbot." 
 "As you have been so generous, reverend Father," the abbot replied, "we can set out a straw mattress behind the devarajas in the Devaraja Hall for her to sleep on." 
@@ -19429,8 +19326,7 @@ If you don't know whether this departure was to be for good or ill listen to the
     {
       title: `Chapter 82: The Girl Seeks the Male
 The Primal Deity Guards the Way `,
-      content: `
-The story tells how Pig leapt down the mountainside and found a narrow path. After following it for nearly two miles he came across two she−monsters drawing water from a well. How did he know that they both were monsters? Each of them had on her head an extremely unfashionable hair−style held up by bamboo slivers that stood one foot two or three inches high. 
+      content: `The story tells how Pig leapt down the mountainside and found a narrow path. After following it for nearly two miles he came across two she−monsters drawing water from a well. How did he know that they both were monsters? Each of them had on her head an extremely unfashionable hair−style held up by bamboo slivers that stood one foot two or three inches high. 
 "Evil monsters," Pig called, going up to them. 
 The two of them looked at each other and said. "What an outrageous monk. We don't know him and we've never had words with him. So why did he call us evil monsters?" In their fury the monsters raised the pole with which they were going to carry the water and struck at Pig's head. 
 After a few blows that he could not ward off as he was unarmed, the idiot rushed back up the mountain with his head covered by both hands shouting, "Brother! Go back! The monsters are vicious." 
@@ -19711,8 +19607,7 @@ If you don't know whether the evil spirit's life was spared listen to the explan
       title: `Chapter 83: The Mind−Ape Recognizes the Refiner of Cinnabar 
 The Girl Reverts to Her True Nature
 `,
-      content: `
-The story tells how after Sanzang had been carried out of the cave by the evil spirit Friar Sand went up to him and asked, "Where is my oldest brother now that you have come out, Master?" 
+      content: `The story tells how after Sanzang had been carried out of the cave by the evil spirit Friar Sand went up to him and asked, "Where is my oldest brother now that you have come out, Master?" 
 "He must know what he's doing," said Pig. "I expect he's exchanged himself for the master to get him out." 
 "Your brother is in her stomach," Sanzang replied, pointing at the evil spirit. 
 "It is terribly filthy," Pig said. "Whatever are you doing in there? Come out." 
@@ -19901,8 +19796,7 @@ If you do not know what lay in store for them on their way ahead listen to the e
       title: `Chapter 84: The Indestructible Proteges of the Buddha Complete Enlightenment 
 The Dharma King Comes to the Truth Through His Own Nature
 `,
-      content: `
-The story tells how Tang Sanzang kept his masculine essence intact and escaped from the terrible snare of mist and flowers. As he headed Westwards with Brother Monkey he did not notice that it was already summer: warm breezes were beginning to blow, and the early summer rain was falling. It was a beautiful sight: 
+      content: `The story tells how Tang Sanzang kept his masculine essence intact and escaped from the terrible snare of mist and flowers. As he headed Westwards with Brother Monkey he did not notice that it was already summer: warm breezes were beginning to blow, and the early summer rain was falling. It was a beautiful sight: 
 Dark is the shade under tender green; 
 In the gentle breeze the swallows lead their young. 
 New lotus leaves are opening on the ponds; 
@@ -20108,8 +20002,7 @@ If you do not know what happened to the booty in the trunk that the commander−
       title: `Chapter 85: The Mind−ape is jealous of the Mother of Wood 
 The Demon Chief Plots to Devour the Master of Dhyana 
 `,
-      content: `
-The story tells how when the king held his dawn audience the civil and military officials all carried memorials. "Sovereign Lord," they reported, "we beg you to forgive your servants for their lack of decorum." 
+      content: `The story tells how when the king held his dawn audience the civil and military officials all carried memorials. "Sovereign Lord," they reported, "we beg you to forgive your servants for their lack of decorum." 
 "Gentlemen," the king replied, "you are all as courteous as ever. What lack of decorum are you showing?" 
 "Sovereign Lord," they said, "we do not know why, but all of your servants lost their hair last night." Holding in his hand these memorials about the lost hair, the king descended from his dragon throne to say to the officials, "Indeed, we do not know why either, but everyone in the palace, young and old, lost their hair last night." 
 King and ministers alike all wept as they said, "From now on we will not dare kill any more monks." The king then returned to his throne and the officials took their places in their proper ranks. The king then said, "Let those with business here come forward from their ranks to report. If there is no other business the curtain may be rolled up and the audience ended." 
@@ -20369,8 +20262,7 @@ If you do not know how his search for his master ended, listen to the explanatio
       title: `Chapter 86: The Mother of Wood Lends His Might in Defeating the Ogre 
 The Metal Lord Uses His Magic to Wipe Out the Monster
 `,
-      content: `
-The story tells how the Great Sage Monkey was leading the horse and carrying the baggage while he searched the whole mountain top, calling out for his master. Suddenly Pig came running up to him, puffing and panting, to ask, "Why are you shouting like that, brother?" 
+      content: `The story tells how the Great Sage Monkey was leading the horse and carrying the baggage while he searched the whole mountain top, calling out for his master. Suddenly Pig came running up to him, puffing and panting, to ask, "Why are you shouting like that, brother?" 
 "The master's disappeared," Brother Monkey replied. "Have you seen him?" 
 "Why did you have to play that trick on me when I was being a good monk with the Tang Priest?" Pig asked. 
 "What was all that about me being commander of the vanguard? I had to fight for my life before I could beat that evil spirit and come back in one piece. You and Friar Sand were looking after the master, so why ask me about it?" 
@@ -20654,8 +20546,7 @@ If you don't know how long it was till they reached the Western Heaven, listen t
     {
       title: `Chapter 87: When Heaven Is Offended in Fengxian It Stops the Rain 
 The Great Sage Urges Goodness and Brings a Downpour `,
-      content: `
-Deep and mysterious is the Great Way; 
+      content: `Deep and mysterious is the Great Way; 
 What news is there of it? 
 When revealed it will alarm ghosts and divine beings. 
 It controls the universe, 
@@ -20871,8 +20762,7 @@ If you don't know how many more days after this departure it was that they final
       title: `Chapter 88: When the Dhyana Reaches Yuhua a Display of Magic Is Given 
 The Mind−Ape and the Mother of Wood Take Their Own Disciples 
 `,
-      content: `
-The story tells how after happily taking their leave of the marquis the Tang Priest turned to Monkey as he rode and said, "Worthy disciple, this good result was even better than rescuing the babies in Bhiksuland, and it was all your achievement." 
+      content: `The story tells how after happily taking their leave of the marquis the Tang Priest turned to Monkey as he rode and said, "Worthy disciple, this good result was even better than rescuing the babies in Bhiksuland, and it was all your achievement." 
 "In Bhiksuland you only saved 1,111 little boys," said Friar Sand. "That's no comparison with this heavy, soaking rain that's saved tens of thousands of lives. I've been quietly admiring my big brother's magical powers that extend right up to the heavens, as well as his mercy that covers the whole earth." 
 "Merciful and good our big brother may be," said Pig with a laugh, "but it's just a show of being kind. Inside he's a troublemaker. When he's with me he treats me like dirt." 
 "When have I ever treated you like dirt?" Monkey protested. "Often enough," replied Pig. "You're always seeing to it that I get tied up, hung up, boiled and steamed. After being so kind to all those tens of thousands of people in Fengxian you should have stayed there for half a year and let me have a few more good filling meals. Why did you have to be sending us on our way?" 
@@ -21080,11 +20970,7 @@ If you do not know how these weapons were found, listen to the explanation in th
     {
       title: `Chapter 89: The Tawny Lion Spirit Arranges a Rake Feast in Vain 
 Metal, Wood and Earth Make Havoc on Mount Leopard Head `,
-      content: `<ChapterStart>
-Chapter 89: The Tawny Lion Spirit Arranges a Rake Feast in Vain 
-Metal, Wood and Earth Make Havoc on Mount Leopard Head 
-
-The story tells how after days on end of hard work the smiths all went to sleep that night, only to get up at dawn to start again and find that the three weapons had disappeared from under the matting shelter. 
+      content: `The story tells how after days on end of hard work the smiths all went to sleep that night, only to get up at dawn to start again and find that the three weapons had disappeared from under the matting shelter. 
 Dumbfounded with horror, they started looking for them everywhere, and when the three young princes came out of the inner quarters to watch, the smiths all kowtowed to them and said, "Young masters, we don't know where the divine teachers' three weapons have all gone." 
 When the young princes heard this news they trembled and said, "We expect our masters put them away last night." Rushing to the Gauze Pavilion, they found the white horse still tethered in the walkway and could not help shouting, "Teachers, are you still asleep?" 
 "We're up," Friar Sand replied, and opened the door of their room to let the young princes in. 
@@ -21250,8 +21136,7 @@ If you do not know the outcome of the battle listen to the explanation in the ne
       title: `Chapter 90: By Giving and Receiving the Master and the Lion Turn into One 
 After Stealing the Way and Obstructing Dhyana Ninefold Numinosity Is Pacified 
 `,
-      content: `
-The story tells how the Great Sage Sun left the city with Pig and Friar Sand and looked the monsters in the face to see that they were all lions of various kinds. The Tawny Lion Spirit was leading, with Leo and Elephant−fighter Lion on his left, Gryphon and Raccoon−dog Lion on his right and Monkey Lion with Snowy Lion behind him. In the middle of them all was a nine−headed lion. The ogre Greenface was holding a canopy of brocade embroidered with flowers just behind the nine−headed lion; while Wily Freak and Freaky Wile carried a pair of red flags. They were all drawn up at a hollow place. 
+      content: `The story tells how the Great Sage Sun left the city with Pig and Friar Sand and looked the monsters in the face to see that they were all lions of various kinds. The Tawny Lion Spirit was leading, with Leo and Elephant−fighter Lion on his left, Gryphon and Raccoon−dog Lion on his right and Monkey Lion with Snowy Lion behind him. In the middle of them all was a nine−headed lion. The ogre Greenface was holding a canopy of brocade embroidered with flowers just behind the nine−headed lion; while Wily Freak and Freaky Wile carried a pair of red flags. They were all drawn up at a hollow place. 
 In his rough way Pig went up to them to shout abusively, "Ogres! Thieves! Treasure−stealers! What did you go there and gang up with that hairy lot for?" 
 To this the Tawny Lion Spirit retorted, gnashing his teeth in fury, "Vicious baldies! When I was alone yesterday the three of you beat me and I had to run away. You should have done right, instead of burning my cave palace, destroying my mountain home and murdering my family. My hatred for you is as great as the ocean. Stay where you are and take this from my halberd!" 
 The splendid Pig raised his rake to parry the blow. When the two of them had just started fighting and neither was yet coming out on top Monkey Lion joined in, swinging his spiked iron club, as did Snowy Lion with his three−edged mace. 
@@ -21451,8 +21336,7 @@ If you do not know how much further the journey was to be or when it was to end,
     {
       title: `Chapter 91: Admiring the Moon Festival Lanterns in Jinping 
 The Tang Priest Confesses in Dark Essence Cave `,
-      content: `
-Where should one strive to practice dhyana? 
+      content: `Where should one strive to practice dhyana? 
 Swiftly to extirpate the misdeeds of the thought−horse and the mind−ape. 
 When they are firmly tethered they give off radiance, 
 But whoever halts falls to the three paths of suffering. 
@@ -21792,8 +21676,7 @@ If you don't know who was to win this encounter listen to the explanation in the
       title: `Chapter 92: Three Monks Wage a Great Fight on Green Dragon Mountain 
 Four Stars Seize the Rhinoceros Monsters 
 `,
-      content: `
-The story tells how after the Great Sage Monkey took his two brother disciples by gale and cloud to the Northeast they were soon bringing their cloud down at the entrance to the Dark Essence Cave on Green Dragon Mountain. Pig was just about to smash the doors in when Monkey said, "Wait a moment. I'll go in and find out whether the master's still alive before we have it out with him." 
+      content: `The story tells how after the Great Sage Monkey took his two brother disciples by gale and cloud to the Northeast they were soon bringing their cloud down at the entrance to the Dark Essence Cave on Green Dragon Mountain. Pig was just about to smash the doors in when Monkey said, "Wait a moment. I'll go in and find out whether the master's still alive before we have it out with him." 
 "But the doors are shut very tightly," said Friar Sand. How will you get in?" 
 "I've got my methods," Monkey replied. 
 The splendid Great Sage then put his cudgel away, made a spell with his fingers while saying the magic words, called "Change!" and turned into a fire−fly. He was really nimble. Just look at him: Wings that shine like shooting stars: 
@@ -21973,8 +21856,7 @@ If you don't know what the households who still wanted to thank them did at dayb
       title: `Chapter 93: In the Almsgiver's Garden Antiquity and Causes Are Discussed 
 In the Court of India the King Meets the Monks 
 `,
-      content: `
-When thoughts arise there surely will be desire, 
+      content: `When thoughts arise there surely will be desire, 
 Longing is certain to lead one to disaster. 
 Why should intelligence distinguish the three ranks of nobility? 
 When conduct is complete it naturally returns to the primal sea. 
@@ -22157,9 +22039,7 @@ If you do not know what was said when they met the king, listen to the explanati
       title: `Chapter 94: The Four Monks Dine to Music in the Palace Gardens 
 One Demon Loves in Vain and Longs for Bliss 
 `,
-      content: `
-
-The story tells how Brother Monkey and the other two disciples went with the official who had brought the invitation to outside the Meridional Gate of the palace, where the eunuch gate officer immediately reported their arrival and brought back a summons for them to enter. The three of them stood in a row, not bowing. 
+      content: `The story tells how Brother Monkey and the other two disciples went with the official who had brought the invitation to outside the Meridional Gate of the palace, where the eunuch gate officer immediately reported their arrival and brought back a summons for them to enter. The three of them stood in a row, not bowing. 
 "Are you three gentlemen the illustrious disciples of the holy monk? What are your names? Where do you live? Why did you become monks? What scriptures are you going to fetch?" Monkey then came closer, intending to enter the throne hall. 
 "Don't move," one of the king's bodyguards shouted. "If you have anything to say, say it standing down there." 
 "We monks like to step forward whenever we're given an opening," Monkey said with a smile, at which Pig and Friar Sand too approached the king. Worried that their rough manners would alarm the king, Sanzang stepped forward and called out, "Disciples, His Majesty has asked you why you have come here. You must submit your reply." 
@@ -22480,8 +22360,7 @@ If you don't know how the Tang Priest escaped once in the inner quarters of the 
       title: `Chapter 95: False and True Form Combine When the Jade Hare is Captured 
 The True Female Is Converted and Meets With Spiritual Origin 
 `,
-      content: `
-The story tells how the Tang Priest was feeling thoroughly miserable as he accompanied the king into the inner quarters, from where a great sound of drums and music arose and fine perfumes could be smelt. He kept his head bowed, not daring to look up. Monkey, secretly very pleased, had fixed himself to the Vairocana mitre, from where he used his magic light to look around with his fiery eyes and golden pupils. There were two ranks of court ladies, making it seem like a palace of flowers or immortals, and finer than a spring breeze blowing past a brocade screen. Indeed, they were 
+      content: `The story tells how the Tang Priest was feeling thoroughly miserable as he accompanied the king into the inner quarters, from where a great sound of drums and music arose and fine perfumes could be smelt. He kept his head bowed, not daring to look up. Monkey, secretly very pleased, had fixed himself to the Vairocana mitre, from where he used his magic light to look around with his fiery eyes and golden pupils. There were two ranks of court ladies, making it seem like a palace of flowers or immortals, and finer than a spring breeze blowing past a brocade screen. Indeed, they were 
 Jadelike, and with ice−smooth skin. 
 Bewitching pairs more lovely than the girl of Chu, 
 Beauties two by two, rivaling the lady Xi Shi. 
@@ -22683,8 +22562,7 @@ If you do not know what happened on the journey ahead, listen to the explanation
       title: `Chapter 96: Squire Kou Entertains the Lofty Monk 
 The Tang Priest Does Not Covet Wealth and Honour 
 `,
-      content: `
-All kinds of matter are really without matter; 
+      content: `All kinds of matter are really without matter; 
 No emptiness is truly empty. 
 Stillness and clamour, speech and silence, all are the same: 
 Why bother to dream−talk in one's dreams? 
@@ -22895,8 +22773,7 @@ If you don't know what happened when they carried on with their journey, listen 
     {
       title: `Chapter 97: The Monks and Their Supporters Meet With Demonic Attack 
 The Sage Makes the Spirit Reappear to Save the Primal One `,
-      content: `
-We will tell not of how the Tang Priest and the others endured a hard night in the dilapidated palace of Padmaprabha, but of a group of evil villains in Diling county in the prefecture of Brazentower who had squandered all their families' fortunes in whoring, drinking and gambling. Having nothing else left to live on they had formed a criminal gang of a dozen and more members and were discussing which family was the richest in the city and which the second richest. The idea was to rob them of their gold and silver and thus get some money to spend. 
+      content: `We will tell not of how the Tang Priest and the others endured a hard night in the dilapidated palace of Padmaprabha, but of a group of evil villains in Diling county in the prefecture of Brazentower who had squandered all their families' fortunes in whoring, drinking and gambling. Having nothing else left to live on they had formed a criminal gang of a dozen and more members and were discussing which family was the richest in the city and which the second richest. The idea was to rob them of their gold and silver and thus get some money to spend. 
 "There's no need to go round making enquiries," one of them said, "or work it out in detail. The Mr. Kou who saw the Tang monk off today is rolling in money. Let's strike tonight in the rain. There'll be nobody ready for us in the streets and the fire wardens won't be patrolling. When we've stolen his property we'll be able to go with the girls, gamble and have a good time again. That would be great, wouldn't it?" 
 The other robbers were all delighted with the suggestion, and with one heart they all set out in the rain carrying daggers, spiked clubs, sticks, coshes, ropes and torches. Flinging open the main gates of the Kou house they charged inside, shouting and sending everyone inside, young and old, male and female, scurrying into hiding. The old woman hid under the bed and the old man slipped behind the gates, while Kou Liang, Kou Dong and their families fled for their lives in all directions. Holding their knives in their hands and lighting torches, the bandits opened up all the chests in the house and grabbed as much of the gold, silver, jewelry, hair ornaments, clothing, vessels and other household goods as they wanted. Mr. Kou could not bear to lose all this, so taking his life in his hands he come out from behind the gate to plead with the robbers. 
 "Take as much as you want, great kings," he said, "but please leave me a few clothes to be buried in." The robbers were in no mood for argument. They rushed up to him, tripped and kicked him to the ground. Alas, His three souls vanished to the underworld; 
@@ -23076,8 +22953,7 @@ If you do not know what happened when they met the Buddha, listen to the explana
       title: `Chapter 98: When the Ape and the Horse Are Tamed They Cast Off Their Husks 	When All the Deeds Have Been Done Reality Is Seen 
 `,
       createdAt: new Date(),
-      content: `
-The story told how after coming back to life Mr. Kou once more arranged for parasols, banners, drummers, musicians, Buddhist monks, Taoist priests, his friends and his relations to see Sanzang off again. But instead of describing this we will tell of the Tang Priest and his three disciples taking the main road. The West was indeed a land of the Buddha, unlike anywhere else. They saw precious flowers, rare grasses, ancient cypresses and hoary pines. In all the places they passed through every family was pious and fed monks. Under every mountain people cultivated their conduct; in all the forests travelers recited sutras Master and disciples took shelter each night and set out at dawn, till six or seven days later a mass of high buildings and splendid halls suddenly came into view. Truly they were: 
+      content: `The story told how after coming back to life Mr. Kou once more arranged for parasols, banners, drummers, musicians, Buddhist monks, Taoist priests, his friends and his relations to see Sanzang off again. But instead of describing this we will tell of the Tang Priest and his three disciples taking the main road. The West was indeed a land of the Buddha, unlike anywhere else. They saw precious flowers, rare grasses, ancient cypresses and hoary pines. In all the places they passed through every family was pious and fed monks. Under every mountain people cultivated their conduct; in all the forests travelers recited sutras Master and disciples took shelter each night and set out at dawn, till six or seven days later a mass of high buildings and splendid halls suddenly came into view. Truly they were: 
 Thrusting a hundred feet into the heavens, 
 Touching the Milky Way in the sky. 
 Lower your head and see the setting sun; 
@@ -23361,8 +23237,7 @@ If you do not know how they passed on the scriptures after returning to the East
 After the Triple Threes Are Fulfilled the Way Returns to Its Roots 
 `,
       createdAt: new Date(),
-      content: `
-The story goes on to tell how the Eight Vajrapanis escorted the Tang Priest back to their country, but we will not go into that now. 
+      content: `The story goes on to tell how the Eight Vajrapanis escorted the Tang Priest back to their country, but we will not go into that now. 
 Outside the gates the Protectors of the Four Quarters and the Centre, the Four Duty Gods, the Six Dings, the Six Jias and the Guardians of the Faith went up to the Bodhisattva Guanyin and said, "We, your disciples, have given secret help to the holy monk in obedience to your dharma command, Bodhisattva. Now that they have fulfilled their deeds and you have reported your mission accomplished to the Lord Buddha, we would like to report the completion of our mission." 
 "Permission granted." The Bodhisattva replied with delight, "permission granted." The Bodhisattva then went on to ask, "What were the thoughts and actions of the Tang Priest and his three disciples on their journey?" 
 "They really were pious and determined," the deities all replied, "as we are sure will not have escaped your profound perception. But the Tang Priest's sufferings truly beggar description. Your disciples have made a careful record of the disasters and hardships that he has endured on his journey. This is the account of his ordeals." The Bodhisattva read it through from the beginning, and this is what was written in it: 
@@ -23547,8 +23422,7 @@ If you do not know how he saw the Tang emperor, listen to the explanation in the
       title: `Chapter 100: The Journey Back to the East Is Made 
 The Five Immortals Achieve Nirvana 
 `,
-      content: `
-We will tell not of how the four travelers escaped and rose on the wind with the vajrapanis, but of the many people in the Temple of Deliverance in Chen Village. After they rose at dawn to prepare more fruit and delicacies to offer they came to the ground floor of the tower and found the Tang Priest gone. Some asked questions and others searched. They were all thrown into panic and did not know what to do. 
+      content: `We will tell not of how the four travelers escaped and rose on the wind with the vajrapanis, but of the many people in the Temple of Deliverance in Chen Village. After they rose at dawn to prepare more fruit and delicacies to offer they came to the ground floor of the tower and found the Tang Priest gone. Some asked questions and others searched. They were all thrown into panic and did not know what to do. 
 "We've let those living Buddhas all get clean away," they lamented as their howls rose to the skies. As there was nothing else they could do about it they carried all the food they had prepared to the ground floor of the tower as offerings and burned imitation paper money. From then on four major sacrifices and twenty−four minor sacrifices were held every year. In addition people praying for cures or safety, seeking marriages, making vows, and seeking wealth or sons came at every hour of every day to bum incense and make offerings. Indeed: 
 Incense smoked in the golden burner for a thousand years; 
 The light burned in the lamps of jade through eternity. 
