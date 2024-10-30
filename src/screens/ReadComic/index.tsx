@@ -8,11 +8,11 @@ import {
   FlatList,
   ActivityIndicator,
 } from 'react-native';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import AppText from '@components/AppText';
 import {useSharedValue} from 'react-native-reanimated';
 import BottomSheet from '@components/AppBottomSheet';
-import {ASSETS, COLORS, COMMIC, HEIGHT, WIDTH} from '@constants/index';
+import {ASSETS, COLORS, HEIGHT, WIDTH} from '@constants/index';
 import ChapterBottomSheet from './components/ChapterBottomSheet';
 import ChevronLeft from '@assets/icons/common/Chevron-Left';
 import ChevronRight from '@assets/icons/common/Chevron-Right';
@@ -20,17 +20,33 @@ import ChevronDown from '@assets/icons/common/Chevron-Down';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@utils/types/navigation';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+import {COMMIC_EN} from '@constants/en';
+import {useSelector} from 'react-redux';
+import {RootState} from '@redux/store';
+import {COMIC_HINDI} from '@constants/hidi';
 const LIST_COLOR = [
   'rgba(235, 188, 93, 0.05)',
   'rgba(197,231,206,1)',
   'rgba(246,238,220,1)',
   'rgba(34,38,43,1)',
 ];
-const LIST_KEY = Array.from(COMMIC, ([key]) => key);
 const LIST_FONTFAMILY = ['Lora', 'Poppins', 'Times-New-Roman', 'OpenSans'];
 type Props = NativeStackScreenProps<RootStackParamList, 'ReadComic'>;
 const ReadComic = ({navigation, route}: Props) => {
+  const {curLanguage} = useSelector((state: RootState) => state.comic);
+  const LIST_KEY = useMemo(
+    () =>
+      Array.from(
+        curLanguage === 'English' ? COMMIC_EN : COMIC_HINDI,
+        ([key]) => key,
+      ),
+    [curLanguage],
+  );
+  const COMMIC = useMemo(
+    () => (curLanguage === 'English' ? COMMIC_EN : COMIC_HINDI),
+    [curLanguage],
+  );
+
   const chapterKey = route.params.chapterKey;
   const isOpen = useSharedValue(false);
   const isOpenMenu = useSharedValue(false);

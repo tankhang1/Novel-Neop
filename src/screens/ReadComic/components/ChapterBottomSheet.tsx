@@ -1,15 +1,15 @@
 import {View, ScrollView, TouchableOpacity, StyleSheet} from 'react-native';
-import React from 'react';
+import React, {useMemo} from 'react';
 import BottomSheet from '@components/AppBottomSheet';
 import {SharedValue} from 'react-native-reanimated';
-import {COLORS, COMMIC, HEIGHT} from '@constants/index';
+import {COLORS, HEIGHT} from '@constants/index';
 import ChapterItem from './ChapterItem';
 import ChevronDown from '@assets/icons/common/Chevron-Down';
-const LIST_CHAPTER = Array.from(COMMIC, ([key, value]) => ({
-  label: value.title,
-  createdAt: value.createdAt,
-  value: key,
-}));
+import {COMMIC_EN} from '@constants/en';
+import {useSelector} from 'react-redux';
+import {RootState} from '@redux/store';
+import {COMIC_HINDI} from '@constants/hidi';
+
 type TChapterBottomSheet = {
   isOpenMenu: SharedValue<boolean>;
   toggleSheetMenu: () => void;
@@ -27,6 +27,19 @@ const ChapterBottomSheet = ({
   setCounterEnd,
   chapter,
 }: TChapterBottomSheet) => {
+  const {curLanguage} = useSelector((state: RootState) => state.comic);
+  const LIST_CHAPTER = useMemo(
+    () =>
+      Array.from(
+        curLanguage === 'English' ? COMMIC_EN : COMIC_HINDI,
+        ([key, value]) => ({
+          label: value.title,
+          createdAt: value.createdAt,
+          value: key,
+        }),
+      ),
+    [curLanguage],
+  );
   return (
     <BottomSheet
       isOpen={isOpenMenu}

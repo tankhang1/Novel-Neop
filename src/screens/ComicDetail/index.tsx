@@ -37,6 +37,9 @@ import CloseX from '@assets/icons/common/CloseX';
 import Repeat from '@assets/icons/common/Repeat';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useFocusEffect} from '@react-navigation/native';
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from '@redux/store';
+import {changeLanguage} from '@redux/slices/ComicSlice';
 type TComment = {
   avatar: string;
   sender: string;
@@ -44,7 +47,7 @@ type TComment = {
   countLike: number;
   message: string;
 };
-const Language = ['Vietnamese', 'English', 'Indian', 'French', 'Japan'];
+const Language = ['English', 'Hindi'];
 const ListComments: TComment[] = [
   {
     avatar:
@@ -130,6 +133,8 @@ const ListComments: TComment[] = [
 ];
 type Props = NativeStackScreenProps<RootStackParamList, 'ComicDetail'>;
 const ComicDetail = ({navigation}: Props) => {
+  const {curLanguage} = useSelector((state: RootState) => state.comic);
+  const dispatch = useDispatch();
   const [isTimeoutLoading, setIsTimeOutLoading] = useState(true);
   const [tab, setTab] = useState<'info' | 'chapter'>('info');
   const [oldReadChapter, setOldReadChapter] = useState<null | number>(null);
@@ -216,7 +221,9 @@ const ComicDetail = ({navigation}: Props) => {
                 variant="yellow"
                 onPress={() => (isOpenLanguage.value = !isOpenLanguage.value)}>
                 <View style={styles.descriptionRightButtonItem}>
-                  <Text style={styles.descriptionRightTxtItem}>English</Text>
+                  <Text style={styles.descriptionRightTxtItem}>
+                    {curLanguage}
+                  </Text>
                   <ChevronDown width={14} height={14} />
                 </View>
               </BackgroundButton>
@@ -355,7 +362,13 @@ const ComicDetail = ({navigation}: Props) => {
               {Language.map((language, index) => (
                 <TouchableOpacity
                   key={index}
-                  style={styles.bottomTouchableItem}>
+                  style={[
+                    styles.bottomTouchableItem,
+                    curLanguage === language && {backgroundColor: '#eeeeee'},
+                  ]}
+                  onPress={() => {
+                    dispatch(changeLanguage(language));
+                  }}>
                   <Text style={styles.bottomTouchableTextItem}>{language}</Text>
                 </TouchableOpacity>
               ))}

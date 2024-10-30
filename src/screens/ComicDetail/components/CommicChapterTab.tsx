@@ -6,35 +6,50 @@ import {
   StyleSheet,
 } from 'react-native';
 import React, {useMemo, useState} from 'react';
-import {COLORS, COMMIC} from '@constants/index';
+import {COLORS} from '@constants/index';
 import ChapterItem from '@screens/ReadComic/components/ChapterItem';
 
-const LIST_CHAPTER = Array.from(COMMIC, ([key, value]) => ({
-  label: value.title,
-  createdAt: value.createdAt,
-  value: key,
-}));
+import {useSelector} from 'react-redux';
+import {RootState} from '@redux/store';
+import {COMMIC_EN} from '@constants/en';
+import {COMIC_HINDI} from '@constants/hidi';
 
 type TComicChapter = {
   onPress?: (key: number) => void;
 };
 const ComicChapterTab = ({onPress}: TComicChapter) => {
+  const {curLanguage} = useSelector((state: RootState) => state.comic);
   const [rangeSelected, setRangeSelected] = useState<{
     start: number;
     end: number;
   }>({start: 1, end: 10});
+
+  const curComic = useMemo(
+    () => (curLanguage === 'English' ? COMMIC_EN : COMIC_HINDI),
+    [curLanguage],
+  );
   const [isChangeSort, setIsChangeSort] = useState<null | 'oldest' | 'newest'>(
     null,
   );
 
   const ranges = useMemo(() => {
     const tmp = [];
-    const n = COMMIC.size;
+    const n = curComic?.size ?? 1;
     for (let start = 1; start <= n; start += 10) {
       tmp.push({start, end: Math.min(start + 10 - 1, n)});
     }
     return tmp;
-  }, []);
+  }, [curComic]);
+  const LIST_CHAPTER = useMemo(
+    () =>
+      curComic &&
+      Array.from(curComic, ([key, value]) => ({
+        label: value.title,
+        createdAt: value.createdAt,
+        value: key,
+      })),
+    [curComic],
+  );
 
   return (
     <View style={styles.container}>
@@ -100,7 +115,7 @@ const ComicChapterTab = ({onPress}: TComicChapter) => {
         style={styles.chapterList}
         persistentScrollbar={true}>
         <View style={styles.chapterItemList}>
-          {LIST_CHAPTER.slice(rangeSelected.start - 1, rangeSelected.end).map(
+          {LIST_CHAPTER?.slice(rangeSelected.start - 1, rangeSelected.end).map(
             (item, index) => (
               <TouchableOpacity
                 key={index}

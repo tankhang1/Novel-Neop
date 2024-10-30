@@ -13,6 +13,8 @@ module.exports = {
           '@utils': './src/utils',
           '@components': './src/components',
           '@navigation': './src/navigation',
+          '@hooks': './src/hooks',
+          '@redux': './src/redux',
         },
       },
     ],

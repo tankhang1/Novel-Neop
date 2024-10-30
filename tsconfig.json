@@ -9,7 +9,9 @@
       "@constants/*": ["src/constants/*"],
       "@screens/*": ["src/screens/*"],
       "@utils/*": ["src/utils/*"],
-      "@navigation/*": ["src/navigation/*"]
+      "@navigation/*": ["src/navigation/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@redux/*": ["src/redux/*"]
     }
   }
 }
