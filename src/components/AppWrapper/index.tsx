@@ -1,10 +1,23 @@
-import {View, Image, StyleSheet} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {ASSETS, HEIGHT, WIDTH} from '@constants/index';
+import {SafeAreaView} from 'react-native-safe-area-context';
 type TAppWrapper = {
   children: React.ReactNode;
+  isAreaView?: boolean;
 };
-const AppWrapper = ({children}: TAppWrapper) => {
+const AppWrapper = ({children, isAreaView = true}: TAppWrapper) => {
+  if (isAreaView) {
+    return (
+      <SafeAreaView style={styles.overall}>
+        <Image
+          source={ASSETS.IMAGES.AppBackground}
+          style={[StyleSheet.absoluteFill, {width: WIDTH, height: HEIGHT}]}
+        />
+        {children}
+      </SafeAreaView>
+    );
+  }
   return (
     <View style={styles.overall}>
       <Image

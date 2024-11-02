@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   tabText: {
     fontSize: 22,
-    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontFamily: 'UVNBayBuomHepNang-Regular',
   },
   activeTabText: {
     color: COLORS.lightmode.primary[600],

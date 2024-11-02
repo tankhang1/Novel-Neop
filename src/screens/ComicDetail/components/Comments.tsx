@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 24,
     color: COLORS.lightmode.netrual[900],
-    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontFamily: 'UVNBayBuomHepNang-Regular',
   },
   cardWrapper: {
     maxWidth: WIDTH / 4 - 17,

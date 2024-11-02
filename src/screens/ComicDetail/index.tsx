@@ -40,6 +40,7 @@ import {useFocusEffect} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '@redux/store';
 import {changeLanguage} from '@redux/slices/ComicSlice';
+import {SafeAreaView} from 'react-native-safe-area-context';
 type TComment = {
   avatar: string;
   sender: string;
@@ -178,7 +179,7 @@ const ComicDetail = ({navigation}: Props) => {
     readOldChapter();
   });
   return (
-    <View
+    <SafeAreaView
       style={{
         backgroundColor: COLORS.lightmode.netrual[50],
       }}>
@@ -432,7 +433,7 @@ const ComicDetail = ({navigation}: Props) => {
           </View>
         </View>
       </BottomSheet>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -603,7 +604,7 @@ const styles = StyleSheet.create({
   tabText: {
     fontSize: 20,
     color: 'rgba(9, 10, 11, 1)',
-    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontFamily: 'UVNBayBuomHepNang-Regular',
   },
 
   bottomBar: {
@@ -697,7 +698,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 24,
     color: COLORS.lightmode.netrual[900],
-    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontFamily: 'UVNBayBuomHepNang-Regular',
   },
   card2RightSection: {gap: 8},
 });

@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   tagTxtStyle: {
     fontSize: 16,
-    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontFamily: 'UVNBayBuomHepNang-Regular',
     color: COLORS.lightmode.netrual[900],
     fontWeight: '400',
   },

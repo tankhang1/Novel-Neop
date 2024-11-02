@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     color: 'black',
-    fontFamily: 'UVNBayBuomHep_Bold',
+    fontFamily: 'UVNBayBuomHep-Bold',
   },
   subtitleContainer: {
     flexDirection: 'row',
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   },
   subTitle: {
     color: 'black',
-    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontFamily: 'UVNBayBuomHepNang-Regular',
     fontSize: 14,
   },
   tagContainer: {
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   },
   tagText: {
     color: 'white',
-    fontFamily: 'UVNBayBuomHep_Bold',
+    fontFamily: 'UVNBayBuomHep-Bold',
     fontSize: 14,
     paddingVertical: 4,
     paddingHorizontal: 15,

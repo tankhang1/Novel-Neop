@@ -13,6 +13,7 @@ import {COLORS} from '@constants/index';
 import Item from './components/Item';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import NotificationBellCross from '@assets/icons/common/Notification-Bell-Cross';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const NotificationScreen = () => {
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
@@ -26,58 +27,60 @@ const NotificationScreen = () => {
   };
 
   return (
-    <GestureHandlerRootView style={styles.container}>
-      <Header />
-      {isEmpty ? (
-        <View style={styles.emptyContainer}>
-          <Image
-            source={require('@assets/images/no-notification.png')}
-            style={styles.image}
-          />
-          <Text style={styles.title}>No notification yet</Text>
-          <Text style={styles.text}>
-            Stay tuned! We'll notify you when there's something new.
-          </Text>
-          <View style={styles.bottomSpacing} />
-        </View>
-      ) : (
-        <View>
-          <FlatList
-            renderItem={renderItem}
-            data={Array.from({length: 10})}
-            ListFooterComponent={<View style={styles.bottomSpacing} />}
-          />
-        </View>
-      )}
-      <Modal
-        visible={openDeleteModal}
-        onRequestClose={() => setOpenDeleteModal(false)}
-        transparent
-        animationType="slide">
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <NotificationBellCross color="red" width={36} height={36} />
-            <View style={styles.modalTextContainer}>
-              <Text style={styles.modalTitle}>Delete All This ?</Text>
-              <Text style={styles.modalMessage}>
-                Are you sure you want to delete all this? This action cannot be
-                undone.
-              </Text>
-            </View>
-            <View style={styles.modalButtons}>
-              <TouchableOpacity
-                onPress={() => setOpenDeleteModal(false)}
-                style={styles.cancelButton}>
-                <Text style={styles.cancelButtonText}>Cancel</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.deleteButton}>
-                <Text style={styles.deleteButtonText}>Delete</Text>
-              </TouchableOpacity>
+    <SafeAreaView style={styles.container}>
+      <GestureHandlerRootView style={styles.container}>
+        <Header />
+        {isEmpty ? (
+          <View style={styles.emptyContainer}>
+            <Image
+              source={require('@assets/images/no-notification.png')}
+              style={styles.image}
+            />
+            <Text style={styles.title}>No notification yet</Text>
+            <Text style={styles.text}>
+              Stay tuned! We'll notify you when there's something new.
+            </Text>
+            <View style={styles.bottomSpacing} />
+          </View>
+        ) : (
+          <View>
+            <FlatList
+              renderItem={renderItem}
+              data={Array.from({length: 10})}
+              ListFooterComponent={<View style={styles.bottomSpacing} />}
+            />
+          </View>
+        )}
+        <Modal
+          visible={openDeleteModal}
+          onRequestClose={() => setOpenDeleteModal(false)}
+          transparent
+          animationType="slide">
+          <View style={styles.modalContainer}>
+            <View style={styles.modalContent}>
+              <NotificationBellCross color="red" width={36} height={36} />
+              <View style={styles.modalTextContainer}>
+                <Text style={styles.modalTitle}>Delete All This ?</Text>
+                <Text style={styles.modalMessage}>
+                  Are you sure you want to delete all this? This action cannot
+                  be undone.
+                </Text>
+              </View>
+              <View style={styles.modalButtons}>
+                <TouchableOpacity
+                  onPress={() => setOpenDeleteModal(false)}
+                  style={styles.cancelButton}>
+                  <Text style={styles.cancelButtonText}>Cancel</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.deleteButton}>
+                  <Text style={styles.deleteButtonText}>Delete</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
-        </View>
-      </Modal>
-    </GestureHandlerRootView>
+        </Modal>
+      </GestureHandlerRootView>
+    </SafeAreaView>
   );
 };
 

@@ -14,6 +14,7 @@ import AppSwitch from '@components/AppSwitch';
 import CloseX from '@assets/icons/common/CloseX';
 import ChevronRight from '@assets/icons/common/Chevron-Right';
 import Edit from '@assets/icons/common/Edit';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const LIST_MALE_AVATAR = [
   require('@assets/images/avatar/01.png'),
@@ -32,7 +33,7 @@ const LIST_FEMALE_AVATAR = [
 const MyProfileScreen = () => {
   const [openSelectAvatar, setOpenSelectAvatar] = useState(false);
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View>
         <View style={styles.avatarWrapper}>
           <AppImageWrapper
@@ -137,7 +138,7 @@ const MyProfileScreen = () => {
           </View>
         </View>
       </Modal>
-    </View>
+    </SafeAreaView>
   );
 };
 

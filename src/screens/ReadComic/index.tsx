@@ -24,6 +24,7 @@ import {COMMIC_EN} from '@constants/en';
 import {useSelector} from 'react-redux';
 import {RootState} from '@redux/store';
 import {COMIC_HINDI} from '@constants/hidi';
+import {SafeAreaView} from 'react-native-safe-area-context';
 const LIST_COLOR = [
   'rgba(235, 188, 93, 0.05)',
   'rgba(197,231,206,1)',
@@ -126,7 +127,7 @@ const ReadComic = ({navigation, route}: Props) => {
     checkNewChapter();
   }, [chapter, checkNewChapter]);
   return (
-    <View style={styles.overall}>
+    <SafeAreaView style={styles.overall}>
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={() => navigation.goBack()} hitSlop={15}>
           <ChevronLeft width={20} />
@@ -387,7 +388,7 @@ const ReadComic = ({navigation, route}: Props) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -446,6 +447,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     position: 'absolute',
     bottom: 0,
+    paddingBottom: 30,
     width: WIDTH,
     zIndex: 999,
   },

@@ -7,11 +7,12 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@utils/types/navigation';
 import AppSearch from '@components/AppSearch';
 import ChevronLeft from '@assets/icons/common/Chevron-Left';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'More'>;
 const MoreScreen = ({navigation}: Props) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <AppHeader
         title="Wuxia"
         leftSection={
@@ -37,7 +38,7 @@ const MoreScreen = ({navigation}: Props) => {
           <View style={styles.bottomSpace} />
         </ScrollView>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

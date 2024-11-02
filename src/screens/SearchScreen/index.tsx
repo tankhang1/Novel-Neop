@@ -5,6 +5,7 @@ import SearchItem from './components/SearchItem';
 import BadgeItem from './components/BadgeItem';
 import Item from './components/Item';
 import Categories from '@screens/HomeScreen/Categories';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const TAGS = [
   {label: '#Wuxia', value: '#Wuxia'},
@@ -37,7 +38,7 @@ const LIST_SEARCH = [
 
 const SearchScreen = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <SearchItem />
       <Text style={styles.title}>Category</Text>
 
@@ -73,7 +74,7 @@ const SearchScreen = () => {
           />
         ))}
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   title: {
-    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontFamily: 'UVNBayBuomHepNang-Regular',
     fontSize: 28,
     lineHeight: 23.53,
     letterSpacing: 1,
@@ -105,7 +106,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   recentSearchText: {
-    fontFamily: 'UVNBayBuomHepNang_Regular',
+    fontFamily: 'UVNBayBuomHepNang-Regular',
     fontSize: 28,
     letterSpacing: 1,
     color: COLORS.lightmode.netrual[900],
