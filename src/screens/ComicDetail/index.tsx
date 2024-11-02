@@ -41,6 +41,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '@redux/store';
 import {changeLanguage} from '@redux/slices/ComicSlice';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import Play from '@assets/icons/common/Play';
 type TComment = {
   avatar: string;
   sender: string;
@@ -232,28 +233,28 @@ const ComicDetail = ({navigation}: Props) => {
                 wrapStyle={styles.descriptionButtonWraper}
                 variant="gray-bold"
                 onPress={() => (isOpenLanguage.value = !isOpenLanguage.value)}>
-                <TouchableOpacity style={[styles.descriptionRightButtonItem]}>
+                <View style={[styles.descriptionRightButtonItem]}>
                   <BookMark
                     color={COLORS.lightmode.netrual[500]}
                     width={16}
                     height={16}
                   />
                   <Text style={styles.descriptionRightTxtItem}>5.4k</Text>
-                </TouchableOpacity>
+                </View>
               </BackgroundButton>
 
               <BackgroundButton
                 wrapStyle={styles.descriptionButtonWraper}
                 variant="gray-bold"
                 onPress={() => (isOpenLanguage.value = !isOpenLanguage.value)}>
-                <TouchableOpacity style={[styles.descriptionRightButtonItem]}>
+                <View style={[styles.descriptionRightButtonItem]}>
                   <LikeLight
                     width={16}
                     height={16}
                     color={COLORS.lightmode.netrual[500]}
                   />
                   <Text style={styles.descriptionRightTxtItem}>5.4k</Text>
-                </TouchableOpacity>
+                </View>
               </BackgroundButton>
             </View>
           </View>
@@ -338,7 +339,7 @@ const ComicDetail = ({navigation}: Props) => {
             wrapStyle={styles.bottomItemSecondWrapper}
             variant="yellow">
             <View style={styles.bottomItemSecondContainer}>
-              <ASSETS.ICONS.PlayIcon />
+              <Play />
               <Text style={styles.bottomItemTextStyle}>
                 Continue Chapter {oldReadChapter}
               </Text>

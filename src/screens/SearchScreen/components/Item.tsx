@@ -7,10 +7,11 @@ import {
 } from 'react-native';
 import React from 'react';
 import AppImageWrapper from '@components/AppImageWrapper';
-import {ASSETS, COLORS} from '@constants/index';
+import {COLORS} from '@constants/index';
 import CloseX from '@assets/icons/common/CloseX';
 import Animated, {FadeIn} from 'react-native-reanimated';
 import ViewAltLight from '@assets/icons/common/View-Alt-Light';
+import MenuIcon from '@assets/icons/common/Menu';
 
 type TItem = {
   source: ImageSourcePropType;
@@ -30,7 +31,7 @@ const Item = ({label, onClose, source, index}: TItem) => {
         <Text style={styles.text}>{label}</Text>
         <View style={styles.rowContainer}>
           <View style={styles.iconTextContainer}>
-            <ASSETS.ICONS.MenuIcon width={20} color="gray" />
+            <MenuIcon width={20} color="gray" />
             <Text style={styles.text}>653</Text>
           </View>
           <View style={styles.iconTextContainer}>

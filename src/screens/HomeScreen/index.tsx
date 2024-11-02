@@ -18,7 +18,7 @@ import AppWrapper from '@components/AppWrapper';
 import {COLORS} from '@constants/index';
 import {BottomTabParamList, RootStackParamList} from '@utils/types/navigation';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import SearchIcon from '@assets/icons/SearchIcon';
+import SearchIcon from '@assets/icons/common/SearchIcon';
 import Tag from './components/Tag';
 type TComic = {
   image: any;

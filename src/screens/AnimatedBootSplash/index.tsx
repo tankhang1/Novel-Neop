@@ -9,6 +9,7 @@ import Animated, {
   withRepeat,
   withTiming,
 } from 'react-native-reanimated';
+import NeopLogo from '@assets/icons/common/Neop-Logo';
 
 type Props = {
   onAnimationEnd: () => void;
@@ -54,7 +55,7 @@ const AnimatedBootSplash = ({onAnimationEnd, isReady}: Props) => {
         style={[styles.logo, logoAnimatedStyle]}
       />
       <View style={styles.neop_logo}>
-        <ASSETS.ICONS.NeopLogoIcon />
+        <NeopLogo />
       </View>
     </ImageBackground>
   );

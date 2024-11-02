@@ -7,7 +7,7 @@ import {
   Text,
 } from 'react-native';
 import React from 'react';
-import SearchIcon from '@assets/icons/SearchIcon';
+import SearchIcon from '@assets/icons/common/SearchIcon';
 import {ASSETS, COLORS} from '@constants/index';
 import {useNavigation} from '@react-navigation/native';
 

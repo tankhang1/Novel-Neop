@@ -25,6 +25,7 @@ import {useSelector} from 'react-redux';
 import {RootState} from '@redux/store';
 import {COMIC_HINDI} from '@constants/hidi';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import MenuDotSquare from '@assets/icons/common/Menu-Dot-Square';
 const LIST_COLOR = [
   'rgba(235, 188, 93, 0.05)',
   'rgba(197,231,206,1)',
@@ -205,7 +206,7 @@ const ReadComic = ({navigation, route}: Props) => {
         toggleSheet={toggleSheet}
         duration={300}
         wrapperStyle={styles.bottomSheetContainer}>
-        <View style={{paddingHorizontal: 16, height: HEIGHT * 0.4}}>
+        <View style={styles.bottomSheetInnerContainer}>
           <ScrollView>
             <TouchableOpacity
               hitSlop={10}
@@ -356,7 +357,7 @@ const ReadComic = ({navigation, route}: Props) => {
                 setTabBottomSheet('menu');
               }
             }}>
-            <ASSETS.ICONS.MenuDotSquare
+            <MenuDotSquare
               color={
                 tabBottomSheet === 'menu'
                   ? COLORS.lightmode.primary[600]
@@ -498,4 +499,5 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: COLORS.lightmode.netrual[900],
   },
+  bottomSheetInnerContainer: {paddingHorizontal: 16, height: HEIGHT * 0.45},
 });

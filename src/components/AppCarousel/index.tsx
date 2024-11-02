@@ -47,7 +47,7 @@ const AppCarousel = () => {
             key={bannerIndex}
             source={banner}
             imageStyle={styles.banner}
-            resizeMode="stretch"
+            resizeMode="cover"
           />
         ))}
       </ScrollView>

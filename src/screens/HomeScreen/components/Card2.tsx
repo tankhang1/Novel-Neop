@@ -12,8 +12,9 @@ import AppImage from '@components/AppImage';
 import AppText from '@components/AppText';
 import Tag from './Tag';
 import AppImageWrapper from '@components/AppImageWrapper';
-import {ASSETS, COLORS} from '@constants/index';
+import {COLORS} from '@constants/index';
 import ViewAltLight from '@assets/icons/common/View-Alt-Light';
+import MenuIcon from '@assets/icons/common/Menu';
 
 type TCard2 = {
   imageStyle?: StyleProp<ImageStyle>;
@@ -68,7 +69,7 @@ const Card2 = ({
         {isReview && (
           <View style={styles.rowContainer}>
             <View style={styles.iconTextContainer}>
-              <ASSETS.ICONS.MenuIcon width={25} color="gray" />
+              <MenuIcon width={25} color="gray" />
               <Text style={styles.text}>653</Text>
             </View>
             <View style={styles.iconTextContainer}>

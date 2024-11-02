@@ -109,7 +109,6 @@ const MyProfileScreen = () => {
 
             <View style={styles.avatarContainer}>
               <View style={styles.avatarColumn}>
-                <Text style={styles.avatarTitle}>Male</Text>
                 <View style={styles.avatarList}>
                   {LIST_MALE_AVATAR.map((avatar, index) => (
                     <Image
@@ -122,7 +121,6 @@ const MyProfileScreen = () => {
                 </View>
               </View>
               <View style={styles.avatarColumn}>
-                <Text style={styles.avatarTitle}>Female</Text>
                 <View style={styles.avatarList}>
                   {LIST_FEMALE_AVATAR.map((avatar, index) => (
                     <Image

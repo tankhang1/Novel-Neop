@@ -10,17 +10,12 @@ import ProfileActiveIcon from '@assets/icons/navigation/profile-active.svg';
 import SortIcon from '@assets/icons/sort.svg';
 import SortUpIcon from '@assets/icons/sort-up.svg';
 import TopTabIndicatorIcon from '@assets/icons/top-tab-indicator.svg';
-import RemoveIcon from '@assets/icons/remove.svg';
-import NeopLogoIcon from '@assets/icons/logo-neop.svg';
 import StarFillIcon from '@assets/icons/star-fill.svg';
-import PlayIcon from '@assets/icons/play.svg';
 import SendFillIcon from '@assets/icons/send-fill.svg';
-import MenuIcon from '@assets/icons/MenuIcon';
-import SubtractIcon from '@assets/icons/Subtract';
+import SubtractIcon from '@assets/icons/common/Subtract';
 import LineHeightIcon from '@assets/icons/line-height.svg';
 import MarginIcon from '@assets/icons/margin.svg';
-import MenuDotSquare from '@assets/icons/MenuDotSquare';
-import Settings from '@assets/icons/Settings';
+import Settings from '@assets/icons/common/Settings';
 
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
@@ -44,16 +39,11 @@ const ASSETS = {
     SortIcon,
     SortUpIcon,
     TopTabIndicatorIcon,
-    RemoveIcon,
-    NeopLogoIcon,
-    MenuIcon,
     StarFillIcon,
     SubtractIcon,
     MarginIcon,
     LineHeightIcon,
-    PlayIcon,
     SendFillIcon,
-    MenuDotSquare,
     Settings,
   },
 };

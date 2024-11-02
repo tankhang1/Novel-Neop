@@ -1,20 +1,20 @@
 import {
   FlatList,
   Image,
+  ImageBackground,
   Modal,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
 import React, {useState} from 'react';
 import Header from './components/Header';
-import {COLORS} from '@constants/index';
+import {COLORS, WIDTH} from '@constants/index';
 import Item from './components/Item';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import NotificationBellCross from '@assets/icons/common/Notification-Bell-Cross';
 import {SafeAreaView} from 'react-native-safe-area-context';
-
+import BackgroundButton from '@assets/icons/common/Background-Button';
 const NotificationScreen = () => {
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
   const isEmpty = false;
@@ -57,8 +57,16 @@ const NotificationScreen = () => {
           transparent
           animationType="slide">
           <View style={styles.modalContainer}>
-            <View style={styles.modalContent}>
-              <NotificationBellCross color="red" width={36} height={36} />
+            <ImageBackground
+              source={require('@assets/images/mask-3.png')}
+              style={styles.modalContent}
+              resizeMode="stretch">
+              <ImageBackground
+                source={require('@assets/images/bg-icon-1.png')}
+                resizeMode="stretch"
+                style={styles.backgroundIcon}>
+                <NotificationBellCross color="red" width={36} height={36} />
+              </ImageBackground>
               <View style={styles.modalTextContainer}>
                 <Text style={styles.modalTitle}>Delete All This ?</Text>
                 <Text style={styles.modalMessage}>
@@ -67,16 +75,17 @@ const NotificationScreen = () => {
                 </Text>
               </View>
               <View style={styles.modalButtons}>
-                <TouchableOpacity
+                <BackgroundButton
                   onPress={() => setOpenDeleteModal(false)}
-                  style={styles.cancelButton}>
+                  wrapStyle={styles.cancelButton}
+                  variant="gray-large-bold">
                   <Text style={styles.cancelButtonText}>Cancel</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.deleteButton}>
+                </BackgroundButton>
+                <BackgroundButton wrapStyle={styles.deleteButton} variant="red">
                   <Text style={styles.deleteButtonText}>Delete</Text>
-                </TouchableOpacity>
+                </BackgroundButton>
               </View>
-            </View>
+            </ImageBackground>
           </View>
         </Modal>
       </GestureHandlerRootView>
@@ -128,13 +137,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   modalContent: {
-    backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '90%',
+    width: WIDTH * 0.9,
     padding: 24,
-    gap: 15,
-    borderRadius: 32,
+    gap: 24,
   },
   modalTextContainer: {
     gap: 8,
@@ -166,17 +173,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 1,
     borderRadius: 12,
     height: 44,
+    fontFamily: 'Montserrat',
+    width: WIDTH * 0.4,
     borderColor: COLORS.lightmode.netrual[200],
   },
   cancelButtonText: {
     fontSize: 16,
     fontFamily: 'Montserrat',
     lineHeight: 24,
-    fontWeight: '700',
-    color: COLORS.lightmode.netrual[500],
+    fontWeight: '600',
+    color: COLORS.lightmode.netrual[900],
   },
   deleteButton: {
     flex: 1,
@@ -184,13 +192,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 12,
     height: 44,
-    backgroundColor: COLORS.lightmode.error[500],
+    width: WIDTH * 0.4,
   },
   deleteButtonText: {
     fontSize: 16,
     fontFamily: 'Montserrat',
     lineHeight: 24,
-    fontWeight: '700',
+    fontWeight: '600',
     color: COLORS.lightmode.netrual[0],
+  },
+  backgroundIcon: {
+    width: 58,
+    height: 58,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
