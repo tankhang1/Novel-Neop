@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   title: {
-    fontFamily: 'UVNBayBuomHepNang-Regular',
+    fontFamily: 'Kings-Regular',
     fontSize: 28,
     lineHeight: 23.53,
     letterSpacing: 1,
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   recentSearchText: {
-    fontFamily: 'UVNBayBuomHepNang-Regular',
+    fontFamily: 'Kings-Regular',
     fontSize: 28,
     letterSpacing: 1,
     color: COLORS.lightmode.netrual[900],

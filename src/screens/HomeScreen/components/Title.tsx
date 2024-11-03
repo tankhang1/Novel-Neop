@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     // any default style values can go here if needed
   },
   text: {
-    fontFamily: 'UVNBayBuomHep-Bold',
+    fontFamily: 'Kings-Regular',
     fontSize: 17,
     color: COLORS.lightmode.primary[500],
   },

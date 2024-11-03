@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     color: COLORS.lightmode.netrual[900],
-    fontFamily: 'UVNBayBuomHepNang-Regular',
+    fontFamily: 'Kings-Regular',
   },
 });

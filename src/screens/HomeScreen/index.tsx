@@ -408,7 +408,7 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
     fontWeight: 400,
     color: COLORS.lightmode.netrual[0],
-    fontFamily: 'UVNBayBuomHepNang-Regular',
+    fontFamily: 'Kings-Regular',
   },
 
   scrollView: {
@@ -421,7 +421,7 @@ const styles = StyleSheet.create({
   tagText: {
     paddingHorizontal: 15,
     paddingVertical: 10,
-    fontFamily: 'UVNBayBuomHepNang-Regular',
+    fontFamily: 'Kings-Regular',
     fontSize: 16,
     color: COLORS.lightmode.netrual[900],
   },

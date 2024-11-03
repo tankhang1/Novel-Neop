@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat',
   },
   container: {
+    height: 42,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 12,

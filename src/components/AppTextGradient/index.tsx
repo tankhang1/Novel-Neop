@@ -41,7 +41,7 @@ const AppTextGradient = ({content, width, height}: TAppTextGradient) => {
           <Text
             x={15}
             y={20 + (height ?? 48) / 4.7}
-            fontFamily="UVNBayBuomHepNang-Regular"
+            fontFamily="Kings-Regular"
             fontSize={17}
             letterSpacing={4}
             fontWeight="bold"

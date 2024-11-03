@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
 
   badgeText: {
-    fontFamily: 'UVNBayBuomHepNang-Regular',
+    fontFamily: 'Kings-Regular',
     fontWeight: '400',
     fontSize: 13.76,
     color: COLORS.lightmode.netrual[900],

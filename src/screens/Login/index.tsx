@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   title: {
     color: '#000000',
     fontSize: 36,
-    fontFamily: 'UVNBayBuomHepNang-Regular',
+    fontFamily: 'Kings-Regular',
     fontWeight: '600',
   },
   description: {
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   btnText: {
-    fontFamily: 'UVNBayBuomHepNang-Regular',
+    fontFamily: 'Kings-Regular',
     fontSize: 23,
     color: '#181818',
   },
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#EBBC5D',
   },
   orText: {
-    fontFamily: 'UVNBayBuomHepNang-Regular',
+    fontFamily: 'Kings-Regular',
     fontSize: 11,
     color: '#4E4E4E',
   },

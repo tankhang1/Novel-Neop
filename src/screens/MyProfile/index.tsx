@@ -5,9 +5,11 @@ import {
   StyleSheet,
   Modal,
   Image,
+  ScrollView,
+  ImageBackground,
 } from 'react-native';
 import React, {useState} from 'react';
-import {ASSETS, COLORS} from '@constants/index';
+import {ASSETS, COLORS, HEIGHT} from '@constants/index';
 import AppImageWrapper from '@components/AppImageWrapper';
 import AppImage from '@components/AppImage';
 import AppSwitch from '@components/AppSwitch';
@@ -15,6 +17,9 @@ import CloseX from '@assets/icons/common/CloseX';
 import ChevronRight from '@assets/icons/common/Chevron-Right';
 import Edit from '@assets/icons/common/Edit';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import PaperFill from '@assets/icons/common/Paper-Fill';
+import RoundPrivacyTip from '@assets/icons/common/Round-Privacy-Tip';
+import About from '@assets/icons/common/About';
 
 const LIST_MALE_AVATAR = [
   require('@assets/images/avatar/01.png'),
@@ -68,12 +73,34 @@ const MyProfileScreen = () => {
 
         <TouchableOpacity style={styles.optionItem}>
           <View style={styles.optionContent}>
-            <AppImage
-              source={ASSETS.IMAGES.SettingImage}
-              resizeMode="stretch"
-              imageStyle={styles.optionImage}
-            />
-            <Text style={styles.optionText}>Settings</Text>
+            <ImageBackground
+              source={require('@assets/images/bg-icon-2.png')}
+              style={styles.iconContainer}>
+              <PaperFill />
+            </ImageBackground>
+            <Text style={styles.optionText}>Terms of Service</Text>
+          </View>
+          <ChevronRight variant="bold" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.optionItem}>
+          <View style={styles.optionContent}>
+            <ImageBackground
+              source={require('@assets/images/bg-icon-2.png')}
+              style={styles.iconContainer}>
+              <RoundPrivacyTip />
+            </ImageBackground>
+            <Text style={styles.optionText}>Privacy Policy</Text>
+          </View>
+          <ChevronRight variant="bold" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.optionItem}>
+          <View style={styles.optionContent}>
+            <ImageBackground
+              source={require('@assets/images/bg-icon-2.png')}
+              style={styles.iconContainer}>
+              <About />
+            </ImageBackground>
+            <Text style={styles.optionText}>About</Text>
           </View>
           <ChevronRight variant="bold" />
         </TouchableOpacity>
@@ -107,31 +134,33 @@ const MyProfileScreen = () => {
               </TouchableOpacity>
             </View>
 
-            <View style={styles.avatarContainer}>
-              <View style={styles.avatarColumn}>
-                <View style={styles.avatarList}>
-                  {LIST_MALE_AVATAR.map((avatar, index) => (
-                    <Image
-                      source={avatar}
-                      key={index}
-                      resizeMode="cover"
-                      style={styles.modalAvatarImage}
-                    />
-                  ))}
+            <View style={styles.scrollContainer}>
+              <ScrollView contentContainerStyle={styles.avatarContainer}>
+                <View style={styles.avatarColumn}>
+                  <View style={styles.avatarList}>
+                    {LIST_MALE_AVATAR.map((avatar, index) => (
+                      <Image
+                        source={avatar}
+                        key={index}
+                        resizeMode="cover"
+                        style={styles.modalAvatarImage}
+                      />
+                    ))}
+                  </View>
                 </View>
-              </View>
-              <View style={styles.avatarColumn}>
-                <View style={styles.avatarList}>
-                  {LIST_FEMALE_AVATAR.map((avatar, index) => (
-                    <Image
-                      source={avatar}
-                      key={index}
-                      resizeMode="cover"
-                      style={styles.modalAvatarImage}
-                    />
-                  ))}
+                <View style={styles.avatarColumn}>
+                  <View style={styles.avatarList}>
+                    {LIST_FEMALE_AVATAR.map((avatar, index) => (
+                      <Image
+                        source={avatar}
+                        key={index}
+                        resizeMode="cover"
+                        style={styles.modalAvatarImage}
+                      />
+                    ))}
+                  </View>
                 </View>
-              </View>
+              </ScrollView>
             </View>
           </View>
         </View>
@@ -159,6 +188,7 @@ const styles = StyleSheet.create({
     height: 80,
     zIndex: 999,
   },
+  scrollContainer: {maxHeight: HEIGHT * 0.7},
   editIcon: {
     position: 'absolute',
     bottom: 0,
@@ -210,7 +240,7 @@ const styles = StyleSheet.create({
   optionText: {
     fontSize: 17,
     fontFamily: 'Montserrat',
-    fontWeight: '600',
+    fontWeight: '500',
     color: COLORS.lightmode.netrual[900],
   },
   logoutText: {
@@ -239,7 +269,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: COLORS.lightmode.netrual[900],
-    fontSize: 24,
+    fontSize: 20,
     fontFamily: 'Montserrat',
     fontWeight: '700',
   },
@@ -271,6 +301,12 @@ const styles = StyleSheet.create({
     width: 103,
     height: 103,
     resizeMode: 'cover',
+  },
+  iconContainer: {
+    width: 47,
+    height: 47,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

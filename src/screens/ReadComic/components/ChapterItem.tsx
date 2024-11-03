@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   chapterTitle: {
-    fontFamily: 'UVNBayBuomHepNang-Regular',
+    fontFamily: 'Kings-Regular',
     color: COLORS.lightmode.netrual[700],
     fontSize: 18,
   },
