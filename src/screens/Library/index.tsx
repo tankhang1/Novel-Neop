@@ -8,7 +8,6 @@ import BookMarks from './components/BookMarks';
 import Offline from './components/Offline';
 import Owned from './components/Owned';
 import MyTabBar from './components/MyTabBar';
-import {SafeAreaView} from 'react-native';
 
 const Tab = createMaterialTopTabNavigator<TopLibraryTabParamList>();
 
@@ -17,13 +16,11 @@ const LibraryScreen: React.FC = () => {
     return <MyTabBar {...props} />;
   }, []);
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <Tab.Navigator tabBar={customTopTab}>
-        <Tab.Screen name="BookMarks" component={BookMarks} />
-        <Tab.Screen name="Owned" component={Owned} />
-        <Tab.Screen name="Offline" component={Offline} />
-      </Tab.Navigator>
-    </SafeAreaView>
+    <Tab.Navigator tabBar={customTopTab}>
+      <Tab.Screen name="BookMarks" component={BookMarks} />
+      <Tab.Screen name="Owned" component={Owned} />
+      <Tab.Screen name="Offline" component={Offline} />
+    </Tab.Navigator>
   );
 };
 

@@ -334,7 +334,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 15,
   },
-  mainWrapper: {paddingVertical: 8, gap: 24},
+  mainWrapper: {paddingVertical: 8, gap: 20},
   gapColumnWrapper: {
     gap: 16,
   },
@@ -433,7 +433,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     fontSize: 24,
     letterSpacing: 1.5,
-    lineHeight: 27,
+    lineHeight: 33,
   },
 
   columnWrapper: {

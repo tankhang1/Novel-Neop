@@ -16,7 +16,6 @@ const AppNavigation = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        statusBarColor: 'white',
       }}>
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Main" component={BottomTabNavigation} />
