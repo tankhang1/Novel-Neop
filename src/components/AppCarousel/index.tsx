@@ -10,12 +10,7 @@ import Animated, {
   ZoomIn,
   ZoomOut,
 } from 'react-native-reanimated';
-const BANNERS = [
-  require('@assets/images/banner.png'),
-  require('@assets/images/banner.png'),
-  require('@assets/images/banner.png'),
-  require('@assets/images/banner.png'),
-];
+const BANNERS = [require('@assets/images/banner.png')];
 const AppCarousel = () => {
   const ref = useRef<ScrollView>(null);
   const [curIndex, setCurIndex] = useState(0);

@@ -206,10 +206,10 @@ const ComicDetail = ({navigation}: Props) => {
             <View style={styles.descriptionLeftContainer}>
               <View style={styles.descriptionItemContainer}>
                 <ViewAltLight width={14} height={14} />
-                <Text style={styles.descriptionItemTxtContainer}>300k</Text>
+                <Text style={styles.descriptionItemTxtContainer}>0</Text>
               </View>
               <View style={styles.descriptionItemContainer}>
-                <Text style={styles.descriptionItemTxtContainer}>4.8</Text>
+                <Text style={styles.descriptionItemTxtContainer}>5</Text>
                 <RoundStar
                   width={14}
                   height={14}
@@ -238,7 +238,7 @@ const ComicDetail = ({navigation}: Props) => {
                     width={16}
                     height={16}
                   />
-                  <Text style={styles.descriptionRightTxtItem}>5.4k</Text>
+                  <Text style={styles.descriptionRightTxtItem}>0</Text>
                 </View>
               </BackgroundButton>
 
@@ -251,7 +251,7 @@ const ComicDetail = ({navigation}: Props) => {
                     height={16}
                     color={COLORS.lightmode.netrual[500]}
                   />
-                  <Text style={styles.descriptionRightTxtItem}>5.4k</Text>
+                  <Text style={styles.descriptionRightTxtItem}>0</Text>
                 </View>
               </BackgroundButton>
             </View>

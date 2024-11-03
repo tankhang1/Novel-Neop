@@ -300,34 +300,33 @@ const ReadComic = ({navigation, route}: Props) => {
               </View>
               <View style={{gap: 5}}>
                 <Text style={styles.label}>Font</Text>
-                <ScrollView contentContainerStyle={{gap: 17}}>
-                  {LIST_FONTFAMILY.map((item, index) => (
-                    <TouchableOpacity
-                      onPress={() => setFontFamily(item)}
-                      key={index}
+                {LIST_FONTFAMILY.map((item, index) => (
+                  <TouchableOpacity
+                    onPress={() => setFontFamily(item)}
+                    key={index}
+                    style={[
+                      styles.fontItem,
+                      {
+                        borderColor:
+                          fontFamily === item
+                            ? COLORS.lightmode.primary[600]
+                            : COLORS.lightmode.netrual[50],
+                      },
+                    ]}>
+                    <Text
                       style={[
-                        styles.fontItem,
+                        styles.fontTxt,
                         {
-                          borderColor:
-                            fontFamily === item
-                              ? COLORS.lightmode.primary[600]
-                              : COLORS.lightmode.netrual[50],
+                          fontFamily: item,
                         },
                       ]}>
-                      <Text
-                        style={[
-                          styles.fontTxt,
-                          {
-                            fontFamily: item,
-                          },
-                        ]}>
-                        The brightly lit inner palace was a dazzling yet
-                        imposing sight.
-                      </Text>
-                    </TouchableOpacity>
-                  ))}
-                </ScrollView>
+                      The brightly lit inner palace was a dazzling yet imposing
+                      sight.
+                    </Text>
+                  </TouchableOpacity>
+                ))}
               </View>
+              <View style={styles.spacing} />
             </View>
           </ScrollView>
         </View>
@@ -499,5 +498,6 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: COLORS.lightmode.netrual[900],
   },
-  bottomSheetInnerContainer: {paddingHorizontal: 16, height: HEIGHT * 0.45},
+  bottomSheetInnerContainer: {paddingHorizontal: 16, height: HEIGHT * 0.4},
+  spacing: {height: 50},
 });
