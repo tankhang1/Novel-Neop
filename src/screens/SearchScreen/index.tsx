@@ -6,7 +6,6 @@ import BadgeItem from './components/BadgeItem';
 import Item from './components/Item';
 import Categories from '@screens/HomeScreen/Categories';
 import {SafeAreaView} from 'react-native-safe-area-context';
-
 const TAGS = [
   {label: '#Wuxia', value: '#Wuxia'},
   {label: '#MartialArtsNovel', value: '#MartialArtsNovel'},
@@ -21,20 +20,7 @@ const TAGS = [
   {label: '#MartialArtsSaga', value: '#MartialArtsSaga'},
 ];
 
-const LIST_SEARCH = [
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Unrivaled Medicine God',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Unrivaled Medicine God',
-  },
-  {
-    image: require('@assets/images/card_1.png'),
-    label: 'Unrivaled Medicine God',
-  },
-];
+const LIST_SEARCH: any[] = [];
 
 const SearchScreen = () => {
   return (

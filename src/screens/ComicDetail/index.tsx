@@ -231,8 +231,7 @@ const ComicDetail = ({navigation}: Props) => {
               </BackgroundButton>
               <BackgroundButton
                 wrapStyle={styles.descriptionButtonWraper}
-                variant="gray-bold"
-                onPress={() => (isOpenLanguage.value = !isOpenLanguage.value)}>
+                variant="gray-bold">
                 <View style={[styles.descriptionRightButtonItem]}>
                   <BookMark
                     color={COLORS.lightmode.netrual[500]}
@@ -245,8 +244,7 @@ const ComicDetail = ({navigation}: Props) => {
 
               <BackgroundButton
                 wrapStyle={styles.descriptionButtonWraper}
-                variant="gray-bold"
-                onPress={() => (isOpenLanguage.value = !isOpenLanguage.value)}>
+                variant="gray-bold">
                 <View style={[styles.descriptionRightButtonItem]}>
                   <LikeLight
                     width={16}
@@ -366,7 +364,7 @@ const ComicDetail = ({navigation}: Props) => {
                   key={index}
                   style={[
                     styles.bottomTouchableItem,
-                    curLanguage === language && {backgroundColor: '#eeeeee'},
+                    curLanguage === language && styles.activeBg,
                   ]}
                   onPress={() => {
                     dispatch(changeLanguage(language));
@@ -503,6 +501,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.lightmode.netrual[900],
     borderRadius: 100,
   },
+  activeBg: {backgroundColor: '#eeeeee'},
   descriptionImageContainer: {
     marginTop: 5,
     flexDirection: 'row',
@@ -699,7 +698,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 24,
     color: COLORS.lightmode.netrual[900],
-    fontFamily: 'UKings-Regular',
+    fontFamily: 'Kings-Regular',
   },
   card2RightSection: {gap: 8},
 });

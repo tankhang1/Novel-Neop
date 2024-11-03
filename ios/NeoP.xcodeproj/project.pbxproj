@@ -24,7 +24,6 @@
 		D5F8BAB4A86D4B7E8F643B46 /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C16544DA94BDEA93C6D23 /* Merriweather-Light.ttf */; };
 		EA79E344D7EE46AE88054765 /* SedgwickAve-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A740745A8D947E28450BD87 /* SedgwickAve-Regular.ttf */; };
 		FE64F1800E674F8282C56E11 /* Lora.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0B0C1CCDC294DE98336AF3F /* Lora.ttf */; };
-		6C5CE1418F724287BA1FF25C /* UVNBayBuomHep-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2DA91EBD5B34DDCBBC3F329 /* UVNBayBuomHep-Bold.ttf */; };
 		76646C443C3E447284E61BDC /* UVNBayBuomHepNang-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06513D0C29E3454D827A47E5 /* UVNBayBuomHepNang-Regular.ttf */; };
 		86DA8E12E4344D2F946B2204 /* Kings-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B80A4B5E62949638D02FDE5 /* Kings-Regular.ttf */; };
 /* End PBXBuildFile section */
@@ -68,7 +67,6 @@
 		D603EFD1CE154FA5A19044B7 /* OpenSans.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = OpenSans.ttf; path = ../src/assets/fonts/OpenSans.ttf; sourceTree = "<group>"; };
 		EBE46666B14541A9917D0BE0 /* Times-New-Roman.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Times-New-Roman.ttf"; path = "../src/assets/fonts/Times-New-Roman.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		D2DA91EBD5B34DDCBBC3F329 /* UVNBayBuomHep-Bold.ttf */ = {isa = PBXFileReference; name = "UVNBayBuomHep-Bold.ttf"; path = "../src/assets/fonts/UVNBayBuomHep-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		06513D0C29E3454D827A47E5 /* UVNBayBuomHepNang-Regular.ttf */ = {isa = PBXFileReference; name = "UVNBayBuomHepNang-Regular.ttf"; path = "../src/assets/fonts/UVNBayBuomHepNang-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		6B80A4B5E62949638D02FDE5 /* Kings-Regular.ttf */ = {isa = PBXFileReference; name = "Kings-Regular.ttf"; path = "../src/assets/fonts/Kings-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
@@ -137,7 +135,6 @@
 				4F9FEDFCEBD043A7BC8A20A2 /* Poppins.ttf */,
 				EBE46666B14541A9917D0BE0 /* Times-New-Roman.ttf */,
 				B4542591A93F49F5A3CAC69A /* Montserrat-SemiBold.ttf */,
-				D2DA91EBD5B34DDCBBC3F329 /* UVNBayBuomHep-Bold.ttf */,
 				06513D0C29E3454D827A47E5 /* UVNBayBuomHepNang-Regular.ttf */,
 				6B80A4B5E62949638D02FDE5 /* Kings-Regular.ttf */,
 			);
@@ -303,7 +300,6 @@
 				B2DE744440134A119F9B186B /* Times-New-Roman.ttf in Resources */,
 				C21606E3786A4E7AA6015727 /* Montserrat-SemiBold.ttf in Resources */,
 				1C8BC080E2CB09542A00A92F /* PrivacyInfo.xcprivacy in Resources */,
-				6C5CE1418F724287BA1FF25C /* UVNBayBuomHep-Bold.ttf in Resources */,
 				76646C443C3E447284E61BDC /* UVNBayBuomHepNang-Regular.ttf in Resources */,
 				86DA8E12E4344D2F946B2204 /* Kings-Regular.ttf in Resources */,
 			);
