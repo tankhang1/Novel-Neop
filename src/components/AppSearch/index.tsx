@@ -41,7 +41,7 @@ const AppSearch = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.iconWrapper}>
         <ASSETS.ICONS.SortUpIcon />
-        <Text style={styles.newBookMark}>Mới đánh dấu</Text>
+        <Text style={styles.newBookMark}>Newly Bookmarked</Text>
       </TouchableOpacity>
     </View>
   );
