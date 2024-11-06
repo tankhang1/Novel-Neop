@@ -12,7 +12,7 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import AppText from '@components/AppText';
 import {useSharedValue} from 'react-native-reanimated';
 import BottomSheet from '@components/AppBottomSheet';
-import {ASSETS, COLORS, HEIGHT, WIDTH} from '@constants/index';
+import {ASSETS, COLORS, WIDTH} from '@constants/index';
 import ChapterBottomSheet from './components/ChapterBottomSheet';
 import ChevronLeft from '@assets/icons/common/Chevron-Left';
 import ChevronRight from '@assets/icons/common/Chevron-Right';
@@ -498,6 +498,6 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: COLORS.lightmode.netrual[900],
   },
-  bottomSheetInnerContainer: {paddingHorizontal: 16, height: HEIGHT * 0.4},
+  bottomSheetInnerContainer: {paddingHorizontal: 16, flex: 1},
   spacing: {height: 50},
 });
