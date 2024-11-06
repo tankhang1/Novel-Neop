@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   tagTxtStyle: {
     fontSize: 16,
-    fontFamily: 'Kings-Regular',
+    fontFamily: 'Oregano-Regular',
     color: COLORS.lightmode.netrual[900],
     fontWeight: '400',
   },

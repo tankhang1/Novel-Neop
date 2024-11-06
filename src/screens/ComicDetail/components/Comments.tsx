@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 24,
     color: COLORS.lightmode.netrual[900],
-    fontFamily: 'Kings-Regular',
+    fontFamily: 'Oregano-Regular',
   },
   cardWrapper: {
     maxWidth: WIDTH / 4 - 17,

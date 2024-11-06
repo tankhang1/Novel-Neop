@@ -61,6 +61,6 @@ const styles = StyleSheet.create({
   labelStyle: {
     fontSize: 16,
     color: 'black',
-    fontFamily: 'Kings-Regular',
+    fontFamily: 'Oregano-Regular',
   },
 });

@@ -26,6 +26,7 @@
 		D61A4FAB37634A129B6476E4 /* UVNBayBuomHepNang-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23905C662AD04695962AAF8D /* UVNBayBuomHepNang-Regular.ttf */; };
 		EA79E344D7EE46AE88054765 /* SedgwickAve-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A740745A8D947E28450BD87 /* SedgwickAve-Regular.ttf */; };
 		FE64F1800E674F8282C56E11 /* Lora.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0B0C1CCDC294DE98336AF3F /* Lora.ttf */; };
+		133C71C06D1B4DD69A9EA99A /* Oregano-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D946C67EB7D748C49FFA5EA9 /* Oregano-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		BB4FD54DC0F14E7E932A6E9C /* SedgwickAveDisplay-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SedgwickAveDisplay-Regular.ttf"; path = "../src/assets/fonts/SedgwickAveDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		C0B0C1CCDC294DE98336AF3F /* Lora.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Lora.ttf; path = ../src/assets/fonts/Lora.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		D946C67EB7D748C49FFA5EA9 /* Oregano-Regular.ttf */ = {isa = PBXFileReference; name = "Oregano-Regular.ttf"; path = "../src/assets/fonts/Oregano-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				5D357F1B116A4F8594002EB9 /* Kings-Regular.ttf */,
 				7CEAE2F383BA4A259BD878D2 /* Montserrat-SemiBold.ttf */,
 				23905C662AD04695962AAF8D /* UVNBayBuomHepNang-Regular.ttf */,
+				D946C67EB7D748C49FFA5EA9 /* Oregano-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				092A43837E614DE0846691A5 /* Kings-Regular.ttf in Resources */,
 				25FAC3EC265645A4B39ED240 /* Montserrat-SemiBold.ttf in Resources */,
 				D61A4FAB37634A129B6476E4 /* UVNBayBuomHepNang-Regular.ttf in Resources */,
+				133C71C06D1B4DD69A9EA99A /* Oregano-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

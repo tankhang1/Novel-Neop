@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   title: {
-    fontFamily: 'Kings-Regular',
+    fontFamily: 'Oregano-Regular',
     fontSize: 20,
     lineHeight: 28,
     letterSpacing: 1,

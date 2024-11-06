@@ -604,7 +604,7 @@ const styles = StyleSheet.create({
   tabText: {
     fontSize: 20,
     color: 'rgba(9, 10, 11, 1)',
-    fontFamily: 'Kings-Regular',
+    fontFamily: 'Oregano-Regular',
   },
 
   bottomBar: {
@@ -698,7 +698,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 24,
     color: COLORS.lightmode.netrual[900],
-    fontFamily: 'Kings-Regular',
+    fontFamily: 'Oregano-Regular',
   },
   card2RightSection: {gap: 8},
 });

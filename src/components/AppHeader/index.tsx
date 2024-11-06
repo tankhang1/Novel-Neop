@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     color: COLORS.lightmode.netrual[900],
-    fontFamily: 'Kings-Regular',
+    fontFamily: 'Oregano-Regular',
   },
 });
