@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   cancelText: {
-    fontFamily: 'Kings-Regular',
+    fontFamily: 'Oregano-Regular',
     fontSize: 24,
     fontWeight: '400',
     color: COLORS.lightmode.netrual[900],
