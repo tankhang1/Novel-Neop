@@ -45,9 +45,9 @@ const Categories = ({gap = 16}: TCategory) => {
       <CategoryItem icon={MartialArts} label="Urban" key={3} />
       <CategoryItem icon={ScienceFiction} label="Martial Arts" key={4} />
       <CategoryItem icon={FirstHalf} label="Sci-fi" key={5} />
-      <CategoryItem icon={FirstHalf} label="Sci-fi" key={6} />
+      {/* <CategoryItem icon={FirstHalf} label="Sci-fi" key={6} />
       <CategoryItem icon={FirstHalf} label="Sci-fi" key={7} />
-      <CategoryItem icon={FirstHalf} label="Sci-fi" key={8} />
+      <CategoryItem icon={FirstHalf} label="Sci-fi" key={8} /> */}
 
       <View style={{width: gap}} />
     </ScrollView>

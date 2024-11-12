@@ -138,6 +138,7 @@ const HomeScreen = ({navigation}: Props) => {
           <ScrollView
             horizontal
             style={styles.scrollView}
+            showsHorizontalScrollIndicator={false}
             contentContainerStyle={styles.scrollContentContainer}>
             <Tag isGray={true} content="#Full" textStyle={styles.tagText} />
             <Tag

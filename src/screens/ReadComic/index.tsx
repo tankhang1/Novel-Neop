@@ -10,9 +10,14 @@ import {
 } from 'react-native';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import AppText from '@components/AppText';
-import {useSharedValue} from 'react-native-reanimated';
+import Animated, {
+  interpolate,
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
 import BottomSheet from '@components/AppBottomSheet';
-import {ASSETS, COLORS, WIDTH} from '@constants/index';
+import {ASSETS, COLORS, HEIGHT, WIDTH} from '@constants/index';
 import ChapterBottomSheet from './components/ChapterBottomSheet';
 import ChevronLeft from '@assets/icons/common/Chevron-Left';
 import ChevronRight from '@assets/icons/common/Chevron-Right';
@@ -48,6 +53,7 @@ const ReadComic = ({navigation, route}: Props) => {
     () => (curLanguage === 'English' ? COMMIC_EN : COMIC_HINDI),
     [curLanguage],
   );
+  const isShowTab = useSharedValue(0);
 
   const chapterKey = route.params.chapterKey;
   const isOpen = useSharedValue(false);
@@ -57,6 +63,7 @@ const ReadComic = ({navigation, route}: Props) => {
   const [tabBottomSheet, setTabBottomSheet] = useState<
     'menu' | 'setting' | undefined
   >();
+  const [lastTap, setLastTap] = useState(0);
   const [themeColor, setThemeColor] = useState('#FFFFFF');
   const [fontSize, setFontSize] = useState(15);
   const [padding, setPadding] = useState(0);
@@ -116,6 +123,35 @@ const ReadComic = ({navigation, route}: Props) => {
   const checkNewChapter = useCallback(async () => {
     await AsyncStorage.setItem('key', chapter.toString());
   }, [chapter]);
+  const handleDoubleClick = () => {
+    if (isShowTab.value === 0) {
+      isShowTab.value = withTiming(1);
+    }
+  };
+
+  const handleTap = () => {
+    const currentTime = Date.now();
+    const DOUBLE_TAP_DELAY = 800; // Adjust delay for double-click detection (in ms)
+
+    if (currentTime - lastTap < DOUBLE_TAP_DELAY) {
+      handleDoubleClick();
+    } else {
+      if (isShowTab.value === 1) {
+        isShowTab.value = withTiming(0, {duration: 300});
+      }
+    }
+    setLastTap(currentTime);
+  };
+  const topAnimatedStyle = useAnimatedStyle(() => {
+    return {
+      transform: [{translateY: interpolate(isShowTab.value, [0, 1], [0, -50])}],
+    };
+  });
+  const bottomAnimatedStyle = useAnimatedStyle(() => {
+    return {
+      transform: [{translateY: interpolate(isShowTab.value, [0, 1], [0, 80])}],
+    };
+  });
   useEffect(() => {
     if (chapterKey) {
       setChapter(chapterKey);
@@ -129,15 +165,15 @@ const ReadComic = ({navigation, route}: Props) => {
   }, [chapter, checkNewChapter]);
   return (
     <SafeAreaView style={styles.overall}>
-      <View style={styles.headerContainer}>
+      <Animated.View style={[styles.headerContainer, topAnimatedStyle]}>
         <TouchableOpacity onPress={() => navigation.goBack()} hitSlop={15}>
           <ChevronLeft width={20} />
         </TouchableOpacity>
         <AppText style={styles.headerTitle} numberOfLines={1}>
           {COMMIC.get(chapter)?.title}
         </AppText>
-        <View style={{width: 20}} />
-      </View>
+        <View style={styles.spacing_1} />
+      </Animated.View>
       <FlatList
         data={[12]}
         onEndReached={() => {
@@ -158,24 +194,8 @@ const ReadComic = ({navigation, route}: Props) => {
               <ActivityIndicator />
             </View>
           ) : (
-            <View style={styles.comicContainer}>
-              {/* <Text
-                selectable
-                style={[
-                  styles.comicTitle,
-                  {
-                    color:
-                      themeColor === 'rgba(34,38,43,1)' ? 'white' : 'black',
-                  },
-                  {
-                    fontSize: fontSize,
-                    lineHeight: lineHeight,
-                    padding: padding,
-                    fontFamily: fontFamily,
-                  },
-                ]}>
-                {COMMIC.get(chapter)?.title}
-              </Text> */}
+            <Pressable onPress={handleTap} style={styles.comicContainer}>
+              <View style={styles.spacing_2} />
               <Text
                 selectable
                 style={[
@@ -193,10 +213,15 @@ const ReadComic = ({navigation, route}: Props) => {
                 ]}>
                 {COMMIC.get(chapter)?.content}
               </Text>
-              <View style={{height: 100}} />
-            </View>
+              <View style={styles.spacing_3} />
+            </Pressable>
           )
         }
+        onMomentumScrollBegin={() => {
+          if (isShowTab.value === 0) {
+            isShowTab.value = withTiming(1);
+          }
+        }}
         style={{
           backgroundColor: themeColor,
         }}
@@ -279,7 +304,10 @@ const ReadComic = ({navigation, route}: Props) => {
 
               <View style={{gap: 5}}>
                 <Text style={styles.label}>Theme</Text>
-                <ScrollView horizontal contentContainerStyle={{gap: 17}}>
+                <ScrollView
+                  horizontal
+                  contentContainerStyle={{gap: 17}}
+                  showsHorizontalScrollIndicator={false}>
                   {LIST_COLOR.map((item, index) => (
                     <TouchableOpacity
                       onPress={() => setThemeColor(item)}
@@ -341,7 +369,7 @@ const ReadComic = ({navigation, route}: Props) => {
         chapter={chapter}
         setCounterEnd={setCounterEnd}
       />
-      <View style={styles.menuContainer}>
+      <Animated.View style={[styles.menuContainer, bottomAnimatedStyle]}>
         <View style={styles.menuItemContainer}>
           <TouchableOpacity hitSlop={10} onPress={onDecreaseChapter}>
             <ChevronLeft width={20} />
@@ -387,7 +415,7 @@ const ReadComic = ({navigation, route}: Props) => {
             <ChevronRight variant="bold" />
           </TouchableOpacity>
         </View>
-      </View>
+      </Animated.View>
     </SafeAreaView>
   );
 };
@@ -403,6 +431,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: WIDTH,
     backgroundColor: COLORS.lightmode.netrual[0],
+    position: 'absolute',
+    top: 0,
+    zIndex: 999,
   },
   headerTitle: {fontSize: 16, color: '#090A0B', flex: 1},
   overall: {
@@ -412,7 +443,7 @@ const styles = StyleSheet.create({
   comicContainer: {paddingHorizontal: 16, gap: 12, paddingVertical: 6},
   comicTitle: {fontSize: 16, fontWeight: 700, fontFamily: 'Lora'},
   comicContent: {fontSize: 16, fontFamily: 'Lora'},
-  bottomSheetContainer: {height: 430, flex: 1},
+  bottomSheetContainer: {height: HEIGHT * 0.8, flex: 1},
   bottomSheetContentContainer: {paddingHorizontal: 16, paddingVertical: 12},
   bottomSheetHeaderContainer: {
     justifyContent: 'center',
@@ -500,4 +531,7 @@ const styles = StyleSheet.create({
   },
   bottomSheetInnerContainer: {paddingHorizontal: 16, flex: 1},
   spacing: {height: 50},
+  spacing_1: {width: 20},
+  spacing_2: {height: 20},
+  spacing_3: {height: 100},
 });

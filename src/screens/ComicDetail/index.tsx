@@ -289,7 +289,7 @@ const ComicDetail = ({navigation}: Props) => {
                   styles.tabText,
                   tab !== 'chapter' && {color: COLORS.lightmode.netrual[500]},
                 ]}>
-                Chapters (1k)
+                Chapters (100)
               </AppText>
             </TouchableOpacity>
           </View>

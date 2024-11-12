@@ -15,7 +15,7 @@ import AppImage from '@components/AppImage';
 import AppSwitch from '@components/AppSwitch';
 import CloseX from '@assets/icons/common/CloseX';
 import ChevronRight from '@assets/icons/common/Chevron-Right';
-import Edit from '@assets/icons/common/Edit';
+// import Edit from '@assets/icons/common/Edit';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import PaperFill from '@assets/icons/common/Paper-Fill';
 import RoundPrivacyTip from '@assets/icons/common/Round-Privacy-Tip';
@@ -47,15 +47,15 @@ const MyProfileScreen = () => {
             resizeMode="contain"
             imageStyle={styles.avatarImage}
           />
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={styles.editIcon}
             onPress={() => setOpenSelectAvatar(true)}>
             <Edit color="white" width={18} height={18} />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
         <View style={styles.nameWrapper}>
-          <Text style={styles.nameText}>Bryan</Text>
-          <Text style={styles.changeNameText}>Change your name</Text>
+          <Text style={styles.nameText}>Me</Text>
+          {/* <Text style={styles.changeNameText}>Change your name</Text> */}
         </View>
       </View>
       <View style={styles.optionsWrapper}>

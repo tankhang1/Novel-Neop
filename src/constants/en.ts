@@ -2379,10 +2379,8 @@ const COMMIC_EN = new Map([
   [
     11,
     {
-      title: `
-  Chapter 11: After Touring the Underworld, Taizong Returns to Life.
-      By Presenting a Pumpkin Liu Quan Continues His Marriage 
-  `,
+      title: `Chapter 11: After Touring the Underworld, Taizong Returns to Life.
+      By Presenting a Pumpkin Liu Quan Continues His Marriage `,
       createdAt: new Date(),
       content: `A hundred years flow by like water; 
   A lifetime's career is no more than a bubble, 
