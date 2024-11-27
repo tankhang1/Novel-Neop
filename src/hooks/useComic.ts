@@ -1,5 +1,5 @@
-import {COMMIC_EN} from '@constants/en';
-import {COMIC_HINDI} from '@constants/hidi';
+import {COMMIC_EN} from '@constants/journey_to_the_west/en';
+import {COMIC_HINDI} from '@constants/journey_to_the_west/hidi';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const renderComic = async () => {

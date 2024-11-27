@@ -33,7 +33,7 @@ const CategoryScreen = ({navigation}: Props) => {
         <ScrollView
           contentContainerStyle={styles.scrollViewContent}
           style={styles.scrollView}>
-          {[...Array(6)].map((_, index) => (
+          {[...Array(1)].map((_, index) => (
             <Card2
               key={index}
               imageStyle={styles.cardImage}

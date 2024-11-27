@@ -7,7 +7,7 @@ import {
   ImageBackground,
   TextInput,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import Card2 from '../HomeScreen/components/Card2';
 import {ASSETS, COLORS, HEIGHT, WIDTH} from '@constants/index';
 import AppText from '@components/AppText';
@@ -23,9 +23,8 @@ import Animated, {
 } from 'react-native-reanimated';
 import CommicDetailTab from './components/CommicDetailTab';
 import CommicChapterTab from './components/CommicChapterTab';
-import Comments from './components/Comments';
+// import Comments from './components/Comments';
 import AppComment from '@components/AppComment';
-import AppImage from '@components/AppImage';
 import ChevronLeft from '@assets/icons/common/Chevron-Left';
 import ViewAltLight from '@assets/icons/common/View-Alt-Light';
 import RoundStar from '@assets/icons/common/Round-Star';
@@ -42,6 +41,8 @@ import {RootState} from '@redux/store';
 import {changeLanguage} from '@redux/slices/ComicSlice';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Play from '@assets/icons/common/Play';
+import AppImage from '@components/AppImage';
+import {getComicData} from '@hooks/useGetComicData';
 type TComment = {
   avatar: string;
   sender: string;
@@ -49,7 +50,6 @@ type TComment = {
   countLike: number;
   message: string;
 };
-const Language = ['English', 'Hindi'];
 const ListComments: TComment[] = [
   {
     avatar:
@@ -134,7 +134,9 @@ const ListComments: TComment[] = [
   },
 ];
 type Props = NativeStackScreenProps<RootStackParamList, 'ComicDetail'>;
-const ComicDetail = ({navigation}: Props) => {
+const ComicDetail = ({navigation, route}: Props) => {
+  const {comicKey} = route.params;
+  const comic = useMemo(() => getComicData(comicKey), [comicKey]);
   const {curLanguage} = useSelector((state: RootState) => state.comic);
   const dispatch = useDispatch();
   const [isTimeoutLoading, setIsTimeOutLoading] = useState(true);
@@ -180,10 +182,7 @@ const ComicDetail = ({navigation}: Props) => {
     readOldChapter();
   });
   return (
-    <SafeAreaView
-      style={{
-        backgroundColor: COLORS.lightmode.netrual[50],
-      }}>
+    <SafeAreaView style={styles.overall}>
       <ScrollView>
         <TouchableOpacity
           onPress={() => navigation.goBack()}
@@ -200,6 +199,10 @@ const ComicDetail = ({navigation}: Props) => {
             titleStyle={styles.cardTitleStyle}
             subTitleStyle={styles.cardSubTitleStyle}
             isReview={false}
+            data={{
+              image: comic?.image,
+              name: comic?.comic_name || '',
+            }}
             rightSectionStyle={styles.card2RightSection}
           />
           <View style={styles.descriptionImageContainer}>
@@ -230,6 +233,7 @@ const ComicDetail = ({navigation}: Props) => {
                 </View>
               </BackgroundButton>
               <BackgroundButton
+                disabled={true}
                 wrapStyle={styles.descriptionButtonWraper}
                 variant="gray-bold">
                 <View style={[styles.descriptionRightButtonItem]}>
@@ -243,6 +247,7 @@ const ComicDetail = ({navigation}: Props) => {
               </BackgroundButton>
 
               <BackgroundButton
+                disabled={true}
                 wrapStyle={styles.descriptionButtonWraper}
                 variant="gray-bold">
                 <View style={[styles.descriptionRightButtonItem]}>
@@ -289,7 +294,7 @@ const ComicDetail = ({navigation}: Props) => {
                   styles.tabText,
                   tab !== 'chapter' && {color: COLORS.lightmode.netrual[500]},
                 ]}>
-                Chapters (1k)
+                Chapters ({comic?.chapter?.en.size})
               </AppText>
             </TouchableOpacity>
           </View>
@@ -300,15 +305,20 @@ const ComicDetail = ({navigation}: Props) => {
             </Animated.View>
           </View>
           {tab === 'info' ? (
-            <CommicDetailTab />
+            <CommicDetailTab data={comic?.desc} />
           ) : (
             <CommicChapterTab
+              data={comic?.chapter}
               onPress={key =>
-                navigation.navigate('ReadComic', {chapterKey: key})
+                navigation.navigate('ReadComic', {
+                  chapterKey: key,
+                  comicKey: comicKey,
+                })
               }
             />
           )}
-          <Comments isOpenComment={isOpenComment} />
+          <View style={styles.bottomHeight} />
+          {/* <Comments isOpenComment={isOpenComment} /> */}
         </ImageBackground>
       </ScrollView>
 
@@ -319,7 +329,10 @@ const ComicDetail = ({navigation}: Props) => {
           <BackgroundButton
             onPress={() => {
               resetStorageChapter();
-              navigation.navigate('ReadComic', {chapterKey: 1});
+              navigation.navigate('ReadComic', {
+                chapterKey: 1,
+                comicKey: comicKey,
+              });
             }}
             variant="gray"
             wrapStyle={styles.bottomItemWrapper}>
@@ -332,6 +345,7 @@ const ComicDetail = ({navigation}: Props) => {
             onPress={() => {
               navigation.navigate('ReadComic', {
                 chapterKey: oldReadChapter || 1,
+                comicKey: comicKey,
               });
             }}
             wrapStyle={styles.bottomItemSecondWrapper}
@@ -359,7 +373,7 @@ const ComicDetail = ({navigation}: Props) => {
           <Text style={styles.bottomContainerStyle}>Language</Text>
           {!isTimeoutLoading && (
             <View>
-              {Language.map((language, index) => (
+              {comic?.language?.map((language, index) => (
                 <TouchableOpacity
                   key={index}
                   style={[
@@ -384,7 +398,7 @@ const ComicDetail = ({navigation}: Props) => {
         wrapperStyle={{
           // backgroundColor: COLORS.lightmode.netrual[0],
           width: WIDTH,
-          height: HEIGHT * 0.9,
+          height: HEIGHT * 0.95,
         }}>
         <View style={styles.container}>
           <View style={styles.header}>
@@ -437,6 +451,7 @@ const ComicDetail = ({navigation}: Props) => {
 };
 
 const styles = StyleSheet.create({
+  overall: {flex: 1, backgroundColor: COLORS.lightmode.netrual[50]},
   commentImage: {
     width: 33,
     height: 33,
@@ -701,6 +716,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Oregano-Regular',
   },
   card2RightSection: {gap: 8},
+  bottomHeight: {height: 100},
 });
 
 export default ComicDetail;

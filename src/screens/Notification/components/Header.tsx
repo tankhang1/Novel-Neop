@@ -1,9 +1,11 @@
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
-import NotificationBellCheck from '@assets/icons/common/Notification-Bell-Check';
-import NotificationBellCross from '@assets/icons/common/Notification-Bell-Cross';
+// import NotificationBellCheck from '@assets/icons/common/Notification-Bell-Check';
+// import NotificationBellCross from '@assets/icons/common/Notification-Bell-Cross';
 import BellNotificationSquare from '@assets/icons/common/Bell-Notification-Square';
 import {COLORS} from '@constants/index';
+import NotificationBellCheck from '@assets/icons/common/Notification-Bell-Check';
+import NotificationBellCross from '@assets/icons/common/Notification-Bell-Cross';
 
 const Header = () => {
   return (
@@ -15,7 +17,7 @@ const Header = () => {
           height={36}
         />
         <Text style={styles.titleText}>Notifications</Text>
-        <Text style={styles.notificationCount}>(99+)</Text>
+        <Text style={styles.notificationCount}>(0+)</Text>
       </View>
       <View style={styles.iconContainer}>
         <TouchableOpacity style={styles.iconButtonWarning}>

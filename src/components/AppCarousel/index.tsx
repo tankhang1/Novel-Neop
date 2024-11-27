@@ -1,7 +1,7 @@
 import {View, StyleSheet, ScrollView} from 'react-native';
 import React, {useEffect, useRef, useState} from 'react';
 import AppImage from '../AppImage';
-import {WIDTH} from '@constants/index';
+import {COMIC_DATA, WIDTH} from '@constants/index';
 import Indicator from '@assets/icons/indicator.svg';
 import IndicatorActive from '@assets/icons/indicator-active.svg';
 import Animated, {
@@ -10,7 +10,6 @@ import Animated, {
   ZoomIn,
   ZoomOut,
 } from 'react-native-reanimated';
-const BANNERS = [require('@assets/images/banner.png')];
 const AppCarousel = () => {
   const ref = useRef<ScrollView>(null);
   const [curIndex, setCurIndex] = useState(0);
@@ -37,7 +36,7 @@ const AppCarousel = () => {
             setCurIndex(Math.round(e.nativeEvent.contentOffset.x / WIDTH));
           }
         }}>
-        {BANNERS.map((banner, bannerIndex) => (
+        {COMIC_DATA.map(comic => comic.banner).map((banner, bannerIndex) => (
           <AppImage
             key={bannerIndex}
             source={banner}
@@ -47,7 +46,7 @@ const AppCarousel = () => {
         ))}
       </ScrollView>
       <View style={styles.dotWrapper}>
-        {BANNERS.map((_, index) =>
+        {COMIC_DATA.map(comic => comic.banner).map((_, index) =>
           curIndex === index ? (
             <Animated.View
               key={Math.random()}

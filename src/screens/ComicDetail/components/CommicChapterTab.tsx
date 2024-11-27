@@ -5,19 +5,22 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
-import React, {useMemo, useState} from 'react';
-import {COLORS} from '@constants/index';
+import React, {useMemo, useRef, useState} from 'react';
+import {COLORS, TComic} from '@constants/index';
 import ChapterItem from '@screens/ReadComic/components/ChapterItem';
 
 import {useSelector} from 'react-redux';
 import {RootState} from '@redux/store';
-import {COMMIC_EN} from '@constants/en';
-import {COMIC_HINDI} from '@constants/hidi';
 
 type TComicChapter = {
   onPress?: (key: number) => void;
+  data?: {
+    en?: TComic;
+    hindi?: TComic;
+  };
 };
-const ComicChapterTab = ({onPress}: TComicChapter) => {
+const ComicChapterTab = ({onPress, data}: TComicChapter) => {
+  const scrollRef = useRef<ScrollView>(null);
   const {curLanguage} = useSelector((state: RootState) => state.comic);
   const [rangeSelected, setRangeSelected] = useState<{
     start: number;
@@ -25,8 +28,8 @@ const ComicChapterTab = ({onPress}: TComicChapter) => {
   }>({start: 1, end: 10});
 
   const curComic = useMemo(
-    () => (curLanguage === 'English' ? COMMIC_EN : COMIC_HINDI),
-    [curLanguage],
+    () => (curLanguage === 'English' ? data?.en : data?.hindi),
+    [curLanguage, data],
   );
   const [isChangeSort, setIsChangeSort] = useState<null | 'oldest' | 'newest'>(
     null,
@@ -55,6 +58,7 @@ const ComicChapterTab = ({onPress}: TComicChapter) => {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <ScrollView
+          ref={scrollRef}
           horizontal
           contentContainerStyle={styles.scrollViewContainer}
           style={styles.scrollView}>
@@ -85,6 +89,7 @@ const ComicChapterTab = ({onPress}: TComicChapter) => {
             onPress={() => {
               setIsChangeSort('oldest');
               setRangeSelected(ranges[0]);
+              scrollRef.current?.scrollTo({x: 0, animated: true});
             }}>
             <Text
               style={[
@@ -99,6 +104,7 @@ const ComicChapterTab = ({onPress}: TComicChapter) => {
             onPress={() => {
               setIsChangeSort('newest');
               setRangeSelected(ranges[ranges.length - 1]);
+              scrollRef.current?.scrollToEnd({animated: true});
             }}>
             <Text
               style={[

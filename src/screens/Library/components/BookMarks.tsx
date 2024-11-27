@@ -1,21 +1,22 @@
 import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {COLORS} from '@constants/index';
-import BackgroundButton from '@assets/icons/common/Background-Button';
 
 const BookMarks = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('@assets/images/no-login-library.png')}
+        source={require('@assets/images/no-story.png')}
         style={styles.image}
+        resizeMode="contain"
       />
+      <Text style={styles.title}>No stories bookmarked yet</Text>
       <Text style={styles.text}>
-        Log in to view your bookmarks, purchased stories, and more.
+        Start bookmarking your favorite stories to easily find them later
       </Text>
-      <BackgroundButton variant="yellow" wrapStyle={styles.buttonWrapper}>
+      {/* <BackgroundButton variant="yellow" wrapStyle={styles.buttonWrapper}>
         <Text style={styles.buttonText}>Click to login</Text>
-      </BackgroundButton>
+      </BackgroundButton> */}
       <View style={styles.bottomSpacing} />
     </View>
   );
@@ -32,15 +33,18 @@ const styles = StyleSheet.create({
     width: 264,
     height: 190,
   },
+  title: {
+    fontSize: 24,
+    fontFamily: 'Montserrat-SemiBold',
+    color: COLORS.lightmode.netrual[700],
+  },
   text: {
     fontFamily: 'Montserrat',
     color: COLORS.lightmode.netrual[300],
-    fontSize: 13,
+    fontSize: 15,
     letterSpacing: 1,
-    width: '70%',
+    width: '90%',
     textAlign: 'center',
-    lineHeight: 18,
-    opacity: 0.5,
   },
   buttonWrapper: {
     width: 183,
