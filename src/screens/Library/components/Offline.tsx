@@ -8,6 +8,7 @@ const Offline = () => {
       <Image
         source={require('@assets/images/no-offline.png')}
         style={styles.image}
+        resizeMode="contain"
       />
       <Text style={styles.title}>No stories downloaded</Text>
       <Text style={styles.text}>Download stories to enjoy them offline</Text>
@@ -23,28 +24,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     gap: 14,
-    opacity: 0.5,
   },
   image: {
     width: 214,
     height: 200,
   },
   title: {
-    color: COLORS.lightmode.primary[600],
     fontSize: 24,
-    fontFamily: 'Montserrat',
-    fontWeight: '700',
-    letterSpacing: 1,
-    textAlign: 'center',
-    lineHeight: 33,
+    fontFamily: 'Montserrat-SemiBold',
+    color: COLORS.lightmode.netrual[700],
   },
   text: {
+    fontFamily: 'Montserrat',
     color: COLORS.lightmode.netrual[300],
-    fontSize: 16,
+    fontSize: 15,
     letterSpacing: 1,
-    width: '70%',
+    width: '90%',
     textAlign: 'center',
-    lineHeight: 22,
   },
   buttonImage: {
     width: 220,

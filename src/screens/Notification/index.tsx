@@ -17,7 +17,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import BackgroundButton from '@assets/icons/common/Background-Button';
 const NotificationScreen = () => {
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
-  const isEmpty = false;
+  const isEmpty = true;
   const onDeleteClick = () => {
     setOpenDeleteModal(true);
   };
@@ -46,7 +46,7 @@ const NotificationScreen = () => {
           <View>
             <FlatList
               renderItem={renderItem}
-              data={Array.from({length: 10})}
+              data={Array.from({length: 0})}
               ListFooterComponent={<View style={styles.bottomSpacing} />}
             />
           </View>
@@ -101,31 +101,27 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.lightmode.netrual[0],
   },
   emptyContainer: {
-    opacity: 0.5,
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
+    gap: 14,
   },
   image: {
     width: 208,
     height: 217,
   },
-  text: {
-    color: COLORS.lightmode.netrual[300],
-    fontSize: 16,
-    letterSpacing: 1.5,
-    width: '70%',
-    textAlign: 'center',
-    lineHeight: 22.4,
-  },
   title: {
-    color: COLORS.lightmode.primary[600],
     fontSize: 24,
+    fontFamily: 'Montserrat-SemiBold',
+    color: COLORS.lightmode.netrual[700],
+  },
+  text: {
     fontFamily: 'Montserrat',
-    fontWeight: '700',
+    color: COLORS.lightmode.netrual[300],
+    fontSize: 15,
     letterSpacing: 1,
+    width: '90%',
     textAlign: 'center',
-    lineHeight: 33,
   },
   bottomSpacing: {
     height: 250,

@@ -21,6 +21,7 @@ const CategoryItem = ({icon: Icon, label}: TCategoryItem) => {
   const navigation = useNavigation<CategoryItemNavigationProp>();
   return (
     <TouchableOpacity
+      disabled
       style={styles.categoryItem}
       onPress={() => {
         navigation.navigate('Category');

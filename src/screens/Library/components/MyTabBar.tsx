@@ -14,6 +14,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import {MaterialTopTabBarProps} from '@react-navigation/material-top-tabs';
 import {ASSETS, COLORS, WIDTH} from '@constants/index';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 const TOP_TAB = [
   {
@@ -34,6 +35,7 @@ const TOP_TAB = [
 ];
 
 const MyTabBar: React.FC<MaterialTopTabBarProps> = ({navigation, state}) => {
+  const inset = useSafeAreaInsets();
   const [tab, setTab] = useState(0);
   const transX = useSharedValue(0);
 
@@ -58,7 +60,7 @@ const MyTabBar: React.FC<MaterialTopTabBarProps> = ({navigation, state}) => {
 
   return (
     <ImageBackground
-      style={styles.backgroundImage}
+      style={[styles.backgroundImage, {paddingTop: inset.top}]}
       resizeMode="stretch"
       source={require('@assets/images/background_2.png')}>
       <View style={styles.tabContainer}>
@@ -93,8 +95,9 @@ const MyTabBar: React.FC<MaterialTopTabBarProps> = ({navigation, state}) => {
 
 const styles = StyleSheet.create({
   backgroundImage: {
-    height: 90,
+    // height: 90,
     width: WIDTH,
+    paddingBottom: 10,
     justifyContent: 'center',
   },
   tabContainer: {

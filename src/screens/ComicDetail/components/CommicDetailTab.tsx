@@ -3,8 +3,14 @@ import React from 'react';
 import Tag from '@screens/HomeScreen/components/Tag';
 import AppText from '@components/AppText';
 import {COLORS} from '@constants/index';
+import {useSelector} from 'react-redux';
+import {RootState} from '@redux/store';
 
-const CommicDetailTab = () => {
+type TComicDetailTab = {
+  data?: {en?: string; hindi?: string};
+};
+const CommicDetailTab = ({data}: TComicDetailTab) => {
+  const {curLanguage} = useSelector((state: RootState) => state.comic);
   return (
     <View>
       <ScrollView horizontal contentContainerStyle={styles.tagContainer}>
@@ -36,12 +42,7 @@ const CommicDetailTab = () => {
       <View style={styles.descriptionContainer}>
         <View style={styles.descriptionWrapper}>
           <AppText style={styles.descriptionText}>
-            Embark on the journey of Sun Wukong, the Monkey King, who rises from
-            humble beginnings to legendary status. Armed with extraordinary
-            abilities and a mischievous personality, he challenges gods and
-            demons alike. As Wukong confronts the trials of his destiny, he must
-            learn to wield his powers for both personal vengeance and to protect
-            the realm.
+            {curLanguage === 'English' ? data?.en : data?.hindi}
           </AppText>
         </View>
       </View>

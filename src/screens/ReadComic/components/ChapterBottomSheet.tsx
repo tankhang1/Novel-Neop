@@ -2,13 +2,11 @@ import {View, ScrollView, TouchableOpacity, StyleSheet} from 'react-native';
 import React, {useMemo} from 'react';
 import BottomSheet from '@components/AppBottomSheet';
 import {SharedValue} from 'react-native-reanimated';
-import {COLORS, HEIGHT} from '@constants/index';
+import {COLORS, HEIGHT, TComic} from '@constants/index';
 import ChapterItem from './ChapterItem';
 import ChevronDown from '@assets/icons/common/Chevron-Down';
-import {COMMIC_EN} from '@constants/en';
 import {useSelector} from 'react-redux';
 import {RootState} from '@redux/store';
-import {COMIC_HINDI} from '@constants/hidi';
 
 type TChapterBottomSheet = {
   isOpenMenu: SharedValue<boolean>;
@@ -18,6 +16,7 @@ type TChapterBottomSheet = {
   setChapter: (value: number) => void;
   chapter: number;
   setCounterEnd: (value: number) => void;
+  data?: {en: TComic; hindi?: TComic};
 };
 const ChapterBottomSheet = ({
   isOpenMenu,
@@ -26,19 +25,20 @@ const ChapterBottomSheet = ({
   setChapter,
   setCounterEnd,
   chapter,
+  data,
 }: TChapterBottomSheet) => {
   const {curLanguage} = useSelector((state: RootState) => state.comic);
   const LIST_CHAPTER = useMemo(
     () =>
       Array.from(
-        curLanguage === 'English' ? COMMIC_EN : COMIC_HINDI,
+        curLanguage === 'English' ? data?.en! : data?.hindi!,
         ([key, value]) => ({
           label: value.title,
           createdAt: value.createdAt,
           value: key,
         }),
       ),
-    [curLanguage],
+    [curLanguage, data],
   );
   return (
     <BottomSheet

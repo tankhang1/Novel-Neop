@@ -15,21 +15,18 @@ import Card from './components/Card';
 // import AppText from '@components/AppText';
 // import Card2 from './components/Card2';
 import AppWrapper from '@components/AppWrapper';
-import {COLORS} from '@constants/index';
+import {COLORS, COMIC_DATA} from '@constants/index';
 import {BottomTabParamList, RootStackParamList} from '@utils/types/navigation';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import SearchIcon from '@assets/icons/common/SearchIcon';
 import Tag from './components/Tag';
+import {showToast} from '@hooks/toast';
 type TComic = {
   image: any;
   label: string;
+  key: string;
 };
-const ListComic = [
-  {
-    image: require('@assets/images/journey_banner.png'),
-    label: 'Journey to the West',
-  },
-];
+
 // const ListComicNew = [
 //   {
 //     image: require('@assets/images/card_1.png'),
@@ -70,8 +67,8 @@ type Props = NativeStackScreenProps<
 >;
 const HomeScreen = ({navigation}: Props) => {
   // const [isTimeoutLoading, setIsTimeOutLoading] = useState(true);
-  const onCardPress = () => {
-    navigation.navigate('ComicDetail');
+  const onCardPress = (key: string) => {
+    navigation.navigate('ComicDetail', {comicKey: key});
   };
   const renderCommicPopularItem = ({
     item,
@@ -80,11 +77,16 @@ const HomeScreen = ({navigation}: Props) => {
     <Card
       {...item}
       key={index}
-      onPress={onCardPress}
-      wrapperStyle={{maxWidth: 120}}
-      imageStyle={{height: 155, maxWidth: 120}}
+      onPress={() => onCardPress(item.key)}
+      wrapperStyle={styles.comicWraper}
+      imageStyle={styles.comicImage}
     />
   );
+
+  const onSearch = () => {
+    // navigation.navigate('SearchScreen');
+    showToast();
+  };
 
   // const renderCommicDoneItem = useCallback(
   //   ({item, index}: ListRenderItemInfo<TComic>) => (
@@ -128,7 +130,7 @@ const HomeScreen = ({navigation}: Props) => {
             resizeMode="contain"
             imageStyle={styles.logo}
           />
-          <TouchableOpacity onPress={() => navigation.navigate('SearchScreen')}>
+          <TouchableOpacity onPress={onSearch}>
             <SearchIcon width={32} height={32} />
           </TouchableOpacity>
         </View>
@@ -174,7 +176,11 @@ const HomeScreen = ({navigation}: Props) => {
               </TouchableOpacity> */}
             </View>
             <FlatList
-              data={ListComic}
+              data={COMIC_DATA.map(comic => ({
+                image: comic.image,
+                label: comic.comic_name,
+                key: comic.key,
+              }))}
               renderItem={renderCommicPopularItem}
               numColumns={3}
               columnWrapperStyle={{gap: 10, paddingVertical: 10}}
@@ -450,4 +456,6 @@ const styles = StyleSheet.create({
   loader: {
     marginVertical: 20,
   },
+  comicWraper: {maxWidth: 120},
+  comicImage: {height: 155, maxWidth: 120},
 });

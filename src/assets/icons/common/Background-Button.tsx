@@ -11,6 +11,7 @@ type TBackgroundButton = {
   children: React.ReactNode;
   onPress?: () => void;
   wrapStyle?: StyleProp<ViewStyle>;
+  disabled?: boolean;
   variant: 'yellow' | 'gray' | 'gray-bold' | 'red' | 'gray-large-bold';
 };
 const MapBg = new Map([
@@ -25,9 +26,13 @@ const BackgroundButton = ({
   onPress,
   wrapStyle,
   variant,
+  disabled = false,
 }: TBackgroundButton) => {
   return (
-    <TouchableOpacity onPress={onPress} style={[wrapStyle, styles.overall]}>
+    <TouchableOpacity
+      disabled={disabled}
+      onPress={onPress}
+      style={[wrapStyle, styles.overall]}>
       <ImageBackground
         source={MapBg.get(variant)}
         style={wrapStyle}

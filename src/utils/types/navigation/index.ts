@@ -1,13 +1,17 @@
 type RootStackParamList = {
   Login: undefined;
   Main: undefined;
-  ComicDetail: undefined;
+  ComicDetail: {
+    comicKey: string;
+  };
   ReadComic: {
     chapterKey?: number;
+    comicKey: string;
   };
   SearchScreen: undefined;
   Category: undefined;
   More: undefined;
+  About: undefined;
 };
 
 type BottomTabParamList = {

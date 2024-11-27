@@ -8,6 +8,7 @@ import ReadComic from '@screens/ReadComic';
 import SearchScreen from '@screens/SearchScreen';
 import CategoryScreen from '@screens/Category';
 import MoreScreen from '@screens/More';
+import AboutPage from '@screens/MyProfile/components/AboutPage';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -23,6 +24,8 @@ const AppNavigation = () => {
       <Stack.Screen name="ReadComic" component={ReadComic} />
       <Stack.Screen name="SearchScreen" component={SearchScreen} />
       <Stack.Screen name="Category" component={CategoryScreen} />
+      <Stack.Screen name="About" component={AboutPage} />
+
       <Stack.Screen name="More" component={MoreScreen} />
     </Stack.Navigator>
   );

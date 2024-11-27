@@ -1,4 +1,5 @@
 import {
+  ImageSourcePropType,
   ImageStyle,
   StyleProp,
   StyleSheet,
@@ -16,12 +17,17 @@ import {COLORS} from '@constants/index';
 import ViewAltLight from '@assets/icons/common/View-Alt-Light';
 import MenuIcon from '@assets/icons/common/Menu';
 
+type TData = {
+  image?: ImageSourcePropType;
+  name: string;
+};
 type TCard2 = {
   imageStyle?: StyleProp<ImageStyle>;
   titleStyle?: StyleProp<TextStyle>;
   subTitleStyle?: StyleProp<TextStyle>;
   rightSectionStyle?: StyleProp<ViewStyle>;
   isReview?: boolean;
+  data?: TData;
 };
 
 const Card2 = ({
@@ -30,11 +36,14 @@ const Card2 = ({
   subTitleStyle,
   rightSectionStyle,
   isReview = true,
+  data,
 }: TCard2) => {
   return (
     <View style={styles.cardContainer}>
       <AppImageWrapper
-        source={require('../../../assets/images/journey_banner.png')}
+        source={
+          data?.image || require('../../../assets/images/journey_banner.png')
+        }
         imageStyle={[styles.image, imageStyle]}
         resizeMode="cover"
         type="YELLOW"
@@ -42,7 +51,7 @@ const Card2 = ({
       <View style={styles.contentContainer}>
         <View style={rightSectionStyle}>
           <AppText style={[styles.title, titleStyle]}>
-            Journey to the West
+            {data?.name || 'Journey to the West'}
           </AppText>
           <View style={styles.subtitleContainer}>
             <AppImage
@@ -70,11 +79,11 @@ const Card2 = ({
           <View style={styles.rowContainer}>
             <View style={styles.iconTextContainer}>
               <MenuIcon width={25} color="gray" />
-              <Text style={styles.text}>653</Text>
+              <Text style={styles.text}>100</Text>
             </View>
             <View style={styles.iconTextContainer}>
               <ViewAltLight width={14} />
-              <Text style={styles.text}>200k</Text>
+              <Text style={styles.text}>0k</Text>
             </View>
           </View>
         )}

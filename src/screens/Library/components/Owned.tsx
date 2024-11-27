@@ -23,6 +23,7 @@ const Owned = () => {
           <Image
             source={require('@assets/images/no-purchase.png')}
             style={styles.image}
+            resizeMode="contain"
           />
           <Text style={styles.title}>No purchased stories</Text>
           <Text style={styles.text}>
@@ -59,21 +60,17 @@ const styles = StyleSheet.create({
     height: 200,
   },
   title: {
-    color: COLORS.lightmode.primary[600],
     fontSize: 24,
-    fontFamily: 'Montserrat',
-    fontWeight: '700',
-    letterSpacing: 1,
-    textAlign: 'center',
-    lineHeight: 33,
+    fontFamily: 'Montserrat-SemiBold',
+    color: COLORS.lightmode.netrual[700],
   },
   text: {
+    fontFamily: 'Montserrat',
     color: COLORS.lightmode.netrual[300],
-    fontSize: 16,
+    fontSize: 15,
     letterSpacing: 1,
-    width: '70%',
+    width: '90%',
     textAlign: 'center',
-    lineHeight: 22,
   },
   buttonImage: {
     width: 220,
@@ -87,7 +84,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-    opacity: 0.5,
+    gap: 14,
   },
 });
 

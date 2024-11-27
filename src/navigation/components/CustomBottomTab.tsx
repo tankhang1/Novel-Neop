@@ -8,6 +8,7 @@ import React, {memo, useState} from 'react';
 import {ASSETS, WIDTH} from '@constants/index';
 import AppImageWrapper from '@components/AppImageWrapper';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
+// import {showToast} from '@hooks/toast';
 
 const BottomTabs = [
   {
@@ -58,7 +59,10 @@ const CustomBottomTab = ({navigation}: BottomTabBarProps) => {
       {BottomTabs.map((tab, index) => {
         if (tab.key === 'COMMIC') {
           return (
-            <TouchableOpacity key={tab.key} style={styles.tabContainer}>
+            <TouchableOpacity
+              key={tab.key}
+              style={styles.tabContainer}
+              disabled={true}>
               <View style={styles.commicContainer}>
                 <AppImageWrapper
                   source={tab.url}
@@ -79,7 +83,10 @@ const CustomBottomTab = ({navigation}: BottomTabBarProps) => {
             hitSlop={10}
             key={tab.key}
             style={styles.tabContainer}
-            onPress={() => onTabClick(index)}>
+            onPress={() => {
+              // showToast();
+              onTabClick(index);
+            }}>
             {tabIndex === index ? <ActiveIcon /> : <InActiveIcon />}
           </TouchableOpacity>
         );

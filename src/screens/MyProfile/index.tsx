@@ -11,15 +11,22 @@ import {
 import React, {useState} from 'react';
 import {ASSETS, COLORS, HEIGHT} from '@constants/index';
 import AppImageWrapper from '@components/AppImageWrapper';
-import AppImage from '@components/AppImage';
-import AppSwitch from '@components/AppSwitch';
+// import AppImage from '@components/AppImage';
+// import AppSwitch from '@components/AppSwitch';
 import CloseX from '@assets/icons/common/CloseX';
 import ChevronRight from '@assets/icons/common/Chevron-Right';
 // import Edit from '@assets/icons/common/Edit';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import PaperFill from '@assets/icons/common/Paper-Fill';
-import RoundPrivacyTip from '@assets/icons/common/Round-Privacy-Tip';
+// import PaperFill from '@assets/icons/common/Paper-Fill';
+// import RoundPrivacyTip from '@assets/icons/common/Round-Privacy-Tip';
 import About from '@assets/icons/common/About';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {BottomTabParamList, RootStackParamList} from '@utils/types/navigation';
+import AppImage from '@components/AppImage';
+import RoundPrivacyTip from '@assets/icons/common/Round-Privacy-Tip';
+import PaperFill from '@assets/icons/common/Paper-Fill';
+import AppSwitch from '@components/AppSwitch';
+import Edit from '@assets/icons/common/Edit';
 
 const LIST_MALE_AVATAR = [
   require('@assets/images/avatar/01.png'),
@@ -35,7 +42,10 @@ const LIST_FEMALE_AVATAR = [
   require('@assets/images/avatar/08.png'),
   require('@assets/images/avatar/10.png'),
 ];
-const MyProfileScreen = () => {
+type Props = NativeStackScreenProps<
+  RootStackParamList & Pick<BottomTabParamList, 'MyProfile'>
+>;
+const MyProfileScreen = ({navigation}: Props) => {
   const [openSelectAvatar, setOpenSelectAvatar] = useState(false);
   return (
     <SafeAreaView style={styles.container}>
@@ -93,7 +103,9 @@ const MyProfileScreen = () => {
           </View>
           <ChevronRight variant="bold" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.optionItem}>
+        <TouchableOpacity
+          style={styles.optionItem}
+          onPress={() => navigation.navigate('About')}>
           <View style={styles.optionContent}>
             <ImageBackground
               source={require('@assets/images/bg-icon-2.png')}
@@ -220,8 +232,11 @@ const styles = StyleSheet.create({
     color: 'rgba(0, 0, 0, 1)',
   },
   optionsWrapper: {
-    paddingHorizontal: 16,
-    gap: 14,
+    padding: 20,
+    marginHorizontal: 8,
+    borderRadius: 30,
+    gap: 20,
+    backgroundColor: COLORS.lightmode.netrual[25],
   },
   optionItem: {
     flexDirection: 'row',
